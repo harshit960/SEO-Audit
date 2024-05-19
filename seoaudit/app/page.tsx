@@ -3,6 +3,10 @@ import { InfiniteMovingCards } from './components/ui/infinite-moving-cards'
 // import { MovingBorder } from './components/ui/moving-border'
 import { Button } from "./components/ui/moving-border";
 import { BackgroundBeams } from "./components/ui/background-beams";
+import { ContainerScroll } from './components/ui/container-scroll-animation';
+import Image from 'next/image';
+import { Spotlight } from './components/Spotlight';
+import { MaskContainer } from './components/ui/svg-mask-effect';
 
 function Home() {
   const items = [{
@@ -77,6 +81,56 @@ function Home() {
         />
       </div>
       <BackgroundBeams />
+    </div>
+    <div className="h-[40rem] w-full flex items-center justify-center  overflow-hidden">
+      <MaskContainer
+        revealText={
+          <p className="max-w-4xl mx-auto text-slate-800 text-center  text-4xl font-bold">
+            SEO Site Checkup runs through a fast audit of your site, checking for proper tags and surfacing any errors that might come up."
+          </p>
+        }
+        className="h-[40rem] border rounded-md"
+      >
+        SEO Site Checkup runs through a fast audit of your site, checking for proper <span className="text-red-500">tags</span> and surfacing any <span className="text-red-500">errors</span> that might come up."
+        
+      </MaskContainer>
+    </div>
+    <div className="">
+    <ContainerScroll
+        titleComponent={
+          <>
+            <h1 className="text-4xl font-semibold text-[#221A43] dark:text-white">
+               
+              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+              Everything you need in one place
+              </span>
+            </h1>
+          </>
+        }
+      >
+        <Image
+          src={`/linear.webp`}
+          alt=""
+          height={720}
+          width={1400}
+          className="mx-auto rounded-2xl object-cover h-full object-left-top"
+          draggable={false}
+        />
+      </ContainerScroll>
+    </div>
+    <div className="h-[40rem] w-full rounded-md flex md:items-center md:justify-center bg-white/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden ">
+    <Spotlight
+        className="-top-40 left-0 md:left-60 md:-top-20"
+        fill="white"
+      />
+      <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
+        <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-[#221a43b0] to-[#221A43] bg-opacity-50">
+        Why wait? <br /> Boost your website’s SEO right now!
+        </h1>
+        <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque soluta illo placeat corrupti nemo voluptatibus, in asperiores labore voluptates. Ex eos officia iusto recusandae nobis quod eaque modi ea ut.
+        </p>
+      </div>
     </div>
   </>
   )
