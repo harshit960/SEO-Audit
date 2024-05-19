@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function Footer() {
@@ -24,15 +25,15 @@ export default function Footer() {
           </div>
         </div>
         <div className="basis-1/4 font-black opacity-40	">
-          <div className="flex flex-col">FAQ</div>
+          <Link href="/faq" className="flex flex-col">FAQ</Link>
           <div className="flex flex-col">Pricing</div>
           <div className="flex flex-col">Disclaimer</div>
-          <div className="flex flex-col">Contact- Us</div>
+          <Link href="/contact" className="flex flex-col">Contact- Us</Link>
         </div>
         <div className="basis-1/4 font-black opacity-40	">
-          <div className="flex flex-col">Terms and Condition</div>
-          <div className="flex flex-col">About Us</div>
-          <div className="flex flex-col">Refunds Policy</div>
+          <Link href="/terms-of-service" className="flex flex-col">Terms and Condition</Link>
+          <Link href="\about" className="flex flex-col">About Us</Link>
+          <Link href="/refund-policy" className="flex flex-col">Refunds Policy</Link>
 
         </div>
       </div>

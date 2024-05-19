@@ -82,19 +82,7 @@ function Home() {
       </div>
       <BackgroundBeams />
     </div>
-    <div className="h-[40rem] w-full flex items-center justify-center  overflow-hidden">
-      <MaskContainer
-        revealText={
-          <p className="max-w-4xl mx-auto text-slate-800 text-center  text-4xl font-bold">
-            SEO Site Checkup runs through a fast audit of your site, checking for proper tags and surfacing any errors that might come up."
-          </p>
-        }
-        className="h-[40rem] border rounded-md"
-      >
-        SEO Site Checkup runs through a fast audit of your site, checking for proper <span className="text-red-500">tags</span> and surfacing any <span className="text-red-500">errors</span> that might come up."
-        
-      </MaskContainer>
-    </div>
+    
     <div className="">
     <ContainerScroll
         titleComponent={
