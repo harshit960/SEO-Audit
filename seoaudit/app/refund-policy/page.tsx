@@ -2,7 +2,7 @@ import React from 'react'
 
 function page() {
     return (
-        <div className='mx-40'>
+        <div className='mx-40 h-screen'>
             <div className="text-center text-5xl font-bold mt-52">
                 Returns and Refunds Policy
             </div>

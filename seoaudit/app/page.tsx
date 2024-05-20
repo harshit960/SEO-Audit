@@ -7,6 +7,7 @@ import { ContainerScroll } from './components/ui/container-scroll-animation';
 import Image from 'next/image';
 import { Spotlight } from './components/Spotlight';
 import { MaskContainer } from './components/ui/svg-mask-effect';
+import Link from 'next/link';
 
 function Home() {
   const items = [{
@@ -45,7 +46,10 @@ function Home() {
         <div className="my-2 text-black">
           Check your website's SEO for free right now!
         </div>
+        <Link href="run">
+
         <div className="my-4 bg-[#1B68FF] rounded-full p-2 font-semibold text-white w-28 text-xs inline-flex items-center justify-center">GET STARTED</div>
+        </Link>
 
       </div>
     </div>
@@ -56,13 +60,16 @@ function Home() {
       <div className="my-10 flex flex-col items-center justify-center overflow-hidden">
 
         <InfiniteMovingCards items={items} />
+        <Link href="tools">
+
         <Button
           borderRadius="1rem"
           borderClassName="10px"
           className="bg-[#1B68FF] text-white font-medium border-neutral-200 "
-        >
+          >
           AND MANY MORE
         </Button>
+          </Link>
       </div>
     </div>
     <div className="h-[40rem] w-full rounded-md relative flex flex-col items-center justify-center ">

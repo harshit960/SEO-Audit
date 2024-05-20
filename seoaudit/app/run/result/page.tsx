@@ -1,7 +1,15 @@
-import Link from 'next/link';
+'use client'
+import { useSearchParams } from "next/navigation";
 import React from 'react'
+import { redirect } from 'next/navigation'
 
 function page() {
+    const searchParams = useSearchParams();
+    let url = searchParams.get("url");
+    if (!url) {
+        console.log("no urll");
+        redirect("/run")
+    }
     const test = [
 
         {
@@ -519,33 +527,29 @@ function page() {
 
     ];
 
+
     return (
-        <>
-
-            <div className='h-80 mt-40 w-full flex items-center justify-center flex-col'>
-                <div className="text-5xl font-bold ">
-                    Some of our SEO Tools
-                </div>
-                <div className="text-lg font-medium mt-4">
-                    Want all the tools in one place?
-                    Start your Free Trial
-                </div>
+        <div className=' w-full flex flex-col px-40' >
+            <div className="flex justify-between mt-40 ">
+                <div className="text-3xl">{url}</div>
+                <div className="text-sm bg-blue-600 rounded-full p-2 px-4 text-white font-semibold">Download Report</div>
             </div>
-            <div className="flex flex-wrap my-20 items-center justify-center">
+            <div className="flex mt-10 ">
+                <div className="w-80 rounded mx-2 bg-slate-300 h-96"></div>
+                <div className="grow rounded mx-2 bg-slate-300 h-96"></div>
+                <div className="w-80 rounded mx-2 bg-slate-300 h-96"></div>
+            </div>
+            <div className="flex flex-col my-10 p-1">
                 {test.map((item) => (
-                    <Link href={`tools/test/?test=${item.title}`}>
 
-                        <div className="h-52 w-80 m-4 rounded flex flex-col items-center justify-center bg-slate-100 p-2 ">
-                            <div className="icon"></div>
-                            <div className="text-lg font-semibold">{item.title}</div>
-                            <div className="font-light line-clamp-4 text-center	">{item.desc}</div>
-                        </div>
-                    </Link>
+                    <div className="flex mx-2 my-1 rounded items-center border p-2">
+                        <div className="rounded-full bg-slate-500 h-10 mx-2 w-10"></div>
+                        <div className="text-sm w-80 font-semibold mx-2">{item.title}</div>
+                        <div className="text-sm">Remark</div>
+                    </div>
                 ))}
-
             </div>
-
-        </>
+        </div>
     )
 }
 
