@@ -1,6 +1,6 @@
 'use client'
 import { useSearchParams } from "next/navigation";
-import React from 'react'
+import React, { Suspense } from 'react'
 import { redirect } from 'next/navigation'
 
 function page() {
@@ -529,7 +529,7 @@ function page() {
 
 
     return (
-        <div className=' w-full flex flex-col px-40' >
+        <Suspense fallback={<div>Loading...</div>}>       <div className=' w-full flex flex-col px-40' >
             <div className="flex justify-between mt-40 ">
                 <div className="text-3xl">{url}</div>
                 <div className="text-sm bg-blue-600 rounded-full p-2 px-4 text-white font-semibold">Download Report</div>
@@ -550,6 +550,8 @@ function page() {
                 ))}
             </div>
         </div>
+        </Suspense>
+ 
     )
 }
 
