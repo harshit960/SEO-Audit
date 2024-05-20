@@ -4,6 +4,13 @@ import React, { Suspense } from 'react'
 import { redirect } from 'next/navigation'
 
 function page() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <YourComponent />
+        </Suspense>
+    );
+}
+function YourComponent() {
     const searchParams = useSearchParams();
     let url = searchParams.get("url");
     if (!url) {
@@ -551,7 +558,7 @@ function page() {
             </div>
         </div>
         </Suspense>
- 
+
     )
 }
 
