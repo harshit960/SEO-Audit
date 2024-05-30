@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { InfiniteMovingCards } from './components/ui/infinite-moving-cards'
 // import { MovingBorder } from './components/ui/moving-border'
@@ -8,6 +9,12 @@ import Image from 'next/image';
 import { Spotlight } from './components/Spotlight';
 import { MaskContainer } from './components/ui/svg-mask-effect';
 import Link from 'next/link';
+import { StickyScroll } from './components/ui/sticky-scroll-reveal';
+import { TracingBeam } from './components/ui/tracing-beam';
+import { twMerge } from "tailwind-merge";
+import { HoverEffect } from './components/ui/card-hover-effect';
+import { TypewriterEffectSmooth } from './components/ui/typewriter-effect';
+// import { calsans } from "@/fonts/calsans";
 
 function Home() {
   const items = [{
@@ -23,6 +30,145 @@ function Home() {
     name: "This test will check if the analyzed webpage is using social media meta tags. ",
     title: "test",
   }]
+  const content = [
+    {
+      title: "Meta Tags",
+      description:
+        "Meta tags are snippets of text that describe a webpage's content. They don't appear on the page itself but only in the page's source code. They are used by search engines to understand what the webpage is about.",
+      content: (
+        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+          Meta Tags
+        </div>
+      ),
+    },
+    {
+      title: "Why They Are Important",
+      description:
+        "Meta tags are crucial for SEO because they directly impact how search engines interpret and rank your webpage. Effective meta tags can improve the visibility of your website in search engine results, increase click-through rates, and attract more visitors. Improved Click-Through Rates (CTR) A compelling title tag and meta description can entice users to click on your link. Relevance and Ranking Properly optimized meta tags help search engines determine the relevancy of your content to specific search queries, potentially improving your ranking. User Experience Clear and accurate meta tags provide users with a good understanding of what to expect from the content, improving their overall experience.",
+      content: (
+        <div className="h-full w-full  flex items-center justify-center text-white">
+          <Image
+            src="/linear.webp"
+            width={300}
+            height={300}
+            className="h-full w-full object-cover"
+            alt="linear board demo"
+          />
+        </div>
+      ),
+    },
+    {
+      title: "How to Optimize Them",
+      description:
+        "Title Tag Optimization, Meta Description Optimization, Other Meta Tags Title Tag Optimization, Meta Description Optimization, Other Meta Tags Title Tag Optimization, Meta Description Optimization, Other Meta TagsTitle Tag Optimization, Meta Description Optimization, Other Meta TagsTitle Tag Optimization, Meta Description Optimization, Other Meta TagsTitle Tag Optimization, Meta Description Optimization, Other Meta TagsTitle Tag Optimization, Meta Description Optimization, Other Meta TagsTitle Tag Optimization, Meta Description Optimization, Other Meta TagsTitle Tag Optimization, Meta Description Optimization, Other Meta TagsTitle Tag Optimization, Meta Description Optimization, Other Meta Tags",
+      content: (
+        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
+          How to Optimize Them
+        </div>
+      ),
+    },
+
+  ];
+
+  const dummyContent = [
+    {
+      title: "Blog 1",
+      description: (
+        <>
+          <p>
+            Dolor minim irure ut Lorem proident. Ipsum do pariatur est ad ad
+            veniam in commodo id reprehenderit adipisicing. Proident duis
+            exercitation ad quis ex cupidatat cupidatat occaecat adipisicing.
+          </p>
+
+        </>
+      ),
+      badge: "React",
+      image:
+        "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      title: "Blog 2",
+      description: (
+        <>
+          <p>
+            Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
+            deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
+            non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
+
+          </p>
+        </>
+      ),
+      badge: "Changelog",
+      image:
+        "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+  ];
+  const projects = [
+    {
+      title: "Stripe",
+      description:
+        "A technology company that builds economic infrastructure for the internet.",
+      link: "https://stripe.com",
+    },
+    {
+      title: "Netflix",
+      description:
+        "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
+      link: "https://netflix.com",
+    },
+    {
+      title: "Google",
+      description:
+        "A multinational technology company that specializes in Internet-related services and products.",
+      link: "https://google.com",
+    },
+    {
+      title: "Meta",
+      description:
+        "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
+      link: "https://meta.com",
+    },
+    {
+      title: "Amazon",
+      description:
+        "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
+      link: "https://amazon.com",
+    },
+    {
+      title: "Microsoft",
+      description:
+        "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
+      link: "https://microsoft.com",
+    },
+  ];
+  const faq = [
+    {
+      que: "What is an SEO checker?",
+      desc: "The Seobility SEO checker is a tool that scans any web page for technical errors and SEO issues that can have a negative impact on search engine rankings. Use it to get a comprehensive list of errors found on your web page and find out where you still have to improve your website."
+    },
+    {
+      que: "What is an SEO checker?",
+      desc: "The Seobility SEO checker is a tool that scans any web page for technical errors and SEO issues that can have a negative impact on search engine rankings. Use it to get a comprehensive list of errors found on your web page and find out where you still have to improve your website."
+    },
+    {
+      que: "What is an SEO checker?",
+      desc: "The Seobility SEO checker is a tool that scans any web page for technical errors and SEO issues that can have a negative impact on search engine rankings. Use it to get a comprehensive list of errors found on your web page and find out where you still have to improve your website."
+    },
+  ]
+  const words = [
+    {
+      text: "Try",
+    },
+    
+    {
+      text: "SEOAudit",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+    {
+      text: "Today",
+    },
+  ];
   return (<>
 
     <div className='flex items-center h-screen'>
@@ -33,27 +179,82 @@ function Home() {
       </div>
       <div className="flex flex-col ">
         <div className="my-2 text-black">
-          Supercharged analysis & monitoring tools
+          {/* Supercharged analysis & monitoring tools */}
         </div>
         <div className="text-7xl ">
           <div className="text-[#221A43] font-black">
-            Search Engine<br />
-            Optimization</div>
+            SEO Audit
+            <br /> Checklist and
+          </div>
           <div className="text-[#1B68FF] font-black">
-            Made Easy
+            Reporting Tool
           </div>
         </div>
-        <div className="my-2 text-black">
-          Check your website's SEO for free right now!
+        <div className="my-2 mt-10 text-black">
+          Get a Website Audit and Report
+          <br />Boost your SEO Score and Driver more Organic Traffic to your Website.
         </div>
-        <Link href="run">
+        <div className="flex items-center justify-start">
 
-        <div className="my-4 bg-[#1B68FF] rounded-full p-2 font-semibold text-white w-28 text-xs inline-flex items-center justify-center">GET STARTED</div>
-        </Link>
+          <div className="">
+            <input type="text" className='rounded-full bg-slate-200 p-2 px-4 w-96' placeholder='Enter Your Domain Name' />
+          </div>
+          <Link href="" className='mx-4'>
+
+            <div className="my-4 bg-[#1B68FF] rounded-full p-2 py-3 font-semibold text-white w-28 text-xs inline-flex items-center justify-center">ANALYZE</div>
+          </Link>
+        </div>
 
       </div>
     </div>
-    <div className="w-full ">
+    <div className="h-80">
+      <div className="bg-gray-100 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-extrabold text-gray-900 text-center">
+            Trusted by Leading Brands
+          </h2>
+          <div className="mt-8 flex justify-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+              {/* Replace the src attributes with the logos of your trusted brands */}
+              <div className="flex justify-center">
+                <img className="h-12" src="/images/logo1.png" alt="Brand 1" />
+              </div>
+              <div className="flex justify-center">
+                <img className="h-12" src="/images/logo2.png" alt="Brand 2" />
+              </div>
+              <div className="flex justify-center">
+                <img className="h-12" src="/images/logo3.png" alt="Brand 3" />
+              </div>
+              <div className="flex justify-center">
+                <img className="h-12" src="/images/logo4.png" alt="Brand 4" />
+              </div>
+              <div className="flex justify-center">
+                <img className="h-12" src="/images/logo5.png" alt="Brand 5" />
+              </div>
+              {/* Add more logos as needed */}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="mt-0">
+      <ContainerScroll
+        titleComponent={
+          <>
+            <h1 className="text-4xl font-semibold text-[#221A43] dark:text-white">
+
+              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+                See Us in Action: Intro and Demo
+              </span>
+            </h1>
+          </>
+        }
+      >
+        <iframe width="" height="" className='w-full h-full' src="https://www.youtube.com/embed/MYE6T_gd7H0?si=QF2GbncK0oEKBn8o" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" ></iframe>
+      </ContainerScroll>
+    </div>
+    <div className="w-full mt-40">
       <div className="text-4xl text-[#221A43] font-black text-center">
         TOOLS AVAILABLE
       </div>
@@ -62,69 +263,106 @@ function Home() {
         <InfiniteMovingCards items={items} />
         <Link href="tools">
 
-        <Button
-          borderRadius="1rem"
-          borderClassName="10px"
-          className="bg-[#1B68FF] text-white font-medium border-neutral-200 "
+          <Button
+            borderRadius="1rem"
+            borderClassName="10px"
+            className="bg-[#1B68FF] text-white font-medium border-neutral-200 "
           >
-          AND MANY MORE
-        </Button>
-          </Link>
+            AND MANY MORE
+          </Button>
+        </Link>
       </div>
     </div>
-    <div className="h-[40rem] w-full rounded-md relative flex flex-col items-center justify-center ">
-      <div className="max-w-2xl mx-auto p-4">
-        <h1 className="relative z-10 text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-[#221a43ce] to-[#221A43]  text-center font-sans font-bold">
-        Get in touch with us
-        </h1>
-        <p></p>
-        <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, dolorum! Magni modi quod commodi velit porro nobis. Sed nisi fuga cupiditate autem aspernatur similique, saepe, a officia expedita impedit quisquam.
-        </p>
-        <input
-          type="text"
-          placeholder="hi@manuarora.in"
-          className="rounded-lg border border-neutral-200 focus:ring-2 p-2 focus:ring-teal-300  w-full relative z-10 mt-4 placeholder:text-neutral-300"
-        />
-      </div>
-      <BackgroundBeams />
-    </div>
-    
-    <div className="">
-    <ContainerScroll
-        titleComponent={
-          <>
-            <h1 className="text-4xl font-semibold text-[#221A43] dark:text-white">
-               
-              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-              Everything you need in one place
-              </span>
-            </h1>
-          </>
-        }
-      >
-        <Image
-          src={`/linear.webp`}
-          alt=""
-          height={720}
-          width={1400}
-          className="mx-auto rounded-2xl object-cover h-full object-left-top"
-          draggable={false}
-        />
-      </ContainerScroll>
+    <div className="mt-40">
+
+      <StickyScroll content={content} />
     </div>
     <div className="h-[40rem] w-full rounded-md flex md:items-center md:justify-center bg-white/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden ">
-    <Spotlight
+      <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
       />
       <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
         <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-[#221a43b0] to-[#221A43] bg-opacity-50">
-        Why wait? <br /> Boost your website’s SEO right now!
+        Why SEOptimer?
         </h1>
-        <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque soluta illo placeat corrupti nemo voluptatibus, in asperiores labore voluptates. Ex eos officia iusto recusandae nobis quod eaque modi ea ut.
+        <p className="mt-4  font-lg text-base text-neutral-500 max-w-4xl text-center mx-auto">
+        Getting your website to rank in Google is harder and more competitive than ever. There are many factors such as on page content, performance, social factors and backlink profile that search engines like Google use to determine which sites should rank highest.
+        <br/>
+        SEOptimer is a free SEO Audit Tool that will perform a detailed SEO Analysis across 100 website data points, and provide clear and actionable recommendations for steps you can take to improve your online presence and ultimately rank better in Search Engine Results. SEOptimer is ideal for website owners, website designers and digital agencies who want to improve their own sites or theirs of their clients.
         </p>
+      </div>
+    </div>
+    <div className="relative">
+      <TracingBeam className="px-6">
+        <div className="max-w-2xl mx-auto antialiased pt-4 relative">
+          {dummyContent.map((item, index) => (
+            <div key={`content-${index}`} className="mb-10">
+              <h2 className="bg-[#221A43] text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
+                {item.badge}
+              </h2>
+
+              <p className={twMerge("text-xl mb-4")}>
+                {item.title}
+              </p>
+
+              <div className="text-sm  prose prose-sm dark:prose-invert">
+                {item?.image && (
+                  <Image
+                    src={item.image}
+                    alt="blog thumbnail"
+                    height="1000"
+                    width="1000"
+                    className="rounded-lg mb-10 object-cover"
+                  />
+                )}
+                {item.description}
+              </div>
+            </div>
+          ))}
+        </div>
+      </TracingBeam>
+    </div>
+    <div className="mt-40">
+      <div className="max-w-5xl mx-auto px-8">
+        <div className="text-4xl font-extrabold text-[#221A43]">
+          What our awesome customers are saying
+        </div>
+        <HoverEffect items={projects} />
+      </div>
+    </div>
+    <div className="my-40 w-full flex flex-col items-center justify-center">
+      <div className="text-5xl my-2 text-center font-extrabold text-[#221A43]">
+        Frequently Asked Questions
+      </div>
+      <div className="text-lg text-center font-extrabold text-[#221A43] opacity-45">
+        Everything you have to know about the SEO Checker
+      </div>
+      <div className="w-2/3">
+
+        {faq.map((item) => (
+          <>
+          <div className="mt-14">
+
+            <div className="text-lg font-semibold">{item.que}</div>
+            <div className="mt-2 text-slate-500">{item.desc}</div>
+          </div>
+          </>
+        ))}
+      </div>
+    </div>
+    <div className="flex flex-col items-center justify-center my-40  ">
+      <p className="text-neutral-600 dark:text-neutral-200 text-base sm:text-base  ">
+      What Are You Waiting For?
+      </p>
+      
+      <TypewriterEffectSmooth words={words} />
+      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
+      <Link href="run" className=''>
+        <button className="w-40 h-10 rounded-full bg-black border dark:border-white border-transparent text-white text-sm">
+          ANALYZE
+        </button>
+        </Link>
       </div>
     </div>
   </>
