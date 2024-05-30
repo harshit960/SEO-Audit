@@ -208,28 +208,28 @@ function Home() {
       </div>
     </div>
     <div className="h-80">
-      <div className="bg-gray-100 py-12">
+      <div className="bg-gray-100 py-12 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-gray-900 text-center">
             Trusted by Leading Brands
           </h2>
           <div className="mt-8 flex justify-center">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+            <div className="flex justify-between w-full">
               {/* Replace the src attributes with the logos of your trusted brands */}
               <div className="flex justify-center">
-                <img className="h-12" src="/images/logo1.png" alt="Brand 1" />
+                <img className="h-8" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-4.svg" alt="Brand 1" />
               </div>
               <div className="flex justify-center">
-                <img className="h-12" src="/images/logo2.png" alt="Brand 2" />
+                <img className="h-8" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-1.svg" alt="Brand 2" />
               </div>
               <div className="flex justify-center">
-                <img className="h-12" src="/images/logo3.png" alt="Brand 3" />
+                <img className="h-8" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-3.svg" alt="Brand 3" />
               </div>
               <div className="flex justify-center">
-                <img className="h-12" src="/images/logo4.png" alt="Brand 4" />
+                <img className="h-8" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-2.svg" alt="Brand 4" />
               </div>
               <div className="flex justify-center">
-                <img className="h-12" src="/images/logo5.png" alt="Brand 5" />
+                <img className="h-8" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-5.svg" alt="Brand 5" />
               </div>
               {/* Add more logos as needed */}
             </div>
@@ -295,7 +295,7 @@ function Home() {
     </div>
     <TracingBeam className="px-6">
       <div className="relative">
-        <div className="max-w-2xl mx-auto antialiased pt-4 relative">
+        <div className="max-w-4xl mx-auto antialiased pt-4 relative">
           {dummyContent.map((item, index) => (
             <div key={`content-${index}`} className="mb-10">
               <h2 className="bg-[#221A43] text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
@@ -323,7 +323,7 @@ function Home() {
         </div>
       </div>
       <div className="mt-40">
-        <div className="max-w-5xl mx-auto px-8">
+        <div className="max-w-5xl">
           <div className="text-4xl font-extrabold text-[#221A43]">
             What our awesome customers are saying
           </div>
@@ -337,7 +337,7 @@ function Home() {
         <div className="text-lg text-center font-extrabold text-[#221A43] opacity-45">
           Everything you have to know about the SEO Checker
         </div>
-        <div className="w-2/3">
+        <div className="w-">
 
           {faq.map((item) => (
             <>
