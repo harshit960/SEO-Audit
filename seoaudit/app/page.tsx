@@ -160,7 +160,7 @@ function Home() {
     {
       text: "Try",
     },
-    
+
     {
       text: "SEOAudit",
       className: "text-blue-500 dark:text-blue-500",
@@ -284,17 +284,17 @@ function Home() {
       />
       <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
         <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-[#221a43b0] to-[#221A43] bg-opacity-50">
-        Why SEOptimer?
+          Why SEOptimer?
         </h1>
         <p className="mt-4  font-lg text-base text-neutral-500 max-w-4xl text-center mx-auto">
-        Getting your website to rank in Google is harder and more competitive than ever. There are many factors such as on page content, performance, social factors and backlink profile that search engines like Google use to determine which sites should rank highest.
-        <br/>
-        SEOptimer is a free SEO Audit Tool that will perform a detailed SEO Analysis across 100 website data points, and provide clear and actionable recommendations for steps you can take to improve your online presence and ultimately rank better in Search Engine Results. SEOptimer is ideal for website owners, website designers and digital agencies who want to improve their own sites or theirs of their clients.
+          Getting your website to rank in Google is harder and more competitive than ever. There are many factors such as on page content, performance, social factors and backlink profile that search engines like Google use to determine which sites should rank highest.
+          <br />
+          SEOptimer is a free SEO Audit Tool that will perform a detailed SEO Analysis across 100 website data points, and provide clear and actionable recommendations for steps you can take to improve your online presence and ultimately rank better in Search Engine Results. SEOptimer is ideal for website owners, website designers and digital agencies who want to improve their own sites or theirs of their clients.
         </p>
       </div>
     </div>
-    <div className="relative">
-      <TracingBeam className="px-6">
+    <TracingBeam className="px-6">
+      <div className="relative">
         <div className="max-w-2xl mx-auto antialiased pt-4 relative">
           {dummyContent.map((item, index) => (
             <div key={`content-${index}`} className="mb-10">
@@ -321,47 +321,47 @@ function Home() {
             </div>
           ))}
         </div>
-      </TracingBeam>
-    </div>
-    <div className="mt-40">
-      <div className="max-w-5xl mx-auto px-8">
-        <div className="text-4xl font-extrabold text-[#221A43]">
-          What our awesome customers are saying
-        </div>
-        <HoverEffect items={projects} />
       </div>
-    </div>
-    <div className="my-40 w-full flex flex-col items-center justify-center">
-      <div className="text-5xl my-2 text-center font-extrabold text-[#221A43]">
-        Frequently Asked Questions
-      </div>
-      <div className="text-lg text-center font-extrabold text-[#221A43] opacity-45">
-        Everything you have to know about the SEO Checker
-      </div>
-      <div className="w-2/3">
-
-        {faq.map((item) => (
-          <>
-          <div className="mt-14">
-
-            <div className="text-lg font-semibold">{item.que}</div>
-            <div className="mt-2 text-slate-500">{item.desc}</div>
+      <div className="mt-40">
+        <div className="max-w-5xl mx-auto px-8">
+          <div className="text-4xl font-extrabold text-[#221A43]">
+            What our awesome customers are saying
           </div>
-          </>
-        ))}
+          <HoverEffect items={projects} />
+        </div>
       </div>
-    </div>
+      <div className="my-40 w-full flex flex-col items-center justify-center">
+        <div className="text-5xl my-2 text-center font-extrabold text-[#221A43]">
+          Frequently Asked Questions
+        </div>
+        <div className="text-lg text-center font-extrabold text-[#221A43] opacity-45">
+          Everything you have to know about the SEO Checker
+        </div>
+        <div className="w-2/3">
+
+          {faq.map((item) => (
+            <>
+              <div className="mt-14">
+
+                <div className="text-lg font-semibold">{item.que}</div>
+                <div className="mt-2 text-slate-500">{item.desc}</div>
+              </div>
+            </>
+          ))}
+        </div>
+      </div>
+    </TracingBeam>
     <div className="flex flex-col items-center justify-center my-40  ">
       <p className="text-neutral-600 dark:text-neutral-200 text-base sm:text-base  ">
-      What Are You Waiting For?
+        What Are You Waiting For?
       </p>
-      
+
       <TypewriterEffectSmooth words={words} />
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
-      <Link href="run" className=''>
-        <button className="w-40 h-10 rounded-full bg-black border dark:border-white border-transparent text-white text-sm">
-          ANALYZE
-        </button>
+        <Link href="run" className=''>
+          <button className="w-40 h-10 rounded-full bg-black border dark:border-white border-transparent text-white text-sm">
+            ANALYZE
+          </button>
         </Link>
       </div>
     </div>
