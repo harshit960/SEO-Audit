@@ -4,7 +4,7 @@ import React from 'react'
 export default function Footer() {
   return (
     <div className=' bg-[#221A43] w-full'>
-      <div className="flex flex-wrap p-5">
+      <div className="flex flex-wrap p-5 lg:p-20">
 
 
         <div className="flex flex-col lg:basis-1/2">
@@ -39,7 +39,7 @@ export default function Footer() {
       </div>
       <div className="border w-full">
       </div>
-      <div className="flex flex-wrap justify-between px-5 py-2 font-bold opacity-40">
+      <div className="flex flex-wrap justify-between px-5 py-2 lg:px-20 font-bold opacity-40">
         <div className="text-sm whitespace-nowrap">Privacy Policy</div>
         <div className="text-sm whitespace-nowrap">© Copyright All rights reserved</div>
       </div>
