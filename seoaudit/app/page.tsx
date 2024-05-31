@@ -199,7 +199,7 @@ function Home() {
           <div className="">
             <input type="text" className='rounded-full bg-slate-200 p-2 px-4 lg:w-96 w-80' placeholder='Enter Your Domain Name' />
           </div>
-          <Link href="" className='lg:mx-4 mt-5'>
+          <Link href="" className='lg:mx-4 mt-5 lg:mt-0'>
 
             <div className="my-4 bg-[#1B68FF] rounded-full p-2 py-3 font-semibold text-white w-28 text-xs inline-flex items-center justify-center">ANALYZE</div>
           </Link>
