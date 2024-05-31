@@ -171,17 +171,17 @@ function Home() {
   ];
   return (<>
 
-    <div className='flex items-center h-screen'>
+    <div className='flex items-center lg:h-screen h-[90vh] overflow-hidden'>
 
-      <div className="p-0 basis-1/2">
+      <div className="p-0 basis-1/2 hidden lg:inline">
 
         <img src="3 1.png" alt="" className='h-screen ' />
       </div>
-      <div className="flex flex-col ">
+      <div className="flex flex-col px-8">
         <div className="my-2 text-black">
           {/* Supercharged analysis & monitoring tools */}
         </div>
-        <div className="text-7xl ">
+        <div className="lg:text-7xl text-4xl">
           <div className="text-[#221A43] font-black">
             SEO Audit
             <br /> Checklist and
@@ -190,16 +190,16 @@ function Home() {
             Reporting Tool
           </div>
         </div>
-        <div className="my-2 mt-10 text-black">
+        <div className="my-2 mt-5 text-black">
           Get a Website Audit and Report
           <br />Boost your SEO Score and Driver more Organic Traffic to your Website.
         </div>
-        <div className="flex items-center justify-start">
+        <div className="flex items-center justify-start flex-wrap mt-5">
 
           <div className="">
-            <input type="text" className='rounded-full bg-slate-200 p-2 px-4 w-96' placeholder='Enter Your Domain Name' />
+            <input type="text" className='rounded-full bg-slate-200 p-2 px-4 lg:w-96 w-80' placeholder='Enter Your Domain Name' />
           </div>
-          <Link href="" className='mx-4'>
+          <Link href="" className='lg:mx-4 mt-5'>
 
             <div className="my-4 bg-[#1B68FF] rounded-full p-2 py-3 font-semibold text-white w-28 text-xs inline-flex items-center justify-center">ANALYZE</div>
           </Link>
@@ -208,28 +208,28 @@ function Home() {
       </div>
     </div>
     <div className="h-80">
-      <div className="bg-gray-100 py-12 pb-20">
+      <div className="bg-gray-100 py-12 pb-15">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-gray-900 text-center">
             Trusted by Leading Brands
           </h2>
           <div className="mt-8 flex justify-center">
-            <div className="flex justify-between w-full">
+            <div className="flex justify-center w-full flex-wrap">
               {/* Replace the src attributes with the logos of your trusted brands */}
               <div className="flex justify-center">
-                <img className="h-8" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-4.svg" alt="Brand 1" />
+                <img className="h-8 m-2 lg:mx-10 my-3" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-4.svg" alt="Brand 1" />
               </div>
               <div className="flex justify-center">
-                <img className="h-8" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-1.svg" alt="Brand 2" />
+                <img className="h-8 m-2 lg:mx-10 my-3" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-1.svg" alt="Brand 2" />
               </div>
               <div className="flex justify-center">
-                <img className="h-8" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-3.svg" alt="Brand 3" />
+                <img className="h-8 m-2 lg:mx-10 my-3" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-3.svg" alt="Brand 3" />
               </div>
               <div className="flex justify-center">
-                <img className="h-8" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-2.svg" alt="Brand 4" />
+                <img className="h-8 m-2 lg:mx-10 my-3" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-2.svg" alt="Brand 4" />
               </div>
               <div className="flex justify-center">
-                <img className="h-8" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-5.svg" alt="Brand 5" />
+                <img className="h-8 m-2 lg:mx-10 my-3" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-5.svg" alt="Brand 5" />
               </div>
               {/* Add more logos as needed */}
             </div>
@@ -254,14 +254,14 @@ function Home() {
         <iframe width="" height="" className='w-full h-full' src="https://www.youtube.com/embed/MYE6T_gd7H0?si=QF2GbncK0oEKBn8o" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" ></iframe>
       </ContainerScroll>
     </div>
-    <div className="w-full mt-40">
-      <div className="text-4xl text-[#221A43] font-black text-center">
+    <div className="w-full mt-0 lg:mt-20">
+      <div className="lg:text-4xl text-3xl text-[#221A43] font-black text-center">
         TOOLS AVAILABLE
       </div>
-      <div className="my-10 flex flex-col items-center justify-center overflow-hidden">
+      <div className="mt-10 flex flex-col items-center justify-center overflow-hidden">
 
         <InfiniteMovingCards items={items} />
-        <Link href="tools">
+        <Link href="tools" className='mt-8'>
 
           <Button
             borderRadius="1rem"
@@ -273,7 +273,7 @@ function Home() {
         </Link>
       </div>
     </div>
-    <div className="mt-40">
+    <div className="lg:mt-40 mt-10 bg-gray-100">
 
       <StickyScroll content={content} />
     </div>
@@ -282,87 +282,92 @@ function Home() {
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
       />
-      <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
+      <div className=" p-4 max-w-7xl flex flex-col items-center justify-center  mx-auto relative z-10  w-full pt-20 md:pt-0">
         <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-[#221a43b0] to-[#221A43] bg-opacity-50">
           Why SEOptimer?
         </h1>
-        <p className="mt-4  font-lg text-base text-neutral-500 max-w-4xl text-center mx-auto">
+        <p className="mt-4  font-lg text-base text-neutral-500 max-w-4xl text-justify lg:text-center mx-5">
           Getting your website to rank in Google is harder and more competitive than ever. There are many factors such as on page content, performance, social factors and backlink profile that search engines like Google use to determine which sites should rank highest.
+          <br />
           <br />
           SEOptimer is a free SEO Audit Tool that will perform a detailed SEO Analysis across 100 website data points, and provide clear and actionable recommendations for steps you can take to improve your online presence and ultimately rank better in Search Engine Results. SEOptimer is ideal for website owners, website designers and digital agencies who want to improve their own sites or theirs of their clients.
         </p>
       </div>
     </div>
-    <TracingBeam className="px-6">
-      <div className="relative">
-        <div className="max-w-4xl mx-auto antialiased pt-4 relative">
-          {dummyContent.map((item, index) => (
-            <div key={`content-${index}`} className="mb-10">
-              <h2 className="bg-[#221A43] text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
-                {item.badge}
-              </h2>
+    <div className="relative ml-2">
 
-              <p className={twMerge("text-xl mb-4")}>
-                {item.title}
-              </p>
 
-              <div className="text-sm  prose prose-sm dark:prose-invert">
-                {item?.image && (
-                  <Image
-                    src={item.image}
-                    alt="blog thumbnail"
-                    height="1000"
-                    width="1000"
-                    className="rounded-lg mb-10 object-cover"
-                  />
-                )}
-                {item.description}
+      <TracingBeam className=" px-10">
+        <div className="relative ">
+          <div className="max-w-4xl mx-auto antialiased pt-4 relative">
+            {dummyContent.map((item, index) => (
+              <div key={`content-${index}`} className="mb-10">
+                <h2 className="bg-[#221A43] text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
+                  {item.badge}
+                </h2>
+
+                <p className={twMerge("text-xl mb-4")}>
+                  {item.title}
+                </p>
+
+                <div className="text-sm  prose prose-sm dark:prose-invert">
+                  {item?.image && (
+                    <Image
+                      src={item.image}
+                      alt="blog thumbnail"
+                      height="1000"
+                      width="1000"
+                      className="rounded-lg mb-10 object-cover"
+                    />
+                  )}
+                  {item.description}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="mt-40">
-        <div className="max-w-5xl">
-          <div className="text-4xl font-extrabold text-[#221A43]">
-            What our awesome customers are saying
+            ))}
           </div>
-          <HoverEffect items={projects} />
         </div>
-      </div>
-      <div className="my-40 w-full flex flex-col items-center justify-center">
-        <div className="text-5xl my-2 text-center font-extrabold text-[#221A43]">
-          Frequently Asked Questions
+        <div className="mt-40">
+          <div className="max-w-5xl">
+            <div className="text-4xl font-extrabold text-[#221A43]">
+              What our awesome customers are saying
+            </div>
+            <HoverEffect items={projects} />
+          </div>
         </div>
-        <div className="text-lg text-center font-extrabold text-[#221A43] opacity-45">
-          Everything you have to know about the SEO Checker
-        </div>
-        <div className="w-">
+        <div className="my-32 w-full flex flex-col items-center justify-center">
+          <div className="text-5xl my-2 text-center font-extrabold text-[#221A43]">
+            Frequently Asked Questions
+          </div>
+          <div className="text-lg text-center font-extrabold text-[#221A43] opacity-45">
+            Everything you have to know about the SEO Checker
+          </div>
+          <div className="w-">
 
-          {faq.map((item) => (
-            <>
-              <div className="mt-14">
+            {faq.map((item) => (
+              <>
+                <div className="mt-14">
 
-                <div className="text-lg font-semibold">{item.que}</div>
-                <div className="mt-2 text-slate-500">{item.desc}</div>
-              </div>
-            </>
-          ))}
+                  <div className="text-lg font-semibold">{item.que}</div>
+                  <div className="mt-2 text-slate-500">{item.desc}</div>
+                </div>
+              </>
+            ))}
+          </div>
         </div>
-      </div>
-    </TracingBeam>
-    <div className="flex flex-col items-center justify-center my-40  ">
-      <p className="text-neutral-600 dark:text-neutral-200 text-base sm:text-base  ">
-        What Are You Waiting For?
-      </p>
+      </TracingBeam>
+      <div className="flex flex-col items-center justify-center my-40  ">
+        <p className="text-neutral-600 dark:text-neutral-200 text-base sm:text-base  ">
+          What Are You Waiting For?
+        </p>
 
-      <TypewriterEffectSmooth words={words} />
-      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
-        <Link href="run" className=''>
-          <button className="w-40 h-10 rounded-full bg-black border dark:border-white border-transparent text-white text-sm">
-            ANALYZE
-          </button>
-        </Link>
+        <TypewriterEffectSmooth words={words} />
+        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
+          <Link href="run" className=''>
+            <button className="w-40 h-10 rounded-full bg-black border dark:border-white border-transparent text-white text-sm">
+              ANALYZE
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   </>

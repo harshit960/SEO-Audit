@@ -4,45 +4,45 @@ import React from 'react'
 export default function Footer() {
   return (
     <div className=' bg-[#221A43] w-full'>
-      <div className="flex p-10">
+      <div className="flex flex-wrap p-5">
 
-        <div className="basis-1/2  pl-10 font-bold	">
-          <div className="flex flex-col">
 
-            <div className="flex opacity-60 basis-1/2 my-1 font-black text-3xl">
-              LOGO
-            </div>
-            <div className="text-sm opacity-60 my-1">
-              Search Engine Optimization
-            </div>
-            <div className="my-1 bg-[#1B68FF] rounded p-1 text-white w-28 text-xs inline-flex items-center justify-center">GET STARTED</div>
-            <div className="flex mt-1 opacity-60">
+        <div className="flex flex-col lg:basis-1/2">
 
-              <img src="\Instagram Circle.png" alt=""  className='w-7' />
-              <img src="\Facebook Circled.png" alt=""  className='w-7 mx-4' />
-              <img src="\Twitter Circled.png" alt=""  className='w-7' />
-            </div>
+          <div className="flex   my-2 font-black text-3xl">
+            LOGO
           </div>
+          <div className="text-sm opacity-60 my-1">
+            Search Engine Optimization
+          </div>
+          <div className="my-3 bg-[#1B68FF] rounded p-1 text-white w-28 text-xs inline-flex items-center justify-center">GET STARTED</div>
+          <div className="flex mt-1 opacity-60">
+
+            <img src="\Instagram Circle.png" alt="" className='w-7' />
+            <img src="\Facebook Circled.png" alt="" className='w-7 mx-4' />
+            <img src="\Twitter Circled.png" alt="" className='w-7' />
+          </div>
+
         </div>
-        <div className="basis-1/4 font-black opacity-40	">
+        <div className=" font-black  basis-full lg:basis-1/4	mt-5 lg:mt-0">
           <Link href="/faq" className="flex flex-col">FAQ</Link>
           <div className="flex flex-col">Pricing</div>
           <div className="flex flex-col">Disclaimer</div>
           <Link href="/contact" className="flex flex-col">Contact- Us</Link>
         </div>
-        <div className="basis-1/4 font-black opacity-40	">
+        <div className="font-black ">
           <Link href="/terms-of-service" className="flex flex-col">Terms and Condition</Link>
           <Link href="\about" className="flex flex-col">About Us</Link>
           <Link href="/refund-policy" className="flex flex-col">Refunds Policy</Link>
 
         </div>
       </div>
-      <div className="border w-full opacity-10">
+      <div className="border w-full">
       </div>
-        <div className="flex justify-between px-20 py-2 font-bold opacity-40">
-          <div className="text-sm">Privacy Policy</div>
-          <div className="text-sm">© Copyright All rights reserved</div>
-        </div>
+      <div className="flex flex-wrap justify-between px-5 py-2 font-bold opacity-40">
+        <div className="text-sm whitespace-nowrap">Privacy Policy</div>
+        <div className="text-sm whitespace-nowrap">© Copyright All rights reserved</div>
+      </div>
     </div>
   )
 }
