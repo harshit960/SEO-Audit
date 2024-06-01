@@ -178,7 +178,7 @@ function Home() {
 
         <div className="lg:text-6xl text-4xl flex items-center justify-center flex-col w-full">
           <div className="text-[#2D2D2D] font-black">
-            SEO Audit Checklist and
+            SEO Audit <span className='text-[#F8D57E]'> Checklist </span> and
           </div>
           <div className="text-[#2D2D2D] font-black">
             Reporting Tool
@@ -289,35 +289,55 @@ function Home() {
 
       </div>
     </div>
-    <div className="w-full mt-40">
-      <div className="text-3xl text-center font-black">Our Metrics Tell the Story</div>
-      <div className="text-base text-center m-4">Our metrics component gives you the inside scoop on your success and helps you stay on top of your game in style.</div>
-    </div>
-    <div className="flex justify-around px-20 mt-10">
-      <div className="w-60 h-28  border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
-        <div className="text-3xl font-bold">10k+</div>
-        <div className="text-base">Website Analysed</div>
+    <div className="">
+
+      <div className="w-full mt-40">
+        <div className="text-3xl text-center font-black">Our Metrics Tell the Story</div>
+        <div className="text-base text-center m-4">Our metrics component gives you the inside scoop on your success and helps you stay on top of your game in style.</div>
       </div>
-      <div className="w-60 h-28  border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
-        <div className="text-3xl font-bold">10k+</div>
-        <div className="text-base">Website Analysed</div>
-      </div>
-      <div className="w-60 h-28  border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
-        <div className="text-3xl font-bold">10k+</div>
-        <div className="text-base">Website Analysed</div>
-      </div>
-      <div className="w-60 h-28  border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
-        <div className="text-3xl font-bold">10k+</div>
-        <div className="text-base">Website Analysed</div>
+      <div className="flex justify-around px-20 mt-10">
+        <div className="w-60 h-28  border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
+          <div className="text-3xl font-bold">10k+</div>
+          <div className="text-base">Website Analysed</div>
+        </div>
+        <div className="w-60 h-28  border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
+          <div className="text-3xl font-bold">10k+</div>
+          <div className="text-base">Website Analysed</div>
+        </div>
+        <div className="w-60 h-28  border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
+          <div className="text-3xl font-bold">10k+</div>
+          <div className="text-base">Website Analysed</div>
+        </div>
+        <div className="w-60 h-28  border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
+          <div className="text-3xl font-bold">10k+</div>
+          <div className="text-base">Website Analysed</div>
+        </div>
       </div>
 
     </div>
-    <div className="flex w-full h-[80vh] justify-around px-40 mt-40 items-center">
+    <div className="w-full flex bg-gray-100 mt-32 p-20">
+      <div className="flex flex-col w-1/2">
+        <div className="text-4xl font-bold">Embeddable Audit Tool</div>
+        <div className="font-light text-xl leading-10 mt-10 pr-10">
+          Generate more leads straight from your website with your own Embedded SEO Audit Tool. Simply embed a simple Audit Form that matches your website’s styling and colors.
+
+          Present customers a beautiful branded audit that inspires action.
+
+          Get notified of new leads and their details straight to your mailbox.
+
+          Send your leads and their reports straight to any other CRM, Mail Tool like MailChimp, Active Campaign and Salesforce.
+        </div>
+      </div>
+      <div className="grow">
+        <iframe className='w-full h-full' src="https://www.youtube.com/embed/MYE6T_gd7H0?si=wNTqbGkgooX4ilQp" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" ></iframe>
+      </div>
+    </div>
+    <div className="flex w-full h-[80vh] justify-around px-40 mt-32 items-center">
       <div className=" basis-1/2">
         <div className="text-5xl font-bold pr-10 leading-20	">
           Comprehensive Website Audit
         </div>
-        <div className="text-xl py-6 pr-32 leading-relaxed		">
+        <div className="text-xl py-6 pr-32 leading-10 font-light		">
           Search Engines rely on many factors to rank a website. SEOptimer is a Website SEO Checker which reviews these and more to help identify problems that could be holding your site back from it’s potential.
 
           Additionally we provide a clear, actionable, prioritised list of recommendations to help improve.
@@ -330,7 +350,7 @@ function Home() {
         <img src="\comprehensive_website_audit_en.png" alt="" srcSet="" />
       </div>
     </div>
-    <div className="flex w-full h-[80vh] justify-around px-40 mt-20 items-center">
+    <div className="flex w-full h-[80vh] justify-around px-40 mt-32 items-center">
       <div className="basis-1/2">
         <img src="\comprehensive_website_audit_en.png" alt="" srcSet="" />
       </div>
@@ -338,7 +358,7 @@ function Home() {
         <div className="text-5xl font-bold ml-10 leading-20	">
           Comprehensive Website Audit
         </div>
-        <div className="text-xl py-6 ml-10 leading-relaxed		">
+        <div className="text-xl py-6 ml-10 leading-10 font-light		">
           Search Engines rely on many factors to rank a website. SEOptimer is a Website SEO Checker which reviews these and more to help identify problems that could be holding your site back from it’s potential.
 
           Additionally we provide a clear, actionable, prioritised list of recommendations to help improve.
@@ -348,7 +368,7 @@ function Home() {
         </div>
       </div>
     </div>
-    <div className="flex flex-col items-center justify-center mt-10 ">
+    <div className="flex flex-col items-center justify-center mt-32 ">
       <div className="text-4xl font-bold">
         Pick Your Perfect Plan
       </div>
@@ -448,40 +468,40 @@ function Home() {
         </div>
       </div>
     </div>
-    <div className="flex flex-col items-center justify-center mt-20  ">
+    <div className="flex flex-col items-center justify-center mt-32  ">
       <div className="text-4xl font-bold ">Our Latest Blogs</div>
       <div className="flex mt-10 mx-5">
         <div className="flex flex-col mx-5 w-80 h-80 rounded shadow-2xl shadow-[#c9d2fc]">
-          <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-40 bg-cover '/>
+          <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-40 bg-cover ' />
           <div className="text-xl m-2 line-clamp-2	">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores labore mollitia illum animi voluptas aliquam minima iure? Aut, dolore iste consectetur tempore harum molestiae, in, nesciunt deleniti facilis voluptas quisquam.</div>
           <div className="border-b mt-2">
-            
+
           </div>
-          
+
           <div className="flex justify-between p-2">
             <div className="text-sm">12/04/2024</div>
             <div className="text-sm">Author</div>
           </div>
         </div>
         <div className="flex flex-col mx-5 w-80 h-80 rounded shadow-2xl shadow-[#c9d2fc]">
-          <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-40 bg-cover '/>
+          <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-40 bg-cover ' />
           <div className="text-xl m-2 line-clamp-2	">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores labore mollitia illum animi voluptas aliquam minima iure? Aut, dolore iste consectetur tempore harum molestiae, in, nesciunt deleniti facilis voluptas quisquam.</div>
           <div className="border-b mt-2">
-            
+
           </div>
-          
+
           <div className="flex justify-between p-2">
             <div className="text-sm">12/04/2024</div>
             <div className="text-sm">Author</div>
           </div>
         </div>
         <div className="flex flex-col mx-5 w-80 h-80 rounded shadow-2xl shadow-[#c9d2fc]">
-          <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-40 bg-cover '/>
+          <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-40 bg-cover ' />
           <div className="text-xl m-2 line-clamp-2	">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores labore mollitia illum animi voluptas aliquam minima iure? Aut, dolore iste consectetur tempore harum molestiae, in, nesciunt deleniti facilis voluptas quisquam.</div>
           <div className="border-b mt-2">
-            
+
           </div>
-          
+
           <div className="flex justify-between p-2">
             <div className="text-sm">12/04/2024</div>
             <div className="text-sm">Author</div>
@@ -492,9 +512,31 @@ function Home() {
         View All
       </div>
     </div>
+    <div className="flex p-20 mt-20">
+      <div className="bg-[#E5F4F2] flex flex-col w-full p-20 rounded-xl text-[#2D2D2D]">
+        <div className="text-3xl font-semibold">
+          Why SEO Audit?
+        </div>
+        <div className="text-xl font-light leading-relaxed mt-8">
+          Getting your website to rank in Google is harder and more competitive than ever. There are many factors such as on page content, performance, social factors and backlink profile that search engines like Google use to determine which sites should rank highest.
+          <br />
+          <br />
+          SEOptimer is a free SEO Audit Tool that will perform a detailed SEO Analysis across 100 website data points, and provide clear and actionable recommendations for steps you can take to improve your online presence and ultimately rank better in Search Engine Results. SEOptimer is ideal for website owners, website designers and digital agencies who want to improve their own sites or theirs of their clients.
+          <br />
+          <br />
+          SEOptimer is better than other Website SEO Checkers through it`s super fast SEO analysis execution, JavaScript rendering and breadth of features.
+          <br />
+          <br />
+          Additionally SEOptimer provides a range of free SEO Tools such as Backlink Checker, Meta Tags and Robots.txt Generator which will help take you through the actual steps of improving your site.
+          <br />
+          <br />
+          Last but not least, the SEOptimer blog provides a bunch of relevant articles and tips and tricks for you to stay on top of the SEO improvement landscape.
+        </div>
 
+      </div>
+    </div>
     <div className="relative ml-2 flex flex-col items-center justify-center">
-      <div className="my-32 w-full flex flex-col items-center justify-center">
+      <div className="my-20 w-full flex flex-col items-center justify-center">
         <div className="text-5xl my-2 text-center font-extrabold ">
           Frequently Asked Questions
         </div>
@@ -515,7 +557,7 @@ function Home() {
         </div>
       </div>
     </div>
-    <div className="flex flex-col text-white items-center justify-center py-32  bg-[#2D2D2D]">
+    <div className="flex flex-col mt-10 text-white items-center justify-center py-32  bg-[#2D2D2D]">
       <p className="text-white dark:text-neutral-200 text-base sm:text-base  ">
         What Are You Waiting For?
       </p>
