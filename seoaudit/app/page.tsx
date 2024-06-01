@@ -163,7 +163,7 @@ function Home() {
 
     {
       text: "SEOAudit",
-      className: "text-blue-500 dark:text-blue-500",
+      className: "text-[#F8D57E]",
     },
     {
       text: "Today",
@@ -171,37 +171,30 @@ function Home() {
   ];
   return (<>
 
-    <div className='flex items-center lg:h-screen h-[90vh] overflow-hidden'>
+    <div className='flex items-center w-full lg:h-screen h-[90vh] overflow-hidden bg-[#F8F9FF]'>
 
-      <div className="p-0 basis-1/2 hidden lg:inline">
 
-        <img src="3 1.png" alt="" className='h-screen ' />
-      </div>
-      <div className="flex flex-col px-8">
-        <div className="my-2 text-black">
-          {/* Supercharged analysis & monitoring tools */}
-        </div>
-        <div className="lg:text-7xl text-4xl">
-          <div className="text-[#221A43] font-black">
-            SEO Audit
-            <br /> Checklist and
+      <div className="flex flex-col px-8 w-full items-center justify-center ">
+
+        <div className="lg:text-6xl text-4xl flex items-center justify-center flex-col w-full">
+          <div className="text-[#2D2D2D] font-black">
+            SEO Audit Checklist and
           </div>
-          <div className="text-[#1B68FF] font-black">
+          <div className="text-[#2D2D2D] font-black">
             Reporting Tool
           </div>
         </div>
-        <div className="my-2 mt-5 text-black">
-          Get a Website Audit and Report
-          <br />Boost your SEO Score and Driver more Organic Traffic to your Website.
+        <div className="my-2 mt-5 text-black text-xl">
+          Get a Website Audit and Report Boost your SEO Score and Driver more Organic Traffic to your Website.
         </div>
-        <div className="flex items-center justify-start flex-wrap mt-5">
+        <div className="flex items-center justify-center flex-wrap mt-5 w-full drop-shadow-lg	">
 
-          <div className="">
-            <input type="text" className='rounded-full bg-slate-200 p-2 px-4 lg:w-96 w-80' placeholder='Enter Your Domain Name' />
-          </div>
+
+          <input type="text" className='rounded bg-[#E5F4F2] p-2 px-4 py-4 lg:w-1/2 w-80' placeholder='Enter Your Domain Name' />
+
           <Link href="" className='lg:mx-4 mt-5 lg:mt-0'>
 
-            <div className="my-4 bg-[#1B68FF] rounded-full p-2 py-3 font-semibold text-white w-28 text-xs inline-flex items-center justify-center">ANALYZE</div>
+            <div className="my-4 bg-[#009379] hover:bg-[#2D2D2D] hover:text-[#fff] rounded p-2 py-5 font-semibold text-white w-28 text-xs inline-flex items-center justify-center">ANALYZE</div>
           </Link>
         </div>
 
@@ -237,136 +230,341 @@ function Home() {
         </div>
       </div>
     </div>
-
-    <div className="mt-0">
-      <ContainerScroll
-        titleComponent={
-          <>
-            <h1 className="text-4xl font-semibold text-[#221A43] dark:text-white">
-
-              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-                See Us in Action: Intro and Demo
-              </span>
-            </h1>
-          </>
-        }
-      >
-        <iframe width="" height="" className='w-full h-full' src="https://www.youtube.com/embed/MYE6T_gd7H0?si=QF2GbncK0oEKBn8o" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" ></iframe>
-      </ContainerScroll>
-    </div>
-    <div className="w-full mt-0 lg:mt-20">
-      <div className="lg:text-4xl text-3xl text-[#221A43] font-black text-center">
-        TOOLS AVAILABLE
+    <div className="w-full mt-0 lg:mt-0 flex flex-col justify-center ">
+      <div className="lg:text-3xl text-3xl text-black font-black text-center">
+        Tools Available
       </div>
-      <div className="mt-10 flex flex-col items-center justify-center overflow-hidden">
+      <div className="flex justify-center mt-20  flex-wrap  ">
+        <div className="w-80  h-96 rounded-2xl mx-5 border border-[#c9d2fc] shadow-2xl shadow-[#c9d2fc] flex flex-col items-center justify-center bg-neutral-50">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+          <div className="text-2xl p-5 text-[#2D2D2D] font-semibold">SEO Friendly
+          </div>
+          <div className="text-base text-center px-10">
+            No need to worry about screen size. Anima's Landing Page UI Kit adapts to any screen size, from desktop to mobile.
+          </div>
+          <div className="text-[#009379] flex font-semibold p-4 items-center justify-center">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mx-1">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+            </svg>
 
-        <InfiniteMovingCards items={items} />
-        <Link href="tools" className='mt-8'>
+          </div>
+        </div>
+        <div className="w-80 border mx-5 border-[#c9d2fc] bg-neutral-50 h-96 rounded-2xl shadow-2xl shadow-[#c9d2fc] flex flex-col items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+          <div className="text-2xl p-5 text-[#2D2D2D] font-semibold">SEO Friendly
+          </div>
+          <div className="text-base text-center px-10">
+            No need to worry about screen size. Anima's Landing Page UI Kit adapts to any screen size, from desktop to mobile.
+          </div>
+          <div className="text-[#009379] flex font-semibold p-4 items-center justify-center">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mx-1">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+            </svg>
 
-          <Button
-            borderRadius="1rem"
-            borderClassName="10px"
-            className="bg-[#1B68FF] text-white font-medium border-neutral-200 "
-          >
-            AND MANY MORE
-          </Button>
+          </div>
+        </div>
+        <div className="w-80 border mx-5 border-[#c9d2fc] bg-neutral-50 h-96 rounded-2xl shadow-2xl shadow-[#c9d2fc] flex flex-col items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+          <div className="text-2xl p-5 text-[#2D2D2D] font-semibold">SEO Friendly
+          </div>
+          <div className="text-base text-center px-10">
+            No need to worry about screen size. Anima's Landing Page UI Kit adapts to any screen size, from desktop to mobile.
+          </div>
+          <div className="text-[#009379] flex font-semibold p-4 items-center justify-center">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mx-1">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+            </svg>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div className="w-full mt-40">
+      <div className="text-3xl text-center font-black">Our Metrics Tell the Story</div>
+      <div className="text-base text-center m-4">Our metrics component gives you the inside scoop on your success and helps you stay on top of your game in style.</div>
+    </div>
+    <div className="flex justify-around px-20 mt-10">
+      <div className="w-60 h-28  border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
+        <div className="text-3xl font-bold">10k+</div>
+        <div className="text-base">Website Analysed</div>
+      </div>
+      <div className="w-60 h-28  border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
+        <div className="text-3xl font-bold">10k+</div>
+        <div className="text-base">Website Analysed</div>
+      </div>
+      <div className="w-60 h-28  border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
+        <div className="text-3xl font-bold">10k+</div>
+        <div className="text-base">Website Analysed</div>
+      </div>
+      <div className="w-60 h-28  border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
+        <div className="text-3xl font-bold">10k+</div>
+        <div className="text-base">Website Analysed</div>
+      </div>
+
+    </div>
+    <div className="flex w-full h-[80vh] justify-around px-40 mt-40 items-center">
+      <div className=" basis-1/2">
+        <div className="text-5xl font-bold pr-10 leading-20	">
+          Comprehensive Website Audit
+        </div>
+        <div className="text-xl py-6 pr-32 leading-relaxed		">
+          Search Engines rely on many factors to rank a website. SEOptimer is a Website SEO Checker which reviews these and more to help identify problems that could be holding your site back from it’s potential.
+
+          Additionally we provide a clear, actionable, prioritised list of recommendations to help improve.
+        </div>
+        <div className="text-white bg-[#009379] w-32 p-2 rounded text-center font-semibold">
+          Learn More
+        </div>
+      </div>
+      <div className="basis-1/2">
+        <img src="\comprehensive_website_audit_en.png" alt="" srcSet="" />
+      </div>
+    </div>
+    <div className="flex w-full h-[80vh] justify-around px-40 mt-20 items-center">
+      <div className="basis-1/2">
+        <img src="\comprehensive_website_audit_en.png" alt="" srcSet="" />
+      </div>
+      <div className=" basis-1/2 ml-10">
+        <div className="text-5xl font-bold ml-10 leading-20	">
+          Comprehensive Website Audit
+        </div>
+        <div className="text-xl py-6 ml-10 leading-relaxed		">
+          Search Engines rely on many factors to rank a website. SEOptimer is a Website SEO Checker which reviews these and more to help identify problems that could be holding your site back from it’s potential.
+
+          Additionally we provide a clear, actionable, prioritised list of recommendations to help improve.
+        </div>
+        <div className="text-white ml-10 bg-[#009379] w-32 p-2 rounded text-center font-semibold">
+          Learn More
+        </div>
+      </div>
+    </div>
+    <div className="flex flex-col items-center justify-center mt-10 ">
+      <div className="text-4xl font-bold">
+        Pick Your Perfect Plan
+      </div>
+      <div className="text-base mt-3">Find the perfect plan for your business with our flexible pricing options.</div>
+      <div className="flex mt-10">
+        <div className="mx-5 w-80 p-10 bg-neutral-50 shadow-2xl shadow-[#c9d2fc] rounded-md text-[#2D2D2D]" >
+          <div className="flex flex-col">
+            <div className="text-xl my-2">Free</div>
+            <div className="flex items-baseline my-2">
+              <div className="text-5xl font-bold">$0</div>
+              <div className="text-base">/ month</div>
+            </div>
+            <div className="text-base my-2">Best for Small Teams or Individuals.</div>
+            <ul className='list-disc	mx-5 my-2 font-medium'>
+              <li>Write feature details here</li>
+              <li>Write feature details here</li>
+              <li>Write feature details here</li>
+            </ul>
+            <div className="mt-5 w-full rounded-2xl bg-[#E5F4F2] text-center hover:bg-[#009379] hover:text-white duration-200 p-3 text-[#009379] font-semibold">
+              Get Started
+            </div>
+          </div>
+        </div>
+        <div className="mx-5 w-80 p-10 bg-neutral-50 shadow-2xl shadow-[#c9d2fc] rounded-md text-[#2D2D2D]" >
+          <div className="flex flex-col">
+            <div className="text-xl my-2">Professional</div>
+            <div className="flex items-baseline my-2">
+              <div className="text-5xl font-bold">$19</div>
+              <div className="text-base">/ month</div>
+            </div>
+            <div className="text-base my-2">Best for Small Teams or Individuals.</div>
+            <ul className='list-disc	mx-5 my-2 font-medium'>
+              <li>Write feature details here</li>
+              <li>Write feature details here</li>
+              <li>Write feature details here</li>
+            </ul>
+            <div className="mt-5 w-full rounded-2xl bg-[#E5F4F2] hover:bg-[#009379] hover:text-white duration-200  text-center p-3 text-[#009379] font-semibold">
+              Get Started
+            </div>
+          </div>
+        </div>
+        <div className="mx-5 w-80 p-10 bg-[#009379] shadow-2xl shadow-[#c9d2fc] rounded-md text-[#fff]" >
+          <div className="flex flex-col">
+            <div className="text-xl my-2">Enterprise</div>
+            <div className="flex items-baseline my-2">
+              <div className="text-5xl font-bold">$49</div>
+              <div className="text-base">/ month</div>
+            </div>
+            <div className="text-base my-2">Best for Small Teams or Individuals.</div>
+            <ul className='list-disc	mx-5 my-2 font-medium'>
+              <li>Write feature details here</li>
+              <li>Write feature details here</li>
+              <li>Write feature details here</li>
+            </ul>
+            <div className="mt-5 w-full rounded-2xl bg-[#fff] hover:bg-[#E5F4F2] duration-200 text-center p-3 text-[#009379] font-semibold">
+              Get Started
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="py-20 bg-[#F8D57E] flex flex-col items-center justify-center mt-20">
+      <div className="text-4xl text-center font-bold">Real Stories from Satisfied Customers</div>
+      <div className="text-base mt-2">See how our landing page ui kit is making an impact.</div>
+      <div className="flex mt-14 justify-center w-full ">
+        <div className="w-[570px]  bg-white rounded p-10 mx-5">
+          <div className="flex">
+            <div className="flex flex-col items-center justify-center">
+
+              <div className="rounded-full bg-slate-400 w-28 h-28"></div>
+              <div className="text-base font-semibold mt-3">David B.</div>
+              <div className="text-base">Developer</div>
+            </div>
+            <div className="flex flex-col p-2 pl-10">
+              <div className="stars "> 8 88 88 88 </div>
+              <div className="text-base">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt fugit dolorum maxime ipsa esse! Aliquam porro reiciendis eum corporis animi, itaque
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="w-[570px]  bg-white rounded p-10 mx-5">
+          <div className="flex">
+            <div className="flex flex-col items-center justify-center">
+
+              <div className="rounded-full bg-slate-400 w-28 h-28"></div>
+              <div className="text-base font-semibold mt-3">David B.</div>
+              <div className="text-base">Developer</div>
+            </div>
+            <div className="flex flex-col p-2 pl-10">
+              <div className="stars "> 8 88 88 88 </div>
+              <div className="text-base">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, odit? Repellat eos asperiores et amet tempore adipisci quam architecto in voluptatem,
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="flex flex-col items-center justify-center mt-20  ">
+      <div className="text-4xl font-bold ">Our Latest Blogs</div>
+      <div className="flex mt-10 mx-5">
+        <div className="flex flex-col mx-5 w-80 h-80 rounded shadow-2xl shadow-[#c9d2fc]">
+          <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-40 bg-cover '/>
+          <div className="text-xl m-2 line-clamp-2	">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores labore mollitia illum animi voluptas aliquam minima iure? Aut, dolore iste consectetur tempore harum molestiae, in, nesciunt deleniti facilis voluptas quisquam.</div>
+          <div className="border-b mt-2">
+            
+          </div>
+          
+          <div className="flex justify-between p-2">
+            <div className="text-sm">12/04/2024</div>
+            <div className="text-sm">Author</div>
+          </div>
+        </div>
+        <div className="flex flex-col mx-5 w-80 h-80 rounded shadow-2xl shadow-[#c9d2fc]">
+          <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-40 bg-cover '/>
+          <div className="text-xl m-2 line-clamp-2	">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores labore mollitia illum animi voluptas aliquam minima iure? Aut, dolore iste consectetur tempore harum molestiae, in, nesciunt deleniti facilis voluptas quisquam.</div>
+          <div className="border-b mt-2">
+            
+          </div>
+          
+          <div className="flex justify-between p-2">
+            <div className="text-sm">12/04/2024</div>
+            <div className="text-sm">Author</div>
+          </div>
+        </div>
+        <div className="flex flex-col mx-5 w-80 h-80 rounded shadow-2xl shadow-[#c9d2fc]">
+          <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-40 bg-cover '/>
+          <div className="text-xl m-2 line-clamp-2	">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores labore mollitia illum animi voluptas aliquam minima iure? Aut, dolore iste consectetur tempore harum molestiae, in, nesciunt deleniti facilis voluptas quisquam.</div>
+          <div className="border-b mt-2">
+            
+          </div>
+          
+          <div className="flex justify-between p-2">
+            <div className="text-sm">12/04/2024</div>
+            <div className="text-sm">Author</div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#2D2D2D] rounded p-3 text-white font-semibold mt-8 px-8">
+        View All
+      </div>
+    </div>
+
+    <div className="relative ml-2 flex flex-col items-center justify-center">
+      <div className="my-32 w-full flex flex-col items-center justify-center">
+        <div className="text-5xl my-2 text-center font-extrabold ">
+          Frequently Asked Questions
+        </div>
+        <div className="text-lg text-center font-semibold opacity-90">
+          Everything you have to know about the SEO Checker
+        </div>
+        <div className="w-3/5 mt-5">
+
+          {faq.map((item) => (
+            <>
+              <div className="mt-14">
+
+                <div className="text-lg font-semibold">{item.que}</div>
+                <div className="mt-2 text-slate-500">{item.desc}</div>
+              </div>
+            </>
+          ))}
+        </div>
+      </div>
+    </div>
+    <div className="flex flex-col text-white items-center justify-center py-32  bg-[#2D2D2D]">
+      <p className="text-white dark:text-neutral-200 text-base sm:text-base  ">
+        What Are You Waiting For?
+      </p>
+
+      <TypewriterEffectSmooth words={words} />
+      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
+        <Link href="run" className=''>
+          <button className="w-40 h-10 rounded-lg bg-[#009379] hover:bg-[#F8D57E] duration-300 border dark:border-white border-transparent text-white text-sm">
+            ANALYZE
+          </button>
         </Link>
       </div>
     </div>
-    <div className="lg:mt-40 mt-10 bg-gray-100">
 
-      <StickyScroll content={content} />
-    </div>
-    <div className="h-[40rem] w-full rounded-md flex md:items-center md:justify-center bg-white/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden ">
-      <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="white"
-      />
-      <div className=" p-4 max-w-7xl flex flex-col items-center justify-center  mx-auto relative z-10  w-full pt-20 md:pt-0">
-        <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-[#221a43b0] to-[#221A43] bg-opacity-50">
-          Why SEOptimer?
-        </h1>
-        <p className="mt-4  font-lg text-base text-neutral-500 max-w-4xl text-justify lg:text-center mx-5">
-          Getting your website to rank in Google is harder and more competitive than ever. There are many factors such as on page content, performance, social factors and backlink profile that search engines like Google use to determine which sites should rank highest.
-          <br />
-          <br />
-          SEOptimer is a free SEO Audit Tool that will perform a detailed SEO Analysis across 100 website data points, and provide clear and actionable recommendations for steps you can take to improve your online presence and ultimately rank better in Search Engine Results. SEOptimer is ideal for website owners, website designers and digital agencies who want to improve their own sites or theirs of their clients.
-        </p>
-      </div>
-    </div>
-    <div className="relative ml-2">
-
-
-      <TracingBeam className=" px-10">
-        <div className="relative ">
-          <div className="max-w-4xl mx-auto antialiased pt-4 relative">
-            {dummyContent.map((item, index) => (
-              <div key={`content-${index}`} className="mb-10">
-                <h2 className="bg-[#221A43] text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
-                  {item.badge}
-                </h2>
-
-                <p className={twMerge("text-xl mb-4")}>
-                  {item.title}
-                </p>
-
-                <div className="text-sm  prose prose-sm dark:prose-invert">
-                  {item?.image && (
-                    <Image
-                      src={item.image}
-                      alt="blog thumbnail"
-                      height="1000"
-                      width="1000"
-                      className="rounded-lg mb-10 object-cover"
-                    />
-                  )}
-                  {item.description}
-                </div>
-              </div>
-            ))}
-          </div>
+    <div className=" w-full flex flex-col p-32">
+      <div className="border rounded p-14">
+        <div className="text-2xl font-bold">
+          Let’s get in touch!
         </div>
-        <div className="mt-40">
-          <div className="max-w-5xl">
-            <div className="text-4xl font-extrabold text-[#221A43]">
-              What our awesome customers are saying
+        <div className="text-base mt-1">Got questions about the Landing Page UI Kit? Our team is here to help. Contact us for quick and friendly support.</div>
+        <div className="flex mt-10 justify-between items-stretch">
+
+          <div className="flex flex-col w-full items-stretch">
+            <div className="flex"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+            </svg>
+              +91 7894561587
             </div>
-            <HoverEffect items={projects} />
-          </div>
-        </div>
-        <div className="my-32 w-full flex flex-col items-center justify-center">
-          <div className="text-5xl my-2 text-center font-extrabold text-[#221A43]">
-            Frequently Asked Questions
-          </div>
-          <div className="text-lg text-center font-extrabold text-[#221A43] opacity-45">
-            Everything you have to know about the SEO Checker
-          </div>
-          <div className="w-">
+            <div className="flex mt-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+            </svg>
+              abcxyzemail@mail.com
+            </div>
+            <div className="text-xl font-semibold mt-11">Connect with us</div>
+            <div className="flex mt-1 bg-black">
 
-            {faq.map((item) => (
-              <>
-                <div className="mt-14">
+              <img src="\Instagram Circle.png" alt="" className='w-7' />
+              <img src="\Facebook Circled.png" alt="" className='w-7 mx-4' />
+              <img src="\Twitter Circled.png" alt="" className='w-7' />
+            </div>
 
-                  <div className="text-lg font-semibold">{item.que}</div>
-                  <div className="mt-2 text-slate-500">{item.desc}</div>
-                </div>
-              </>
-            ))}
           </div>
-        </div>
-      </TracingBeam>
-      <div className="flex flex-col items-center justify-center my-40  ">
-        <p className="text-neutral-600 dark:text-neutral-200 text-base sm:text-base  ">
-          What Are You Waiting For?
-        </p>
-
-        <TypewriterEffectSmooth words={words} />
-        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
-          <Link href="run" className=''>
-            <button className="w-40 h-10 rounded-full bg-black border dark:border-white border-transparent text-white text-sm">
-              ANALYZE
-            </button>
-          </Link>
+          <div className="flex flex-col w-full pr-40">
+            <input type="text" className='w-full p-2 m-2 px-4 border-2 rounded-xl' placeholder='Full Name' />
+            <input type="text" className='w-full p-2 m-2 px-4 border-2 rounded-xl' placeholder='Email' />
+            <div className="text-white m-2 bg-[#009379] w-32 p-2 rounded-xl text-center font-semibold">
+              Submit
+            </div>
+          </div>
         </div>
       </div>
     </div>
