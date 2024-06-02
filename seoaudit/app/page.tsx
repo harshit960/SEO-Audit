@@ -177,17 +177,16 @@ function Home() {
       <div className="flex flex-col px-8 w-full items-center justify-center ">
 
         <div className="lg:text-6xl text-4xl flex items-center justify-center flex-col w-full">
-          <div className="text-[#2D2D2D] font-black">
+          <div className="text-[#2D2D2D] font-black lg:text-center">
             SEO Audit <span className='text-[#F8D57E]'> Checklist </span> and
-          </div>
-          <div className="text-[#2D2D2D] font-black">
+          <br />
             Reporting Tool
           </div>
         </div>
-        <div className="my-2 mt-5 text-black text-xl">
+        <div className="my-2 mt-5 text-black text-base lg:text-xl">
           Get a Website Audit and Report Boost your SEO Score and Driver more Organic Traffic to your Website.
         </div>
-        <div className="flex items-center justify-center flex-wrap mt-5 w-full drop-shadow-lg	">
+        <div className="flex items-center lg:justify-center flex-wrap mt-5 w-full drop-shadow-lg	">
 
 
           <input type="text" className='rounded bg-[#E5F4F2] p-2 px-4 py-4 lg:w-1/2 w-80' placeholder='Enter Your Domain Name' />
@@ -200,8 +199,8 @@ function Home() {
 
       </div>
     </div>
-    <div className="h-80">
-      <div className="bg-gray-100 py-12 pb-15">
+    <div className="mb-10">
+      <div className="bg-gray-100 py-12 mb-15">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-gray-900 text-center">
             Trusted by Leading Brands
@@ -230,12 +229,12 @@ function Home() {
         </div>
       </div>
     </div>
-    <div className="w-full mt-0 lg:mt-0 flex flex-col justify-center ">
+    <div className="w-full mt-0 lg:mt-0 flex flex-col justify-center items-center ">
       <div className="lg:text-3xl text-3xl text-black font-black text-center">
         Tools Available
       </div>
       <div className="flex justify-center mt-20  flex-wrap  ">
-        <div className="w-80  h-96 rounded-2xl mx-5 border border-[#c9d2fc] shadow-2xl shadow-[#c9d2fc] flex flex-col items-center justify-center bg-neutral-50">
+        <div className="w-80 h-96 rounded-2xl m-5 border border-[#c9d2fc] shadow-2xl shadow-[#c9d2fc] flex flex-col items-center justify-center bg-neutral-50">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
             <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
           </svg>
@@ -252,7 +251,7 @@ function Home() {
 
           </div>
         </div>
-        <div className="w-80 border mx-5 border-[#c9d2fc] bg-neutral-50 h-96 rounded-2xl shadow-2xl shadow-[#c9d2fc] flex flex-col items-center justify-center">
+        <div className="w-80 border m-5 border-[#c9d2fc] bg-neutral-50 h-96 rounded-2xl shadow-2xl shadow-[#c9d2fc] flex flex-col items-center justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
             <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
           </svg>
@@ -269,7 +268,7 @@ function Home() {
 
           </div>
         </div>
-        <div className="w-80 border mx-5 border-[#c9d2fc] bg-neutral-50 h-96 rounded-2xl shadow-2xl shadow-[#c9d2fc] flex flex-col items-center justify-center">
+        <div className="w-80 border m-5 border-[#c9d2fc] bg-neutral-50 h-96 rounded-2xl shadow-2xl shadow-[#c9d2fc] flex flex-col items-center justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
             <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
           </svg>
@@ -287,36 +286,39 @@ function Home() {
           </div>
         </div>
 
+      </div>
+      <div className="bg-[#2D2D2D] w-32 rounded p-3 hover:bg-[#009379] duration-200 text-white text-center font-semibold mt-8 px-8">
+        View All
       </div>
     </div>
     <div className="">
 
       <div className="w-full mt-40">
-        <div className="text-3xl text-center font-black">Our Metrics Tell the Story</div>
+        <div className="text-3xl text-center font-black p-5">Our Metrics Tell the Story</div>
         <div className="text-base text-center m-4">Our metrics component gives you the inside scoop on your success and helps you stay on top of your game in style.</div>
       </div>
-      <div className="flex justify-around px-20 mt-10">
-        <div className="w-60 h-28  border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
+      <div className="flex justify-center flex-wrap mt-10">
+        <div className="w-60 h-28 m-5 border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
           <div className="text-3xl font-bold">10k+</div>
           <div className="text-base">Website Analysed</div>
         </div>
-        <div className="w-60 h-28  border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
+        <div className="w-60 h-28 m-5 border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
           <div className="text-3xl font-bold">10k+</div>
           <div className="text-base">Website Analysed</div>
         </div>
-        <div className="w-60 h-28  border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
+        <div className="w-60 h-28 m-5  border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
           <div className="text-3xl font-bold">10k+</div>
           <div className="text-base">Website Analysed</div>
         </div>
-        <div className="w-60 h-28  border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
+        <div className="w-60 h-28 m-5 border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
           <div className="text-3xl font-bold">10k+</div>
           <div className="text-base">Website Analysed</div>
         </div>
       </div>
 
     </div>
-    <div className="w-full flex bg-gray-100 mt-32 p-20">
-      <div className="flex flex-col w-1/2">
+    <div className="w-full flex bg-gray-100 mt-32 lg:p-20 p-5 py-12 flex-wrap">
+      <div className="flex flex-col lg:w-1/2 ">
         <div className="text-4xl font-bold">Embeddable Audit Tool</div>
         <div className="font-light text-xl leading-10 mt-10 pr-10">
           Generate more leads straight from your website with your own Embedded SEO Audit Tool. Simply embed a simple Audit Form that matches your website’s styling and colors.
@@ -332,9 +334,9 @@ function Home() {
         <iframe className='w-full h-full' src="https://www.youtube.com/embed/MYE6T_gd7H0?si=wNTqbGkgooX4ilQp" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" ></iframe>
       </div>
     </div>
-    <div className="flex w-full h-[80vh] justify-around px-40 mt-32 items-center">
-      <div className=" basis-1/2">
-        <div className="text-5xl font-bold pr-10 leading-20	">
+    <div className="flex w-full lg:h-[80vh] flex-wrap justify-around lg:px-40 mt-32 items-center">
+      <div className=" lg:basis-1/2">
+        <div className="lg:text-5xl text-3xl font-bold pr-10 leading-20	">
           Comprehensive Website Audit
         </div>
         <div className="text-xl py-6 pr-32 leading-10 font-light		">
@@ -346,19 +348,19 @@ function Home() {
           Learn More
         </div>
       </div>
-      <div className="basis-1/2">
+      <div className="lg:basis-1/2">
         <img src="\comprehensive_website_audit_en.png" alt="" srcSet="" />
       </div>
     </div>
-    <div className="flex w-full h-[80vh] justify-around px-40 mt-32 items-center">
-      <div className="basis-1/2">
-        <img src="\comprehensive_website_audit_en.png" alt="" srcSet="" />
+    <div className="flex w-full lg:h-[80vh] justify-around lg:px- mt-32 items-center">
+      <div className="">
+        <img src="\comprehensive_website_audit_en.png" alt="" srcSet="" className=''/>
       </div>
-      <div className=" basis-1/2 ml-10">
-        <div className="text-5xl font-bold ml-10 leading-20	">
+      <div className="">
+        <div className="lg:text-5xl text-3xl font-bold  leading-20	">
           Comprehensive Website Audit
         </div>
-        <div className="text-xl py-6 ml-10 leading-10 font-light		">
+        <div className="text-xl py-6  leading-10 font-light		">
           Search Engines rely on many factors to rank a website. SEOptimer is a Website SEO Checker which reviews these and more to help identify problems that could be holding your site back from it’s potential.
 
           Additionally we provide a clear, actionable, prioritised list of recommendations to help improve.
@@ -373,8 +375,8 @@ function Home() {
         Pick Your Perfect Plan
       </div>
       <div className="text-base mt-3">Find the perfect plan for your business with our flexible pricing options.</div>
-      <div className="flex mt-10">
-        <div className="mx-5 w-80 p-10 bg-neutral-50 shadow-2xl shadow-[#c9d2fc] rounded-md text-[#2D2D2D]" >
+      <div className="flex mt-10 flex-wrap">
+        <div className="m-5 w-80 p-10 bg-neutral-50 shadow-2xl shadow-[#c9d2fc] rounded-md text-[#2D2D2D]" >
           <div className="flex flex-col">
             <div className="text-xl my-2">Free</div>
             <div className="flex items-baseline my-2">
@@ -392,7 +394,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="mx-5 w-80 p-10 bg-neutral-50 shadow-2xl shadow-[#c9d2fc] rounded-md text-[#2D2D2D]" >
+        <div className="m-5 w-80 p-10 bg-neutral-50 shadow-2xl shadow-[#c9d2fc] rounded-md text-[#2D2D2D]" >
           <div className="flex flex-col">
             <div className="text-xl my-2">Professional</div>
             <div className="flex items-baseline my-2">
@@ -410,7 +412,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="mx-5 w-80 p-10 bg-[#009379] shadow-2xl shadow-[#c9d2fc] rounded-md text-[#fff]" >
+        <div className="m-5 w-80 p-10 bg-[#009379] shadow-2xl shadow-[#c9d2fc] rounded-md text-[#fff]" >
           <div className="flex flex-col">
             <div className="text-xl my-2">Enterprise</div>
             <div className="flex items-baseline my-2">
@@ -433,9 +435,9 @@ function Home() {
     <div className="py-20 bg-[#F8D57E] flex flex-col items-center justify-center mt-20">
       <div className="text-4xl text-center font-bold">Real Stories from Satisfied Customers</div>
       <div className="text-base mt-2">See how our landing page ui kit is making an impact.</div>
-      <div className="flex mt-14 justify-center w-full ">
-        <div className="w-[570px]  bg-white rounded p-10 mx-5">
-          <div className="flex">
+      <div className="flex mt-14 justify-center w-full flex-wrap">
+        <div className="w-[570px]  bg-white rounded p-10 m-5">
+          <div className="flex flex-wrap lg:flex-nowrap justify-center">
             <div className="flex flex-col items-center justify-center">
 
               <div className="rounded-full bg-slate-400 w-28 h-28"></div>
@@ -450,8 +452,8 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="w-[570px]  bg-white rounded p-10 mx-5">
-          <div className="flex">
+        <div className="w-[570px]  bg-white rounded p-10 m-5">
+          <div className="flex flex-wrap lg:flex-nowrap justify-center">
             <div className="flex flex-col items-center justify-center">
 
               <div className="rounded-full bg-slate-400 w-28 h-28"></div>
@@ -470,8 +472,8 @@ function Home() {
     </div>
     <div className="flex flex-col items-center justify-center mt-32  ">
       <div className="text-4xl font-bold ">Our Latest Blogs</div>
-      <div className="flex mt-10 mx-5">
-        <div className="flex flex-col mx-5 w-80 h-80 rounded shadow-2xl shadow-[#c9d2fc]">
+      <div className="flex mt-10 mx-5 flex-wrap">
+        <div className="flex flex-col m-5 w-80 h-80 rounded shadow-2xl shadow-[#c9d2fc]">
           <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-40 bg-cover ' />
           <div className="text-xl m-2 line-clamp-2	">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores labore mollitia illum animi voluptas aliquam minima iure? Aut, dolore iste consectetur tempore harum molestiae, in, nesciunt deleniti facilis voluptas quisquam.</div>
           <div className="border-b mt-2">
@@ -483,7 +485,7 @@ function Home() {
             <div className="text-sm">Author</div>
           </div>
         </div>
-        <div className="flex flex-col mx-5 w-80 h-80 rounded shadow-2xl shadow-[#c9d2fc]">
+        <div className="flex flex-col m-5 w-80 h-80 rounded shadow-2xl shadow-[#c9d2fc]">
           <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-40 bg-cover ' />
           <div className="text-xl m-2 line-clamp-2	">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores labore mollitia illum animi voluptas aliquam minima iure? Aut, dolore iste consectetur tempore harum molestiae, in, nesciunt deleniti facilis voluptas quisquam.</div>
           <div className="border-b mt-2">
@@ -495,7 +497,7 @@ function Home() {
             <div className="text-sm">Author</div>
           </div>
         </div>
-        <div className="flex flex-col mx-5 w-80 h-80 rounded shadow-2xl shadow-[#c9d2fc]">
+        <div className="flex flex-col m-5 w-80 h-80 rounded shadow-2xl shadow-[#c9d2fc]">
           <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-40 bg-cover ' />
           <div className="text-xl m-2 line-clamp-2	">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores labore mollitia illum animi voluptas aliquam minima iure? Aut, dolore iste consectetur tempore harum molestiae, in, nesciunt deleniti facilis voluptas quisquam.</div>
           <div className="border-b mt-2">
@@ -508,12 +510,12 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-[#2D2D2D] rounded p-3 text-white font-semibold mt-8 px-8">
+      <div className="bg-[#2D2D2D] rounded p-3 hover:bg-[#009379] duration-200 text-white font-semibold mt-8 px-8">
         View All
       </div>
     </div>
-    <div className="flex p-20 mt-20">
-      <div className="bg-[#E5F4F2] flex flex-col w-full p-20 rounded-xl text-[#2D2D2D]">
+    <div className="flex lg:p-20 p-5 mt-20">
+      <div className="bg-[#E5F4F2] flex flex-col w-full lg:p-20 p-5 py-10 rounded-xl text-[#2D2D2D]">
         <div className="text-3xl font-semibold">
           Why SEO Audit?
         </div>
@@ -537,13 +539,13 @@ function Home() {
     </div>
     <div className="relative ml-2 flex flex-col items-center justify-center">
       <div className="my-20 w-full flex flex-col items-center justify-center">
-        <div className="text-5xl my-2 text-center font-extrabold ">
+        <div className="lg:text-5xl text-4xl my-2 text-center font-extrabold ">
           Frequently Asked Questions
         </div>
-        <div className="text-lg text-center font-semibold opacity-90">
+        <div className="lg:text-lg text-center font-semibold opacity-90">
           Everything you have to know about the SEO Checker
         </div>
-        <div className="w-3/5 mt-5">
+        <div className="lg:w-3/5 mt-5 w-4/5">
 
           {faq.map((item) => (
             <>
@@ -572,15 +574,15 @@ function Home() {
       </div>
     </div>
 
-    <div className=" w-full flex flex-col p-32">
+    <div className=" w-full flex flex-col lg:p-32">
       <div className="border rounded p-14">
         <div className="text-2xl font-bold">
           Let’s get in touch!
         </div>
-        <div className="text-base mt-1">Got questions about the Landing Page UI Kit? Our team is here to help. Contact us for quick and friendly support.</div>
-        <div className="flex mt-10 justify-between items-stretch">
+        <div className="text-base mt-1">Got questions? Our team is here to help. Contact us for quick and friendly support.</div>
+        <div className="flex lg:mt-10 mt-5 justify-between items-stretch flex-wrap-reverse lg:flex-nowrap">
 
-          <div className="flex flex-col w-full items-stretch">
+          <div className="flex flex-col w-full items-stretch mt-5">
             <div className="flex"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
             </svg>
@@ -592,18 +594,26 @@ function Home() {
               abcxyzemail@mail.com
             </div>
             <div className="text-xl font-semibold mt-11">Connect with us</div>
-            <div className="flex mt-1 bg-black">
+            <div className="flex mt-1 justify-between w-28">
 
-              <img src="\Instagram Circle.png" alt="" className='w-7' />
-              <img src="\Facebook Circled.png" alt="" className='w-7 mx-4' />
-              <img src="\Twitter Circled.png" alt="" className='w-7' />
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+              </svg>
+
+
             </div>
 
           </div>
-          <div className="flex flex-col w-full pr-40">
-            <input type="text" className='w-full p-2 m-2 px-4 border-2 rounded-xl' placeholder='Full Name' />
-            <input type="text" className='w-full p-2 m-2 px-4 border-2 rounded-xl' placeholder='Email' />
-            <div className="text-white m-2 bg-[#009379] w-32 p-2 rounded-xl text-center font-semibold">
+          <div className="flex flex-col w-full lg:pr-40">
+            <input type="text" className='w-full p-2 lg:m-2 px-4 border-2 rounded-xl' placeholder='Full Name' />
+            <input type="text" className='w-full p-2 lg:m-2 px-4 my-2 border-2 rounded-xl' placeholder='Email' />
+            <div className="text-white my-2 lg:m-2 bg-[#009379] w-32 p-2 rounded-xl text-center font-semibold">
               Submit
             </div>
           </div>
