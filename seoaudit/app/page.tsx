@@ -171,7 +171,7 @@ function Home() {
   ];
   return (<>
 
-    <div className='flex items-center w-full lg:h-screen h-[90vh] overflow-hidden bg-[#F8F9FF]'>
+    <div className='flex  w-full items-end pb-28 lg:pb-0 lg:items-center lg:h-screen h-[90vh] overflow-hidden bg-[#F8F9FF]'>
 
 
       <div className="flex flex-col px-8 w-full items-center justify-center ">
@@ -193,7 +193,7 @@ function Home() {
 
           <Link href="" className='lg:mx-4 mt-5 lg:mt-0'>
 
-            <div className="my-4 bg-[#009379] hover:bg-[#2D2D2D] hover:text-[#fff] rounded p-2 py-5 font-semibold text-white w-28 text-xs inline-flex items-center justify-center">ANALYZE</div>
+            <div className="my-4 bg-[#009379] hover:bg-[#2D2D2D] duration-200 hover:text-[#fff] rounded p-2 py-5 font-semibold text-white w-28 text-xs inline-flex items-center justify-center">ANALYZE</div>
           </Link>
         </div>
 
@@ -229,12 +229,12 @@ function Home() {
         </div>
       </div>
     </div>
-    <div className="w-full mt-0 lg:mt-0 flex flex-col justify-center items-center ">
+    <div className="w-full mt-20 lg:mt-0 flex flex-col justify-center items-center ">
       <div className="lg:text-3xl text-3xl text-black font-black text-center">
         Tools Available
       </div>
       <div className="flex justify-center mt-20  flex-wrap  ">
-        <div className="w-80 h-96 rounded-2xl m-5 border border-[#c9d2fc] shadow-2xl shadow-[#c9d2fc] flex flex-col items-center justify-center bg-neutral-50">
+        <div className="w-80 h-96 rounded-2xl m-5 border border-[#c9d2fc] shadow-2xl hover:shadow-xl hover:shadow-[#c9d2fc] duration-150 shadow-[#c9d2fc] flex flex-col items-center justify-center bg-neutral-50">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
             <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
           </svg>
@@ -251,7 +251,7 @@ function Home() {
 
           </div>
         </div>
-        <div className="w-80 border m-5 border-[#c9d2fc] bg-neutral-50 h-96 rounded-2xl shadow-2xl shadow-[#c9d2fc] flex flex-col items-center justify-center">
+        <div className="w-80 border m-5 border-[#c9d2fc] bg-neutral-50 h-96 rounded-2xl shadow-2xl hover:shadow-xl hover:shadow-[#c9d2fc] duration-150 shadow-[#c9d2fc] flex flex-col items-center justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
             <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
           </svg>
@@ -268,7 +268,7 @@ function Home() {
 
           </div>
         </div>
-        <div className="w-80 border m-5 border-[#c9d2fc] bg-neutral-50 h-96 rounded-2xl shadow-2xl shadow-[#c9d2fc] flex flex-col items-center justify-center">
+        <div className="w-80 border m-5 border-[#c9d2fc] bg-neutral-50 h-96 rounded-2xl shadow-2xl hover:shadow-xl hover:shadow-[#c9d2fc] duration-150 shadow-[#c9d2fc] flex flex-col items-center justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
             <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
           </svg>
@@ -287,7 +287,7 @@ function Home() {
         </div>
 
       </div>
-      <div className="bg-[#2D2D2D] w-32 rounded p-3 hover:bg-[#009379] duration-200 text-white text-center font-semibold mt-8 px-8">
+      <div className="bg-[#2D2D2D] w-32 rounded p-3 hover:bg-[#009379] hover:shadow-2xl hover:shadow-[#c9d2fc] duration-200 text-white text-center font-semibold mt-8 px-8">
         View All
       </div>
     </div>
@@ -330,33 +330,33 @@ function Home() {
           Send your leads and their reports straight to any other CRM, Mail Tool like MailChimp, Active Campaign and Salesforce.
         </div>
       </div>
-      <div className="grow">
+      <div className="grow mt-10 lg:mt-0">
         <iframe className='w-full h-full' src="https://www.youtube.com/embed/MYE6T_gd7H0?si=wNTqbGkgooX4ilQp" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" ></iframe>
       </div>
     </div>
-    <div className="flex w-full lg:h-[80vh] flex-wrap justify-around lg:px-40 mt-32 items-center">
-      <div className=" lg:basis-1/2">
-        <div className="lg:text-5xl text-3xl font-bold pr-10 leading-20	">
+    <div className="flex w-full lg:h-[80vh] flex-wrap justify-center   mt-10 items-center">
+      <div className="lg:w-1/3 p-10 lg:p-5">
+        <div className="lg:text-5xl text-3xl font-bold leading-20	">
           Comprehensive Website Audit
         </div>
-        <div className="text-xl py-6 pr-32 leading-10 font-light		">
+        <div className="text-xl py-6 leading-10 font-light		">
           Search Engines rely on many factors to rank a website. SEOptimer is a Website SEO Checker which reviews these and more to help identify problems that could be holding your site back from it’s potential.
 
           Additionally we provide a clear, actionable, prioritised list of recommendations to help improve.
         </div>
-        <div className="text-white bg-[#009379] w-32 p-2 rounded text-center font-semibold">
+        <div className="text-white hover:bg-[#2D2D2D] duration-200 bg-[#009379] w-32 p-2 rounded text-center font-semibold">
           Learn More
         </div>
       </div>
-      <div className="lg:basis-1/2">
+      <div className="lg:w-1/3">
         <img src="\comprehensive_website_audit_en.png" alt="" srcSet="" />
       </div>
     </div>
-    <div className="flex w-full lg:h-[80vh] justify-around lg:px- mt-32 items-center">
-      <div className="">
+    <div className="flex w-full lg:h-[80vh] justify-center mt-10 flex-wrap lg:flex-nowrap items-center">
+      <div className="lg:w-1/3">
         <img src="\comprehensive_website_audit_en.png" alt="" srcSet="" className=''/>
       </div>
-      <div className="">
+      <div className="lg:w-1/3 lg:mx-10  p-10 lg:p-5">
         <div className="lg:text-5xl text-3xl font-bold  leading-20	">
           Comprehensive Website Audit
         </div>
@@ -365,17 +365,17 @@ function Home() {
 
           Additionally we provide a clear, actionable, prioritised list of recommendations to help improve.
         </div>
-        <div className="text-white ml-10 bg-[#009379] w-32 p-2 rounded text-center font-semibold">
+        <div className="text-white hover:bg-[#2D2D2D] duration-200 bg-[#009379] w-32 p-2 rounded text-center font-semibold">
           Learn More
         </div>
       </div>
     </div>
-    <div className="flex flex-col items-center justify-center mt-32 ">
-      <div className="text-4xl font-bold">
+    <div className=" flex flex-col items-center justify-center mt-20 ">
+      <div className="text-4xl font-bold text-center">
         Pick Your Perfect Plan
       </div>
-      <div className="text-base mt-3">Find the perfect plan for your business with our flexible pricing options.</div>
-      <div className="flex mt-10 flex-wrap">
+      <div className="text-base mt-3 text-center">Find the perfect plan for your business with our flexible pricing options.</div>
+      <div className="flex mt-10 flex-wrap justify-center items-center">
         <div className="m-5 w-80 p-10 bg-neutral-50 shadow-2xl shadow-[#c9d2fc] rounded-md text-[#2D2D2D]" >
           <div className="flex flex-col">
             <div className="text-xl my-2">Free</div>
@@ -434,7 +434,7 @@ function Home() {
     </div>
     <div className="py-20 bg-[#F8D57E] flex flex-col items-center justify-center mt-20">
       <div className="text-4xl text-center font-bold">Real Stories from Satisfied Customers</div>
-      <div className="text-base mt-2">See how our landing page ui kit is making an impact.</div>
+      <div className="text-base mt-2 text-center">See how our landing page ui kit is making an impact.</div>
       <div className="flex mt-14 justify-center w-full flex-wrap">
         <div className="w-[570px]  bg-white rounded p-10 m-5">
           <div className="flex flex-wrap lg:flex-nowrap justify-center">
@@ -444,10 +444,10 @@ function Home() {
               <div className="text-base font-semibold mt-3">David B.</div>
               <div className="text-base">Developer</div>
             </div>
-            <div className="flex flex-col p-2 pl-10">
+            <div className="flex flex-col p-2 lg:pl-10 text-center lg:text-left">
               <div className="stars "> 8 88 88 88 </div>
               <div className="text-base">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt fugit dolorum maxime ipsa esse! Aliquam porro reiciendis eum corporis animi, itaque
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt fugit dolorum maxime ipsa esse! Aliquam porro reiciendis eum corporis animi, itaque"
               </div>
             </div>
           </div>
@@ -460,10 +460,10 @@ function Home() {
               <div className="text-base font-semibold mt-3">David B.</div>
               <div className="text-base">Developer</div>
             </div>
-            <div className="flex flex-col p-2 pl-10">
+            <div className="flex flex-col p-2 lg:pl-10 text-center lg:text-left">
               <div className="stars "> 8 88 88 88 </div>
               <div className="text-base">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, odit? Repellat eos asperiores et amet tempore adipisci quam architecto in voluptatem,
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, odit? Repellat eos asperiores et amet tempore adipisci quam architecto in voluptatem,""
               </div>
             </div>
           </div>
@@ -610,10 +610,10 @@ function Home() {
             </div>
 
           </div>
-          <div className="flex flex-col w-full lg:pr-40">
+          <div className="flex flex-col w-full my-5 lg:pr-40">
             <input type="text" className='w-full p-2 lg:m-2 px-4 border-2 rounded-xl' placeholder='Full Name' />
             <input type="text" className='w-full p-2 lg:m-2 px-4 my-2 border-2 rounded-xl' placeholder='Email' />
-            <div className="text-white my-2 lg:m-2 bg-[#009379] w-32 p-2 rounded-xl text-center font-semibold">
+            <div className="text-white my-2 lg:m-2 hover:bg-[#2D2D2D] duration-200 bg-[#009379] w-32 p-2 rounded-xl text-center font-semibold">
               Submit
             </div>
           </div>
