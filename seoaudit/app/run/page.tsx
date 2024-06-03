@@ -1,10 +1,12 @@
 'use client'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
+import { SeoCheck } from "seord";
 
 function page() {
     const [url, seturl] = useState("");
+  
 
     return (
         <div className='h-screen w-full flex items-center justify-center flex-col'>

@@ -1,45 +1,80 @@
-import {SeoCheck} from "seord";
-const htmlContent = `<h1>Does Progressive Raise Your Rates After 6 Months?</h1><p>When it comes to car insurance, 
-finding the right provider...
-`
-const contentJson = {
-    title: 'Does Progressive raise your rates after 6 months?',
-    htmlText: htmlContent,
-    keyword: 'progressive',
-    subKeywords: ['car insurance', 'rates', 'premiums', 'save money', 'US'],
-    metaDescription: 'Find out if Progressive raises your rates after 6 months and what factors can impact your insurance premiums. Learn how to save money on car insurance in the US.',
-    languageCode: 'en',
-    countryCode: 'us'
-};
+const express = require('express');
+const axios = require('axios');
+const puppeteer = require('puppeteer');
+const app = express();
+const port = 10000;
+const cors = require('cors')
+// Replace with your actual Google PSI API key
+const API_KEY = 'AIzaSyACLmKUkHHdaqeaIznrqBibQ2XQGw1HEks';
 
-// Initialize SeoCheck with html content, main keyword and sub keywords
-const seoCheck = new SeoCheck(contentJson, 'liveinabroad.com');
+// Middleware to parse JSON bodies
+app.use(express.json());
+app.use(cors())
+app.get('/psi', async (req, res) => {
+    console.log("psi");
+    const { url } = req.query;
 
-// Perform analysis
-const result = seoCheck.analyzeSeo();
-// Print the result
-console.log(`Warnings: ${result.messages.warnings.length}`);
-result.messages.warnings.forEach((warning) => {
-    console.log(`  - ${warning}`);
+    if (!url) {
+        return res.status(400).json({ error: 'URL parameter is required' });
+    }
+
+    try {
+        const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(url)}&key=${API_KEY}&strategy=MOBILE&category=ACCESSIBILITY&category=BEST_PRACTICES&category=PERFORMANCE&category=SEO&category=PWA`;
+        const response = await axios.get(apiUrl);
+        console.log("ghj");
+        res.json(response.data);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'An error occurred while fetching the PageSpeed Insights data' });
+    }
+});
+// Puppeteer Endpoint
+app.get('/scrape', async (req, res) => {
+    const { url } = req.query;
+    console.log("scrape");
+    if (!url) {
+        return res.status(400).json({ error: 'URL parameter is required' });
+    }
+
+    try {
+        const browser = await puppeteer.launch();
+        const page = await browser.newPage();
+        await page.goto(url);
+
+        const data = await page.evaluate(() => {
+            const title = document.querySelector('title')?.innerText;
+            const htmlText = document.documentElement.innerHTML;
+            const keywordsMeta = document.querySelector('meta[name="keywords"]');
+            const keywords = keywordsMeta ? keywordsMeta.getAttribute('content') : null;
+            const metaDescription = document.querySelector('meta[name="description"]')?.getAttribute('content');
+            const languageCode = document.documentElement.lang;
+            const countryCode = document.querySelector('meta[name="geo.country"]')?.getAttribute('content');
+
+            return {
+                title,
+                keywords,
+                subKeywords: keywords ? keywords.split(',').map(kw => kw.trim()) : [],
+                metaDescription,
+                languageCode,
+                countryCode,
+                htmlText,
+            };
+        });
+
+        await browser.close();
+        console.log("2hh");
+        res.json(data);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'An error occurred while scraping the page' });
+    }
 });
 
-console.log(`\nGood Points: ${result.messages.goodPoints.length}`);
-result.messages.goodPoints.forEach((error) => {
-    console.log(`  - ${error}`);
+
+
+
+
+
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
 });
-
-
-console.log(`\nMinor Warnings: ${result.messages.minorWarnings.length}`);
-result.messages.minorWarnings.forEach((error) => {
-    console.log(`  - ${error}`);
-});
-
-console.log("\nSEO Score: " + result.seoScore);
-console.log(`Keyword SEO Score: ${result.keywordSeoScore}`);
-console.log(`Keyword Density: ${result.keywordDensity}`);
-console.log(`Sub Keyword Density: ${result.subKeywordDensity.map((subKeywordDensity) => {
-    return `(${subKeywordDensity.keyword} ${subKeywordDensity.density})`;
-})}`);
-console.log(`Keyword Frequency: ${result.keywordFrequency}`);
-console.log(`Word Count: ${result.wordCount}`);
-console.log(`Total Links: ${result.totalLinks}`);
