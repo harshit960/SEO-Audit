@@ -5,6 +5,8 @@ import { redirect } from 'next/navigation'
 import { SeoCheck } from "seord";
 import type { KeywordDensity, LinksGroup } from "seord";
 import { extractMetaTitle } from "./test/extractMetaTitle";
+
+
 function page() {
     return (
         <Suspense fallback={<div>Loading...</div>}>
@@ -944,7 +946,7 @@ async function YourComponent() {
                                     },
                                     "path": "1,HTML,1,BODY,0,DIV,0,DIV,7,DIV,1,DIV,1,SECTION,4,DIV,1,DIV,0,DIV,1,DIV,1,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,TABLE,1,TBODY,0,TR,5,TD,0,DIV,2,DIV,0,DIV,1,FORM,1,DIV,0,DIV,0,BUTTON",
                                     "nodeLabel": "Save",
-                                    "snippet": "<button type=\"submit\" class=\"btn-brand-2 opacity-50\" disabled=\"\">",
+                                    "snippet": "<button type=\"submit\" className=\"btn-brand-2 opacity-50\" disabled=\"\">",
                                     "type": "node"
                                 },
                                 "value": {
@@ -966,7 +968,7 @@ async function YourComponent() {
                                     "type": "node",
                                     "lhId": "1-1-DIV",
                                     "path": "1,HTML,1,BODY,0,DIV,0,DIV,7,DIV,1,DIV,1,SECTION,4,DIV",
-                                    "snippet": "<div class=\"space-y-6 mt-8 \">",
+                                    "snippet": "<div className=\"space-y-6 mt-8 \">",
                                     "nodeLabel": "Your Progress: 0/455\n0% complete\nShow Revision\nStep 1 : Learn the basics\n0 /31\n…",
                                     "boundingRect": {
                                         "bottom": 2416,
@@ -1014,7 +1016,7 @@ async function YourComponent() {
                                     "selector": "div.lg:w-1/3 > div > div.h-2 > div.h-full",
                                     "path": "1,HTML,1,BODY,0,DIV,0,DIV,7,DIV,1,DIV,1,SECTION,4,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV",
                                     "nodeLabel": "div.lg:w-1/3 > div > div.h-2 > div.h-full",
-                                    "snippet": "<div class=\"h-full rounded-xl transition-all ease-in-out duration-300 bg-brand_50\" style=\"width: 0%;\">",
+                                    "snippet": "<div className=\"h-full rounded-xl transition-all ease-in-out duration-300 bg-brand_50\" style=\"width: 0%;\">",
                                     "boundingRect": {
                                         "height": 8,
                                         "width": 0,
@@ -1066,7 +1068,7 @@ async function YourComponent() {
                                         "left": 345,
                                         "height": 24
                                     },
-                                    "snippet": "<div class=\"absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-l…\">",
+                                    "snippet": "<div className=\"absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-l…\">",
                                     "selector": "div.flex > div.grid > div.relative > div.absolute",
                                     "nodeLabel": "div.flex > div.grid > div.relative > div.absolute"
                                 }
@@ -1082,7 +1084,7 @@ async function YourComponent() {
                                         "bottom": 608,
                                         "left": 209
                                     },
-                                    "snippet": "<button data-tooltip-id=\"pick-random\" data-tooltip-content=\"Practice a random question\" data-tooltip-place=\"top\" class=\"p-2 border-[1.2px] border-zinc-300 dark:bg-dark_50 bg-white  dark:border-z…\">",
+                                    "snippet": "<button data-tooltip-id=\"pick-random\" data-tooltip-content=\"Practice a random question\" data-tooltip-place=\"top\" className=\"p-2 border-[1.2px] border-zinc-300 dark:bg-dark_50 bg-white  dark:border-z…\">",
                                     "selector": "div.space-y-6 > div.flex > div.flex > button.p-2",
                                     "path": "1,HTML,1,BODY,0,DIV,0,DIV,7,DIV,1,DIV,1,SECTION,4,DIV,0,DIV,1,DIV,0,BUTTON",
                                     "nodeLabel": "div.space-y-6 > div.flex > div.flex > button.p-2",
@@ -1131,7 +1133,7 @@ async function YourComponent() {
                                         "width": 256
                                     },
                                     "selector": "div > div.flex > div > div#sidebar",
-                                    "snippet": "<div id=\"sidebar\" class=\"flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-aut…\">",
+                                    "snippet": "<div id=\"sidebar\" className=\"flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-aut…\">",
                                     "type": "node",
                                     "nodeLabel": "Profile\nBlogs\nDSA Sheets\nStriver's A2Z Sheet\nStriver's SDE Sheet\nStriver's 79 S…"
                                 },
@@ -1163,7 +1165,7 @@ async function YourComponent() {
                             },
                             {
                                 "node": {
-                                    "snippet": "<button class=\"w-full cursor-pointer px-3 py-2 rounded-lg mb-0.5 last:mb-0 transition-all…\">",
+                                    "snippet": "<button className=\"w-full cursor-pointer px-3 py-2 rounded-lg mb-0.5 last:mb-0 transition-all…\">",
                                     "type": "node",
                                     "boundingRect": {
                                         "bottom": 691,
@@ -1227,7 +1229,7 @@ async function YourComponent() {
                                         "right": -17,
                                         "left": -240
                                     },
-                                    "snippet": "<div class=\"px-3 py-2 rounded-lg mb-0.5 last:mb-0 transition-all ease-out duration-300…\">"
+                                    "snippet": "<div className=\"px-3 py-2 rounded-lg mb-0.5 last:mb-0 transition-all ease-out duration-300…\">"
                                 },
                                 "subItems": {
                                     "items": [
@@ -1308,7 +1310,7 @@ async function YourComponent() {
                                     },
                                     "lhId": "page-8-DIV",
                                     "path": "1,HTML,1,BODY,0,DIV,0,DIV,7,DIV,0,DIV,1,DIV,1,DIV,3,DIV",
-                                    "snippet": "<div class=\"px-3 py-2 rounded-lg mb-0.5 last:mb-0  transition-all ease-out duration-30…\">",
+                                    "snippet": "<div className=\"px-3 py-2 rounded-lg mb-0.5 last:mb-0  transition-all ease-out duration-30…\">",
                                     "type": "node",
                                     "nodeLabel": "System Design",
                                     "selector": "div > div#sidebar > div.space-y-4 > div.px-3"
@@ -1320,7 +1322,7 @@ async function YourComponent() {
                                     "type": "node",
                                     "lhId": "page-9-BUTTON",
                                     "path": "1,HTML,1,BODY,0,DIV,0,DIV,7,DIV,0,DIV,1,DIV,1,DIV,0,BUTTON",
-                                    "snippet": "<button class=\"w-full cursor-pointer px-3 py-2 rounded-lg mb-0.5 last:mb-0 transition-all…\">",
+                                    "snippet": "<button className=\"w-full cursor-pointer px-3 py-2 rounded-lg mb-0.5 last:mb-0 transition-all…\">",
                                     "boundingRect": {
                                         "right": -17,
                                         "height": 40,
@@ -1367,7 +1369,7 @@ async function YourComponent() {
                             },
                             {
                                 "node": {
-                                    "snippet": "<div class=\"px-[14px] py-2 rounded-lg mb-0.5 last:mb-0  transition-all ease-out durati…\">",
+                                    "snippet": "<div className=\"px-[14px] py-2 rounded-lg mb-0.5 last:mb-0  transition-all ease-out durati…\">",
                                     "nodeLabel": "Striver's CP Sheet",
                                     "selector": "div > div#sidebar > div.space-y-4 > div.px-[14px]",
                                     "boundingRect": {
@@ -2328,7 +2330,7 @@ async function YourComponent() {
                                             },
                                             "type": "node",
                                             "selector": "div.flex > div.relative > section.px-4 > p.text-lg",
-                                            "snippet": "<p class=\"text-lg\">",
+                                            "snippet": "<p className=\"text-lg\">",
                                             "path": "1,HTML,1,BODY,0,DIV,0,DIV,7,DIV,1,DIV,1,SECTION,1,P",
                                             "lhId": "page-0-P",
                                             "nodeLabel": "This course is made for people who want to learn DSA from A to Z for free in a …"
@@ -3340,7 +3342,7 @@ async function YourComponent() {
                                     "type": "subitems"
                                 },
                                 "node": {
-                                    "snippet": "<button class=\"btn-brand-2 \">",
+                                    "snippet": "<button className=\"btn-brand-2 \">",
                                     "lhId": "page-1-BUTTON",
                                     "type": "node",
                                     "selector": "div.space-y-6 > div.flex > div.flex > button.btn-brand-2",
@@ -3361,7 +3363,7 @@ async function YourComponent() {
                                 "node": {
                                     "path": "1,HTML,1,BODY,0,DIV,0,DIV,7,DIV,1,DIV,1,SECTION,1,P",
                                     "selector": "div.flex > div.relative > section.px-4 > p.text-lg",
-                                    "snippet": "<p class=\"text-lg\">",
+                                    "snippet": "<p className=\"text-lg\">",
                                     "boundingRect": {
                                         "left": 16,
                                         "right": 396,
@@ -3572,7 +3574,7 @@ async function YourComponent() {
                                         "left": 0
                                     },
                                     "lhId": "1-2-IMG",
-                                    "snippet": "<img src=\"https://takeuforward-content-images.s3.ap-south-1.amazonaws.com/content/co…\" class=\"w-6 h-6 object-contain\" alt=\"code\">",
+                                    "snippet": "<img src=\"https://takeuforward-content-images.s3.ap-south-1.amazonaws.com/content/co…\" className=\"w-6 h-6 object-contain\" alt=\"code\">",
                                     "selector": "td.px-2 > div.flex > a > img.w-6",
                                     "nodeLabel": "code"
                                 },
@@ -5801,84 +5803,205 @@ async function YourComponent() {
         console.log(outdata1);
 
     }, [outdata1]);
-    
-    
-    
+
+
+
     return (
         <Suspense fallback={<div>Loading...</div>}>
-            <div className=' flex flex-col items-center justify-center bg-gray-200 text-[#2D2D2D] ' >
-                <div className="w-4/5 flex justify-between mt-40 bg-white p-10">
-                    <div className="text-3xl">{scrapeData ? scrapeData.title : <></>}</div>
-                    <div className="text-sm bg-blue-600 rounded-full p-2 px-4 text-white font-semibold">Download Report</div>
+            <div className="fixed flex flex-col top-0 left-0 w-80 bg-white h-full border-r">
+                <div className="flex items-center justify-center h-14 border-b p-10 font-semibold">
+                    <div>LOGO</div>
                 </div>
-                <div className="w-4/5 flex mt-10 bg-white p-10 flex-wrap justify-center">
-                    <div className="w-80 rounded mx-2 bg-slate-300 h-96 flex items-center justify-center">
-                        <div className="radial-progress" style={{ "--value": outdata1 ? outdata1.seoScore : 0 } as React.CSSProperties} role="progressbar">{outdata1 ? Math.floor(outdata1.seoScore) : null}</div>
+                <div className="overflow-y-auto overflow-x-hidden flex-grow mx-2">
+                    <div className="flex flex-col py-4 space-y-5 text-gray-600 font-semibold">
+
+                        <a href="#" className="relative flex  items-center justify-center focus:outline-none ">
+                            <div className="p-4 w-full mx-5 flex items-center  hover:bg-[#2D2D2D] rounded-2xl hover:text-white">
+
+                                <img src="/appGrid.svg" className="hover:text-white" alt="" srcSet="" />
+                                <span className="ml-2 text-sm tracking-wide truncate">Overview</span>
+                            </div>
+                        </a>
+
+
+                        <a href="#" className="relative flex flex-row items-center h-11 focus:outline-none ">
+                            <div className="p-4 w-full mx-5 flex items-center hover:bg-[#2D2D2D] rounded-2xl hover:text-white">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                                    <path fillRule="evenodd" d="M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6Zm4.5 7.5a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0v-2.25a.75.75 0 0 1 .75-.75Zm3.75-1.5a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0V12Zm2.25-3a.75.75 0 0 1 .75.75v6.75a.75.75 0 0 1-1.5 0V9.75A.75.75 0 0 1 13.5 9Zm3.75-1.5a.75.75 0 0 0-1.5 0v9a.75.75 0 0 0 1.5 0v-9Z" clipRule="evenodd" />
+                                </svg>
+
+                                <span className="ml-2 text-sm tracking-wide truncate">Scrp</span>
+                                <span className="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-indigo-500 bg-indigo-50 rounded-full">New</span>
+                            </div></a>
+
+
+                        <a href="#" className="relative flex flex-row items-center h-11 focus:outline-none ">
+                            <div className="p-4 w-full mx-5 flex items-center hover:bg-[#2D2D2D] rounded-2xl hover:text-white">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                                    <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm0 8.625a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25ZM15.375 12a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0ZM7.5 10.875a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25Z" clipRule="evenodd" />
+                                </svg>
+
+                                <span className="ml-2 text-sm tracking-wide truncate">Crawler</span>
+                            </div>   </a>
+
+
+                        <a href="#" className="relative flex flex-row items-center h-11 focus:outline-none ">
+                            <div className="p-4 w-full mx-5 flex items-center hover:bg-[#2D2D2D] rounded-2xl hover:text-white">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                                    <path fillRule="evenodd" d="M7.502 6h7.128A3.375 3.375 0 0 1 18 9.375v9.375a3 3 0 0 0 3-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 0 0-.673-.05A3 3 0 0 0 15 1.5h-1.5a3 3 0 0 0-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6ZM13.5 3A1.5 1.5 0 0 0 12 4.5h4.5A1.5 1.5 0 0 0 15 3h-1.5Z" clipRule="evenodd" />
+                                    <path fillRule="evenodd" d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V9.375ZM6 12a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V12Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM6 15a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V15Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM6 18a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V18Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75Z" clipRule="evenodd" />
+                                </svg>
+
+                                <span className="ml-2 text-sm tracking-wide truncate">Issues</span>
+                                <span className="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-500 bg-red-50 rounded-full">1.2k</span>
+                            </div>
+                        </a>
+
+
+
+                        <a href="#" className="relative flex flex-row items-center h-11 focus:outline-none ">
+                            <div className="p-4 w-full mx-5 flex items-center hover:bg-[#2D2D2D] rounded-2xl hover:text-white">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                                    <path fillRule="evenodd" d="M1.5 6a2.25 2.25 0 0 1 2.25-2.25h16.5A2.25 2.25 0 0 1 22.5 6v12a2.25 2.25 0 0 1-2.25 2.25H3.75A2.25 2.25 0 0 1 1.5 18V6ZM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0 0 21 18v-1.94l-2.69-2.689a1.5 1.5 0 0 0-2.12 0l-.88.879.97.97a.75.75 0 1 1-1.06 1.06l-5.16-5.159a1.5 1.5 0 0 0-2.12 0L3 16.061Zm10.125-7.81a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Z" clipRule="evenodd" />
+                                </svg>
+
+                                <span className="ml-2 text-sm tracking-wide truncate">Images</span>
+                            </div>      </a>
+
+
+                        <a href="#" className="relative flex flex-row items-center h-11 focus:outline-none ">
+                            <div className="p-4 w-full mx-5 flex items-center hover:bg-[#2D2D2D] rounded-2xl hover:text-white">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                                    <path d="M11.625 16.5a1.875 1.875 0 1 0 0-3.75 1.875 1.875 0 0 0 0 3.75Z" />
+                                    <path fillRule="evenodd" d="M5.625 1.5H9a3.75 3.75 0 0 1 3.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 0 1 3.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 0 1-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875Zm6 16.5c.66 0 1.277-.19 1.797-.518l1.048 1.048a.75.75 0 0 0 1.06-1.06l-1.047-1.048A3.375 3.375 0 1 0 11.625 18Z" clipRule="evenodd" />
+                                    <path d="M14.25 5.25a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963A5.23 5.23 0 0 0 16.5 7.5h-1.875a.375.375 0 0 1-.375-.375V5.25Z" />
+                                </svg>
+
+                                <span className="ml-2 text-sm tracking-wide truncate">Content</span>
+                                <span className="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-green-500 bg-green-50 rounded-full">15</span>
+                            </div>         </a>
+
+
+
+                        <a href="#" className="relative flex flex-row items-center h-11 focus:outline-none ">
+                            <div className="p-4 w-full mx-5 flex items-center hover:bg-[#2D2D2D] rounded-2xl hover:text-white">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                                    <path fillRule="evenodd" d="M2.25 13.5a8.25 8.25 0 0 1 8.25-8.25.75.75 0 0 1 .75.75v6.75H18a.75.75 0 0 1 .75.75 8.25 8.25 0 0 1-16.5 0Z" clipRule="evenodd" />
+                                    <path fillRule="evenodd" d="M12.75 3a.75.75 0 0 1 .75-.75 8.25 8.25 0 0 1 8.25 8.25.75.75 0 0 1-.75.75h-7.5a.75.75 0 0 1-.75-.75V3Z" clipRule="evenodd" />
+                                </svg>
+
+                                <span className="ml-2 text-sm tracking-wide truncate">Performance</span>
+                            </div> </a>
+
+
+
+                        <a href="#" className="relative flex flex-row items-center h-11 focus:outline-none ">
+                            <div className="p-4 w-full mx-5 flex items-center hover:bg-[#2D2D2D] rounded-2xl hover:text-white">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                                    <path fillRule="evenodd" d="M12 2.25a.75.75 0 0 1 .75.75v11.69l3.22-3.22a.75.75 0 1 1 1.06 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.22 3.22V3a.75.75 0 0 1 .75-.75Zm-9 13.5a.75.75 0 0 1 .75.75v2.25a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V16.5a.75.75 0 0 1 1.5 0v2.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V16.5a.75.75 0 0 1 .75-.75Z" clipRule="evenodd" />
+                                </svg>
+
+
+
+                                <span className="ml-2 text-sm tracking-wide truncate">Download</span>
+                            </div>      </a>
+
+
+                        <a href="#" className="relative flex flex-row items-center h-11 focus:outline-none ">
+                            <div className="p-4 w-full mx-5 flex items-center hover:bg-[#2D2D2D] rounded-2xl hover:text-white">
+
+                                <svg className="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+
+                                <span className="ml-2 text-sm tracking-wide truncate">New</span>
+                            </div>      </a>
+
                     </div>
-                    <div className="w-80 rounded mx-2 bg-slate-300 h-96"></div>
-                    <div className="w-80 rounded mx-2 bg-slate-300 h-96"></div>
                 </div>
-                <div className="w-4/5  my-10  p-20 pt-0 rounded bg-white">
-                    <div className="text-2xl my-10 font-semibold">Good Points</div>
-                    {outdata1 ? outdata1.messages.goodPoints.map((item: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined, index: React.Key | null | undefined) => (
-
-                        <div key={index} className="border-2 border-green-100 flex  my-1 rounded items-center  p-4">
-                            {/* <div className="rounded-full bg-slate-500 h-10 mx-2 w-10"></div> */}
-                            <div className="text-sm  font-semibold  whitespace-nowrap truncate">{item}</div>
-                            {/* <div className="text-sm">Remark</div> */}
-                        </div>
-                    )) : <></>}
-
+            </div>
+            <div className="flex">
+                <div className="h-screen w-80">
                 </div>
-                <div className="w-4/5  my-10  p-20 pt-0 rounded bg-white">
-                    <div className="text-2xl my-10 font-semibold">Minor Warnings</div>
-                    {outdata1 ? outdata1.messages.minorWarnings.map((item: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined, index: React.Key | null | undefined) => (
-
-                        <div key={index} className="border-yellow-100 flex mx-2 my-1 rounded items-center border-2 p-4">
-                            {/* <div className="rounded-full bg-slate-500 h-10 mx-2 w-10"></div> */}
-                            <div className="text-sm  font-semibold  whitespace-nowrap truncate">{item}</div>
-                            {/* <div className="text-sm">Remark</div> */}
-                        </div>
-                    )) : <></>}
-
-                </div>
-                <div className="w-4/5  my-10  p-20 pt-0 rounded bg-white">
-                    <div className="text-2xl my-10 font-semibold">Warnings</div>
-                    {outdata1 ? outdata1.messages.warnings.map((item: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined, index: React.Key | null | undefined) => (
-
-                        <div key={index} className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
-                            {/* <div className="rounded-full bg-slate-500 h-10 mx-2 w-10"></div> */}
-                            <div className="text-sm  font-semibold  whitespace-nowrap truncate">{item}</div>
-                            {/* <div className="text-sm">Remark</div> */}
-                        </div>
-                    )) : <></>}
-
-                </div>
-                <div className="w-4/5  my-10  p-20 pt-0 rounded bg-white">
-                    <div className="text-2xl my-10 font-semibold">Common SEO issues</div>
-
-
-                    <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
-                        {/* <div className="rounded-full bg-slate-500 h-10 mx-2 w-10"></div> */}
-                        <div className="text-sm  font-semibold w-80 whitespace-nowrap truncate">Meta Title Test</div>
-                        <div className="flex flex-col">
-
-                            <div className="text-sm">Text: {extractMetaTitle(scrapeData).Text}</div>
-                            <div className="text-sm">Length: {extractMetaTitle(scrapeData).Length}</div>
-                        </div>
+                <div className=' flex grow flex-col items-center justify-center bg-gray-200 text-[#2D2D2D] ' >
+                    <div className="w-4/5 flex justify-between mt-10 bg-white p-10">
+                        <div className="text-3xl">{scrapeData ? scrapeData.title : <></>}</div>
+                        <div className="text-sm bg-blue-600 rounded-full p-2 px-4 hover:text-white font-semibold">Download Report</div>
                     </div>
-
-
-                </div>
-                <div className="flex flex-col my-10 p-1 bg-white">
-                    {test.map((item, index) => (
-
-                        <div key={index} className="flex mx-2 my-1 rounded items-center border p-2">
-                            <div className="rounded-full bg-slate-500 h-10 mx-2 w-10"></div>
-                            <div className="text-sm w-80 font-semibold mx-2">{item.title}</div>
-                            <div className="text-sm">Remark</div>
+                    <div className="w-4/5 flex mt-10 bg-white p-10 px-0 flex-wrap justify-center">
+                        <div className="w-80 rounded mx-2 bg-slate-300 h-96 flex items-center justify-center">
+                            <div className="radial-progress" style={{ "--value": outdata1 ? outdata1.seoScore : 0 } as React.CSSProperties} role="progressbar">{outdata1 ? Math.floor(outdata1.seoScore) : null}</div>
                         </div>
-                    ))}
+                        <div className="w-60 rounded mx-2 bg-slate-300 h-96"></div>
+                        <div className="w-60 rounded mx-2 bg-slate-300 h-96"></div>
+                    </div>
+                    <div className="w-4/5  my-10  p-20 pt-0 rounded bg-white">
+                        <div className="text-2xl my-10 font-semibold">Good Points</div>
+                        {outdata1 ? outdata1.messages.goodPoints.map((item: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined, index: React.Key | null | undefined) => (
+
+                            <div key={index} className="border-2 border-green-100 flex  my-1 rounded items-center  p-4">
+                                {/* <div className="rounded-full bg-slate-500 h-10 mx-2 w-10"></div> */}
+                                <div className="text-sm  font-semibold  whitespace-nowrap truncate">{item}</div>
+                                {/* <div className="text-sm">Remark</div> */}
+                            </div>
+                        )) : <></>}
+
+                    </div>
+                    <div className="w-4/5  my-10  p-20 pt-0 rounded bg-white">
+                        <div className="text-2xl my-10 font-semibold">Minor Warnings</div>
+                        {outdata1 ? outdata1.messages.minorWarnings.map((item: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined, index: React.Key | null | undefined) => (
+
+                            <div key={index} className="border-yellow-100 flex mx-2 my-1 rounded items-center border-2 p-4">
+                                {/* <div className="rounded-full bg-slate-500 h-10 mx-2 w-10"></div> */}
+                                <div className="text-sm  font-semibold  whitespace-nowrap truncate">{item}</div>
+                                {/* <div className="text-sm">Remark</div> */}
+                            </div>
+                        )) : <></>}
+
+                    </div>
+                    <div className="w-4/5  my-10  p-20 pt-0 rounded bg-white">
+                        <div className="text-2xl my-10 font-semibold">Warnings</div>
+                        {outdata1 ? outdata1.messages.warnings.map((item: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined, index: React.Key | null | undefined) => (
+
+                            <div key={index} className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                                {/* <div className="rounded-full bg-slate-500 h-10 mx-2 w-10"></div> */}
+                                <div className="text-sm  font-semibold  whitespace-nowrap truncate">{item}</div>
+                                {/* <div className="text-sm">Remark</div> */}
+                            </div>
+                        )) : <></>}
+
+                    </div>
+                    <div className="w-4/5  my-10  p-20 pt-0 rounded bg-white">
+                        <div className="text-2xl my-10 font-semibold">Common SEO issues</div>
+
+
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                            {/* <div className="rounded-full bg-slate-500 h-10 mx-2 w-10"></div> */}
+                            <div className="text-sm  font-semibold w-80 whitespace-nowrap truncate">Meta Title Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {extractMetaTitle(scrapeData).Text}</div>
+                                <div className="text-sm">Length: {extractMetaTitle(scrapeData).Length}</div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div className="flex flex-col my-10 p-1 bg-white">
+                        {test.map((item, index) => (
+
+                            <div key={index} className="flex mx-2 my-1 rounded items-center border p-2">
+                                <div className="rounded-full bg-slate-500 h-10 mx-2 w-10"></div>
+                                <div className="text-sm w-80 font-semibold mx-2">{item.title}</div>
+                                <div className="text-sm">Remark</div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </Suspense>

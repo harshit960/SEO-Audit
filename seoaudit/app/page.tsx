@@ -14,6 +14,7 @@ import { TracingBeam } from './components/ui/tracing-beam';
 import { twMerge } from "tailwind-merge";
 import { HoverEffect } from './components/ui/card-hover-effect';
 import { TypewriterEffectSmooth } from './components/ui/typewriter-effect';
+import Nav from './Nav';
 // import { calsans } from "@/fonts/calsans";
 
 function Home() {
@@ -170,7 +171,7 @@ function Home() {
     },
   ];
   return (<>
-
+    <Nav />
     <div className='flex  w-full items-end pb-28 lg:pb-0 lg:items-center lg:h-screen h-[90vh] overflow-hidden bg-[#F8F9FF]'>
 
 
@@ -179,7 +180,7 @@ function Home() {
         <div className="lg:text-6xl text-4xl flex items-center justify-center flex-col w-full">
           <div className="text-[#2D2D2D] font-black lg:text-center">
             SEO Audit <span className='text-[#F8D57E]'> Checklist </span> and
-          <br />
+            <br />
             Reporting Tool
           </div>
         </div>
@@ -354,7 +355,7 @@ function Home() {
     </div>
     <div className="flex w-full lg:h-[80vh] justify-center mt-10 flex-wrap lg:flex-nowrap items-center">
       <div className="lg:w-1/3">
-        <img src="\comprehensive_website_audit_en.png" alt="" srcSet="" className=''/>
+        <img src="\comprehensive_website_audit_en.png" alt="" srcSet="" className='' />
       </div>
       <div className="lg:w-1/3 lg:mx-10  p-10 lg:p-5">
         <div className="lg:text-5xl text-3xl font-bold  leading-20	">
