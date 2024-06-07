@@ -45,12 +45,12 @@ export function performHTMLCompressionTest(data: PSIData): { IsCompressed: boole
     const description = isCompressed ? `The HTML content is compressed using GZIP compression, resulting in ${compressionSavings} ms of overall savings.` : 'The HTML content is not compressed using GZIP compression.';
     const link = 'https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer#enable-text-compression';
 
-    console.log({
-        message: 'HTML Compression/GZIP Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'HTML Compression/GZIP Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         IsCompressed: isCompressed,

@@ -1,27 +1,7 @@
 // robotsTxtTest.ts
 
-interface PSIData {
-    // Define the structure of the PSI data
-    lighthouseResult: {
-        audits: {
-            robotsTxt: {
-                id: string;
-                title: string;
-                description: string;
-                score: number;
-                details: {
-                    items: {
-                        label: string;
-                        value: string;
-                    }[];
-                };
-            };
-        };
-    };
-}
-
 // Function to extract robots.txt data from PSI data
-export function extractRobotsTxtData(data: PSIData): { HasRobotsTxt: boolean; Importance: string; Description: string; Link: string } {
+export function extractRobotsTxtData(data: any): { HasRobotsTxt: boolean; Importance: string; Description: string; Link: string } {
     const robotsTxtAudit = data?.lighthouseResult?.audits?.robotsTxt;
 
     // Check if the robots.txt audit data is available
@@ -42,12 +22,12 @@ export function extractRobotsTxtData(data: PSIData): { HasRobotsTxt: boolean; Im
     const description = hasRobotsTxt ? 'This website is using a robots.txt file.' : 'This website is not using a robots.txt file.';
     const link = 'https://www.robotstxt.org/robotstxt.html';
 
-    console.log({
-        message: 'Robots.txt Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'Robots.txt Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         HasRobotsTxt: hasRobotsTxt,

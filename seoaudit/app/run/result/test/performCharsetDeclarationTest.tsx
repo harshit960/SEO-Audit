@@ -46,12 +46,12 @@ export function performCharsetDeclarationTest(data: PSIData): { Charset: string;
     const description = hasCharsetDeclaration ? `The charset declaration is set to "${charset}" in the ${charsetAudit.details.items[0].source}.` : 'No charset declaration found.';
     const link = 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-http-equiv';
 
-    console.log({
-        message: 'Charset Declaration Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'Charset Declaration Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         Charset: charset,

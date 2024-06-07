@@ -46,12 +46,12 @@ export function performGoogleAnalyticsTest(data: PSIData): { HasGoogleAnalytics:
     const description = hasGoogleAnalytics ? 'This website has Google Analytics tracking code embedded.' : 'This website does not have Google Analytics tracking code embedded.';
     const link = 'https://analytics.google.com/';
 
-    console.log({
-        message: 'Google Analytics Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'Google Analytics Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         HasGoogleAnalytics: hasGoogleAnalytics,

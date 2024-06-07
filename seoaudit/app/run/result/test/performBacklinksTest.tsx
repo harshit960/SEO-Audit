@@ -12,7 +12,7 @@ interface BacklinksData {
 }
 
 // Function to perform Backlinks Test using backlinks data
-export function performBacklinksTest(backlinksData: BacklinksData): { TotalBacklinks: number; ReferringDomains: number; Importance: string; Description: string; Link: string } {
+export function performBacklinksTest(backlinksData: any): { TotalBacklinks: number; ReferringDomains: number; Importance: string; Description: string; Link: string } {
     // Extract backlinks information
     const totalBacklinks = backlinksData.totalBacklinks;
     const referringDomains = backlinksData.referringDomains;
@@ -24,12 +24,12 @@ export function performBacklinksTest(backlinksData: BacklinksData): { TotalBackl
     const description = hasBacklinks ? `This website has ${totalBacklinks} backlink(s) from ${referringDomains} referring domain(s).` : 'This website does not have any backlinks.';
     const link = 'https://moz.com/learn/seo/backlinks';
 
-    console.log({
-        message: 'Backlinks Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'Backlinks Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         TotalBacklinks: totalBacklinks,

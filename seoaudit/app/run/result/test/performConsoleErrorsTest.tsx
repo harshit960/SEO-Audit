@@ -45,12 +45,12 @@ export function performConsoleErrorsTest(data: PSIData): { HasConsoleErrors: boo
     const description = hasConsoleErrors ? `Console errors were found: ${errorMessages.join(', ')}` : 'No console errors were found.';
     const link = 'https://developer.mozilla.org/en-US/docs/Web/API/Console/error';
 
-    console.log({
-        message: 'Console Errors Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'Console Errors Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         HasConsoleErrors: hasConsoleErrors,

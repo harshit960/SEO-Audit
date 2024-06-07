@@ -22,8 +22,9 @@ interface PSIData {
 }
 
 // Function to extract broken links data from PSI data
-export function extractBrokenLinksData(data: PSIData): { BrokenLinks: { url: string; status: number }[]; Importance: string; Description: string; Link: string } {
+export function extractBrokenLinksData(data: any): { BrokenLinks: { url: string; status: number }[]; Importance: string; Description: string; Link: string } {
     const brokenLinksAudit = data?.lighthouseResult?.audits?.['final-screenshot'];
+console.log(brokenLinksAudit);
 
     // Check if the broken links audit data is available
     if (!brokenLinksAudit) {
@@ -37,21 +38,21 @@ export function extractBrokenLinksData(data: PSIData): { BrokenLinks: { url: str
     }
 
     // Extract broken links information
-    const brokenLinks = brokenLinksAudit.details.items.filter(link => link.isViewedAsFailure);
+    const brokenLinks = brokenLinksAudit.details.items.filter((link: { isViewedAsFailure: any; }) => link.isViewedAsFailure);
 
     const importance = brokenLinks.length > 0 ? 'High' : 'Low';
     const description = brokenLinks.length > 0 ? `This website has ${brokenLinks.length} broken link(s).` : 'This website does not have any broken links.';
     const link = 'https://developers.google.com/search/console';
 
-    console.log({
-        message: 'Broken Links Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'Broken Links Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
-        BrokenLinks: brokenLinks.map(link => ({ url: link.url, status: link.status })),
+        BrokenLinks: brokenLinks.map((link: { url: any; status: any; }) => ({ url: link.url, status: link.status })),
         Importance: importance,
         Description: description,
         Link: link

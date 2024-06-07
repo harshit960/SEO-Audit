@@ -44,12 +44,12 @@ export function performMediaQueryResponsiveTest(data: PSIData): { HasMediaQuerie
     const importance = hasMediaQueries ? 'High' : 'Medium';
     const description = hasMediaQueries ? 'The webpage uses media queries in its CSS, indicating responsive design implementation. This enables the webpage to adapt its layout and styles based on different devices and screen sizes.' : 'No media queries were found in the CSS resources fetched by PSI, which suggests that the webpage may not be fully optimized for responsiveness across various devices and screen sizes. Consider implementing responsive design techniques using media queries.';
 
-    console.log({
-        message: 'Media Query Responsive Test',
-        HasMediaQueries: hasMediaQueries,
-        Importance: importance,
-        Description: description
-    });
+    // console.log({
+    //     message: 'Media Query Responsive Test',
+    //     HasMediaQueries: hasMediaQueries,
+    //     Importance: importance,
+    //     Description: description
+    // });
 
     return {
         HasMediaQueries: hasMediaQueries,

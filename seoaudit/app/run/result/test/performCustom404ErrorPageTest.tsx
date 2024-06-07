@@ -35,12 +35,12 @@ export async function performCustom404ErrorPageTest(baseUrl: string): Promise<{ 
             };
         } else {
             // Return default data if the response status is not 404
-            console.log({
-                message: 'Custom 404 Error Page Test',
-                HasCustom404ErrorPage: false,
-                Importance: 'Low',
-                Description: 'The server does not respond with a 404 status code for the non-existing page, so the custom 404 error page test cannot be performed.'
-            });
+            // console.log({
+            //     message: 'Custom 404 Error Page Test',
+            //     HasCustom404ErrorPage: false,
+            //     Importance: 'Low',
+            //     Description: 'The server does not respond with a 404 status code for the non-existing page, so the custom 404 error page test cannot be performed.'
+            // });
 
             return {
                 HasCustom404ErrorPage: false,
@@ -50,7 +50,7 @@ export async function performCustom404ErrorPageTest(baseUrl: string): Promise<{ 
         }
     } catch (error) {
         // Handle errors
-        console.error('Error occurred during Custom 404 Error Page Test:', error);
+        // console.error('Error occurred during Custom 404 Error Page Test:', error);
         return {
             HasCustom404ErrorPage: false,
             Importance: 'Low',

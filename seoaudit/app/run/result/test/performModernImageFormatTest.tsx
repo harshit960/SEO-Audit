@@ -47,12 +47,12 @@ export function performModernImageFormatTest(data: PSIData): { HasModernImageFor
     const description = hasModernImageFormats ? 'The webpage is utilizing modern image formats effectively.' : 'No modern image formats detected on the webpage.';
     const link = 'https://web.dev/avif-av1/';
 
-    console.log({
-        message: 'Modern Image Format Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'Modern Image Format Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         HasModernImageFormats: hasModernImageFormats,

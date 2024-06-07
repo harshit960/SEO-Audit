@@ -16,11 +16,11 @@ export function performNestedTablesTest(data: HTMLData): { HasNestedTables: bool
     const importance = hasNestedTables ? 'Medium' : 'Low';
     const description = hasNestedTables ? 'The webpage contains nested tables, which can lead to accessibility and performance issues.' : 'No nested tables detected on the webpage.';
 
-    console.log({
-        message: 'Nested Tables Test',
-        description,
-        importance
-    });
+    // console.log({
+    //     message: 'Nested Tables Test',
+    //     description,
+    //     importance
+    // });
 
     return {
         HasNestedTables: hasNestedTables,

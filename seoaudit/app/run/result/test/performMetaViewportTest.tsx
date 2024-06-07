@@ -37,12 +37,12 @@ export function performMetaViewportTest(data: PSIData): { HasMetaViewport: boole
     const importance = hasMetaViewport ? 'High' : 'Medium';
     const description = hasMetaViewport ? 'The webpage includes a viewport meta tag, which is essential for responsive web design and ensuring proper display across devices.' : 'The webpage does not include a viewport meta tag. Consider adding one to ensure proper display across devices, especially on mobile devices.';
 
-    console.log({
-        message: 'Meta Viewport Test',
-        HasMetaViewport: hasMetaViewport,
-        Importance: importance,
-        Description: description
-    });
+    // console.log({
+    //     message: 'Meta Viewport Test',
+    //     HasMetaViewport: hasMetaViewport,
+    //     Importance: importance,
+    //     Description: description
+    // });
 
     return {
         HasMetaViewport: hasMetaViewport,

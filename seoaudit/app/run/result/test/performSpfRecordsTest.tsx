@@ -17,12 +17,12 @@ export async function performSpfRecordsTest(domain: string): Promise<{ HasSpfRec
         const importance = hasSpfRecords ? 'High' : 'Medium';
         const description = hasSpfRecords ? 'The domain has SPF records configured, specifying which mail servers are authorized to send emails on behalf of the domain. This helps prevent email spoofing and phishing attacks.' : 'No SPF records were found for the domain. Consider configuring SPF records to enhance email security and prevent email spoofing.';
 
-        console.log({
-            message: 'SPF Records Test',
-            HasSpfRecords: hasSpfRecords,
-            Importance: importance,
-            Description: description
-        });
+        // console.log({
+        //     message: 'SPF Records Test',
+        //     HasSpfRecords: hasSpfRecords,
+        //     Importance: importance,
+        //     Description: description
+        // });
 
         return {
             HasSpfRecords: hasSpfRecords,
@@ -31,7 +31,7 @@ export async function performSpfRecordsTest(domain: string): Promise<{ HasSpfRec
         };
     } catch (error) {
         // Handle DNS lookup errors
-        console.error('Error occurred during SPF Records Test:', error);
+        // console.error('Error occurred during SPF Records Test:', error);
         return {
             HasSpfRecords: false,
             Importance: 'Low',

@@ -39,12 +39,12 @@ export function performFlashTest(data: PSIData): { HasFlashContent: boolean; Imp
     const description = hasFlashContent ? 'The webpage contains Flash content, which is deprecated and not recommended for use.' : 'No Flash content found on the webpage.';
     const link = 'https://www.adobe.com/products/flashplayer/end-of-life.html';
 
-    console.log({
-        message: 'Flash Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'Flash Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         HasFlashContent: hasFlashContent,

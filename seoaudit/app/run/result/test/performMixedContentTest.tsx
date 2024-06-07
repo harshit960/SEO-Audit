@@ -6,7 +6,7 @@ interface HTMLData {
 }
 
 // Function to perform Mixed Content Test using HTML data
-export function performMixedContentTest(data: HTMLData): { HasMixedContent:number | boolean; Importance: string; Description: string } {
+export function performMixedContentTest(data: any): { HasMixedContent:number | boolean; Importance: string; Description: string } {
     const htmlContent = data.htmlContent;
 
     // Check if the webpage contains mixed content (HTTP resources loaded over HTTPS)
@@ -18,12 +18,12 @@ export function performMixedContentTest(data: HTMLData): { HasMixedContent:numbe
     const importance = hasMixedContent ? 'High' : 'Medium';
     const description = hasMixedContent ? 'The webpage contains mixed content (HTTP resources loaded over HTTPS), posing a security risk. Consider migrating all resources to HTTPS.' : 'No mixed content detected on the webpage.';
 
-    console.log({
-        message: 'Mixed Content Test',
-        HasMixedContent: hasMixedContent,
-        Importance: importance,
-        Description: description
-    });
+    // console.log({
+    //     message: 'Mixed Content Test',
+    //     HasMixedContent: hasMixedContent,
+    //     Importance: importance,
+    //     Description: description
+    // });
 
     return {
         HasMixedContent: hasMixedContent,

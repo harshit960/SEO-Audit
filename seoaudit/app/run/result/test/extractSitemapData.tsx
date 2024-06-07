@@ -21,7 +21,7 @@ interface PSIData {
 }
 
 // Function to extract sitemap data from PSI data
-export function extractSitemapData(data: PSIData): { HasSitemap: boolean; Importance: string; Description: string; Link: string } {
+export function extractSitemapData(data: any): { HasSitemap: boolean; Importance: string; Description: string; Link: string } {
     const sitemapAudit = data?.lighthouseResult?.audits?.sitemap;
 
     // Check if the sitemap audit data is available
@@ -42,12 +42,12 @@ export function extractSitemapData(data: PSIData): { HasSitemap: boolean; Import
     const description = hasSitemap ? 'This website has a sitemap.' : 'This website does not have a sitemap.';
     const link = 'https://developers.google.com/search/docs/advanced/sitemaps/build-sitemap';
 
-    console.log({
-        message: 'Sitemap Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'Sitemap Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         HasSitemap: hasSitemap,

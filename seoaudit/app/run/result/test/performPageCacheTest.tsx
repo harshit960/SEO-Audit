@@ -22,7 +22,7 @@ interface PSIData {
 }
 
 // Function to perform Page Cache Test (Server-Side Caching) using PSI data
-export function performPageCacheTest(data: PSIData): { CacheLifetimeMs: number; CacheHitProbability: number; Importance: string; Description: string; Link: string } {
+export function performPageCacheTest(data: any): { CacheLifetimeMs: number; CacheHitProbability: number; Importance: string; Description: string; Link: string } {
     const cachingAudit = data?.lighthouseResult?.audits?.['caching'];
 
     // Check if the Caching audit data is available
@@ -59,12 +59,12 @@ export function performPageCacheTest(data: PSIData): { CacheLifetimeMs: number; 
 
     const link = 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control';
 
-    console.log({
-        message: 'Page Cache Test (Server-Side Caching)',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'Page Cache Test (Server-Side Caching)',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         CacheLifetimeMs: cacheLifetimeMs,

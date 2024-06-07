@@ -16,11 +16,11 @@ export function performDoctypeTest(data: HTMLData): { HasCorrectDoctype: boolean
     const importance = hasCorrectDoctype ? 'High' : 'Medium';
     const description = hasCorrectDoctype ? 'The webpage has a correct and valid DOCTYPE declaration, ensuring proper rendering in browsers.' : 'The webpage does not have a correct DOCTYPE declaration, which may result in rendering issues in some browsers.';
 
-    console.log({
-        message: 'Doctype Test',
-        description,
-        importance
-    });
+    // console.log({
+    //     message: 'Doctype Test',
+    //     description,
+    //     importance
+    // });
 
     return {
         HasCorrectDoctype: hasCorrectDoctype,

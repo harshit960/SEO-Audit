@@ -48,12 +48,12 @@ export function performJavaScriptMinificationTest(data: PSIData): { IsJavaScript
     const description = isJavaScriptMinified ? 'JavaScript is minified, reducing file size and improving page load times.' : 'Some JavaScript files on the webpage may not be minified, impacting page load performance.';
     const link = 'https://web.dev/minify-javascript/';
 
-    console.log({
-        message: 'JavaScript Minification Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'JavaScript Minification Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         IsJavaScriptMinified: isJavaScriptMinified,

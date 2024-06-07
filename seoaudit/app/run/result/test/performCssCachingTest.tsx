@@ -48,12 +48,12 @@ export function performCssCachingTest(data: PSIData): { IsCssCachingOptimized: b
     const description = isCssCachingOptimized ? 'CSS caching is optimized, improving page load times for returning visitors.' : 'Some CSS files on the webpage may not be effectively cached, impacting page load performance for returning visitors.';
     const link = 'https://web.dev/uses-long-cache-ttl/';
 
-    console.log({
-        message: 'CSS Caching Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'CSS Caching Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         IsCssCachingOptimized: isCssCachingOptimized,

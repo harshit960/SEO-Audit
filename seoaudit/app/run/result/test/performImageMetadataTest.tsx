@@ -48,12 +48,12 @@ export function performImageMetadataTest(data: PSIData): { HasOptimizedImageMeta
     const description = hasOptimizedImageMetadata ? 'The webpage contains images with optimized metadata.' : 'Some images on the webpage have metadata that can be further optimized.';
     const link = 'https://developers.google.com/speed/docs/insights/OptimizeImages';
 
-    console.log({
-        message: 'Image Metadata Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'Image Metadata Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         HasOptimizedImageMetadata: hasOptimizedImageMetadata,

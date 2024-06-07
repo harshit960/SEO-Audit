@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import { InfiniteMovingCards } from './components/ui/infinite-moving-cards'
 // import { MovingBorder } from './components/ui/moving-border'
 import { Button } from "./components/ui/moving-border";
@@ -170,6 +170,7 @@ function Home() {
       text: "Today",
     },
   ];
+  const [url, seturl] = useState("")
   return (<>
     <Nav />
     <div className='flex  w-full items-end pb-28 lg:pb-0 lg:items-center lg:h-screen h-[90vh] overflow-hidden bg-[#F8F9FF]'>
@@ -190,9 +191,9 @@ function Home() {
         <div className="flex items-center lg:justify-center flex-wrap mt-5 w-full drop-shadow-lg	">
 
 
-          <input type="text" className='rounded bg-[#E5F4F2] p-2 px-4 py-4 lg:w-1/2 w-80' placeholder='Enter Your Domain Name' />
+          <input type="text" onChange={(e) => seturl(e.target.value)} value={url}  className='rounded bg-[#E5F4F2] p-2 px-4 py-4 lg:w-1/2 w-80' placeholder='Enter Your Domain Name' />
 
-          <Link href="" className='lg:mx-4 mt-5 lg:mt-0'>
+          <Link href={`run/result/?url=${url}`} className='lg:mx-4 mt-5 lg:mt-0'>
 
             <div className="my-4 bg-[#009379] hover:bg-[#2D2D2D] duration-200 hover:text-[#fff] rounded p-2 py-5 font-semibold text-white w-28 text-xs inline-flex items-center justify-center">ANALYZE</div>
           </Link>

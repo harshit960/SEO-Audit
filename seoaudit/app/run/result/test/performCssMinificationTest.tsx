@@ -48,12 +48,12 @@ export function performCssMinificationTest(data: PSIData): { IsCssMinified: bool
     const description = isCssMinified ? 'CSS is minified, reducing file size and improving page load times.' : 'Some CSS files on the webpage may not be minified, impacting page load performance.';
     const link = 'https://web.dev/minify-css/';
 
-    console.log({
-        message: 'CSS Minification Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'CSS Minification Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         IsCssMinified: isCssMinified,

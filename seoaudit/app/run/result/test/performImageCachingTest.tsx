@@ -48,12 +48,12 @@ export function performImageCachingTest(data: PSIData): { IsImageCachingOptimize
     const description = isImageCachingOptimized ? 'Image caching is optimized, improving page load times for returning visitors.' : 'Some images on the webpage may not be effectively cached, impacting page load performance for returning visitors.';
     const link = 'https://web.dev/uses-long-cache-ttl/';
 
-    console.log({
-        message: 'Image Caching Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'Image Caching Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         IsImageCachingOptimized: isImageCachingOptimized,

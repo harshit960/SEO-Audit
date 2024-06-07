@@ -35,12 +35,12 @@ export async function performDisallowDirectiveTest(baseUrl: string): Promise<{ H
             };
         } else {
             // Return default data if failed to fetch the robots.txt file
-            console.log({
-                message: 'Disallow Directive Test',
-                HasDisallowDirective: false,
-                Importance: 'Low',
-                Description: 'Failed to fetch the robots.txt file, so the Disallow Directive Test cannot be performed.'
-            });
+            // console.log({
+            //     message: 'Disallow Directive Test',
+            //     HasDisallowDirective: false,
+            //     Importance: 'Low',
+            //     Description: 'Failed to fetch the robots.txt file, so the Disallow Directive Test cannot be performed.'
+            // });
 
             return {
                 HasDisallowDirective: false,
@@ -50,7 +50,7 @@ export async function performDisallowDirectiveTest(baseUrl: string): Promise<{ H
         }
     } catch (error) {
         // Handle errors
-        console.error('Error occurred during Disallow Directive Test:', error);
+        // console.error('Error occurred during Disallow Directive Test:', error);
         return {
             HasDisallowDirective: false,
             Importance: 'Low',

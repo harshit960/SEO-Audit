@@ -15,7 +15,7 @@ function extractKeywords(htmlText: string): string[] {
     });
     const sortedWords = Array.from(wordFrequencyMap.entries())
                             .sort((a, b) => b[1] - a[1])
-                            .map(entry => entry[0]);
+                            .map(entry => entry[0]+" ");
     return sortedWords.slice(0, 10); // Returning top 10 most frequent words as keywords
 }
 
@@ -28,12 +28,12 @@ export function extractMostCommonKeywords(data: { title?: any; keywords?: string
     const description = 'Keywords found on your site according to the Text Rank algorithm.';
     const link = 'https://cutt.ly/MjP5nu7';
 
-    console.log({
-        message: 'Keywords (Text Rank)',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'Keywords (Text Rank)',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         Keywords: extractedKeywords,

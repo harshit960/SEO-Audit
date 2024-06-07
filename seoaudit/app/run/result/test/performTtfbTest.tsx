@@ -56,12 +56,12 @@ export function performTtfbTest(data: PSIData): { Ttfb: number; Importance: stri
         description = 'The Time To First Byte (TTFB) is high, indicating slow server response times. Consider optimizing server performance.';
     }
 
-    console.log({
-        message: 'Time To First Byte Test',
-        Ttfb: ttfb,
-        Importance: importance,
-        Description: description
-    });
+    // console.log({
+    //     message: 'Time To First Byte Test',
+    //     Ttfb: ttfb,
+    //     Importance: importance,
+    //     Description: description
+    // });
 
     return {
         Ttfb: ttfb,

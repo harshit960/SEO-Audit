@@ -48,12 +48,12 @@ export function performFirstContentfulPaintTest(data: PSIData): { Fcp: number; I
         description = 'The First Contentful Paint (FCP) occurred after three seconds, indicating slow page load speed. Consider optimizing content delivery.';
     }
 
-    console.log({
-        message: 'First Contentful Paint Test',
-        Fcp: fcp,
-        Importance: importance,
-        Description: description
-    });
+    // console.log({
+    //     message: 'First Contentful Paint Test',
+    //     Fcp: fcp,
+    //     Importance: importance,
+    //     Description: description
+    // });
 
     return {
         Fcp: fcp,

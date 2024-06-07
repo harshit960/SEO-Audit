@@ -6,7 +6,7 @@ interface HTMLData {
 }
 
 // Function to perform Structured Data Test
-export function performStructuredDataTest(data: HTMLData): { HasStructuredData: boolean; Importance: string; Description: string } {
+export function performStructuredDataTest(data: any): { HasStructuredData: boolean; Importance: string; Description: string } {
     const htmlContent = data.htmlContent;
 
     // Regular expressions to match JSON-LD, RDFa, and Microdata
@@ -21,12 +21,12 @@ export function performStructuredDataTest(data: HTMLData): { HasStructuredData: 
     const importance = hasStructuredData ? 'High' : 'Low';
     const description = hasStructuredData ? 'Structured data was found on the webpage, providing search engines with specific information about the content. This can improve the webpage\'s visibility and appearance in search results.' : 'No structured data was found on the webpage, which may limit the webpage\'s visibility and appearance in search results. Consider adding structured data to provide search engines with more information about the content.';
 
-    console.log({
-        message: 'Structured Data Test',
-        HasStructuredData: hasStructuredData,
-        Importance: importance,
-        Description: description
-    });
+    // console.log({
+    //     message: 'Structured Data Test',
+    //     HasStructuredData: hasStructuredData,
+    //     Importance: importance,
+    //     Description: description
+    // });
 
     return {
         HasStructuredData: hasStructuredData,

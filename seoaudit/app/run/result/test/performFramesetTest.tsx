@@ -16,11 +16,11 @@ export function performFramesetTest(data: HTMLData): { HasFrameset: boolean; Imp
     const importance = hasFrameset ? 'High' : 'Low';
     const description = hasFrameset ? 'The webpage uses the deprecated frameset element, which is no longer supported in HTML5 and can cause various issues including accessibility problems and SEO challenges.' : 'No frameset detected on the webpage.';
 
-    console.log({
-        message: 'Frameset Test',
-        description,
-        importance
-    });
+    // console.log({
+    //     message: 'Frameset Test',
+    //     description,
+    //     importance
+    // });
 
     return {
         HasFrameset: hasFrameset,

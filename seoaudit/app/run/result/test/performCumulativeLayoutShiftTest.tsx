@@ -48,12 +48,12 @@ export function performCumulativeLayoutShiftTest(data: PSIData): { Cls: number; 
         description = 'The Cumulative Layout Shift (CLS) score is high, indicating poor visual stability. Consider optimizing layout rendering.';
     }
 
-    console.log({
-        message: 'Cumulative Layout Shift Test',
-        Cls: cls,
-        Importance: importance,
-        Description: description
-    });
+    // console.log({
+    //     message: 'Cumulative Layout Shift Test',
+    //     Cls: cls,
+    //     Importance: importance,
+    //     Description: description
+    // });
 
     return {
         Cls: cls,

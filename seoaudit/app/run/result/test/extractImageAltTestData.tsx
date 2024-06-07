@@ -46,12 +46,12 @@ export function extractImageAltTestData(data: PSIData): { Images: { url: string;
     const description = allImagesHaveAlt ? 'All images on this website have appropriate alt attributes.' : 'Some images on this website do not have appropriate alt attributes.';
     const link = 'https://developers.google.com/web/fundamentals/accessibility';
 
-    console.log({
-        message: 'Image Alt Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'Image Alt Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         Images: images.map(image => ({ url: image.url, alt: image.alt, isAltPresent: image.isAltPresent })),

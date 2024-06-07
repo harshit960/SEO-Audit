@@ -50,12 +50,12 @@ export function performHTMLPageSizeTest(data: PSIData): { HTMLPageSizeBytes: num
     const description = `The HTML page size is ${htmlPageSizeBytes} bytes.`;
     const link = 'https://web.dev/total-byte-weight/';
 
-    console.log({
-        message: 'HTML Page Size Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'HTML Page Size Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         HTMLPageSizeBytes: htmlPageSizeBytes,

@@ -15,12 +15,12 @@ export function performUnsafeCrossOriginLinksTest(htmlContent: string): { HasUns
     const importance = hasUnsafeCrossOriginLinks ? 'Medium' : 'Low';
     const description = hasUnsafeCrossOriginLinks ? 'Unsafe cross-origin links were found on the webpage. Consider updating them to use the HTTPS protocol to prevent mixed content issues and improve security.' : 'No unsafe cross-origin links were found on the webpage, which is a good practice to prevent mixed content issues and improve security.';
 
-    console.log({
-        message: 'Unsafe Cross-Origin Links Test',
-        HasUnsafeCrossOriginLinks: hasUnsafeCrossOriginLinks,
-        Importance: importance,
-        Description: description
-    });
+    // console.log({
+    //     message: 'Unsafe Cross-Origin Links Test',
+    //     HasUnsafeCrossOriginLinks: hasUnsafeCrossOriginLinks,
+    //     Importance: importance,
+    //     Description: description
+    // });
 
     return {
         HasUnsafeCrossOriginLinks: hasUnsafeCrossOriginLinks,

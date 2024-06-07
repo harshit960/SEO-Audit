@@ -45,12 +45,12 @@ export function performFaviconTest(data: PSIData): { HasFavicon: boolean; Import
     const description = hasFavicon ? 'This website has a favicon properly configured.' : 'This website does not have a favicon properly configured.';
     const link = 'https://www.favicon-generator.org/';
 
-    console.log({
-        message: 'Favicon Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'Favicon Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         HasFavicon: hasFavicon,

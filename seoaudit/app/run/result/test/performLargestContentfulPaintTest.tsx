@@ -48,12 +48,12 @@ export function performLargestContentfulPaintTest(data: PSIData): { Lcp: number;
         description = 'The Largest Contentful Paint (LCP) occurred after 4 seconds, indicating slow page load speed. Consider optimizing content delivery.';
     }
 
-    console.log({
-        message: 'Largest Contentful Paint Test',
-        Lcp: lcp,
-        Importance: importance,
-        Description: description
-    });
+    // console.log({
+    //     message: 'Largest Contentful Paint Test',
+    //     Lcp: lcp,
+    //     Importance: importance,
+    //     Description: description
+    // });
 
     return {
         Lcp: lcp,

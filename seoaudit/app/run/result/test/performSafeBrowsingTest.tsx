@@ -47,10 +47,10 @@ export async function performSafeBrowsingTest(url: string): Promise<{ IsSafe: bo
                 Description: description
             };
         } else {
-            console.error('Failed to fetch data from Safe Browsing API:', response.statusText);
+            // console.error('Failed to fetch data from Safe Browsing API:', response.statusText);
         }
     } catch (error) {
-        console.error('Error occurred while performing Safe Browsing Test:', error);
+        // console.error('Error occurred while performing Safe Browsing Test:', error);
     }
 
     // Return default data in case of errors

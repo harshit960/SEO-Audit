@@ -21,7 +21,7 @@ interface PSIData {
 }
 
 // Function to perform HSTS Test using PSI data
-export function performHstsTest(data: PSIData): { IsHstsEnabled: boolean; MaxAge: number | null; Importance: string; Description: string } {
+export function performHstsTest(data: any): { IsHstsEnabled: boolean; MaxAge: number | null; Importance: string; Description: string } {
     const networkRequestsAudit = data?.lighthouseResult?.audits?.['network-requests'];
 
     // Check if the Network Requests audit data is available
@@ -39,7 +39,7 @@ export function performHstsTest(data: PSIData): { IsHstsEnabled: boolean; MaxAge
     const mainDocumentUrl = data.lighthouseResult.requestedUrl;
 
     // Find the response headers for the main document
-    const mainDocumentResponseHeaders = networkRequestsAudit.details.items.find(item => item.url === mainDocumentUrl)?.responseHeaders;
+    const mainDocumentResponseHeaders = networkRequestsAudit.details.items.find((item: { url: any; }) => item.url === mainDocumentUrl)?.responseHeaders;
 
     // Check if the 'Strict-Transport-Security' header is present
     const hstsHeader = mainDocumentResponseHeaders?.['strict-transport-security'];
@@ -52,13 +52,13 @@ export function performHstsTest(data: PSIData): { IsHstsEnabled: boolean; MaxAge
     const importance = isHstsEnabled ? 'High' : 'Medium';
     const description = isHstsEnabled ? `HTTP Strict Transport Security (HSTS) is enabled with a max-age of ${maxAge} seconds.` : 'HTTP Strict Transport Security (HSTS) is not enabled. Consider enabling it to improve security.';
 
-    console.log({
-        message: 'HSTS Test',
-        IsHstsEnabled: isHstsEnabled,
-        MaxAge: maxAge,
-        Importance: importance,
-        Description: description
-    });
+    // console.log({
+    //     message: 'HSTS Test',
+    //     IsHstsEnabled: isHstsEnabled,
+    //     MaxAge: maxAge,
+    //     Importance: importance,
+    //     Description: description
+    // });
 
     return {
         IsHstsEnabled: isHstsEnabled,

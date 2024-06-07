@@ -6,7 +6,7 @@ interface HTMLData {
 }
 
 // Function to perform Meta Refresh Test
-export function performMetaRefreshTest(data: HTMLData): { HasMetaRefreshTag: boolean; Importance: string; Description: string; RedirectURL: string | null } {
+export function performMetaRefreshTest(data: any): { HasMetaRefreshTag: boolean; Importance: string; Description: string; RedirectURL: string | null } {
     const htmlContent = data.htmlContent;
 
     // Regular expression to match meta refresh tag
@@ -25,13 +25,13 @@ export function performMetaRefreshTest(data: HTMLData): { HasMetaRefreshTag: boo
     const importance = hasMetaRefreshTag ? 'Medium' : 'Low';
     const description = hasMetaRefreshTag ? `The webpage contains a meta refresh tag, redirecting to the following URL after a specified time interval: ${redirectURL}` : 'No meta refresh tag was found on the webpage. Ensure that automatic redirects are implemented appropriately if needed.';
 
-    console.log({
-        message: 'Meta Refresh Test',
-        HasMetaRefreshTag: hasMetaRefreshTag,
-        Importance: importance,
-        Description: description,
-        RedirectURL: redirectURL
-    });
+    // console.log({
+    //     message: 'Meta Refresh Test',
+    //     HasMetaRefreshTag: hasMetaRefreshTag,
+    //     Importance: importance,
+    //     Description: description,
+    //     RedirectURL: redirectURL
+    // });
 
     return {
         HasMetaRefreshTag: hasMetaRefreshTag,

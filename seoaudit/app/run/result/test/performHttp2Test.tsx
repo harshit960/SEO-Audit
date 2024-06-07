@@ -44,12 +44,12 @@ export function performHttp2Test(data: PSIData): { IsHttp2: boolean; Importance:
     const importance = isHttp2 ? 'High' : 'Medium';
     const description = isHttp2 ? 'The website is served over HTTP/2, providing improved performance and efficiency.' : 'The website is not served over HTTP/2. Consider upgrading to HTTP/2 for better performance.';
 
-    console.log({
-        message: 'HTTP/2 Test',
-        IsHttp2: isHttp2,
-        Importance: importance,
-        Description: description
-    });
+    // console.log({
+    //     message: 'HTTP/2 Test',
+    //     IsHttp2: isHttp2,
+    //     Importance: importance,
+    //     Description: description
+    // });
 
     return {
         IsHttp2: isHttp2,

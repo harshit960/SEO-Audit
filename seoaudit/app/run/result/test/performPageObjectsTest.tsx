@@ -23,7 +23,7 @@ interface PSIData {
 }
 
 // Function to perform Page Objects Test using PSI data
-export function performPageObjectsTest(data: PSIData): { ResourceSummary: { ResourceType: string; Size: number; Count: number }[]; Importance: string; Description: string; Link: string } {
+export function performPageObjectsTest(data: any): { ResourceSummary: { ResourceType: string; Size: number; Count: number }[]; Importance: string; Description: string; Link: string } {
     const resourceSummaryAudit = data?.lighthouseResult?.audits?.['resource-summary'];
 
     // Check if the Resource Summary audit data is available
@@ -38,7 +38,7 @@ export function performPageObjectsTest(data: PSIData): { ResourceSummary: { Reso
     }
 
     // Extract detailed data about page objects
-    const resourceSummary = resourceSummaryAudit.details.items.map(item => ({
+    const resourceSummary = resourceSummaryAudit.details.items.map((item: { resourceType: any; size: any; count: any; }) => ({
         ResourceType: item.resourceType,
         Size: item.size,
         Count: item.count
@@ -52,9 +52,9 @@ export function performPageObjectsTest(data: PSIData): { ResourceSummary: { Reso
 
     // As an example, let's assume we are primarily interested in image resources and their sizes:
 
-    const imageResources = resourceSummary.filter(item => item.ResourceType === 'image');
-    const totalImageCount = imageResources.reduce((sum, item) => sum + item.Count, 0);
-    const totalImageSize = imageResources.reduce((sum, item) => sum + item.Size, 0);
+    const imageResources = resourceSummary.filter((item: { ResourceType: string; }) => item.ResourceType === 'image');
+    const totalImageCount = imageResources.reduce((sum: any, item: { Count: any; }) => sum + item.Count, 0);
+    const totalImageSize = imageResources.reduce((sum: any, item: { Size: any; }) => sum + item.Size, 0);
 
     let importance: string;
     let description: string;
@@ -72,12 +72,12 @@ export function performPageObjectsTest(data: PSIData): { ResourceSummary: { Reso
 
     const link = 'https://developers.google.com/web/fundamentals/performance/get-started';
 
-    console.log({
-        message: 'Page Objects Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'Page Objects Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         ResourceSummary: resourceSummary,

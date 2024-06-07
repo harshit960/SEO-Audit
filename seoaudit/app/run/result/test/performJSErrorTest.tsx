@@ -45,12 +45,12 @@ export function performJSErrorTest(data: PSIData): { HasJSErrors: boolean; Error
     const description = hasJSErrors ? `JavaScript errors were found in the browser console: ${errorMessages.join(', ')}` : 'No JavaScript errors were found in the browser console.';
     const link = 'https://developer.mozilla.org/en-US/docs/Web/API/Console/error';
 
-    console.log({
-        message: 'JavaScript Error Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'JavaScript Error Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         HasJSErrors: hasJSErrors,

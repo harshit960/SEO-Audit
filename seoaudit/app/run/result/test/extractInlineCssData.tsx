@@ -23,7 +23,7 @@ interface PSIData {
 }
 
 // Function to extract Inline CSS Test data from PSI data
-export function extractInlineCssData(data: PSIData): { TotalCssResources: number; TotalCssBytes: number; TotalCssKb: number; Importance: string; Description: string; Link: string } {
+export function extractInlineCssData(data: any): { TotalCssResources: number; TotalCssBytes: number; TotalCssKb: number; Importance: string; Description: string; Link: string } {
     const inlineCssAudit = data?.lighthouseResult?.audits?.['uses-inline-css'];
 
     // Check if the Inline CSS Test audit data is available
@@ -49,12 +49,12 @@ export function extractInlineCssData(data: PSIData): { TotalCssResources: number
     const description = totalCssResources > 0 ? 'This website uses inline CSS. Consider optimizing CSS delivery by removing or minimizing inline CSS.' : 'This website does not use inline CSS, which is good for performance.';
     const link = 'https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery#inline_css';
 
-    console.log({
-        message: 'Inline CSS Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'Inline CSS Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         TotalCssResources: totalCssResources,

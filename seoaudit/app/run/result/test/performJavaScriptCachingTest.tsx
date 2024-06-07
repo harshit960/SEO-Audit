@@ -48,12 +48,12 @@ export function performJavaScriptCachingTest(data: PSIData): { IsJavaScriptCachi
     const description = isJavaScriptCachingOptimized ? 'JavaScript caching is optimized, improving page load times for returning visitors.' : 'Some JavaScript files on the webpage may not be effectively cached, impacting page load performance for returning visitors.';
     const link = 'https://web.dev/uses-long-cache-ttl/';
 
-    console.log({
-        message: 'JavaScript Caching Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'JavaScript Caching Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         IsJavaScriptCachingOptimized: isJavaScriptCachingOptimized,

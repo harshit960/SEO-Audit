@@ -13,12 +13,12 @@ export function extractHeadingTagsData(htmlText: string): { HasH1Tags: boolean; 
     const description = hasH1Tags ? 'This webpage contains H1 tags.' : 'This webpage does not contain any H1 tags.';
     const link = 'https://developers.google.com/search/docs/advanced/performance/optimize-content#headings';
 
-    console.log({
-        message: 'Heading Tags Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'Heading Tags Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         HasH1Tags: hasH1Tags,

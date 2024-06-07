@@ -56,12 +56,12 @@ export function performSiteLoadingSpeedTest(data: PSIData): { TimeToInteractive:
     const description = `The site's loading speed is optimized with a Time to Interactive of ${timeToInteractive} ms and a First Contentful Paint of ${firstContentfulPaint} ms.`;
     const link = 'https://web.dev/first-contentful-paint/';
 
-    console.log({
-        message: 'Site Loading Speed Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'Site Loading Speed Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         TimeToInteractive: timeToInteractive,

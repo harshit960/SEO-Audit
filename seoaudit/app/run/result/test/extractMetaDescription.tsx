@@ -10,13 +10,13 @@ export function extractMetaDescription(data: { title?: any; keywords?: null; sub
     const importance = 'High';
     const description = 'Provide a summary of the page content so that search engines can include it in search results.';
 
-    console.log({
-        message: 'meta[name="description"]',
-        description,
-        link: 'https://cutt.ly/9jP5y3F',
-        resultType,
-        importance
-    });
+    // console.log({
+    //     message: 'meta[name="description"]',
+    //     description,
+    //     link: 'https://cutt.ly/9jP5y3F',
+    //     resultType,
+    //     importance
+    // });
 
     return {
         Text: descriptionText,

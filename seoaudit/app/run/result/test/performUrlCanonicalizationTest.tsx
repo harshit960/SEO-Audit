@@ -6,7 +6,7 @@ interface HTMLData {
 }
 
 // Function to perform URL Canonicalization Test using HTML data
-export function performUrlCanonicalizationTest(data: HTMLData): { IsCanonicalized: boolean; Importance: string; Description: string } {
+export function performUrlCanonicalizationTest(data: any): { IsCanonicalized: boolean; Importance: string; Description: string } {
     const htmlContent = data.htmlContent;
 
     // Extract canonical link from the HTML content
@@ -19,12 +19,12 @@ export function performUrlCanonicalizationTest(data: HTMLData): { IsCanonicalize
     const importance = isCanonicalized ? 'High' : 'Medium';
     const description = isCanonicalized ? 'The webpage is correctly canonicalized, ensuring proper indexing and avoiding duplicate content issues.' : 'No canonical link found on the webpage. Consider implementing canonicalization for better SEO performance.';
 
-    console.log({
-        message: 'URL Canonicalization Test',
-        IsCanonicalized: isCanonicalized,
-        Importance: importance,
-        Description: description
-    });
+    // console.log({
+    //     message: 'URL Canonicalization Test',
+    //     IsCanonicalized: isCanonicalized,
+    //     Importance: importance,
+    //     Description: description
+    // });
 
     return {
         IsCanonicalized: isCanonicalized,

@@ -23,7 +23,7 @@ interface PSIData {
 }
 
 // Function to perform JavaScript Execution Time Test using PSI data
-export function performJSExecutionTimeTest(data: PSIData): { BootupTime: number; ScriptBootUpTime: number; Importance: string; Description: string; Link: string } {
+export function performJSExecutionTimeTest(data: any): { BootupTime: number; ScriptBootUpTime: number; Importance: string; Description: string; Link: string } {
     const bootupTimeAudit = data?.lighthouseResult?.audits?.['bootup-time'];
     const scriptBootUpTimeAudit = data?.lighthouseResult?.audits?.['script-boot-up-time'];
 
@@ -56,12 +56,12 @@ export function performJSExecutionTimeTest(data: PSIData): { BootupTime: number;
     const description = `JavaScript execution time is optimized with a Bootup Time of ${bootupTime} ms and a Script Bootup Time of ${scriptBootUpTime} ms.`;
     const link = 'https://web.dev/bootup-time/';
 
-    console.log({
-        message: 'JavaScript Execution Time Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'JavaScript Execution Time Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         BootupTime: bootupTime,

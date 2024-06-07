@@ -47,12 +47,12 @@ export function performCDNUsageTest(data: PSIData): { HasCDNUsage: boolean; Impo
     const description = hasCDNUsage ? 'The webpage is utilizing a Content Delivery Network (CDN) effectively.' : 'No CDN usage detected on the webpage.';
     const link = 'https://www.cloudflare.com/learning/cdn/what-is-a-cdn/';
 
-    console.log({
-        message: 'CDN Usage Test',
-        description,
-        link,
-        importance
-    });
+    // console.log({
+    //     message: 'CDN Usage Test',
+    //     description,
+    //     link,
+    //     importance
+    // });
 
     return {
         HasCDNUsage: hasCDNUsage,

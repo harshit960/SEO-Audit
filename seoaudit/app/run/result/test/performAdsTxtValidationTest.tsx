@@ -21,12 +21,12 @@ export async function performAdsTxtValidationTest(domain: string): Promise<{ IsV
             const importance = isValidAdsTxt ? 'High' : 'Medium';
             const description = isValidAdsTxt ? 'The ads.txt file follows the Ads.txt specification, enhancing transparency in programmatic advertising.' : 'The ads.txt file does not follow the Ads.txt specification. Ensure that the file is correctly formatted to improve transparency in programmatic advertising.';
 
-            console.log({
-                message: 'Ads.txt Validation Test',
-                IsValidAdsTxt: isValidAdsTxt,
-                Importance: importance,
-                Description: description
-            });
+            // console.log({
+            //     message: 'Ads.txt Validation Test',
+            //     IsValidAdsTxt: isValidAdsTxt,
+            //     Importance: importance,
+            //     Description: description
+            // });
 
             return {
                 IsValidAdsTxt: isValidAdsTxt,

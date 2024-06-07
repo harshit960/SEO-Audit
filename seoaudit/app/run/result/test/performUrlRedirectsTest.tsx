@@ -46,11 +46,11 @@ export function performUrlRedirectsTest(data: PSIData): { HasRedirects: boolean;
     const importance = hasRedirects ? 'Medium' : 'Low';
     const description = hasRedirects ? 'The webpage contains URL redirects, which may affect performance and user experience.' : 'No URL redirects detected on the webpage.';
 
-    console.log({
-        message: 'URL Redirects Test',
-        description,
-        importance
-    });
+    // console.log({
+    //     message: 'URL Redirects Test',
+    //     description,
+    //     importance
+    // });
 
     return {
         HasRedirects: hasRedirects,

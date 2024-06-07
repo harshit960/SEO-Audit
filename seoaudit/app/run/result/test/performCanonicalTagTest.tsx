@@ -25,13 +25,13 @@ export function performCanonicalTagTest(data: HTMLData): { HasCanonicalTag: bool
     const importance = hasCanonicalTag ? 'High' : 'Medium';
     const description = hasCanonicalTag ? `The webpage contains a canonical link tag pointing to the preferred version of the URL: ${canonicalURL}` : 'No canonical link tag was found on the webpage. Ensure that a preferred version of the URL is specified for indexing purposes.';
 
-    console.log({
-        message: 'Canonical Tag Test',
-        HasCanonicalTag: hasCanonicalTag,
-        Importance: importance,
-        Description: description,
-        CanonicalURL: canonicalURL
-    });
+    // console.log({
+    //     message: 'Canonical Tag Test',
+    //     HasCanonicalTag: hasCanonicalTag,
+    //     Importance: importance,
+    //     Description: description,
+    //     CanonicalURL: canonicalURL
+    // });
 
     return {
         HasCanonicalTag: hasCanonicalTag,

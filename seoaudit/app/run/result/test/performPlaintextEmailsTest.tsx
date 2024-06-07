@@ -15,12 +15,12 @@ export function performPlaintextEmailsTest(htmlContent: string): { HasPlaintextE
     const importance = hasPlaintextEmails ? 'Medium' : 'Low';
     const description = hasPlaintextEmails ? 'Plaintext email addresses were found on the webpage. Consider obfuscating or removing them to prevent email harvesting by spammers.' : 'No plaintext email addresses were found on the webpage, which is a good practice to prevent email harvesting.';
 
-    console.log({
-        message: 'Plaintext Emails Test',
-        HasPlaintextEmails: hasPlaintextEmails,
-        Importance: importance,
-        Description: description
-    });
+    // console.log({
+    //     message: 'Plaintext Emails Test',
+    //     HasPlaintextEmails: hasPlaintextEmails,
+    //     Importance: importance,
+    //     Description: description
+    // });
 
     return {
         HasPlaintextEmails: hasPlaintextEmails,

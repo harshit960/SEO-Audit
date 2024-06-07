@@ -17,12 +17,12 @@ export async function performDirectoryBrowsingTest(url: string): Promise<{ IsDir
             const importance = isDirectoryBrowsingEnabled ? 'Medium' : 'Low';
             const description = isDirectoryBrowsingEnabled ? 'Directory browsing is enabled, which may expose sensitive information. Consider disabling it.' : 'Directory browsing is not enabled, which is a good security practice.';
 
-            console.log({
-                message: 'Directory Browsing Test',
-                IsDirectoryBrowsingEnabled: isDirectoryBrowsingEnabled,
-                Importance: importance,
-                Description: description
-            });
+            // console.log({
+            //     message: 'Directory Browsing Test',
+            //     IsDirectoryBrowsingEnabled: isDirectoryBrowsingEnabled,
+            //     Importance: importance,
+            //     Description: description
+            // });
 
             return {
                 IsDirectoryBrowsingEnabled: isDirectoryBrowsingEnabled,
@@ -30,10 +30,10 @@ export async function performDirectoryBrowsingTest(url: string): Promise<{ IsDir
                 Description: description
             };
         } else {
-            console.error('Failed to fetch URL:', response.statusText);
+            // console.error('Failed to fetch URL:', response.statusText);
         }
     } catch (error) {
-        console.error('Error occurred while performing Directory Browsing Test:', error);
+        // console.error('Error occurred while performing Directory Browsing Test:', error);
     }
 
     // Return default data in case of errors
