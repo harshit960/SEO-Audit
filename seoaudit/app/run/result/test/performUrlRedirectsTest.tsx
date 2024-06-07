@@ -23,7 +23,7 @@ interface PSIData {
 }
 
 // Function to perform URL Redirects Test using PSI data
-export function performUrlRedirectsTest(data: PSIData): { HasRedirects: boolean; Importance: string; Description: string } {
+export function performUrlRedirectsTest(data: any): { HasRedirects: boolean; Importance: string; Description: string } {
     const redirectsAudit = data?.lighthouseResult?.audits?.redirects;
 
     // Check if the Redirects audit data is available
@@ -37,7 +37,7 @@ export function performUrlRedirectsTest(data: PSIData): { HasRedirects: boolean;
     }
 
     // Extract redirect chains
-    const redirectChains = redirectsAudit.details.chains;
+    const redirectChains = redirectsAudit.details.items;
 
     // Check if there are any redirect chains
     const hasRedirects = redirectChains.length > 0;

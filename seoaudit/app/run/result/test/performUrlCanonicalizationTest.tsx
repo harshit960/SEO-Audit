@@ -7,7 +7,7 @@ interface HTMLData {
 
 // Function to perform URL Canonicalization Test using HTML data
 export function performUrlCanonicalizationTest(data: any): { IsCanonicalized: boolean; Importance: string; Description: string } {
-    const htmlContent = data.htmlContent;
+    const htmlContent = data;
 
     // Extract canonical link from the HTML content
     const canonicalLinkMatches = htmlContent.match(/<link[^>]*rel="canonical"([^>]*)>/);

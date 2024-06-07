@@ -1,6 +1,6 @@
 export function extractMetaDescription(data: { title?: any; keywords?: null; subKeywords?: never[]; metaDescription?: string; languageCode?: string; htmlText?: string; countryCode?: string; }): { Text: string; Length: number; ResultType: string; Importance: string; Description: string } {
     const descriptionAudit = data?.metaDescription ?? 'No meta description found';
-    console.log(descriptionAudit);
+    // console.log(descriptionAudit);
 
     const descriptionText = descriptionAudit;
     const descriptionLength = descriptionText.length;

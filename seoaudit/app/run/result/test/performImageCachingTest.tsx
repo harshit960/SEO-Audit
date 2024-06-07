@@ -23,7 +23,7 @@ interface PSIData {
 }
 
 // Function to perform Image Caching Test using PSI data
-export function performImageCachingTest(data: PSIData): { IsImageCachingOptimized: boolean; Importance: string; Description: string; Link: string } {
+export function performImageCachingTest(data: any): { IsImageCachingOptimized: boolean; Importance: string; Description: string; Link: string } {
     const networkRequestsAudit = data?.lighthouseResult?.audits?.['network-requests'];
 
     // Check if the Network Requests audit data is available
@@ -38,10 +38,11 @@ export function performImageCachingTest(data: PSIData): { IsImageCachingOptimize
     }
 
     // Extract image requests
-    const imageRequests = networkRequestsAudit.details.items.filter(item => item.mimeType.startsWith('image/'));
+    const imageRequests = networkRequestsAudit.details.items.filter((item: { mimeType: string; }) => item.mimeType.startsWith('image/'));
+console.log(imageRequests);
 
     // Check if image caching is optimized for all image requests
-    const isImageCachingOptimized = imageRequests.every(request => isCachingOptimized(request));
+    const isImageCachingOptimized = imageRequests.every((request: any) => isCachingOptimized(request));
 
     // Determine the importance and description based on image caching optimization
     const importance = isImageCachingOptimized ? 'High' : 'Medium';

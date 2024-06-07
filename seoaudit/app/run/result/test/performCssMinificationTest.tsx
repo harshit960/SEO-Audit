@@ -23,7 +23,7 @@ interface PSIData {
 }
 
 // Function to perform CSS Minification Test using PSI data
-export function performCssMinificationTest(data: PSIData): { IsCssMinified: boolean; Importance: string; Description: string; Link: string } {
+export function performCssMinificationTest(data: any): { IsCssMinified: boolean; Importance: string; Description: string; Link: string } {
     const networkRequestsAudit = data?.lighthouseResult?.audits?.['network-requests'];
 
     // Check if the Network Requests audit data is available
@@ -38,10 +38,11 @@ export function performCssMinificationTest(data: PSIData): { IsCssMinified: bool
     }
 
     // Extract CSS requests
-    const cssRequests = networkRequestsAudit.details.items.filter(item => item.mimeType === 'text/css');
+    const cssRequests = networkRequestsAudit.details.items.filter((item: { mimeType: string; }) => item.mimeType === 'text/css');
+    console.log(cssRequests);
 
     // Check if CSS is minified for all requests
-    const isCssMinified = cssRequests.every(request => isMinified(request));
+    const isCssMinified = cssRequests.every((request: any) => isMinified(request));
 
     // Determine the importance and description based on CSS minification
     const importance = isCssMinified ? 'High' : 'Medium';

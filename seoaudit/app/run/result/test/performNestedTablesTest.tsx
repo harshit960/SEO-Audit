@@ -6,8 +6,8 @@ interface HTMLData {
 }
 
 // Function to perform Nested Tables Test using HTML data
-export function performNestedTablesTest(data: HTMLData): { HasNestedTables: boolean; Importance: string; Description: string } {
-    const htmlContent = data.htmlContent;
+export function performNestedTablesTest(data: any): { HasNestedTables: boolean; Importance: string; Description: string } {
+    const htmlContent = data;
 
     // Check if the HTML content contains nested tables
     const hasNestedTables = htmlContent.includes('<table') && htmlContent.includes('<table', htmlContent.indexOf('<table') + 1);

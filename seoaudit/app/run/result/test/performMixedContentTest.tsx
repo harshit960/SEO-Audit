@@ -7,7 +7,7 @@ interface HTMLData {
 
 // Function to perform Mixed Content Test using HTML data
 export function performMixedContentTest(data: any): { HasMixedContent:number | boolean; Importance: string; Description: string } {
-    const htmlContent = data.htmlContent;
+    const htmlContent = data;
 
     // Check if the webpage contains mixed content (HTTP resources loaded over HTTPS)
     // const hasMixedContent = htmlContent.match(/<[^>]+(?=src|href)\s+(?:src|href)=(['"]http:\/\/[^'"]+['"])/gi)?.length > 0;

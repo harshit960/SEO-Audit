@@ -1,9 +1,9 @@
-import fetch from 'node-fetch';
+// import fetch from 'node-fetch';
 
 // Function to perform Ads.txt Validation Test
 export async function performAdsTxtValidationTest(domain: string): Promise<{ IsValidAdsTxt: boolean; Importance: string; Description: string }> {
     // Construct the URL of the ads.txt file
-    const adsTxtUrl = `http://${domain}/ads.txt`;
+    const adsTxtUrl = `${domain}ads.txt`;
 
     try {
         // Fetch the ads.txt file
@@ -35,12 +35,12 @@ export async function performAdsTxtValidationTest(domain: string): Promise<{ IsV
             };
         } else {
             // Return default data if failed to fetch the ads.txt file
-            console.log({
-                message: 'Ads.txt Validation Test',
-                IsValidAdsTxt: false,
-                Importance: 'Low',
-                Description: 'Failed to fetch the ads.txt file, so the Ads.txt Validation Test cannot be performed.'
-            });
+            // console.log({
+            //     message: 'Ads.txt Validation Test',
+            //     IsValidAdsTxt: false,
+            //     Importance: 'Low',
+            //     Description: 'Failed to fetch the ads.txt file, so the Ads.txt Validation Test cannot be performed.'
+            // });
 
             return {
                 IsValidAdsTxt: false,
@@ -50,7 +50,7 @@ export async function performAdsTxtValidationTest(domain: string): Promise<{ IsV
         }
     } catch (error) {
         // Handle errors
-        console.error('Error occurred during Ads.txt Validation Test:', error);
+        // console.error('Error occurred during Ads.txt Validation Test:', error);
         return {
             IsValidAdsTxt: false,
             Importance: 'Low',

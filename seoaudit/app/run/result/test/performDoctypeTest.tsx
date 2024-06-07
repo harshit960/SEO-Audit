@@ -6,8 +6,8 @@ interface HTMLData {
 }
 
 // Function to perform Doctype Test using HTML data
-export function performDoctypeTest(data: HTMLData): { HasCorrectDoctype: boolean; Importance: string; Description: string } {
-    const htmlContent = data.htmlContent;
+export function performDoctypeTest(data: any): { HasCorrectDoctype: boolean; Importance: string; Description: string } {
+    const htmlContent = data;
 
     // Check if the HTML content contains the correct DOCTYPE declaration
     const hasCorrectDoctype = htmlContent.includes('<!DOCTYPE html>');

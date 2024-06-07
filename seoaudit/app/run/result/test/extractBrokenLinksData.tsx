@@ -23,9 +23,9 @@ interface PSIData {
 
 // Function to extract broken links data from PSI data
 export function extractBrokenLinksData(data: any): { BrokenLinks: { url: string; status: number }[]; Importance: string; Description: string; Link: string } {
-    const brokenLinksAudit = data?.lighthouseResult?.audits?.['final-screenshot'];
-console.log(brokenLinksAudit);
-
+    const brokenLinksAudit = data?.lighthouseResult.audits['network-requests'];
+    // console.log(brokenLinksAudit);
+    let brokenLinks =[]
     // Check if the broken links audit data is available
     if (!brokenLinksAudit) {
         // Return default data if broken links audit data is missing
@@ -38,8 +38,13 @@ console.log(brokenLinksAudit);
     }
 
     // Extract broken links information
-    const brokenLinks = brokenLinksAudit.details.items.filter((link: { isViewedAsFailure: any; }) => link.isViewedAsFailure);
-
+    if (brokenLinksAudit && brokenLinksAudit.details && brokenLinksAudit.details.items) {
+        for (const request of brokenLinksAudit.details.items) {
+            if (request.statusCode === 404) {
+                brokenLinks.push(request.url);
+            }
+        }
+    }
     const importance = brokenLinks.length > 0 ? 'High' : 'Low';
     const description = brokenLinks.length > 0 ? `This website has ${brokenLinks.length} broken link(s).` : 'This website does not have any broken links.';
     const link = 'https://developers.google.com/search/console';

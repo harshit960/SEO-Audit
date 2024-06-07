@@ -1,9 +1,9 @@
-import fetch from 'node-fetch';
+// import fetch from 'node-fetch';
 
 // Function to perform Disallow Directive Test
 export async function performDisallowDirectiveTest(baseUrl: string): Promise<{ HasDisallowDirective: boolean; Importance: string; Description: string }> {
     // URL of the robots.txt file
-    const robotsTxtUrl = `${baseUrl}/robots.txt`;
+    const robotsTxtUrl = `${baseUrl}robots.txt`;
 
     try {
         // Fetch the robots.txt file

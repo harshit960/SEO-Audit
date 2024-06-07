@@ -7,7 +7,7 @@ interface HTMLData {
 
 // Function to perform SSL Checker and HTTPS Test using HTML data
 export function performSslCheckerTest(data: any): { IsSecure: boolean; Importance: string; Description: string } {
-    const htmlContent = data.htmlContent;
+    const htmlContent = data;
 
     // Check if the webpage is served over HTTPS
     const isSecure = htmlContent.toLowerCase().includes('https');

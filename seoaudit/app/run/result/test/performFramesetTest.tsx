@@ -6,8 +6,8 @@ interface HTMLData {
 }
 
 // Function to perform Frameset Test using HTML data
-export function performFramesetTest(data: HTMLData): { HasFrameset: boolean; Importance: string; Description: string } {
-    const htmlContent = data.htmlContent;
+export function performFramesetTest(data: any): { HasFrameset: boolean; Importance: string; Description: string } {
+    const htmlContent = data;
 
     // Check if the HTML content contains frameset
     const hasFrameset = htmlContent.includes('<frameset');

@@ -23,7 +23,7 @@ interface PSIData {
 }
 
 // Function to perform Charset Declaration Test using PSI data
-export function performCharsetDeclarationTest(data: PSIData): { Charset: string; HasCharsetDeclaration: boolean; Importance: string; Description: string; Link: string } {
+export function performCharsetDeclarationTest(data: any): { Charset: string; HasCharsetDeclaration: boolean; Importance: string; Description: string; Link: string } {
     const charsetAudit = data?.lighthouseResult?.audits?.['charset'];
 
     // Check if the Charset Declaration Test audit data is available
@@ -39,11 +39,11 @@ export function performCharsetDeclarationTest(data: PSIData): { Charset: string;
     }
 
     // Extract charset declaration information
-    const charset = charsetAudit.details.items[0]?.charset || '';
+    const charset = charsetAudit.score || '';
     const hasCharsetDeclaration = charset !== '';
 
     const importance = hasCharsetDeclaration ? 'High' : 'Low';
-    const description = hasCharsetDeclaration ? `The charset declaration is set to "${charset}" in the ${charsetAudit.details.items[0].source}.` : 'No charset declaration found.';
+    const description = hasCharsetDeclaration ? `The charset declaration is set.` : 'No charset declaration found.';
     const link = 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-http-equiv';
 
     // console.log({

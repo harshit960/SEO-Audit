@@ -1,32 +1,35 @@
-import fetch from 'node-fetch';
+// import fetch from 'node-fetch';
 
 // Function to perform Custom 404 Error Page Test
 export async function performCustom404ErrorPageTest(baseUrl: string): Promise<{ HasCustom404ErrorPage: boolean; Importance: string; Description: string }> {
     // URL of a non-existing page to trigger a 404 error
-    const nonExistingPageUrl = `${baseUrl}/non-existing-page`;
+    // console.log(baseUrl);
+    
+    const nonExistingPageUrl = `${baseUrl}non-existing-page`;
 
     try {
         // Fetch the non-existing page
         const response = await fetch(nonExistingPageUrl);
-
+        
         // Check if the response status is 404
         if (response.status === 404) {
+            // console.log(response.status);
             // Extract the response body text
             const responseBodyText = await response.text();
 
             // Check if the response body contains custom 404 error page content
-            const hasCustom404ErrorPage = responseBodyText.includes('Custom 404 Error Page');
+            const hasCustom404ErrorPage = responseBodyText.includes('This page could not be found');
 
             // Determine the importance and description based on the presence of a custom 404 error page
             const importance = hasCustom404ErrorPage ? 'High' : 'Medium';
             const description = hasCustom404ErrorPage ? 'The server responds with a custom 404 error page, providing a more user-friendly experience for visitors encountering a page not found error.' : 'The server does not respond with a custom 404 error page. Consider implementing one to improve the user experience for visitors encountering a page not found error.';
 
-            console.log({
-                message: 'Custom 404 Error Page Test',
-                HasCustom404ErrorPage: hasCustom404ErrorPage,
-                Importance: importance,
-                Description: description
-            });
+            // console.log({
+            //     message: 'Custom 404 Error Page Test',
+            //     HasCustom404ErrorPage: hasCustom404ErrorPage,
+            //     Importance: importance,
+            //     Description: description
+            // });
 
             return {
                 HasCustom404ErrorPage: hasCustom404ErrorPage,

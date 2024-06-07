@@ -39,7 +39,7 @@ export function extractResponsiveImageData(data: any): { Images: { url: string; 
     const images = responsiveImageAudit.details.items;
 
     // Check if all images are responsive
-    const allImagesAreResponsive = images.every(image => image.isResponsive);
+    const allImagesAreResponsive = images.every((image: { isResponsive: any; }) => image.isResponsive);
 
     const importance = allImagesAreResponsive ? 'High' : 'Low';
     const description = allImagesAreResponsive ? 'All images on this website are responsive.' : 'Some images on this website are not responsive.';
@@ -53,7 +53,7 @@ export function extractResponsiveImageData(data: any): { Images: { url: string; 
     // });
 
     return {
-        Images: images.map(image => ({ url: image.url, isResponsive: image.isResponsive })),
+        Images: images.map((image: { url: any; isResponsive: any; }) => ({ url: image.url, isResponsive: image.isResponsive })),
         Importance: importance,
         Description: description,
         Link: link
