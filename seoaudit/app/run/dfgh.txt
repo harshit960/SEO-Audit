@@ -1,0 +1,596 @@
+<div className="w-4/5  my-10  p-20 pt-0 rounded bg-white">
+                        <div className="text-2xl my-10 font-semibold">OnPage Results</div>
+
+
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                            
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Meta Title Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {extractMetaTitle(scrapeData).Text}</div>
+                                <div className="text-sm">Length: {extractMetaTitle(scrapeData).Length}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                            
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Meta Description Test</div>
+                            <div className="flex flex-col overflow-auto">
+
+                                <div className="text-sm">Text: {extractMetaDescription(scrapeData).Text}</div>
+                                <div className="text-sm">Length: {extractMetaDescription(scrapeData).Length}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                            
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Social Media Meta Tags Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performSocialMediaTest(psiData).Description}</div>
+                                <div className="text-sm">Length: {performSocialMediaTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performSocialMediaTest(psiData).HasSocialMediaTags}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                            
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Most Common keyword Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {extractMostCommonKeywords(scrapeData).Keywords}</div>
+                                <div className="text-sm">Length: {extractMostCommonKeywords(scrapeData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                            
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Heading Tags Test</div>
+                            <div className="flex flex-col">
+
+                                {/* <div className="text-sm">Text: {extractHeadingTagsData(scrapeData.htmlText).HasH1Tags}</div> */}
+                                {/* <div className="text-sm">Length: {extractHeadingTagsData(scrapeData.htmlText).Description}</div> */}
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                            
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Robots.txt Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {extractRobotsTxtData(psiData).HasRobotsTxt}</div>
+                                <div className="text-sm">Length: {extractRobotsTxtData(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                            
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Sitemap Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {extractSitemapData(psiData).HasSitemap}</div>
+                                <div className="text-sm">Length: {extractSitemapData(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Broken Link Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {JSON.stringify(extractBrokenLinksData(psiData).BrokenLinks)}</div>
+                                <div className="text-sm">Length: {extractBrokenLinksData(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">SEO Friendly URL Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {extractSEOFriendlyUrlData(psiData).Link}</div>
+                                <div className="text-sm">Length: {extractSEOFriendlyUrlData(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Image Alt Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {extractImageAltTestData(psiData).Link}</div>
+                                <div className="text-sm">Length: {extractImageAltTestData(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Responsive Image Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {extractResponsiveImageData(psiData).Link}</div>
+                                <div className="text-sm">Length: {extractResponsiveImageData(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Image Aspect Ratio Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {extractImageAspectRatioData(psiData).Link}</div>
+                                <div className="text-sm">Length: {extractImageAspectRatioData(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Inline CSS Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {extractInlineCssData(psiData).Link}</div>
+                                <div className="text-sm">Length: {extractInlineCssData(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Deprecated HTML Tags Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {extractDeprecatedHtmlTagsData(psiData).Link}</div>
+                                <div className="text-sm">Length: {extractDeprecatedHtmlTagsData(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Google Analysis Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performGoogleAnalyticsTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performGoogleAnalyticsTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Favicon Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performFaviconTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performFaviconTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Backlink Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performBacklinksTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performBacklinksTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">JS Error Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performJSErrorTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performJSErrorTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Console Errors Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performConsoleErrorsTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performConsoleErrorsTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Charset Decleration Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performCharsetDeclarationTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performCharsetDeclarationTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">HTML Page Size Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performHTMLPageSizeTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performHTMLPageSizeTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">DOM Size Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performDOMSizeTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performDOMSizeTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">HTML Compression/GZIP Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performHTMLCompressionTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performHTMLCompressionTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Site Loading Speed Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performSiteLoadingSpeedTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performSiteLoadingSpeedTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">JS Execution Time Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performJSExecutionTimeTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performJSExecutionTimeTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Page Objects Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performPageObjectsTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performPageObjectsTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Page Cache Test (Server Side Caching )</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performPageCacheTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performPageCacheTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Flash Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performFlashTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performFlashTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">CDN Usage Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performCDNUsageTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performCDNUsageTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Modern Image Format Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performModernImageFormatTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performModernImageFormatTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Image Metadata Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performImageMetadataTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performImageMetadataTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        {/* <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                            
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Image Caching Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performImageCachingTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performImageCachingTest(psiData).Description}</div>
+                            </div>
+                        </div> */}
+                        {/* <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                            
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">JavaScript Caching Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performJavaScriptCachingTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performJavaScriptCachingTest(psiData).Description}</div>
+                            </div>
+                        </div> */}
+                        {/* <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                            
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">CSS Caching Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performCssCachingTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performCssCachingTest(psiData).Description}</div>
+                            </div>
+                        </div> */}
+                        {/* <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                            
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Javascript Minification Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performCssMinificationTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performCssMinificationTest(psiData).Description}</div>
+                            </div>
+                        </div> */}
+                        {/* <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                            
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">JS  Minification Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performCssMinificationTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performCssMinificationTest(psiData).Description}</div>
+                            </div>
+                        </div> */}
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Render Blocking Resources Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performRenderBlockingResourcesTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performRenderBlockingResourcesTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Nested Table Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performNestedTablesTest(scrapeData.htmlText).HasNestedTables}</div>
+                                <div className="text-sm">Length: {performNestedTablesTest(scrapeData.htmlText).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Frameset Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performFramesetTest(scrapeData.htmlText).HasFrameset}</div>
+                                <div className="text-sm">Length: {performFramesetTest(scrapeData.htmlText).Description}</div>
+                            </div>
+                        </div>
+
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Doctype Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performDoctypeTest(scrapeData.htmlText).HasCorrectDoctype}</div>
+                                <div className="text-sm">Length: {performDoctypeTest(scrapeData.htmlText).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">URL Redirects Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performUrlRedirectsTest(psiData).HasRedirects}</div>
+                                <div className="text-sm">Length: {performUrlRedirectsTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">First Contentful Paint Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performFirstContentfulPaintTest(psiData).Fcp}</div>
+                                <div className="text-sm">Length: {performFirstContentfulPaintTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Largest Contentful Paint Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performLargestContentfulPaintTest(psiData).Lcp}</div>
+                                <div className="text-sm">Length: {performLargestContentfulPaintTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Cumulative Layout Shift Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performCumulativeLayoutShiftTest(psiData).Cls}</div>
+                                <div className="text-sm">Length: {performCumulativeLayoutShiftTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">URL Caninicalization Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performUrlCanonicalizationTest(scrapeData.htmlText).IsCanonicalized}</div>
+                                <div className="text-sm">Length: {performUrlCanonicalizationTest(scrapeData.htmlText).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">SSL Checker and HTTPS Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performSslCheckerTest(scrapeData.htmlText).IsSecure}</div>
+                                <div className="text-sm">Length: {performSslCheckerTest(scrapeData.htmlText).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Mixed Content Test (HTTP over HTTPS)</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performMixedContentTest(scrapeData.htmlText).HasMixedContent}</div>
+                                <div className="text-sm">Length: {performMixedContentTest(scrapeData.htmlText).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">HTTP2 Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performHttp2Test(psiData).IsHttp2}</div>
+                                <div className="text-sm">Length: {performHttp2Test(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">HSTS Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performHstsTest(psiData).IsHstsEnabled}</div>
+                                <div className="text-sm">Length: {performHstsTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        {/* <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                            
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Safe Browsing Test</div>
+                            <div className="flex flex-col">
+                            
+                            <div className="text-sm">Text: {JSON.stringify(performSafeBrowsingTest(psiData.lighthouseResult.requestedUrl))}</div>
+                            {/* <div className="text-sm">Length: {performSafeBrowsingTest(psiData.lighthouseResult.requestedUrl).Description}</div> */}
+                        {/* </div>
+                        </div> */}
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Server Signature Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performServerSignatureTest(psiData).IsServerSignaturePresent}</div>
+                                <div className="text-sm">Length: {performServerSignatureTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        {/* <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                            
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Directory Browsing Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performDirectoryBrowsingTest(psiData).IsServerSignaturePresent}</div>
+                                <div className="text-sm">Length: {performDirectoryBrowsingTest(psiData).Description}</div>
+                            </div>
+                        </div> */}
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Plaintext Emails Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performPlaintextEmailsTest(scrapeData.htmlText).HasPlaintextEmails}</div>
+                                <div className="text-sm">Length: {performPlaintextEmailsTest(scrapeData.htmlText).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Unsafe Cross-Origin Links Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performUnsafeCrossOriginLinksTest(scrapeData.htmlText).HasUnsafeCrossOriginLinks}</div>
+                                <div className="text-sm">Length: {performUnsafeCrossOriginLinksTest(scrapeData.htmlText).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Meta Viewport Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performMetaViewportTest(psiData).HasMetaViewport}</div>
+                                <div className="text-sm">Length: {performMetaViewportTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Media Viewport Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performMediaQueryResponsiveTest(psiData).HasMediaQueries}</div>
+                                <div className="text-sm">Length: {performMediaQueryResponsiveTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Mobile Snapshot Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performMobileSnapshotTest(psiData).IsMobileSnapshotValid}</div>
+                                <div className="text-sm">Length: {performMobileSnapshotTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Structured Data Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performStructuredDataTest(psiData).HasStructuredData}</div>
+                                <div className="text-sm">Length: {performStructuredDataTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Custom 404 Error Page Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {await (await performCustom404ErrorPageTest(psiData.lighthouseResult.finalUrl)).Description}</div>
+                                {/* <div className="text-sm">Length: {performCustom404ErrorPageTest(psiData.lighthouseResult.finalUrl)}</div> */}
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Noindex Tag Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performNoindexTagTest(psiData).HasNoindexTag}</div>
+                                <div className="text-sm">Length: {performNoindexTagTest(psiData).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">NoFollow Tag Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performNofollowTagTest(scrapeData.htmlText).HasNofollowTag}</div>
+                                <div className="text-sm">Length: {performNofollowTagTest(scrapeData.htmlText).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Disallow Directive Tag Test</div>
+                            <div className="flex flex-col">
+
+                                {/* <div className="text-sm">Text: {await performDisallowDirectiveTest(scrapeData.htmlText).HasNofollowTag}</div> */}
+                                <div className="text-sm">Length: {await (await performDisallowDirectiveTest(psiData.lighthouseResult.finalUrl)).Description}</div>
+                            </div>
+                        </div>
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Meta Refresh Test</div>
+                            <div className="flex flex-col">
+
+                                <div className="text-sm">Text: {performMetaRefreshTest(scrapeData.htmlText).HasMetaRefreshTag}</div>
+                                <div className="text-sm">Length: {performMetaRefreshTest(scrapeData.htmlText).Description}</div>
+                            </div>
+                        </div>
+                        {/* <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                            
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">SPF Records Test</div>
+                            <div className="flex flex-col">
+
+                                {/* <div className="text-sm">Text: {performSpfRecordsTest(scrapeData.htmlText).HasMetaRefreshTag}</div> */}
+                        {/* <div className="text-sm">Length: {await (await performSpfRecordsTest(scrapeData.htmlText)).Description}</div>
+                            </div>
+                        </div> */}
+
+                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Ads.txt Validation Test</div>
+                            <div className="flex flex-col">
+
+                                {/* <div className="text-sm">Text: {performAdsTxtValidationTest(scrapeData.htmlText).HasMetaRefreshTag}</div> */}
+                                <div className="text-sm">Length: {await (await performAdsTxtValidationTest(psiData.lighthouseResult.finalUrl)).Description}</div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
