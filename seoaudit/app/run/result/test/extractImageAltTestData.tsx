@@ -22,40 +22,33 @@ interface PSIData {
 }
 
 // Function to extract Image Alt Test data from PSI data
-export function extractImageAltTestData(data: PSIData): { Images: { url: string; alt: string; isAltPresent: boolean }[]; Importance: string; Description: string; Link: string } {
+/**
+ * Extracts image alt attribute information from PSI data.
+ * @param data - The PSI data object.
+ * @returns An object containing the extracted image alt attribute information.
+ */
+export function extractImageAltTestData(data: PSIData): { Images: string; Description: string; Link: string } {
     const imageAltAudit = data?.lighthouseResult?.audits?.['image-alt'];
 
     // Check if the Image Alt Test audit data is available
     if (!imageAltAudit) {
         // Return default data if the audit data is missing
         return {
-            Images: [],
-            Importance: 'Low',
+            Images: 'No Image Alt Test audit data found',
             Description: 'No Image Alt Test audit data found in PSI data.',
             Link: 'https://developers.google.com/speed/pagespeed/insights/'
         };
     }
 
     // Extract image alt attribute information
-    const images = imageAltAudit.details.items;
-
-    // Check if all images have alt attributes
-    const allImagesHaveAlt = images.every(image => image.isAltPresent);
-
-    const importance = allImagesHaveAlt ? 'High' : 'Low';
-    const description = allImagesHaveAlt ? 'All images on this website have appropriate alt attributes.' : 'Some images on this website do not have appropriate alt attributes.';
+    const images = imageAltAudit.title;
+    const description = imageAltAudit.description;
     const link = 'https://developers.google.com/web/fundamentals/accessibility';
 
-    // console.log({
-    //     message: 'Image Alt Test',
-    //     description,
-    //     link,
-    //     importance
-    // });
-
+    const status = imageAltAudit.score >= 0.5 ? 'Pass' : 'Fail';
+    
     return {
-        Images: images.map(image => ({ url: image.url, alt: image.alt, isAltPresent: image.isAltPresent })),
-        Importance: importance,
+        Images: images,
         Description: description,
         Link: link
     };

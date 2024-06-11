@@ -39321,7 +39321,7 @@ async function YourComponent() {
                         <div className="text-2xl my-10 font-semibold">Good Points</div>
                         {outdata1 ? outdata1.messages.goodPoints.map((item: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined, index: React.Key | null | undefined) => (
 
-                            <div key={index} className=" flex  my-1 rounded items-center bg-slate-100  p-4 px-2">
+                            <div key={index} className=" flex  my-1 rounded items-center bg-slate-100  p-4 px-2 px-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 m-2 text-green-500">
                                     <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
                                 </svg>
@@ -39545,536 +39545,1445 @@ async function YourComponent() {
                             </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Sitemap Test</div>
                             <div className="flex flex-col">
-                            <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Length: {extractSitemapData(psiData).Description}</div>
-                                <a className="text-sm" href={extractSitemapData(psiData).Link}>Learn More</a>
-                            </div>
+                                    <div className="text-sm">Length: {extractSitemapData(psiData).Description}</div>
+                                    <a className="text-sm" href={extractSitemapData(psiData).Link}>Learn More</a>
+                                </div>
                             </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractBrokenLinksData(psiData).BrokenLinks.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Broken Link Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {JSON.stringify(extractBrokenLinksData(psiData).BrokenLinks)}</div>
-                                <div className="text-sm">Length: {extractBrokenLinksData(psiData).Description}</div>
+                                    {/* <div className="text-sm">Text: {JSON.stringify(extractBrokenLinksData(psiData).BrokenLinks)}</div> */}
+                                    <div className="text-sm">{extractBrokenLinksData(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                </div>
                             </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractSEOFriendlyUrlData(psiData).URLs.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">SEO Friendly URL Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {extractSEOFriendlyUrlData(psiData).Link}</div>
-                                <div className="text-sm">Length: {extractSEOFriendlyUrlData(psiData).Description}</div>
+                                    {/* <div className="text-sm">Text: {extractSEOFriendlyUrlData(psiData).Link}</div> */}
+                                    <div className="text-sm">{extractSEOFriendlyUrlData(psiData).Description}</div>
+                                    <a className="text-sm" href={extractSEOFriendlyUrlData(psiData).Link}>Learn More</a>
+                                </div>
                             </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractSEOFriendlyUrlData(psiData).URLs.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Image Alt Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                {/* <div className="text-sm">Text: {extractImageAltTestData(psiData).Link}</div>
-                                <div className="text-sm">Length: {extractImageAltTestData(psiData).Description}</div> */}
+                                    <div className="text-sm">Text: {extractImageAltTestData(psiData).Link}</div>
+                                    <div className="text-sm">Length: {extractImageAltTestData(psiData).Images}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>
                             </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Responsive Image Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {extractResponsiveImageData(psiData).Link}</div>
-                                <div className="text-sm">Length: {extractResponsiveImageData(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {extractResponsiveImageData(psiData).Link}</div>
+                                    <div className="text-sm">Length: {extractResponsiveImageData(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Image Aspect Ratio Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {extractImageAspectRatioData(psiData).Link}</div>
-                                <div className="text-sm">Length: {extractImageAspectRatioData(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {extractImageAspectRatioData(psiData).Link}</div>
+                                    <div className="text-sm">Length: {extractImageAspectRatioData(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Inline CSS Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {extractInlineCssData(psiData).Link}</div>
-                                <div className="text-sm">Length: {extractInlineCssData(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {extractInlineCssData(psiData).Link}</div>
+                                    <div className="text-sm">Length: {extractInlineCssData(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Deprecated HTML Tags Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {extractDeprecatedHtmlTagsData(psiData).Link}</div>
-                                <div className="text-sm">Length: {extractDeprecatedHtmlTagsData(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {extractDeprecatedHtmlTagsData(psiData).Link}</div>
+                                    <div className="text-sm">Length: {extractDeprecatedHtmlTagsData(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Google Analysis Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performGoogleAnalyticsTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performGoogleAnalyticsTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performGoogleAnalyticsTest(psiData).Link}</div>
+                                    <div className="text-sm">Length: {performGoogleAnalyticsTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Favicon Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performFaviconTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performFaviconTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performFaviconTest(psiData).Link}</div>
+                                    <div className="text-sm">Length: {performFaviconTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Backlink Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performBacklinksTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performBacklinksTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performBacklinksTest(psiData).Link}</div>
+                                    <div className="text-sm">Length: {performBacklinksTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">JS Error Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performJSErrorTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performJSErrorTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performJSErrorTest(psiData).Link}</div>
+                                    <div className="text-sm">Length: {performJSErrorTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Console Errors Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performConsoleErrorsTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performConsoleErrorsTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performConsoleErrorsTest(psiData).Link}</div>
+                                    <div className="text-sm">Length: {performConsoleErrorsTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Charset Decleration Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performCharsetDeclarationTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performCharsetDeclarationTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performCharsetDeclarationTest(psiData).Link}</div>
+                                    <div className="text-sm">Length: {performCharsetDeclarationTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">HTML Page Size Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performHTMLPageSizeTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performHTMLPageSizeTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performHTMLPageSizeTest(psiData).Link}</div>
+                                    <div className="text-sm">Length: {performHTMLPageSizeTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">DOM Size Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performDOMSizeTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performDOMSizeTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performDOMSizeTest(psiData).Link}</div>
+                                    <div className="text-sm">Length: {performDOMSizeTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">HTML Compression/GZIP Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performHTMLCompressionTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performHTMLCompressionTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performHTMLCompressionTest(psiData).Link}</div>
+                                    <div className="text-sm">Length: {performHTMLCompressionTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Site Loading Speed Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performSiteLoadingSpeedTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performSiteLoadingSpeedTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performSiteLoadingSpeedTest(psiData).Link}</div>
+                                    <div className="text-sm">Length: {performSiteLoadingSpeedTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">JS Execution Time Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performJSExecutionTimeTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performJSExecutionTimeTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performJSExecutionTimeTest(psiData).Link}</div>
+                                    <div className="text-sm">Length: {performJSExecutionTimeTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Page Objects Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performPageObjectsTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performPageObjectsTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performPageObjectsTest(psiData).Link}</div>
+                                    <div className="text-sm">Length: {performPageObjectsTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Page Cache Test (Server Side Caching )</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performPageCacheTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performPageCacheTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performPageCacheTest(psiData).Link}</div>
+                                    <div className="text-sm">Length: {performPageCacheTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Flash Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performFlashTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performFlashTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performFlashTest(psiData).Link}</div>
+                                    <div className="text-sm">Length: {performFlashTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">CDN Usage Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performCDNUsageTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performCDNUsageTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performCDNUsageTest(psiData).Link}</div>
+                                    <div className="text-sm">Length: {performCDNUsageTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Modern Image Format Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                {/* <div className="text-sm">Text: {performModernImageFormatTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performModernImageFormatTest(psiData).Description}</div> */}
-                            </div>
+                                    {/* <div className="text-sm">Text: {performModernImageFormatTest(psiData).Link}</div>
+                                <div className="text-sm">Length: {performModernImageFormatTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                 */}
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Image Metadata Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                {/* <div className="text-sm">Text: {performImageMetadataTest(psiData).Link}</div> */}
-                                {/* <div className="text-sm">Length: {performImageMetadataTest(psiData).Description}</div> */}
-                            </div>
+                                    {/* <div className="text-sm">Text: {performImageMetadataTest(psiData).Link}</div> */}
+                                    {/* <div className="text-sm">Length: {performImageMetadataTest(psiData).Description}</div> 
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    */}
+                                </div>                            </div>
                         </div>
-                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Image Caching Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                 <div className="text-sm">Text: {performImageCachingTest(psiData).Link}</div>
                                 <div className="text-sm">Length: {performImageCachingTest(psiData).Description}</div>
                             </div>
                         </div> */}
-                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">JavaScript Caching Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                 <div className="text-sm">Text: {performJavaScriptCachingTest(psiData).Link}</div>
                                 <div className="text-sm">Length: {performJavaScriptCachingTest(psiData).Description}</div>
                             </div>
                         </div> */}
-                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">CSS Caching Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                 <div className="text-sm">Text: {performCssCachingTest(psiData).Link}</div>
                                 <div className="text-sm">Length: {performCssCachingTest(psiData).Description}</div>
                             </div>
                         </div> */}
-                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Javascript Minification Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                 <div className="text-sm">Text: {performCssMinificationTest(psiData).Link}</div>
                                 <div className="text-sm">Length: {performCssMinificationTest(psiData).Description}</div>
                             </div>
                         </div> */}
-                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">JS  Minification Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                 <div className="text-sm">Text: {performCssMinificationTest(psiData).Link}</div>
                                 <div className="text-sm">Length: {performCssMinificationTest(psiData).Description}</div>
                             </div>
                         </div> */}
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Render Blocking Resources Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performRenderBlockingResourcesTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performRenderBlockingResourcesTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performRenderBlockingResourcesTest(psiData).Link}</div>
+                                    <div className="text-sm">Length: {performRenderBlockingResourcesTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Nested Table Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performNestedTablesTest(scrapeData?.htmlText).HasNestedTables}</div>
-                                <div className="text-sm">Length: {performNestedTablesTest(scrapeData?.htmlText).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performNestedTablesTest(scrapeData?.htmlText).HasNestedTables}</div>
+                                    <div className="text-sm">Length: {performNestedTablesTest(scrapeData?.htmlText).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Frameset Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performFramesetTest(scrapeData?.htmlText).HasFrameset}</div>
-                                <div className="text-sm">Length: {performFramesetTest(scrapeData?.htmlText).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performFramesetTest(scrapeData?.htmlText).HasFrameset}</div>
+                                    <div className="text-sm">Length: {performFramesetTest(scrapeData?.htmlText).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
 
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Doctype Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performDoctypeTest(scrapeData?.htmlText).HasCorrectDoctype}</div>
-                                <div className="text-sm">Length: {performDoctypeTest(scrapeData?.htmlText).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performDoctypeTest(scrapeData?.htmlText).HasCorrectDoctype}</div>
+                                    <div className="text-sm">Length: {performDoctypeTest(scrapeData?.htmlText).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">URL Redirects Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performUrlRedirectsTest(psiData).HasRedirects}</div>
-                                <div className="text-sm">Length: {performUrlRedirectsTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performUrlRedirectsTest(psiData).HasRedirects}</div>
+                                    <div className="text-sm">Length: {performUrlRedirectsTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">First Contentful Paint Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performFirstContentfulPaintTest(psiData).Fcp}</div>
-                                <div className="text-sm">Length: {performFirstContentfulPaintTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performFirstContentfulPaintTest(psiData).Fcp}</div>
+                                    <div className="text-sm">Length: {performFirstContentfulPaintTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Largest Contentful Paint Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performLargestContentfulPaintTest(psiData).Lcp}</div>
-                                <div className="text-sm">Length: {performLargestContentfulPaintTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performLargestContentfulPaintTest(psiData).Lcp}</div>
+                                    <div className="text-sm">Length: {performLargestContentfulPaintTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Cumulative Layout Shift Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performCumulativeLayoutShiftTest(psiData).Cls}</div>
-                                <div className="text-sm">Length: {performCumulativeLayoutShiftTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performCumulativeLayoutShiftTest(psiData).Cls}</div>
+                                    <div className="text-sm">Length: {performCumulativeLayoutShiftTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">URL Caninicalization Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performUrlCanonicalizationTest(scrapeData?.htmlText).IsCanonicalized}</div>
-                                <div className="text-sm">Length: {performUrlCanonicalizationTest(scrapeData?.htmlText).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performUrlCanonicalizationTest(scrapeData?.htmlText).IsCanonicalized}</div>
+                                    <div className="text-sm">Length: {performUrlCanonicalizationTest(scrapeData?.htmlText).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">SSL Checker and HTTPS Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performSslCheckerTest(scrapeData?.htmlText).IsSecure}</div>
-                                <div className="text-sm">Length: {performSslCheckerTest(scrapeData?.htmlText).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performSslCheckerTest(scrapeData?.htmlText).IsSecure}</div>
+                                    <div className="text-sm">Length: {performSslCheckerTest(scrapeData?.htmlText).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Mixed Content Test (HTTP over HTTPS)</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performMixedContentTest(scrapeData?.htmlText).HasMixedContent}</div>
-                                <div className="text-sm">Length: {performMixedContentTest(scrapeData?.htmlText).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performMixedContentTest(scrapeData?.htmlText).HasMixedContent}</div>
+                                    <div className="text-sm">Length: {performMixedContentTest(scrapeData?.htmlText).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">HTTP2 Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performHttp2Test(psiData).IsHttp2}</div>
-                                <div className="text-sm">Length: {performHttp2Test(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performHttp2Test(psiData).IsHttp2}</div>
+                                    <div className="text-sm">Length: {performHttp2Test(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">HSTS Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performHstsTest(psiData).IsHstsEnabled}</div>
-                                <div className="text-sm">Length: {performHstsTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performHstsTest(psiData).IsHstsEnabled}</div>
+                                    <div className="text-sm">Length: {performHstsTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Safe Browsing Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
                             
                             <div className="text-sm">Text: {JSON.stringify(performSafeBrowsingTest(psiData.lighthouseResult.requestedUrl))}</div>
                             {/* <div className="text-sm">Length: {performSafeBrowsingTest(psiData.lighthouseResult.requestedUrl).Description}</div> */}
                         {/* </div>
                         </div> */}
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Server Signature Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performServerSignatureTest(psiData).IsServerSignaturePresent}</div>
-                                <div className="text-sm">Length: {performServerSignatureTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performServerSignatureTest(psiData).IsServerSignaturePresent}</div>
+                                    <div className="text-sm">Length: {performServerSignatureTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                         </div>
                         </div>
-                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Directory Browsing Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                 <div className="text-sm">Text: {performDirectoryBrowsingTest(psiData).IsServerSignaturePresent}</div>
                                 <div className="text-sm">Length: {performDirectoryBrowsingTest(psiData).Description}</div>
                             </div>
                         </div> */}
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Plaintext Emails Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performPlaintextEmailsTest(scrapeData?.htmlText).HasPlaintextEmails}</div>
-                                <div className="text-sm">Length: {performPlaintextEmailsTest(scrapeData?.htmlText).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performPlaintextEmailsTest(scrapeData?.htmlText).HasPlaintextEmails}</div>
+                                    <div className="text-sm">Length: {performPlaintextEmailsTest(scrapeData?.htmlText).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Unsafe Cross-Origin Links Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performUnsafeCrossOriginLinksTest(scrapeData?.htmlText).HasUnsafeCrossOriginLinks}</div>
-                                <div className="text-sm">Length: {performUnsafeCrossOriginLinksTest(scrapeData?.htmlText).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performUnsafeCrossOriginLinksTest(scrapeData?.htmlText).HasUnsafeCrossOriginLinks}</div>
+                                    <div className="text-sm">Length: {performUnsafeCrossOriginLinksTest(scrapeData?.htmlText).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                           </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Meta Viewport Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performMetaViewportTest(psiData).HasMetaViewport}</div>
-                                <div className="text-sm">Length: {performMetaViewportTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performMetaViewportTest(psiData).HasMetaViewport}</div>
+                                    <div className="text-sm">Length: {performMetaViewportTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Media Viewport Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performMediaQueryResponsiveTest(psiData).HasMediaQueries}</div>
-                                <div className="text-sm">Length: {performMediaQueryResponsiveTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performMediaQueryResponsiveTest(psiData).HasMediaQueries}</div>
+                                    <div className="text-sm">Length: {performMediaQueryResponsiveTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Mobile Snapshot Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performMobileSnapshotTest(psiData).IsMobileSnapshotValid}</div>
-                                <div className="text-sm">Length: {performMobileSnapshotTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performMobileSnapshotTest(psiData).IsMobileSnapshotValid}</div>
+                                    <div className="text-sm">Length: {performMobileSnapshotTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Structured Data Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performStructuredDataTest(psiData).HasStructuredData}</div>
-                                <div className="text-sm">Length: {performStructuredDataTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performStructuredDataTest(psiData).HasStructuredData}</div>
+                                    <div className="text-sm">Length: {performStructuredDataTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Custom 404 Error Page Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {await (await performCustom404ErrorPageTest(psiData.lighthouseResult.finalUrl)).Description}</div>
-                                {/* <div className="text-sm">Length: {performCustom404ErrorPageTest(psiData.lighthouseResult.finalUrl)}</div> */}
-                            </div>
+                                    <div className="text-sm">Text: {await (await performCustom404ErrorPageTest(psiData.lighthouseResult.finalUrl)).Description}</div>
+                                    {/* <div className="text-sm">Length: {performCustom404ErrorPageTest(psiData.lighthouseResult.finalUrl)}</div> */}
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Noindex Tag Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performNoindexTagTest(psiData).HasNoindexTag}</div>
-                                <div className="text-sm">Length: {performNoindexTagTest(psiData).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performNoindexTagTest(psiData).HasNoindexTag}</div>
+                                    <div className="text-sm">Length: {performNoindexTagTest(psiData).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">NoFollow Tag Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performNofollowTagTest(scrapeData?.htmlText).HasNofollowTag}</div>
-                                <div className="text-sm">Length: {performNofollowTagTest(scrapeData?.htmlText).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performNofollowTagTest(scrapeData?.htmlText).HasNofollowTag}</div>
+                                    <div className="text-sm">Length: {performNofollowTagTest(scrapeData?.htmlText).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Disallow Directive Tag Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                {/* <div className="text-sm">Text: {await performDisallowDirectiveTest(scrapeData?.htmlText).HasNofollowTag}</div> */}
-                                <div className="text-sm">Length: {await (await performDisallowDirectiveTest(psiData.lighthouseResult.finalUrl)).Description}</div>
-                            </div>
+                                    {/* <div className="text-sm">Text: {await performDisallowDirectiveTest(scrapeData?.htmlText).HasNofollowTag}</div> */}
+                                    <div className="text-sm">Length: {await (await performDisallowDirectiveTest(psiData.lighthouseResult.finalUrl)).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Meta Refresh Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performMetaRefreshTest(scrapeData?.htmlText).HasMetaRefreshTag}</div>
-                                <div className="text-sm">Length: {performMetaRefreshTest(scrapeData?.htmlText).Description}</div>
-                            </div>
+                                    <div className="text-sm">Text: {performMetaRefreshTest(scrapeData?.htmlText).HasMetaRefreshTag}</div>
+                                    <div className="text-sm">Length: {performMetaRefreshTest(scrapeData?.htmlText).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
-                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">SPF Records Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                 {/* <div className="text-sm">Text: {performSpfRecordsTest(scrapeData?.htmlText).HasMetaRefreshTag}</div> */}
                         {/* <div className="text-sm">Length: {await (await performSpfRecordsTest(scrapeData?.htmlText)).Description}</div>
                             </div>
                         </div> */}
 
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Ads.txt Validation Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                {/* <div className="text-sm">Text: {performAdsTxtValidationTest(scrapeData.htmlText).HasMetaRefreshTag}</div> */}
-                                <div className="text-sm">Length: {await (await performAdsTxtValidationTest(psiData.lighthouseResult.finalUrl)).Description}</div>
-                            </div>
+                                    {/* <div className="text-sm">Text: {performAdsTxtValidationTest(scrapeData.htmlText).HasMetaRefreshTag}</div> */}
+                                    <div className="text-sm">Length: {await (await performAdsTxtValidationTest(psiData.lighthouseResult.finalUrl)).Description}</div>
+                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+
+                                </div>                            </div>
                         </div>
 
 
