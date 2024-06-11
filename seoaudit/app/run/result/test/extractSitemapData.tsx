@@ -22,7 +22,7 @@ interface PSIData {
 
 // Function to extract sitemap data from PSI data
 export function extractSitemapData(data: any): { HasSitemap: boolean; Importance: string; Description: string; Link: string } {
-    const sitemapAudit = data?.lighthouseResult?.audits?.sitemap;
+    const sitemapAudit = data?.lighthouseResult?.audits?.["robots-txt"];
 
     // Check if the sitemap audit data is available
     if (!sitemapAudit) {

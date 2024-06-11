@@ -1,4 +1,4 @@
-export function extractMetaTitle(data: { title: any; keywords?: null; subKeywords?: never[]; metaDescription?: string; languageCode?: string; htmlText?: string; countryCode?: string; }): { Text: string; Length: number; ResultType: string; Importance: string ;Description: string } {
+export function extractMetaTitle(data: { title: any; keywords?: null; subKeywords?: never[]; metaDescription?: string; languageCode?: string; htmlText?: string; countryCode?: string; }): { Text: string; Length: number; Result: string; Importance: string ;Description: string,Link :string } {
 
     const titleAudit = data?.title ?? { title: 'No title found' };
     // console.log(titleAudit);
@@ -8,14 +8,16 @@ export function extractMetaTitle(data: { title: any; keywords?: null; subKeyword
     const isValid = titleText !== 'No title found' && titleText.length > 0;
     const resultType = isValid ? 'Success' : 'Error';
     const importance = 'High';
+    const link = 'https://developer.chrome.com/docs/lighthouse/seo/meta-description';
     const description = 'HTML contains a non-empty <title> tag inside <head>';
 
 
     return {
         Text: titleText,
         Length: titleLength,
-        ResultType: resultType,
+        Result: resultType,
         Importance: importance,
-        Description: description
+        Description: description,
+        Link:link
     };
 }

@@ -68,6 +68,7 @@ import { performDisallowDirectiveTest } from "./test/performDisallowDirectiveTes
 import { performMetaRefreshTest } from "./test/performMetaRefreshTest";
 import { performSpfRecordsTest } from "./test/performSpfRecordsTest";
 import { performAdsTxtValidationTest } from "./test/performAdsTxtValidationTest";
+import Nav from "@/app/Nav";
 
 
 function page() {
@@ -39034,7 +39035,7 @@ async function YourComponent() {
     const [scrapeData, setScrapeData] = useState<scrapeData | undefined>({
         "title": "Strivers A2Z DSA Course/Sheet - Crack Any FAANG or PBCs",
         "keywords": null,
-        "countryCode":null,
+        "countryCode": null,
         "subKeywords": [],
         "metaDescription": "takeuforward is the best place to learn data structures, algorithms, most asked coding interview questions, real interview experiences free of cost.",
         "languageCode": "en",
@@ -39081,7 +39082,7 @@ async function YourComponent() {
                 countryCode: scrapeData?.countryCode
             };
 
-            
+
             try {
                 const seoCheck = new SeoCheck(contentJson, 'liveinabroad.com');
                 const result: Outdata = await seoCheck.analyzeSeo();
@@ -39099,48 +39100,48 @@ async function YourComponent() {
     if (loading) {
         return (
             <div className="flex h-screen w-screen items-center justify-center fixed bg-white">
-            <div className="loader">
-                <div>
-                    <ul>
-                        <li>
-                            <svg fill="currentColor" viewBox="0 0 90 120">
-                                <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
-                            </svg>
-                        </li>
-                        <li>
-                            <svg fill="currentColor" viewBox="0 0 90 120">
-                                <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
-                            </svg>
-                        </li>
-                        <li>
-                            <svg fill="currentColor" viewBox="0 0 90 120">
-                                <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
-                            </svg>
-                        </li>
-                        <li>
-                            <svg fill="currentColor" viewBox="0 0 90 120">
-                                <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
-                            </svg>
-                        </li>
-                        <li>
-                            <svg fill="currentColor" viewBox="0 0 90 120">
-                                <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
-                            </svg>
-                        </li>
-                        <li>
-                            <svg fill="currentColor" viewBox="0 0 90 120">
-                                <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
-                            </svg>
-                        </li>
-                    </ul>
-                </div><span>Loading</span></div>
-                </div>
+                <div className="loader">
+                    <div>
+                        <ul>
+                            <li>
+                                <svg fill="currentColor" viewBox="0 0 90 120">
+                                    <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg fill="currentColor" viewBox="0 0 90 120">
+                                    <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg fill="currentColor" viewBox="0 0 90 120">
+                                    <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg fill="currentColor" viewBox="0 0 90 120">
+                                    <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg fill="currentColor" viewBox="0 0 90 120">
+                                    <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg fill="currentColor" viewBox="0 0 90 120">
+                                    <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div><span>Loading</span></div>
+            </div>
         )
     }
 
     return (
         // <Suspense fallback={<div></div>}>
-<>
+        <><Nav />
             <div className="hidden fixed  flex-col top-0 left-0 min-w-80 bg-[#F8F9FF] h-full border-r">
                 <div className="flex items-center justify-center h-14 border-b p-10 font-semibold">
                     <div>LOGO</div>
@@ -39268,17 +39269,17 @@ async function YourComponent() {
                     </div>
                 </div>
             </div>
-            <div className="flex">
+            <div className="flex pt-32 bg-[#c9d2fc55]">
 
-                <div className=' flex grow  flex-col items-center justify-center bg-[#c9d2fc55] text-[#2D2D2D] ' >
-                    <div className="flex justify-between items-center self-start p-10 w-full">
-                        <div className="flex flex-col self-start grow">
+                <div className=' flex grow  flex-col items-center justify-center  text-[#2D2D2D] ' >
+                    <div className="w-4/5 flex justify-between items-center py-10 ">
+                        <div className="flex flex-col self-start grow ">
 
                             <div className="text-xl  font-semibold">{scrapeData ? scrapeData.title : <></>}</div>
                             <div className="text-xs  font-base text-blue-500 underline">{psiData ? psiData?.id : <></>}</div>
                         </div>
                         <div className="flex  ">
-                            <input type="text" placeholder="Search Anything" className="px-4 p-2 border-0 border-gray-300  rounded" />
+                            Download
                         </div>
                     </div>
                     <div className="flex w-4/5 justify-between mt-10 text-[#2D2D2D]">
@@ -39288,17 +39289,17 @@ async function YourComponent() {
                             <div className="text-base mt-2 font-semibold ">SEO</div>
                         </div>
                         <div className=" flex flex-col justify-center mx-2 bg-white p-10 rounded-lg grow items-center">
-                            <div className="radial-progress bg-yellow-100 text-yellow-400" style={{ "--value": psiData.lighthouseResult.categories.performance.score*100 } as React.CSSProperties} role="progressbar">{psiData.lighthouseResult.categories.performance.score*100}</div>
+                            <div className="radial-progress bg-yellow-100 text-yellow-400" style={{ "--value": psiData.lighthouseResult.categories.performance.score * 100 } as React.CSSProperties} role="progressbar">{psiData.lighthouseResult.categories.performance.score * 100}</div>
                             <div className="text-base mt-2 font-semibold ">Performaance</div>
 
                         </div>
                         <div className=" flex flex-col justify-center mx-2 bg-white p-10 rounded-lg grow items-center">
-                            <div className="radial-progress bg-red-100 text-red-400" style={{ "--value": psiData.lighthouseResult.categories.accessibility.score*100 } as React.CSSProperties} role="progressbar">{psiData.lighthouseResult.categories.accessibility.score*100}</div>
+                            <div className="radial-progress bg-red-100 text-red-400" style={{ "--value": psiData.lighthouseResult.categories.accessibility.score * 100 } as React.CSSProperties} role="progressbar">{psiData.lighthouseResult.categories.accessibility.score * 100}</div>
                             <div className="text-base mt-2 font-semibold ">Accessibility</div>
 
                         </div>
                         <div className=" flex flex-col justify-center ml-2 bg-white p-10 rounded-lg grow items-center">
-                            <div className="radial-progress bg-yellow-100 text-yellow-400" style={{ "--value": psiData.lighthouseResult.categories?.["best-practices"].score*100 } as React.CSSProperties} role="progressbar">{psiData.lighthouseResult.categories?.["best-practices"].score*100}</div>
+                            <div className="radial-progress bg-yellow-100 text-yellow-400" style={{ "--value": psiData.lighthouseResult.categories?.["best-practices"].score * 100 } as React.CSSProperties} role="progressbar">{psiData.lighthouseResult.categories?.["best-practices"].score * 100}</div>
                             <div className="text-base mt-2 font-semibold ">Best Practices</div>
 
                         </div>
@@ -39367,71 +39368,191 @@ async function YourComponent() {
                         <div className="text-2xl my-10 font-semibold">OnPage Results</div>
 
 
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center p-4 px-2">
+                            <div className="mx-4">
+
+                                {extractMetaTitle(scrapeData).Result == "Success" ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    : extractMetaTitle(scrapeData).Result == "Error" ? (
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 m-2 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    ) : <></>}
+                            </div>
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Meta Title Test</div>
                             <div className="flex flex-col">
 
-                                <div className="text-sm">Text: {extractMetaTitle(scrapeData).Text}</div>
-                                <div className="text-sm">Length: {extractMetaTitle(scrapeData).Length}</div>
+                                <div className="text-sm">{extractMetaTitle(scrapeData).Description}</div>
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
+
+                                    <div className="text-sm">Text: {extractMetaTitle(scrapeData).Text}</div>
+                                    <div className="text-sm">Length: {extractMetaTitle(scrapeData).Length}</div>
+                                    <a href={extractMetaTitle(scrapeData).Link} className="text-sm">Learn More</a>
+                                </div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractMetaDescription(scrapeData).Result == "Success" ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    : extractMetaDescription(scrapeData).Result == "Error" ? (
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 m-2 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    ) : <></>}
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Meta Description Test</div>
                             <div className="flex flex-col overflow-auto">
+                                <div className="text-sm">{extractMetaDescription(scrapeData).Description}</div>
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {extractMetaDescription(scrapeData).Text}</div>
-                                <div className="text-sm">Length: {extractMetaDescription(scrapeData).Length}</div>
+                                    <div className="text-sm">Text: {extractMetaDescription(scrapeData).Text}</div>
+                                    <div className="text-sm">Length: {extractMetaDescription(scrapeData).Length}</div>
+                                    <a href={extractMetaDescription(scrapeData).Link} className="text-sm">Learn More</a>
+
+                                </div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {performSocialMediaTest(psiData).HasSocialMediaTags ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 m-2 text-red-400">
+                                        <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                    </svg>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Social Media Meta Tags Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {performSocialMediaTest(psiData).Description}</div>
-                                <div className="text-sm">Length: {performSocialMediaTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performSocialMediaTest(psiData).HasSocialMediaTags}</div>
+                                    <div className="text-sm">{performSocialMediaTest(psiData).Description}</div>
+                                    {/* <div className="text-sm">Length: {performSocialMediaTest(psiData).HasSocialMediaTags}</div> */}
+                                    <a className="text-sm" href={performSocialMediaTest(psiData).Link}>Learn More</a>
+                                </div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {performSocialMediaTest(psiData).HasSocialMediaTags ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 m-2 text-red-400">
+                                        <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                    </svg>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Most Common keyword Test</div>
                             <div className="flex flex-col">
+                                <div className="text-sm"> {extractMostCommonKeywords(scrapeData).Description}</div>
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {extractMostCommonKeywords(scrapeData).Keywords}</div>
-                                <div className="text-sm">Length: {extractMostCommonKeywords(scrapeData).Description}</div>
+                                    <div className="text-sm">{extractMostCommonKeywords(scrapeData).Keywords}</div>
+                                    <a className="text-sm" href={extractMostCommonKeywords(scrapeData).link}>Learn More</a>
+
+                                </div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractHeadingTagsData(psiData).hasH1Tags ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Heading Tags Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                {/* <div className="text-sm">Text: {extractHeadingTagsData(scrapeData?.htmlText).HasH1Tags}</div> */}
-                                {/* <div className="text-sm">Length: {extractHeadingTagsData(scrapeData?.htmlText).Description}</div> */}
+                                    <div className="text-sm">Length: {extractHeadingTagsData(scrapeData?.htmlText).Description}</div>
+                                    <a className="text-sm" href={extractHeadingTagsData(scrapeData?.htmlText).Link}>Learn More</a>
+                                </div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractRobotsTxtData(psiData).HasRobotsTxt ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Robots.txt Test</div>
                             <div className="flex flex-col">
+                                <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {extractRobotsTxtData(psiData).HasRobotsTxt}</div>
-                                <div className="text-sm">Length: {extractRobotsTxtData(psiData).Description}</div>
+                                    <div className="text-sm">Length: {extractRobotsTxtData(psiData).Description}</div>
+                                    <a className="text-sm" href={extractRobotsTxtData(psiData).Link}>Leran more</a>
+                                </div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
 
+                                {extractSitemapData(psiData).HasSitemap ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    :
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                }
+                            </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Sitemap Test</div>
                             <div className="flex flex-col">
+                            <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                <div className="text-sm">Text: {extractSitemapData(psiData).HasSitemap}</div>
                                 <div className="text-sm">Length: {extractSitemapData(psiData).Description}</div>
+                                <a className="text-sm" href={extractSitemapData(psiData).Link}>Learn More</a>
+                            </div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Broken Link Test</div>
                             <div className="flex flex-col">
@@ -39440,7 +39561,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {extractBrokenLinksData(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">SEO Friendly URL Test</div>
                             <div className="flex flex-col">
@@ -39449,7 +39570,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {extractSEOFriendlyUrlData(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Image Alt Test</div>
                             <div className="flex flex-col">
@@ -39458,7 +39579,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {extractImageAltTestData(psiData).Description}</div> */}
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Responsive Image Test</div>
                             <div className="flex flex-col">
@@ -39467,7 +39588,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {extractResponsiveImageData(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Image Aspect Ratio Test</div>
                             <div className="flex flex-col">
@@ -39476,7 +39597,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {extractImageAspectRatioData(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Inline CSS Test</div>
                             <div className="flex flex-col">
@@ -39485,7 +39606,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {extractInlineCssData(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Deprecated HTML Tags Test</div>
                             <div className="flex flex-col">
@@ -39494,7 +39615,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {extractDeprecatedHtmlTagsData(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Google Analysis Test</div>
                             <div className="flex flex-col">
@@ -39503,7 +39624,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performGoogleAnalyticsTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Favicon Test</div>
                             <div className="flex flex-col">
@@ -39512,7 +39633,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performFaviconTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Backlink Test</div>
                             <div className="flex flex-col">
@@ -39521,7 +39642,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performBacklinksTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">JS Error Test</div>
                             <div className="flex flex-col">
@@ -39530,7 +39651,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performJSErrorTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Console Errors Test</div>
                             <div className="flex flex-col">
@@ -39539,7 +39660,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performConsoleErrorsTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Charset Decleration Test</div>
                             <div className="flex flex-col">
@@ -39548,7 +39669,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performCharsetDeclarationTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">HTML Page Size Test</div>
                             <div className="flex flex-col">
@@ -39557,7 +39678,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performHTMLPageSizeTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">DOM Size Test</div>
                             <div className="flex flex-col">
@@ -39566,7 +39687,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performDOMSizeTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">HTML Compression/GZIP Test</div>
                             <div className="flex flex-col">
@@ -39575,7 +39696,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performHTMLCompressionTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Site Loading Speed Test</div>
                             <div className="flex flex-col">
@@ -39584,7 +39705,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performSiteLoadingSpeedTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">JS Execution Time Test</div>
                             <div className="flex flex-col">
@@ -39593,7 +39714,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performJSExecutionTimeTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Page Objects Test</div>
                             <div className="flex flex-col">
@@ -39602,7 +39723,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performPageObjectsTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Page Cache Test (Server Side Caching )</div>
                             <div className="flex flex-col">
@@ -39611,7 +39732,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performPageCacheTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Flash Test</div>
                             <div className="flex flex-col">
@@ -39620,7 +39741,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performFlashTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">CDN Usage Test</div>
                             <div className="flex flex-col">
@@ -39629,7 +39750,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performCDNUsageTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Modern Image Format Test</div>
                             <div className="flex flex-col">
@@ -39638,7 +39759,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performModernImageFormatTest(psiData).Description}</div> */}
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Image Metadata Test</div>
                             <div className="flex flex-col">
@@ -39647,7 +39768,7 @@ async function YourComponent() {
                                 {/* <div className="text-sm">Length: {performImageMetadataTest(psiData).Description}</div> */}
                             </div>
                         </div>
-                        {/* <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
                             
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Image Caching Test</div>
                             <div className="flex flex-col">
@@ -39656,7 +39777,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performImageCachingTest(psiData).Description}</div>
                             </div>
                         </div> */}
-                        {/* <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
                             
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">JavaScript Caching Test</div>
                             <div className="flex flex-col">
@@ -39665,7 +39786,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performJavaScriptCachingTest(psiData).Description}</div>
                             </div>
                         </div> */}
-                        {/* <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
                             
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">CSS Caching Test</div>
                             <div className="flex flex-col">
@@ -39674,7 +39795,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performCssCachingTest(psiData).Description}</div>
                             </div>
                         </div> */}
-                        {/* <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
                             
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Javascript Minification Test</div>
                             <div className="flex flex-col">
@@ -39683,7 +39804,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performCssMinificationTest(psiData).Description}</div>
                             </div>
                         </div> */}
-                        {/* <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
                             
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">JS  Minification Test</div>
                             <div className="flex flex-col">
@@ -39692,7 +39813,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performCssMinificationTest(psiData).Description}</div>
                             </div>
                         </div> */}
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Render Blocking Resources Test</div>
                             <div className="flex flex-col">
@@ -39701,7 +39822,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performRenderBlockingResourcesTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Nested Table Test</div>
                             <div className="flex flex-col">
@@ -39710,7 +39831,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performNestedTablesTest(scrapeData?.htmlText).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Frameset Test</div>
                             <div className="flex flex-col">
@@ -39720,7 +39841,7 @@ async function YourComponent() {
                             </div>
                         </div>
 
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Doctype Test</div>
                             <div className="flex flex-col">
@@ -39729,7 +39850,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performDoctypeTest(scrapeData?.htmlText).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">URL Redirects Test</div>
                             <div className="flex flex-col">
@@ -39738,7 +39859,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performUrlRedirectsTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">First Contentful Paint Test</div>
                             <div className="flex flex-col">
@@ -39747,7 +39868,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performFirstContentfulPaintTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Largest Contentful Paint Test</div>
                             <div className="flex flex-col">
@@ -39756,7 +39877,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performLargestContentfulPaintTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Cumulative Layout Shift Test</div>
                             <div className="flex flex-col">
@@ -39765,7 +39886,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performCumulativeLayoutShiftTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">URL Caninicalization Test</div>
                             <div className="flex flex-col">
@@ -39774,7 +39895,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performUrlCanonicalizationTest(scrapeData?.htmlText).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">SSL Checker and HTTPS Test</div>
                             <div className="flex flex-col">
@@ -39783,7 +39904,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performSslCheckerTest(scrapeData?.htmlText).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Mixed Content Test (HTTP over HTTPS)</div>
                             <div className="flex flex-col">
@@ -39792,7 +39913,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performMixedContentTest(scrapeData?.htmlText).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">HTTP2 Test</div>
                             <div className="flex flex-col">
@@ -39801,7 +39922,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performHttp2Test(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">HSTS Test</div>
                             <div className="flex flex-col">
@@ -39810,7 +39931,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performHstsTest(psiData).Description}</div>
                             </div>
                         </div>
-                        {/* <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
                             
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Safe Browsing Test</div>
                             <div className="flex flex-col">
@@ -39819,7 +39940,7 @@ async function YourComponent() {
                             {/* <div className="text-sm">Length: {performSafeBrowsingTest(psiData.lighthouseResult.requestedUrl).Description}</div> */}
                         {/* </div>
                         </div> */}
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Server Signature Test</div>
                             <div className="flex flex-col">
@@ -39828,7 +39949,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performServerSignatureTest(psiData).Description}</div>
                             </div>
                         </div>
-                        {/* <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
                             
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Directory Browsing Test</div>
                             <div className="flex flex-col">
@@ -39837,7 +39958,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performDirectoryBrowsingTest(psiData).Description}</div>
                             </div>
                         </div> */}
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Plaintext Emails Test</div>
                             <div className="flex flex-col">
@@ -39846,7 +39967,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performPlaintextEmailsTest(scrapeData?.htmlText).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Unsafe Cross-Origin Links Test</div>
                             <div className="flex flex-col">
@@ -39855,7 +39976,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performUnsafeCrossOriginLinksTest(scrapeData?.htmlText).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Meta Viewport Test</div>
                             <div className="flex flex-col">
@@ -39864,7 +39985,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performMetaViewportTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Media Viewport Test</div>
                             <div className="flex flex-col">
@@ -39873,7 +39994,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performMediaQueryResponsiveTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Mobile Snapshot Test</div>
                             <div className="flex flex-col">
@@ -39882,7 +40003,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performMobileSnapshotTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Structured Data Test</div>
                             <div className="flex flex-col">
@@ -39891,7 +40012,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performStructuredDataTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Custom 404 Error Page Test</div>
                             <div className="flex flex-col">
@@ -39900,7 +40021,7 @@ async function YourComponent() {
                                 {/* <div className="text-sm">Length: {performCustom404ErrorPageTest(psiData.lighthouseResult.finalUrl)}</div> */}
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Noindex Tag Test</div>
                             <div className="flex flex-col">
@@ -39909,7 +40030,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performNoindexTagTest(psiData).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">NoFollow Tag Test</div>
                             <div className="flex flex-col">
@@ -39918,7 +40039,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performNofollowTagTest(scrapeData?.htmlText).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Disallow Directive Tag Test</div>
                             <div className="flex flex-col">
@@ -39927,7 +40048,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {await (await performDisallowDirectiveTest(psiData.lighthouseResult.finalUrl)).Description}</div>
                             </div>
                         </div>
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Meta Refresh Test</div>
                             <div className="flex flex-col">
@@ -39936,7 +40057,7 @@ async function YourComponent() {
                                 <div className="text-sm">Length: {performMetaRefreshTest(scrapeData?.htmlText).Description}</div>
                             </div>
                         </div>
-                        {/* <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
                             
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">SPF Records Test</div>
                             <div className="flex flex-col">
@@ -39946,7 +40067,7 @@ async function YourComponent() {
                             </div>
                         </div> */}
 
-                        <div className="border-red-300 flex mx-2 my-1 rounded items-center border-2 p-4">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4">
 
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Ads.txt Validation Test</div>
                             <div className="flex flex-col">
@@ -39971,7 +40092,7 @@ async function YourComponent() {
                     </div> */}
                 </div>
             </div>
-            </>
+        </>
         // </Suspense>
 
     )

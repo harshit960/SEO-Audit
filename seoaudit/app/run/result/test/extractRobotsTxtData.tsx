@@ -2,7 +2,7 @@
 
 // Function to extract robots.txt data from PSI data
 export function extractRobotsTxtData(data: any): { HasRobotsTxt: boolean; Importance: string; Description: string; Link: string } {
-    const robotsTxtAudit = data?.lighthouseResult?.audits?.robotsTxt;
+    const robotsTxtAudit = data?.lighthouseResult?.audits?.["robots-txt"];
 
     // Check if the robots.txt audit data is available
     if (!robotsTxtAudit) {
