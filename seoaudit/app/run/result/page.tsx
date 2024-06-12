@@ -39391,7 +39391,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     <div className="text-sm">Text: {extractMetaTitle(scrapeData).Text}</div>
-                                    <div className="text-sm">Length: {extractMetaTitle(scrapeData).Length}</div>
+                                    <div className="text-sm">{extractMetaTitle(scrapeData).Length}</div>
                                     <a href={extractMetaTitle(scrapeData).Link} className="text-sm">Learn More</a>
                                 </div>
                             </div>
@@ -39417,7 +39417,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     <div className="text-sm">Text: {extractMetaDescription(scrapeData).Text}</div>
-                                    <div className="text-sm">Length: {extractMetaDescription(scrapeData).Length}</div>
+                                    <div className="text-sm">{extractMetaDescription(scrapeData).Length}</div>
                                     <a href={extractMetaDescription(scrapeData).Link} className="text-sm">Learn More</a>
 
                                 </div>
@@ -39443,7 +39443,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     <div className="text-sm">{performSocialMediaTest(psiData).Description}</div>
-                                    {/* <div className="text-sm">Length: {performSocialMediaTest(psiData).HasSocialMediaTags}</div> */}
+                                    {/* <div className="text-sm">{performSocialMediaTest(psiData).HasSocialMediaTags}</div> */}
                                     <a className="text-sm" href={performSocialMediaTest(psiData).Link}>Learn More</a>
                                 </div>
                             </div>
@@ -39477,7 +39477,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractHeadingTagsData(psiData).hasH1Tags ?
+                                {extractHeadingTagsData(psiData).HasH1Tags ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -39495,7 +39495,7 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Length: {extractHeadingTagsData(scrapeData?.htmlText).Description}</div>
+                                    <div className="text-sm">{extractHeadingTagsData(scrapeData?.htmlText).Description}</div>
                                     <a className="text-sm" href={extractHeadingTagsData(scrapeData?.htmlText).Link}>Learn More</a>
                                 </div>
                             </div>
@@ -39521,7 +39521,7 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Length: {extractRobotsTxtData(psiData).Description}</div>
+                                    <div className="text-sm">{extractRobotsTxtData(psiData).Description}</div>
                                     <a className="text-sm" href={extractRobotsTxtData(psiData).Link}>Leran more</a>
                                 </div>
                             </div>
@@ -39547,7 +39547,7 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Length: {extractSitemapData(psiData).Description}</div>
+                                    <div className="text-sm">{extractSitemapData(psiData).Description}</div>
                                     <a className="text-sm" href={extractSitemapData(psiData).Link}>Learn More</a>
                                 </div>
                             </div>
@@ -39627,9 +39627,9 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {extractImageAltTestData(psiData).Link}</div>
-                                    <div className="text-sm">Length: {extractImageAltTestData(psiData).Images}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    <div className="text-sm">{extractImageAltTestData(psiData).Images}</div>
+                                    {/* <div className="text-sm">{extractImageAltTestData(psiData).Images}</div> */}
+                                    <a className="text-sm" href={extractImageAltTestData(psiData).Link}>Learn More</a>
 
                                 </div>
                             </div>
@@ -39655,16 +39655,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {extractResponsiveImageData(psiData).Link}</div>
-                                    <div className="text-sm">Length: {extractResponsiveImageData(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {extractResponsiveImageData(psiData).Link}</div> */}
+                                    <div className="text-sm">{extractResponsiveImageData(psiData).Description}</div>
+                                    <a className="text-sm" href={extractResponsiveImageData(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {extractImageAspectRatioData(psiData).Images.length == 0 ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -39682,16 +39682,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {extractImageAspectRatioData(psiData).Link}</div>
-                                    <div className="text-sm">Length: {extractImageAspectRatioData(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {extractImageAspectRatioData(psiData).Link}</div> */}
+                                    <div className="text-sm">{extractImageAspectRatioData(psiData).Description}</div>
+                                    <a className="text-sm" href={extractImageAspectRatioData(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {extractInlineCssData(psiData).Importance == "High" ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -39709,16 +39709,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {extractInlineCssData(psiData).Link}</div>
-                                    <div className="text-sm">Length: {extractInlineCssData(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {extractInlineCssData(psiData).Link}</div> */}
+                                    <div className="text-sm">{extractInlineCssData(psiData).Description}</div>
+                                    <a className="text-sm" href={extractInlineCssData(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {extractDeprecatedHtmlTagsData(psiData).DeprecatedTags.length == 0 ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -39736,16 +39736,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {extractDeprecatedHtmlTagsData(psiData).Link}</div>
-                                    <div className="text-sm">Length: {extractDeprecatedHtmlTagsData(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {extractDeprecatedHtmlTagsData(psiData).Link}</div> */}
+                                    <div className="text-sm">{extractDeprecatedHtmlTagsData(psiData).Description}</div>
+                                    <a className="text-sm" href={extractDeprecatedHtmlTagsData(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {performGoogleAnalyticsTest(psiData).HasGoogleAnalytics ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -39763,16 +39763,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performGoogleAnalyticsTest(psiData).Link}</div>
-                                    <div className="text-sm">Length: {performGoogleAnalyticsTest(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performGoogleAnalyticsTest(psiData).Link}</div> */}
+                                    <div className="text-sm">{performGoogleAnalyticsTest(psiData).Description}</div>
+                                    <a className="text-sm" href={performGoogleAnalyticsTest(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {performFaviconTest(psiData).HasFavicon ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -39790,16 +39790,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performFaviconTest(psiData).Link}</div>
-                                    <div className="text-sm">Length: {performFaviconTest(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performFaviconTest(psiData).Link}</div> */}
+                                    <div className="text-sm">{performFaviconTest(psiData).Description}</div>
+                                    <a className="text-sm" href={performFaviconTest(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {performBacklinksTest(psiData).TotalBacklinks ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -39817,16 +39817,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performBacklinksTest(psiData).Link}</div>
-                                    <div className="text-sm">Length: {performBacklinksTest(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performBacklinksTest(psiData).Link}</div> */}
+                                    <div className="text-sm">{performBacklinksTest(psiData).Description}</div>
+                                    <a className="text-sm" href={performBacklinksTest(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {!performJSErrorTest(psiData).HasJSErrors ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -39844,16 +39844,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performJSErrorTest(psiData).Link}</div>
-                                    <div className="text-sm">Length: {performJSErrorTest(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performJSErrorTest(psiData).Link}</div> */}
+                                    <div className="text-sm">{performJSErrorTest(psiData).Description}</div>
+                                    <a className="text-sm" href={performJSErrorTest(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {!performConsoleErrorsTest(psiData).HasConsoleErrors ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -39871,16 +39871,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performConsoleErrorsTest(psiData).Link}</div>
-                                    <div className="text-sm">Length: {performConsoleErrorsTest(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performConsoleErrorsTest(psiData).Link}</div> */}
+                                    <div className="text-sm">{performConsoleErrorsTest(psiData).Description}</div>
+                                    <a className="text-sm" href={performConsoleErrorsTest(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {performCharsetDeclarationTest(psiData).HasCharsetDeclaration ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -39898,16 +39898,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performCharsetDeclarationTest(psiData).Link}</div>
-                                    <div className="text-sm">Length: {performCharsetDeclarationTest(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performCharsetDeclarationTest(psiData).Link}</div> */}
+                                    <div className="text-sm">{performCharsetDeclarationTest(psiData).Description}</div>
+                                    <a className="text-sm" href={performCharsetDeclarationTest(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {performHTMLPageSizeTest(psiData).HTMLPageSizeBytes ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -39925,16 +39925,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performHTMLPageSizeTest(psiData).Link}</div>
-                                    <div className="text-sm">Length: {performHTMLPageSizeTest(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performHTMLPageSizeTest(psiData).Link}</div> */}
+                                    <div className="text-sm">{performHTMLPageSizeTest(psiData).Description}</div>
+                                    <a className="text-sm" href={performHTMLPageSizeTest(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {performDOMSizeTest(psiData).DOMSize ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -39952,16 +39952,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performDOMSizeTest(psiData).Link}</div>
-                                    <div className="text-sm">Length: {performDOMSizeTest(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performDOMSizeTest(psiData).Link}</div> */}
+                                    <div className="text-sm">{performDOMSizeTest(psiData).Description}</div>
+                                    <a className="text-sm" href={performDOMSizeTest(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {performHTMLCompressionTest(psiData).IsCompressed?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -39979,16 +39979,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performHTMLCompressionTest(psiData).Link}</div>
-                                    <div className="text-sm">Length: {performHTMLCompressionTest(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performHTMLCompressionTest(psiData).Link}</div> */}
+                                    <div className="text-sm">{performHTMLCompressionTest(psiData).Description}</div>
+                                    <a className="text-sm" href={performHTMLCompressionTest(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {performSiteLoadingSpeedTest(psiData).FirstContentfulPaint ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -40006,16 +40006,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performSiteLoadingSpeedTest(psiData).Link}</div>
-                                    <div className="text-sm">Length: {performSiteLoadingSpeedTest(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performSiteLoadingSpeedTest(psiData).Link}</div> */}
+                                    <div className="text-sm">{performSiteLoadingSpeedTest(psiData).Description}</div>
+                                    <a className="text-sm" href={performSiteLoadingSpeedTest(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {performJSExecutionTimeTest(psiData).ScriptBootUpTime ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -40033,16 +40033,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performJSExecutionTimeTest(psiData).Link}</div>
-                                    <div className="text-sm">Length: {performJSExecutionTimeTest(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performJSExecutionTimeTest(psiData).Link}</div> */}
+                                    <div className="text-sm">{performJSExecutionTimeTest(psiData).Description}</div>
+                                    <a className="text-sm" href={performJSExecutionTimeTest(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {performPageObjectsTest(psiData).ResourceSummary ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -40060,16 +40060,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performPageObjectsTest(psiData).Link}</div>
-                                    <div className="text-sm">Length: {performPageObjectsTest(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performPageObjectsTest(psiData).Link}</div> */}
+                                    <div className="text-sm">{performPageObjectsTest(psiData).Description}</div>
+                                    <a className="text-sm" href={performPageObjectsTest(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {performPageCacheTest(psiData).CacheLifetimeMs ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -40087,16 +40087,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performPageCacheTest(psiData).Link}</div>
-                                    <div className="text-sm">Length: {performPageCacheTest(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performPageCacheTest(psiData).Link}</div> */}
+                                    <div className="text-sm">{performPageCacheTest(psiData).Description}</div>
+                                    <a className="text-sm" href={performPageCacheTest(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {!performFlashTest(psiData).HasFlashContent ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -40114,16 +40114,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performFlashTest(psiData).Link}</div>
-                                    <div className="text-sm">Length: {performFlashTest(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performFlashTest(psiData).Link}</div> */}
+                                    <div className="text-sm">{performFlashTest(psiData).Description}</div>
+                                    <a className="text-sm" href={performFlashTest(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {performCDNUsageTest(psiData).HasCDNUsage ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -40141,13 +40141,13 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performCDNUsageTest(psiData).Link}</div>
-                                    <div className="text-sm">Length: {performCDNUsageTest(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performCDNUsageTest(psiData).Link}</div> */}
+                                    <div className="text-sm">{performCDNUsageTest(psiData).Description}</div>
+                                    <a className="text-sm" href={performCDNUsageTest(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
                                 {extractResponsiveImageData(psiData).Images.length == 0 ?
@@ -40168,13 +40168,13 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performModernImageFormatTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performModernImageFormatTest(psiData).Description}</div>
+                                    <div className="text-sm">Text: {performModernImageFormatTest(psiData).Link}</div>
+                                <div className="text-sm">{performModernImageFormatTest(psiData).Description}</div>
                                     <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
-                                 */}
+                                
                                 </div>                            </div>
-                        </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                        </div> */}
+                        {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
                                 {extractResponsiveImageData(psiData).Images.length == 0 ?
@@ -40195,12 +40195,12 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performImageMetadataTest(psiData).Link}</div> */}
-                                    {/* <div className="text-sm">Length: {performImageMetadataTest(psiData).Description}</div> 
+                                    <div className="text-sm">Text: {performImageMetadataTest(psiData).Link}</div>
+                                    <div className="text-sm">{performImageMetadataTest(psiData).Description}</div> 
                                     <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
-                                    */}
+                                   
                                 </div>                            </div>
-                        </div>
+                        </div> */}
                         {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Image Caching Test</div>
@@ -40208,7 +40208,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                 <div className="text-sm">Text: {performImageCachingTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performImageCachingTest(psiData).Description}</div>
+                                <div className="text-sm">{performImageCachingTest(psiData).Description}</div>
                             </div>
                         </div> */}
                         {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
@@ -40218,7 +40218,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                 <div className="text-sm">Text: {performJavaScriptCachingTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performJavaScriptCachingTest(psiData).Description}</div>
+                                <div className="text-sm">{performJavaScriptCachingTest(psiData).Description}</div>
                             </div>
                         </div> */}
                         {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
@@ -40228,7 +40228,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                 <div className="text-sm">Text: {performCssCachingTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performCssCachingTest(psiData).Description}</div>
+                                <div className="text-sm">{performCssCachingTest(psiData).Description}</div>
                             </div>
                         </div> */}
                         {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
@@ -40238,7 +40238,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                 <div className="text-sm">Text: {performCssMinificationTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performCssMinificationTest(psiData).Description}</div>
+                                <div className="text-sm">{performCssMinificationTest(psiData).Description}</div>
                             </div>
                         </div> */}
                         {/* <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
@@ -40248,13 +40248,13 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                 <div className="text-sm">Text: {performCssMinificationTest(psiData).Link}</div>
-                                <div className="text-sm">Length: {performCssMinificationTest(psiData).Description}</div>
+                                <div className="text-sm">{performCssMinificationTest(psiData).Description}</div>
                             </div>
                         </div> */}
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {!performRenderBlockingResourcesTest(psiData).HasRenderBlockingResources?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -40272,16 +40272,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performRenderBlockingResourcesTest(psiData).Link}</div>
-                                    <div className="text-sm">Length: {performRenderBlockingResourcesTest(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performRenderBlockingResourcesTest(psiData).Link}</div> */}
+                                    <div className="text-sm">{performRenderBlockingResourcesTest(psiData).Description}</div>
+                                    <a className="text-sm" href={performRenderBlockingResourcesTest(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {performNestedTablesTest(scrapeData?.htmlText).HasNestedTables ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -40299,16 +40299,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performNestedTablesTest(scrapeData?.htmlText).HasNestedTables}</div>
-                                    <div className="text-sm">Length: {performNestedTablesTest(scrapeData?.htmlText).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performNestedTablesTest(scrapeData?.htmlText).HasNestedTables}</div> */}
+                                    <div className="text-sm">{performNestedTablesTest(scrapeData?.htmlText).Description}</div>
+                                    {/* <a className="text-sm" href={performNestedTablesTest(scrapeData?.htmlText).Link}>Learn More</a> */}
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {performFramesetTest(scrapeData?.htmlText).HasFrameset ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -40326,9 +40326,9 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performFramesetTest(scrapeData?.htmlText).HasFrameset}</div>
-                                    <div className="text-sm">Length: {performFramesetTest(scrapeData?.htmlText).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performFramesetTest(scrapeData?.htmlText).HasFrameset}</div> */}
+                                    <div className="text-sm">{performFramesetTest(scrapeData?.htmlText).Description}</div>
+                                    {/* <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
                         </div>
@@ -40336,7 +40336,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {performDoctypeTest(scrapeData?.htmlText).HasCorrectDoctype?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -40354,16 +40354,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performDoctypeTest(scrapeData?.htmlText).HasCorrectDoctype}</div>
-                                    <div className="text-sm">Length: {performDoctypeTest(scrapeData?.htmlText).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performDoctypeTest(scrapeData?.htmlText).HasCorrectDoctype}</div> */}
+                                    <div className="text-sm">{performDoctypeTest(scrapeData?.htmlText).Description}</div>
+                                    {/* <a className="text-sm" href={performDoctypeTest(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {performUrlRedirectsTest(psiData).HasRedirects ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -40381,16 +40381,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performUrlRedirectsTest(psiData).HasRedirects}</div>
-                                    <div className="text-sm">Length: {performUrlRedirectsTest(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performUrlRedirectsTest(psiData).HasRedirects}</div> */}
+                                    <div className="text-sm">{performUrlRedirectsTest(psiData).Description}</div>
+                                    {/* <a className="text-sm" href={performUrlRedirectsTest(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {performFirstContentfulPaintTest(psiData).Fcp != -1 ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -40408,16 +40408,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performFirstContentfulPaintTest(psiData).Fcp}</div>
-                                    <div className="text-sm">Length: {performFirstContentfulPaintTest(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performFirstContentfulPaintTest(psiData).Fcp}</div> */}
+                                    <div className="text-sm">{performFirstContentfulPaintTest(psiData).Description}</div>
+                                    {/* <a className="text-sm" href={performFirstContentfulPaintTest(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {performLargestContentfulPaintTest(psiData).Lcp != -1 ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -40435,16 +40435,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performLargestContentfulPaintTest(psiData).Lcp}</div>
-                                    <div className="text-sm">Length: {performLargestContentfulPaintTest(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performLargestContentfulPaintTest(psiData).Lcp}</div> */}
+                                    <div className="text-sm">{performLargestContentfulPaintTest(psiData).Description}</div>
+                                    {/* <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {performCumulativeLayoutShiftTest(psiData).CLs != -1 ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -40462,16 +40462,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performCumulativeLayoutShiftTest(psiData).Cls}</div>
-                                    <div className="text-sm">Length: {performCumulativeLayoutShiftTest(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performCumulativeLayoutShiftTest(psiData).Cls}</div> */}
+                                    <div className="text-sm">{performCumulativeLayoutShiftTest(psiData).Description}</div>
+                                    {/* <a className="text-sm" href={performCumulativeLayoutShiftTest(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {performUrlCanonicalizationTest(scrapeData?.htmlText).IsCanonicalized ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -40489,9 +40489,9 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {performUrlCanonicalizationTest(scrapeData?.htmlText).IsCanonicalized}</div>
-                                    <div className="text-sm">Length: {performUrlCanonicalizationTest(scrapeData?.htmlText).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {performUrlCanonicalizationTest(scrapeData?.htmlText).IsCanonicalized}</div> */}
+                                    <div className="text-sm">{performUrlCanonicalizationTest(scrapeData?.htmlText).Description}</div>
+                                    {/* <a className="text-sm" href={performUrlCanonicalizationTest(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
                         </div>
@@ -40517,7 +40517,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     <div className="text-sm">Text: {performSslCheckerTest(scrapeData?.htmlText).IsSecure}</div>
-                                    <div className="text-sm">Length: {performSslCheckerTest(scrapeData?.htmlText).Description}</div>
+                                    <div className="text-sm">{performSslCheckerTest(scrapeData?.htmlText).Description}</div>
                                     <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
@@ -40544,7 +40544,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     <div className="text-sm">Text: {performMixedContentTest(scrapeData?.htmlText).HasMixedContent}</div>
-                                    <div className="text-sm">Length: {performMixedContentTest(scrapeData?.htmlText).Description}</div>
+                                    <div className="text-sm">{performMixedContentTest(scrapeData?.htmlText).Description}</div>
                                     <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
@@ -40571,7 +40571,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     <div className="text-sm">Text: {performHttp2Test(psiData).IsHttp2}</div>
-                                    <div className="text-sm">Length: {performHttp2Test(psiData).Description}</div>
+                                    <div className="text-sm">{performHttp2Test(psiData).Description}</div>
                                     <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
@@ -40598,7 +40598,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     <div className="text-sm">Text: {performHstsTest(psiData).IsHstsEnabled}</div>
-                                    <div className="text-sm">Length: {performHstsTest(psiData).Description}</div>
+                                    <div className="text-sm">{performHstsTest(psiData).Description}</div>
                                     <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
@@ -40610,7 +40610,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
                             
                             <div className="text-sm">Text: {JSON.stringify(performSafeBrowsingTest(psiData.lighthouseResult.requestedUrl))}</div>
-                            {/* <div className="text-sm">Length: {performSafeBrowsingTest(psiData.lighthouseResult.requestedUrl).Description}</div> */}
+                            {/* <div className="text-sm">{performSafeBrowsingTest(psiData.lighthouseResult.requestedUrl).Description}</div> */}
                         {/* </div>
                         </div> */}
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
@@ -40635,7 +40635,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     <div className="text-sm">Text: {performServerSignatureTest(psiData).IsServerSignaturePresent}</div>
-                                    <div className="text-sm">Length: {performServerSignatureTest(psiData).Description}</div>
+                                    <div className="text-sm">{performServerSignatureTest(psiData).Description}</div>
                                     <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
 
                                 </div>                         </div>
@@ -40647,7 +40647,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                 <div className="text-sm">Text: {performDirectoryBrowsingTest(psiData).IsServerSignaturePresent}</div>
-                                <div className="text-sm">Length: {performDirectoryBrowsingTest(psiData).Description}</div>
+                                <div className="text-sm">{performDirectoryBrowsingTest(psiData).Description}</div>
                             </div>
                         </div> */}
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
@@ -40672,7 +40672,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     <div className="text-sm">Text: {performPlaintextEmailsTest(scrapeData?.htmlText).HasPlaintextEmails}</div>
-                                    <div className="text-sm">Length: {performPlaintextEmailsTest(scrapeData?.htmlText).Description}</div>
+                                    <div className="text-sm">{performPlaintextEmailsTest(scrapeData?.htmlText).Description}</div>
                                     <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
@@ -40699,7 +40699,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     <div className="text-sm">Text: {performUnsafeCrossOriginLinksTest(scrapeData?.htmlText).HasUnsafeCrossOriginLinks}</div>
-                                    <div className="text-sm">Length: {performUnsafeCrossOriginLinksTest(scrapeData?.htmlText).Description}</div>
+                                    <div className="text-sm">{performUnsafeCrossOriginLinksTest(scrapeData?.htmlText).Description}</div>
                                     <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
 
                                 </div>                           </div>
@@ -40726,7 +40726,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     <div className="text-sm">Text: {performMetaViewportTest(psiData).HasMetaViewport}</div>
-                                    <div className="text-sm">Length: {performMetaViewportTest(psiData).Description}</div>
+                                    <div className="text-sm">{performMetaViewportTest(psiData).Description}</div>
                                     <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
@@ -40753,7 +40753,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     <div className="text-sm">Text: {performMediaQueryResponsiveTest(psiData).HasMediaQueries}</div>
-                                    <div className="text-sm">Length: {performMediaQueryResponsiveTest(psiData).Description}</div>
+                                    <div className="text-sm">{performMediaQueryResponsiveTest(psiData).Description}</div>
                                     <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
@@ -40780,7 +40780,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     <div className="text-sm">Text: {performMobileSnapshotTest(psiData).IsMobileSnapshotValid}</div>
-                                    <div className="text-sm">Length: {performMobileSnapshotTest(psiData).Description}</div>
+                                    <div className="text-sm">{performMobileSnapshotTest(psiData).Description}</div>
                                     <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
@@ -40807,7 +40807,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     <div className="text-sm">Text: {performStructuredDataTest(psiData).HasStructuredData}</div>
-                                    <div className="text-sm">Length: {performStructuredDataTest(psiData).Description}</div>
+                                    <div className="text-sm">{performStructuredDataTest(psiData).Description}</div>
                                     <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
@@ -40834,7 +40834,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     <div className="text-sm">Text: {await (await performCustom404ErrorPageTest(psiData.lighthouseResult.finalUrl)).Description}</div>
-                                    {/* <div className="text-sm">Length: {performCustom404ErrorPageTest(psiData.lighthouseResult.finalUrl)}</div> */}
+                                    {/* <div className="text-sm">{performCustom404ErrorPageTest(psiData.lighthouseResult.finalUrl)}</div> */}
                                     <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
@@ -40861,7 +40861,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     <div className="text-sm">Text: {performNoindexTagTest(psiData).HasNoindexTag}</div>
-                                    <div className="text-sm">Length: {performNoindexTagTest(psiData).Description}</div>
+                                    <div className="text-sm">{performNoindexTagTest(psiData).Description}</div>
                                     <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
@@ -40888,7 +40888,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     <div className="text-sm">Text: {performNofollowTagTest(scrapeData?.htmlText).HasNofollowTag}</div>
-                                    <div className="text-sm">Length: {performNofollowTagTest(scrapeData?.htmlText).Description}</div>
+                                    <div className="text-sm">{performNofollowTagTest(scrapeData?.htmlText).Description}</div>
                                     <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
@@ -40915,7 +40915,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     {/* <div className="text-sm">Text: {await performDisallowDirectiveTest(scrapeData?.htmlText).HasNofollowTag}</div> */}
-                                    <div className="text-sm">Length: {await (await performDisallowDirectiveTest(psiData.lighthouseResult.finalUrl)).Description}</div>
+                                    <div className="text-sm">{await (await performDisallowDirectiveTest(psiData.lighthouseResult.finalUrl)).Description}</div>
                                     <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
@@ -40942,7 +40942,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     <div className="text-sm">Text: {performMetaRefreshTest(scrapeData?.htmlText).HasMetaRefreshTag}</div>
-                                    <div className="text-sm">Length: {performMetaRefreshTest(scrapeData?.htmlText).Description}</div>
+                                    <div className="text-sm">{performMetaRefreshTest(scrapeData?.htmlText).Description}</div>
                                     <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>
@@ -40954,7 +40954,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                 {/* <div className="text-sm">Text: {performSpfRecordsTest(scrapeData?.htmlText).HasMetaRefreshTag}</div> */}
-                        {/* <div className="text-sm">Length: {await (await performSpfRecordsTest(scrapeData?.htmlText)).Description}</div>
+                        {/* <div className="text-sm">{await (await performSpfRecordsTest(scrapeData?.htmlText)).Description}</div>
                             </div>
                         </div> */}
 
@@ -40980,7 +40980,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     {/* <div className="text-sm">Text: {performAdsTxtValidationTest(scrapeData.htmlText).HasMetaRefreshTag}</div> */}
-                                    <div className="text-sm">Length: {await (await performAdsTxtValidationTest(psiData.lighthouseResult.finalUrl)).Description}</div>
+                                    <div className="text-sm">{await (await performAdsTxtValidationTest(psiData.lighthouseResult.finalUrl)).Description}</div>
                                     <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
 
                                 </div>                            </div>

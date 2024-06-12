@@ -24,12 +24,12 @@ export function performBacklinksTest(backlinksData: any): { TotalBacklinks: numb
     const description = hasBacklinks ? `This website has ${totalBacklinks} backlink(s) from ${referringDomains} referring domain(s).` : 'This website does not have any backlinks.';
     const link = 'https://moz.com/learn/seo/backlinks';
 
-    // console.log({
-    //     message: 'Backlinks Test',
-    //     description,
-    //     link,
-    //     importance
-    // });
+    console.log({
+        message: 'Backlinks Test',
+        description,
+        link,
+        importance
+    });
 
     return {
         TotalBacklinks: totalBacklinks,
