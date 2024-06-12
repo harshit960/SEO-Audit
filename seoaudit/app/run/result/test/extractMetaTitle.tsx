@@ -1,4 +1,4 @@
-export function extractMetaTitle(data: { title: any; keywords?: null; subKeywords?: never[]; metaDescription?: string; languageCode?: string; htmlText?: string; countryCode?: string; }): { Text: string; Length: number; Result: string; Importance: string ;Description: string,Link :string } {
+export function extractMetaTitle(data: any): { Text: string; Length: number; Result: string; Importance: string ;Description: string,Link :string } {
 
     const titleAudit = data?.title ?? { title: 'No title found' };
     // console.log(titleAudit);

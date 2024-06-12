@@ -2,7 +2,7 @@
 import cheerio from 'cheerio';
 
 // Function to extract information about H1 tags from HTML text
-export function extractHeadingTagsData(htmlText: string): { HasH1Tags: boolean; Importance: string; Description: string; Link: string } {
+export function extractHeadingTagsData(htmlText: any): { HasH1Tags: boolean; Importance: string; Description: string; Link: string } {
     // Load the HTML text into Cheerio
     const $ = cheerio.load(htmlText);
 

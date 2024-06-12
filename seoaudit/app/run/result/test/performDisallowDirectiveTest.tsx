@@ -21,12 +21,12 @@ export async function performDisallowDirectiveTest(baseUrl: string): Promise<{ H
             const importance = hasDisallowDirective ? 'Medium' : 'Low';
             const description = hasDisallowDirective ? 'The robots.txt file contains one or more Disallow directives, specifying areas of the website that should not be accessed by web crawlers. This can affect the indexing and visibility of these areas in search engine results.' : 'No Disallow directives were found in the robots.txt file. Ensure that appropriate directives are included to control web crawler access to specific areas of the website.';
 
-            console.log({
-                message: 'Disallow Directive Test',
-                HasDisallowDirective: hasDisallowDirective,
-                Importance: importance,
-                Description: description
-            });
+            // console.log({
+            //     message: 'Disallow Directive Test',
+            //     HasDisallowDirective: hasDisallowDirective,
+            //     Importance: importance,
+            //     Description: description
+            // });
 
             return {
                 HasDisallowDirective: hasDisallowDirective,

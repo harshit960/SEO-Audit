@@ -20,7 +20,7 @@ function extractKeywords(htmlText: string): string[] {
 }
 
 // Function to extract the most common keywords from HTML text data
-export function extractMostCommonKeywords(data: { title?: any; keywords?: string[] | null; subKeywords?: never[]; metaDescription?: string; languageCode?: string; htmlText?: string; countryCode?: string; }): { Keywords: string[]; Importance: string; Description: string; Link: string } {
+export function extractMostCommonKeywords(data: any): { Keywords: string[]; Importance: string; Description: string; Link: string } {
     const htmlText = data?.htmlText ?? '';
     const extractedKeywords = extractKeywords(htmlText);
     
