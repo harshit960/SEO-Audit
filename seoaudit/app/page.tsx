@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { lazy, useState } from 'react'
 import { InfiniteMovingCards } from './components/ui/infinite-moving-cards'
 // import { MovingBorder } from './components/ui/moving-border'
 import { Button } from "./components/ui/moving-border";
@@ -16,6 +16,7 @@ import { HoverEffect } from './components/ui/card-hover-effect';
 import { TypewriterEffectSmooth } from './components/ui/typewriter-effect';
 import Nav from './Nav';
 // import { calsans } from "@/fonts/calsans";
+const YouTubeIframe = lazy(() => import('./YTiframe'));
 
 function Home() {
   const items = [{
@@ -333,7 +334,9 @@ function Home() {
         </div>
       </div>
       <div className="grow mt-10 lg:mt-0">
-        <iframe className='w-full h-full' src="https://www.youtube.com/embed/MYE6T_gd7H0?si=wNTqbGkgooX4ilQp" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" ></iframe>
+        {/* <iframe className='w-full h-full' src="https://www.youtube.com/embed/MYE6T_gd7H0?si=wNTqbGkgooX4ilQp" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" ></iframe> */}
+        <YouTubeIframe videoId="MYE6T_gd7H0?si=wNTqbGkgooX4ilQp" />
+
       </div>
     </div>
     <div className="flex w-full lg:h-[80vh] flex-wrap justify-center   mt-10 items-center">
