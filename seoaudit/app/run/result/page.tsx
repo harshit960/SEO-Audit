@@ -39311,10 +39311,11 @@ async function YourComponent() {
                     </div>
                     <div className="w-4/5 flex mt-4 flex-wrap justify-between">
 
-                        <div className="grow mr-4 rounded-lg flex bg-white    ">
-                            <div className="w-80 p-2 mx-2 grow  flex items-center justify-center flex-wrap">
+                        <div className="grow mr-4 rounded-lg flex bg-white  text-[#2D2D2D]  ">
+                            <div className="w-80 mx-2 grow p-4">
+                                <div className="text-xl text-left font-semibold w-full px-4 mt-4 m-0 h-10">Network Requests</div>
                                 <div className="overflow-auto max-h-96">
-                                    <table className="table w-full table-fixed table-zebra	">
+                                    <table className="table w-full table-fixed table-zebra winter table-pin-rows text-[#2D2D2D]	table-pin-cols">
                                         <thead className="fixed-header">
                                             <tr>
                                                 <th className="bg-white w-60">URL</th>
@@ -39346,6 +39347,33 @@ async function YourComponent() {
                             <div className="w-80 p-4  flex items-center justify-center">
                                 <img src={getScreenshot(psiData)} alt="" srcSet="" />
                             </div>
+
+                        </div>
+                    </div>
+                    <div className="flex w-4/5 justify-between mt-10 text-[#2D2D2D]">
+
+                        <div className=" flex flex-col justify-center mr-2 bg-white p-10 rounded-lg grow items-center ">
+                            <div className="text-green-500 text-xl font-semibold" >1.5 s</div>
+                            <div className="text-base mt-2 font-semibold whitespace-nowrap	">First Contentful Paint</div>
+                        </div>
+                        <div className=" flex flex-col justify-center mx-2 bg-white p-10 rounded-lg grow items-center">
+                            <div className=" text-red-400 text-xl font-semibold" role="progressbar">2,120 ms</div>
+                            <div className="text-base mt-2 font-semibold whitespace-nowrap	 ">Total Blocking Time</div>
+
+                        </div>
+                        <div className=" flex flex-col justify-center mx-2 bg-white p-10 rounded-lg grow items-center">
+                            <div className="text-red-400 text-xl font-semibold" role="progressbar">5.1 s</div>
+                            <div className="text-base mt-2 font-semibold whitespace-nowrap	">Speed Index</div>
+
+                        </div>
+                        <div className=" flex flex-col justify-center mx-2 bg-white p-10 rounded-lg grow items-center">
+                            <div className=" text-yellow-400 text-xl font-semibold" role="progressbar">13.5 s</div>
+                            <div className="text-base mt-2 font-semibold whitespace-nowrap	">Largest Contentful Paint</div>
+
+                        </div>
+                        <div className=" flex flex-col justify-center ml-2 bg-white p-10 rounded-lg grow items-center">
+                            <div className=" text-green-500 text-xl font-semibold" role="progressbar">0</div>
+                            <div className="text-base mt-2 font-semibold whitespace-nowrap	">Cumulative Layout Shift</div>
 
                         </div>
                     </div>
@@ -39451,6 +39479,34 @@ async function YourComponent() {
                                     <div className="text-sm">Text: {extractMetaDescription(scrapeData).Text}</div>
                                     <div className="text-sm">{extractMetaDescription(scrapeData).Length}</div>
                                     <a href={extractMetaDescription(scrapeData).Link} className="text-sm">Learn More</a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                            <div className="mx-4">
+
+                                {extractMetaDescription(scrapeData).Result == "Success" ?
+                                    <div className="text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    : extractMetaDescription(scrapeData).Result == "Error" ? (
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 m-2 text-red-400">
+                                            <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                                        </svg>
+                                    ) : <></>}
+                            </div>
+                            <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Google Search Result Preview Test</div>
+                            <div className="flex flex-col overflow-auto">
+                                {/* <div className="text-sm">{extractMetaDescription(scrapeData).Description}</div> */}
+                                <div className="bg-white border-4 border-slate-200 text-slate-700 p-3 my-3">
+                                    <div className="text-sm  font-base text-blue-500  text-[#008744] truncate">{psiData ? psiData?.id : <></>}</div>
+
+                                    <div className="text-base text-[#0057e7] truncate font-medium	">{extractMetaTitle(scrapeData).Text}</div>
+                                    <div className="text-sm line-clamp-2">{extractMetaDescription(scrapeData).Text}</div>
+                                    {/* <a href={extractMetaDescription(scrapeData).Link} className="text-sm">Learn More</a> */}
 
                                 </div>
                             </div>
