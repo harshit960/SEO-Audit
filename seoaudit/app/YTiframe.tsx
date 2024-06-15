@@ -2,8 +2,7 @@ import React from 'react';
 
 const YouTubeIframe = ({ videoId }: { videoId: string }) => (
   <iframe
-    width="560"
-    height="315"
+    className='w-full h-full'
     src={`https://www.youtube.com/embed/${videoId}`}
     title="YouTube video player"
     frameBorder="0"

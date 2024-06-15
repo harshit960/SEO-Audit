@@ -1,18 +1,18 @@
 "use client"
 import React, { lazy, useState } from 'react'
-import { InfiniteMovingCards } from './components/ui/infinite-moving-cards'
+// import { InfiniteMovingCards } from './components/ui/infinite-moving-cards'
 // import { MovingBorder } from './components/ui/moving-border'
-import { Button } from "./components/ui/moving-border";
-import { BackgroundBeams } from "./components/ui/background-beams";
-import { ContainerScroll } from './components/ui/container-scroll-animation';
+// import { Button } from "./components/ui/moving-border";
+// import { BackgroundBeams } from "./components/ui/background-beams";
+// import { ContainerScroll } from './components/ui/container-scroll-animation';
 import Image from 'next/image';
-import { Spotlight } from './components/Spotlight';
-import { MaskContainer } from './components/ui/svg-mask-effect';
+// import { Spotlight } from './components/Spotlight';
+// import { MaskContainer } from './components/ui/svg-mask-effect';
 import Link from 'next/link';
-import { StickyScroll } from './components/ui/sticky-scroll-reveal';
-import { TracingBeam } from './components/ui/tracing-beam';
-import { twMerge } from "tailwind-merge";
-import { HoverEffect } from './components/ui/card-hover-effect';
+// import { StickyScroll } from './components/ui/sticky-scroll-reveal';
+// import { TracingBeam } from './components/ui/tracing-beam';
+// import { twMerge } from "tailwind-merge";
+// import { HoverEffect } from './components/ui/card-hover-effect';
 import { TypewriterEffectSmooth } from './components/ui/typewriter-effect';
 import Nav from './Nav';
 // import { calsans } from "@/fonts/calsans";
@@ -174,7 +174,7 @@ function Home() {
   const [url, seturl] = useState("")
   return (<>
     <Nav />
-    <div className='flex  w-full items-end pb-28 lg:pb-0 lg:items-center lg:h-screen h-[90vh] overflow-hidden bg-[#F8F9FF]'>
+    <div className='flex  w-full items-end pb-28 lg:pt-72 lg:items-center lg:h-[80vh] h-[90vh] overflow-hidden bg-[#F8F9FF]'>
 
 
       <div className="flex flex-col px-8 w-full items-center justify-center ">

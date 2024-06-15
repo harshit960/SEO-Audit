@@ -69,6 +69,8 @@ import { performMetaRefreshTest } from "./test/performMetaRefreshTest";
 import { performSpfRecordsTest } from "./test/performSpfRecordsTest";
 import { performAdsTxtValidationTest } from "./test/performAdsTxtValidationTest";
 import Nav from "@/app/Nav";
+import { getScreenshot } from "./test/getScreenshot";
+import { processPSIData } from "./netreq";
 
 
 function page() {
@@ -39276,11 +39278,14 @@ async function YourComponent() {
                         <div className="flex flex-col self-start grow ">
 
                             <div className="text-xl  font-semibold">{scrapeData ? scrapeData.title : <></>}</div>
-                            <div className="text-xs  font-base text-blue-500 underline">{psiData ? psiData?.id : <></>}</div>
+                            <a className="text-xs  font-base text-blue-500 underline" href={psiData && psiData?.id}>{psiData ? psiData?.id : <></>}</a>
                         </div>
-                        <div className="flex  ">
+                        {/* <button >Print Page</button> */}
+
+                        <button onClick={() => window.print()} className="flex bg-[#2D2D2D] rounded-2xl p-2 text-white px-4">
                             Download
-                        </div>
+
+                        </button>
                     </div>
                     <div className="flex w-4/5 justify-between mt-10 text-[#2D2D2D]">
 
@@ -39307,12 +39312,39 @@ async function YourComponent() {
                     <div className="w-4/5 flex mt-4 flex-wrap justify-between">
 
                         <div className="grow mr-4 rounded-lg flex bg-white    ">
-                            <div className="w-80 mx-2  h-96 flex items-center justify-center">
+                            <div className="w-80 p-2 mx-2 grow  flex items-center justify-center flex-wrap">
+                                <div className="overflow-auto max-h-96">
+                                    <table className="table w-full table-fixed table-zebra	">
+                                        <thead className="fixed-header">
+                                            <tr>
+                                                <th className="bg-white w-60">URL</th>
+                                                <th className="bg-white w-16">Status Code</th>
+                                                <th className="bg-white w-16">Protocol</th>
+                                                <th className="bg-white w-24">Transfer Size (KB)</th>
+                                                <th className="bg-white w-24">Resource Size (KB)</th>
+                                                <th className="bg-white w-20">Priority</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {processPSIData(psiData).map((item: { url: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; statusCode: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; protocol: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; transferSizeKB: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; resourceSizeKB: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; priority: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; }, index: React.Key | null | undefined) => (
+                                                <tr key={index}>
+                                                    <td className="w-60 truncate">{item.url}</td>
+                                                    <td>{item.statusCode}</td>
+                                                    <td>{item.protocol}</td>
+                                                    <td>{item.transferSizeKB}</td>
+                                                    <td>{item.resourceSizeKB}</td>
+                                                    <td>{item.priority}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
 
                         </div>
-                        <div className="w-2/5 flex rounded-lg bg-white  ">
-                            <div className="w-80 mx-2  h-96 flex items-center justify-center">
+                        <div className=" flex rounded-lg bg-white  ">
+                            <div className="w-80 p-4  flex items-center justify-center">
+                                <img src={getScreenshot(psiData)} alt="" srcSet="" />
                             </div>
 
                         </div>
@@ -39961,7 +39993,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performHTMLCompressionTest(psiData).IsCompressed?
+                                {performHTMLCompressionTest(psiData).IsCompressed ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -40254,7 +40286,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {!performRenderBlockingResourcesTest(psiData).HasRenderBlockingResources?
+                                {!performRenderBlockingResourcesTest(psiData).HasRenderBlockingResources ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -40336,7 +40368,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performDoctypeTest(scrapeData?.htmlText).HasCorrectDoctype?
+                                {performDoctypeTest(scrapeData?.htmlText).HasCorrectDoctype ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -40680,7 +40712,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performUnsafeCrossOriginLinksTest(scrapeData?.htmlText).HasUnsafeCrossOriginLinks?
+                                {performUnsafeCrossOriginLinksTest(scrapeData?.htmlText).HasUnsafeCrossOriginLinks ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
