@@ -5,19 +5,28 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
 type ResultContextType = {
     Failed: any[];
     Success: any[];
-    setFailed: React.Dispatch<React.SetStateAction<never[]>>;
-    setSuccess: React.Dispatch<React.SetStateAction<never[]>>;
+    // setFailed: React.Dispatch<React.SetStateAction<never[]>>;
+    // setSuccess: React.Dispatch<React.SetStateAction<never[]>>;
+    appendToFailed: (item: any) => void;
+    appendToSuccess: (item: any) => void;
 };
 
 const ResultContext = createContext<ResultContextType>({} as ResultContextType);
 
 // Create a provider component
 export const OBProvider = ({ children }: { children: ReactNode }) => {
-    const [Failed, setFailed] = useState([]);
-    const [Success, setSuccess] = useState([]);
+    const [Failed, setFailed] = useState<any[]>([]);
+    const [Success, setSuccess] = useState<any[]>([]);
 
+    const appendToFailed = (item: any) => {
+        setFailed(prevFailed => [...prevFailed, item]);
+    };
+
+    const appendToSuccess = (item: any) => {
+        setSuccess(prevSuccess => [...prevSuccess, item]);
+    };
     return (
-        <ResultContext.Provider value={{ Failed, setFailed,Success,setSuccess }}>
+        <ResultContext.Provider value={{ Failed, appendToFailed,appendToSuccess,Success }}>
             {children}
         </ResultContext.Provider>
     );
