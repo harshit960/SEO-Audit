@@ -71,6 +71,7 @@ import { performAdsTxtValidationTest } from "./test/performAdsTxtValidationTest"
 import Nav from "@/app/Nav";
 import { getScreenshot } from "./test/getScreenshot";
 import { processPSIData } from "./netreq";
+import { useResultContext } from "@/app/contexts/Result";
 
 
 function page() {
@@ -39098,7 +39099,19 @@ async function YourComponent() {
         })
 
     }, [scrapeData]);
+    const {Success,Failed, appendToFailed, appendToSuccess } = useResultContext();
+console.log(Failed,Success);
 
+    const [BrokenLink, setBrokenLink] = useState<any>({});
+    const [MetaTitle, setMetaTitle] = useState<any>({});
+
+
+    useEffect(() => {
+        setBrokenLink(extractBrokenLinksData(psiData, appendToFailed, appendToSuccess));
+    }, [psiData]);
+    useEffect(() => {
+        setMetaTitle(extractMetaTitle(scrapeData,appendToFailed, appendToSuccess))
+    }, [scrapeData]);
     if (loading) {
         return (
             <div className="flex h-screen w-screen items-center justify-center fixed bg-white">
@@ -39140,7 +39153,6 @@ async function YourComponent() {
             </div>
         )
     }
-
     return (
         // <Suspense fallback={<div></div>}>
         <><Nav />
@@ -39431,13 +39443,13 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center p-4 px-2">
                             <div className="mx-4">
 
-                                {extractMetaTitle(scrapeData).Result == "Success" ?
+                                {MetaTitle.Result == "Success" ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
                                         </svg>
                                     </div>
-                                    : extractMetaTitle(scrapeData).Result == "Error" ? (
+                                    : MetaTitle.Result == "Error" ? (
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 m-2 text-red-400">
                                             <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
                                         </svg>
@@ -39447,12 +39459,12 @@ async function YourComponent() {
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Meta Title Test</div>
                             <div className="flex flex-col">
 
-                                <div className="text-sm">{extractMetaTitle(scrapeData).Description}</div>
+                                <div className="text-sm">{MetaTitle.Description}</div>
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {extractMetaTitle(scrapeData).Text}</div>
-                                    <div className="text-sm">{extractMetaTitle(scrapeData).Length}</div>
-                                    <a href={extractMetaTitle(scrapeData).Link} className="text-sm">Learn More</a>
+                                    <div className="text-sm">Text: {MetaTitle.Text}</div>
+                                    <div className="text-sm">{MetaTitle.Length}</div>
+                                    <a href={MetaTitle.Link} className="text-sm">Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -39504,7 +39516,7 @@ async function YourComponent() {
                                 <div className="bg-white border-4 border-slate-200 text-slate-700 p-3 my-3">
                                     <div className="text-sm  font-base text-blue-500  text-[#008744] truncate">{psiData ? psiData?.id : <></>}</div>
 
-                                    <div className="text-base text-[#0057e7] truncate font-medium	">{extractMetaTitle(scrapeData).Text}</div>
+                                    <div className="text-base text-[#0057e7] truncate font-medium	">{MetaTitle.Text}</div>
                                     <div className="text-sm line-clamp-2">{extractMetaDescription(scrapeData).Text}</div>
                                     {/* <a href={extractMetaDescription(scrapeData).Link} className="text-sm">Learn More</a> */}
 
@@ -39643,7 +39655,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractBrokenLinksData(psiData).BrokenLinks.length == 0 ?
+                                {!BrokenLink?.BrokenLink ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -39662,8 +39674,9 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     {/* <div className="text-sm">Text: {JSON.stringify(extractBrokenLinksData(psiData).BrokenLinks)}</div> */}
-                                    <div className="text-sm">{extractBrokenLinksData(psiData).Description}</div>
-                                    <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a>
+                                    <div className="text-sm">{BrokenLink?.Description}</div>
+                                    {/* <div className="text-sm">{JSON.stringify(BrokenLink?.BrokenLinks)}</div> */}
+                                    <a className="text-sm" href={BrokenLink?.Link}>Learn More</a>
                                 </div>
                             </div>
                         </div>

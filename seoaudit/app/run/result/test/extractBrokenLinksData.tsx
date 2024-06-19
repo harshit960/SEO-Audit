@@ -1,6 +1,5 @@
 // brokenLinksTest.ts
 
-import { useResultContext } from "@/app/contexts/Result";
 
 interface PSIData {
     // Define the structure of the PSI data
@@ -24,8 +23,7 @@ interface PSIData {
 }
 
 // Function to extract broken links data from PSI data
-export function extractBrokenLinksData(data: any): { BrokenLinks: { url: string; status: number }[]; Importance: string; Description: string; Link: string } {
-    const { appendToFailed, appendToSuccess } = useResultContext();
+export function extractBrokenLinksData(data: any,appendToSuccess:any,appendToFailed:any): { BrokenLinks: { url: string; status: number }[]; Importance: string; Description: string; Link: string } {
     const brokenLinksAudit = data?.lighthouseResult.audits['network-requests'];
     // console.log(brokenLinksAudit);
 
@@ -51,7 +49,7 @@ export function extractBrokenLinksData(data: any): { BrokenLinks: { url: string;
     }
     const importance = brokenLinks.length > 0 ? 'High' : 'Low';
 
-    // brokenLinks.length > 0 ? appendToFailed('Broken Link Test') : appendToSuccess('Broken Link Test');
+    brokenLinks.length > 0 ? appendToFailed('Broken Link Test') : appendToSuccess('Broken Link Test');
     const description = brokenLinks.length > 0 ? `This website has ${brokenLinks.length} broken link(s).` : 'This website does not have any broken links.';
     const link = 'https://developers.google.com/search/console';
 
