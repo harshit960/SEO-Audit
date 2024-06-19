@@ -25,10 +25,11 @@ interface PSIData {
 
 // Function to extract broken links data from PSI data
 export function extractBrokenLinksData(data: any): { BrokenLinks: { url: string; status: number }[]; Importance: string; Description: string; Link: string } {
+    const { appendToFailed, appendToSuccess } = useResultContext();
     const brokenLinksAudit = data?.lighthouseResult.audits['network-requests'];
     // console.log(brokenLinksAudit);
-    
-    let brokenLinks =[]
+
+    let brokenLinks = []
     // Check if the broken links audit data is available
     if (!brokenLinksAudit) {
         // Return default data if broken links audit data is missing
@@ -49,8 +50,8 @@ export function extractBrokenLinksData(data: any): { BrokenLinks: { url: string;
         }
     }
     const importance = brokenLinks.length > 0 ? 'High' : 'Low';
-    
-    brokenLinks.length > 0 ? useResultContext().appendToFailed('Broken Link Test') : useResultContext().appendToSuccess('Broken Link Test');
+
+    // brokenLinks.length > 0 ? appendToFailed('Broken Link Test') : appendToSuccess('Broken Link Test');
     const description = brokenLinks.length > 0 ? `This website has ${brokenLinks.length} broken link(s).` : 'This website does not have any broken links.';
     const link = 'https://developers.google.com/search/console';
 
@@ -68,3 +69,4 @@ export function extractBrokenLinksData(data: any): { BrokenLinks: { url: string;
         Link: link
     };
 }
+
