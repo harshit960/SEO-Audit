@@ -15,6 +15,7 @@ import Link from 'next/link';
 // import { HoverEffect } from './components/ui/card-hover-effect';
 import { TypewriterEffectSmooth } from './components/ui/typewriter-effect';
 import Nav from './Nav';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 // import { calsans } from "@/fonts/calsans";
 const YouTubeIframe = lazy(() => import('./YTiframe'));
 
@@ -174,7 +175,7 @@ function Home() {
   const [url, seturl] = useState("")
   return (<>
     <Nav />
-    <div className='flex  w-full items-end pb-28 lg:pt-72 lg:items-center lg:h-[80vh] h-[90vh] overflow-hidden bg-[#F8F9FF]'>
+    <div className='flex  w-full items-center  lg:items-center lg:h-screen h-[90vh] overflow-hidden bg-[#]'>
 
 
       <div className="flex flex-col px-8 w-full items-center justify-center ">
@@ -185,6 +186,18 @@ function Home() {
             <br />
             Reporting Tool
           </div>
+          <DotLottieReact
+            src="https://lottie.host/9be912a0-8874-4453-9149-881b6eb675ad/mEIIPGP58H.json"
+            loop
+            autoplay
+            className='absolute bottom-16 -right-20 w-1/2  -z-10 overflow-hidden'
+          />
+          <DotLottieReact
+            src="https://lottie.host/9a449fcb-8434-4985-ae02-866607de0cd4/H3276bRGu1.json"
+            loop
+            autoplay
+            className='absolute top-40 left-36 w-1/4  -z-10'
+          />
         </div>
         <div className="my-2 mt-5 text-black text-base lg:text-xl">
           Get a Website Audit and Report Boost your SEO Score and Driver more Organic Traffic to your Website.
@@ -192,7 +205,7 @@ function Home() {
         <div className="flex items-center lg:justify-center flex-wrap mt-5 w-full drop-shadow-lg	">
 
 
-          <input type="text" onChange={(e) => seturl(e.target.value)} value={url}  className='rounded bg-[#E5F4F2] p-2 px-4 py-4 lg:w-1/2 w-80' placeholder='Enter Your Domain Name' />
+          <input type="text" onChange={(e) => seturl(e.target.value)} value={url} className='rounded bg-[#E5F4F2] p-2 px-4 py-4 lg:w-1/2 w-80' placeholder='Enter Your Domain Name' />
 
           <Link href={`run/result/?url=${url}`} className='lg:mx-4 mt-5 lg:mt-0'>
 
@@ -354,12 +367,24 @@ function Home() {
         </div>
       </div>
       <div className="lg:w-1/3">
-        <img src="\comprehensive_website_audit_en.png" alt="" srcSet="" />
+        <DotLottieReact
+          src="https://lottie.host/a92a613e-7bc8-4b1a-8490-3322ccca5cb5/nuwfVTC9cP.json"
+          loop
+          autoplay
+
+          className="scale-[1] w-[450px] h-[450px]"
+        />
       </div>
     </div>
     <div className="flex w-full lg:h-[80vh] justify-center mt-10 flex-wrap lg:flex-nowrap items-center">
       <div className="lg:w-1/3">
-        <img src="\comprehensive_website_audit_en.png" alt="" srcSet="" className='' />
+      <DotLottieReact
+          src="https://lottie.host/759cd847-27af-459a-aeb7-b8f79bd454f4/iHzXLGv0Jv.json"
+          loop
+          autoplay
+
+          className="scale-[1] w-[450px] h-[450px]"
+        />
       </div>
       <div className="lg:w-1/3 lg:mx-10  p-10 lg:p-5">
         <div className="lg:text-5xl text-3xl font-bold  leading-20	">
