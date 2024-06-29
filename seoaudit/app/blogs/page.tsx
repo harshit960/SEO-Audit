@@ -3,9 +3,7 @@ import Nav from '../Nav'
 import client from '../cfclient';
 import { fetchPosts } from './cfservices';
 
-type posts = {
-  posts: Post[];
-};
+
 interface ContentElement {
   value: string | number | bigint | boolean | React.ReactElement | Iterable<React.ReactNode> | React.ReactPortal | null | undefined;
 }
@@ -21,10 +19,15 @@ interface Post {
     };
     date?: string;
     title: string;
+    img: {
+      sys: {
+        id: string;
+      }
+    };
   };
 }
 async function page() {
-  const posts = await fetchPosts();
+  const posts:any = await fetchPosts();
   // console.log(JSON.stringify(posts));
   async function getImg(post:any) {
     const asset = await client.getAsset(post.fields.img.sys.id);
@@ -131,7 +134,7 @@ async function page() {
           <div className="text-3xl font-bold">Recent Blogs</div>
           <div className="flex-wrap flex mt-10 w-full justify-evenly">
 
-            {posts && posts.map(async (post) => (
+            {posts && posts.map(async (post:Post) => (
               <div className="flex mt-5">
                 <div className="border w-96 bg-white rounded">
                   <img className="w-96 bg-gray-400 h-60 " src={await getImg(post)}></img>
