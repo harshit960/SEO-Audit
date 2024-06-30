@@ -8,7 +8,7 @@ function Nav() {
         LOGO
       </Link>
       <div className="hidden text-sm justify-between basis-1/2 items-center sm:hidden lg:flex md:flex ">
-        <div className="">BLOG</div>
+        <Link href="/blogs">BLOG</Link>
         <Link href="/tools" className="">ALL TOOLS</Link>
         {/* <div className="">PRICING</div> */}
         <div className=" bg-[#E5F4F2] rounded-full flex items-center mr-10">

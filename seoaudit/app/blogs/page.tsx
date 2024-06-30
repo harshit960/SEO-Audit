@@ -2,6 +2,7 @@ import React from 'react'
 import Nav from '../Nav'
 import client from '../cfclient';
 import { fetchPosts } from './cfservices';
+import Link from 'next/link';
 
 
 interface ContentElement {
@@ -14,6 +15,7 @@ interface Content {
 
 interface Post {
   fields: {
+    id: string;
     body: {
       content: Content[];
     };
@@ -135,6 +137,7 @@ async function page() {
           <div className="flex-wrap flex mt-10 w-full justify-evenly">
 
             {posts && posts.map(async (post:Post) => (
+              <Link href={`/blogs/${post.fields.id}`} key={post.fields.id}>
               <div className="flex mt-5">
                 <div className="border w-96 bg-white rounded">
                   <img className="w-96 bg-gray-400 h-60 " src={await getImg(post)}></img>
@@ -159,6 +162,7 @@ async function page() {
 
                 </div>
               </div>
+              </Link>
             ))}
               </div>
         </div>
