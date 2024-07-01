@@ -1,5 +1,5 @@
 // "use client"
-import React, { lazy } from 'react'
+import React from 'react'
 // import { InfiniteMovingCards } from './components/ui/infinite-moving-cards'
 // import { MovingBorder } from './components/ui/moving-border'
 // import { Button } from "./components/ui/moving-border";
@@ -16,9 +16,10 @@ import  Animations  from './components/Animations';
 // import { HoverEffect } from './components/ui/card-hover-effect';
 import { TypewriterEffectSmooth } from './components/ui/typewriter-effect';
 import Nav from './Nav';
+import SearchBar from './components/SearchBar';
 // import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 // import { calsans } from "@/fonts/calsans";
-const YouTubeIframe = lazy(() => import('./YTiframe'));
+import YouTubeIframe from './YTiframe';
 
 
 function Home() {
@@ -200,7 +201,7 @@ function Home() {
         </div>
         <div className="flex items-center lg:justify-center flex-wrap mt-5 w-full drop-shadow-lg	">
 
-
+          <SearchBar />
           {/* <input type="text" onChange={(e) => seturl(e.target.value)} value={url} className='rounded bg-[#E5F4F2] p-2 px-4 py-4 lg:w-1/2 w-80' placeholder='Enter Your Domain Name' /> */}
 
           {/* <Link href={`run/result/?url=${url}`} className='lg:mx-4 mt-5 lg:mt-0'> */}
