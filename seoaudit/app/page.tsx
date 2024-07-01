@@ -1,5 +1,5 @@
-"use client"
-import React, { lazy, useState } from 'react'
+// "use client"
+import React, { lazy } from 'react'
 // import { InfiniteMovingCards } from './components/ui/infinite-moving-cards'
 // import { MovingBorder } from './components/ui/moving-border'
 // import { Button } from "./components/ui/moving-border";
@@ -11,13 +11,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 // import { StickyScroll } from './components/ui/sticky-scroll-reveal';
 // import { TracingBeam } from './components/ui/tracing-beam';
+import  Animations  from './components/Animations';
 // import { twMerge } from "tailwind-merge";
 // import { HoverEffect } from './components/ui/card-hover-effect';
 import { TypewriterEffectSmooth } from './components/ui/typewriter-effect';
 import Nav from './Nav';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+// import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 // import { calsans } from "@/fonts/calsans";
 const YouTubeIframe = lazy(() => import('./YTiframe'));
+
 
 function Home() {
   const items = [{
@@ -172,7 +174,7 @@ function Home() {
       text: "Today",
     },
   ];
-  const [url, seturl] = useState("")
+  // const [url, seturl] = useState("")
   return (<>
     <Nav />
     <div className='flex  w-full items-center  lg:items-center lg:h-screen h-[90vh] overflow-hidden bg-[#]'>
@@ -186,16 +188,10 @@ function Home() {
             <br />
             Reporting Tool
           </div>
-          <DotLottieReact
-            src="https://lottie.host/9be912a0-8874-4453-9149-881b6eb675ad/mEIIPGP58H.json"
-            loop
-            autoplay
-            className='absolute bottom-16 -right-20 w-1/2  -z-10 overflow-hidden'
-          />
-          <DotLottieReact
+          <Animations src="https://lottie.host/9be912a0-8874-4453-9149-881b6eb675ad/mEIIPGP58H.json" className="absolute bottom-16 -right-20 w-1/2  -z-10 overflow-hidden"/>
+          
+          <Animations
             src="https://lottie.host/9a449fcb-8434-4985-ae02-866607de0cd4/H3276bRGu1.json"
-            loop
-            autoplay
             className='absolute top-40 left-36 w-1/4  -z-10'
           />
         </div>
@@ -205,12 +201,12 @@ function Home() {
         <div className="flex items-center lg:justify-center flex-wrap mt-5 w-full drop-shadow-lg	">
 
 
-          <input type="text" onChange={(e) => seturl(e.target.value)} value={url} className='rounded bg-[#E5F4F2] p-2 px-4 py-4 lg:w-1/2 w-80' placeholder='Enter Your Domain Name' />
+          {/* <input type="text" onChange={(e) => seturl(e.target.value)} value={url} className='rounded bg-[#E5F4F2] p-2 px-4 py-4 lg:w-1/2 w-80' placeholder='Enter Your Domain Name' /> */}
 
-          <Link href={`run/result/?url=${url}`} className='lg:mx-4 mt-5 lg:mt-0'>
+          {/* <Link href={`run/result/?url=${url}`} className='lg:mx-4 mt-5 lg:mt-0'> */}
 
             <div className="my-4 bg-[#009379] hover:bg-[#2D2D2D] duration-200 hover:text-[#fff] rounded p-2 py-5 font-semibold text-white w-28 text-xs inline-flex items-center justify-center">ANALYZE</div>
-          </Link>
+          {/* </Link> */}
         </div>
 
       </div>
@@ -367,22 +363,16 @@ function Home() {
         </div>
       </div>
       <div className="lg:w-1/3">
-        <DotLottieReact
+        <Animations
           src="https://lottie.host/a92a613e-7bc8-4b1a-8490-3322ccca5cb5/nuwfVTC9cP.json"
-          loop
-          autoplay
-
           className="scale-[1] w-[450px] h-[450px]"
         />
       </div>
     </div>
     <div className="flex w-full lg:h-[80vh] justify-center mt-10 flex-wrap lg:flex-nowrap items-center">
       <div className="lg:w-1/3">
-      <DotLottieReact
+      <Animations
           src="https://lottie.host/759cd847-27af-459a-aeb7-b8f79bd454f4/iHzXLGv0Jv.json"
-          loop
-          autoplay
-
           className="scale-[1] w-[450px] h-[450px]"
         />
       </div>

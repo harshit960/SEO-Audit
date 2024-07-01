@@ -138,7 +138,7 @@ async function page() {
 
             {posts && posts.map(async (post:Post) => (
               <Link href={`/blogs/${post.fields.id}`} key={post.fields.id}>
-              <div className="flex mt-5">
+              <div className="flex mt-5 max-h-[500px] h-[500px]">
                 <div className="border w-96 bg-white rounded">
                   <img className="w-96 bg-gray-400 h-60 " src={await getImg(post)}></img>
                   <div className="flex-col flex p-6 py-8">
