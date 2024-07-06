@@ -7982,6 +7982,8 @@ async function YourComponent() {
     useEffect(() => {
         setMetaTitle(extractMetaTitle(scrapeData, appendToFailed, appendToSuccess))
     }, [scrapeData]);
+
+    
     if (loading) {
         return (
             <div className="flex h-screen w-screen items-center justify-center fixed bg-white">
