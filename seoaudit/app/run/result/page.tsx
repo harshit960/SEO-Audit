@@ -8630,7 +8630,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractSEOFriendlyUrlData(psiData).URLs.length == 0 ?
+                                {SEOFriendlyUrl.URLs && SEOFriendlyUrl.URLs.length == 0 ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8648,9 +8648,9 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {extractSEOFriendlyUrlData(psiData).Link}</div> */}
-                                    <div className="text-sm">{extractSEOFriendlyUrlData(psiData).Description}</div>
-                                    <a className="text-sm" href={extractSEOFriendlyUrlData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {SEOFriendlyUrl.Link}</div> */}
+                                    <div className="text-sm">{SEOFriendlyUrl.Description}</div>
+                                    <a className="text-sm" href={SEOFriendlyUrl.Link}>Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -8685,7 +8685,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {SEOFriendlyUrl.URLs.length == 0 ?
+                                {SEOFriendlyUrl.URLs && SEOFriendlyUrl.URLs.length == 0 ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8713,7 +8713,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {ResponsiveImgData.Images.length == 0 ?
+                                {ResponsiveImgData.Images && ResponsiveImgData.Images.length == 0 ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8740,7 +8740,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {ImageAspectRatioData.Images.length == 0 ?
+                                {ImageAspectRatioData.Images && ImageAspectRatioData.Images.length == 0 ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8794,7 +8794,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {DeprecatedHtmlTagsData.DeprecatedTags.length == 0 ?
+                                {DeprecatedHtmlTagsData.DeprecatedTags && DeprecatedHtmlTagsData.DeprecatedTags.length == 0 ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
