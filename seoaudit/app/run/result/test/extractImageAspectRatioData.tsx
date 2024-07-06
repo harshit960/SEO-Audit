@@ -22,7 +22,7 @@ interface PSIData {
 }
 
 // Function to extract Image Aspect Ratio Test data from PSI data
-export function extractImageAspectRatioData(data: any): { Images: { url: string; aspectRatio: number; isAspectRatioOptimized: boolean }[]; Importance: string; Description: string; Link: string } {
+export function extractImageAspectRatioData(data: any,appendToSuccess:any,appendToFailed:any): { Images: { url: string; aspectRatio: number; isAspectRatioOptimized: boolean }[]; Importance: string; Description: string; Link: string } {
     const imageAspectRatioAudit = data?.lighthouseResult?.audits?.['image-aspect-ratio'];
 
     // Check if the Image Aspect Ratio Test audit data is available
@@ -41,6 +41,7 @@ export function extractImageAspectRatioData(data: any): { Images: { url: string;
 
     // Check if all images have optimized aspect ratios
     const allImagesHaveOptimizedAspectRatio = images.every((image: { isAspectRatioOptimized: any; }) => image.isAspectRatioOptimized);
+    allImagesHaveOptimizedAspectRatio ? appendToFailed('Image Aspect Ratio') : appendToSuccess('Image Aspect Ratio');
 
     const importance = allImagesHaveOptimizedAspectRatio ? 'High' : 'Low';
     const description = allImagesHaveOptimizedAspectRatio ? 'All images on this website have optimized aspect ratios.' : 'Some images on this website do not have optimized aspect ratios.';

@@ -20,7 +20,7 @@ interface PSIData {
 }
 
 // Function to perform DOM Size Test using PSI data
-export function performDOMSizeTest(data: any): { DOMSize: number; Importance: string; Description: string; Link: string } {
+export function performDOMSizeTest(data: any,appendToSuccess:any,appendToFailed:any): { DOMSize: number; Importance: string; Description: string; Link: string } {
     const domSizeAudit = data?.lighthouseResult?.audits?.['dom-size'];
 
     // Check if the DOM Size audit data is available
@@ -46,6 +46,7 @@ export function performDOMSizeTest(data: any): { DOMSize: number; Importance: st
     } else {
         importance = 'High';
     }
+    importance == 'Low' ? appendToFailed('html DOM Size Test') : appendToSuccess('html DOM Size Test');
 
     const description = `The size of the DOM is ${DOMSize} elements.`;
     const link = 'https://web.dev/dom-size/';

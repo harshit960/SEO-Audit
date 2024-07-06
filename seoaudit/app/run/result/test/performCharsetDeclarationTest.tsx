@@ -23,7 +23,7 @@ interface PSIData {
 }
 
 // Function to perform Charset Declaration Test using PSI data
-export function performCharsetDeclarationTest(data: any): { Charset: string; HasCharsetDeclaration: boolean; Importance: string; Description: string; Link: string } {
+export function performCharsetDeclarationTest(data: any,appendToSuccess:any,appendToFailed:any): { Charset: string; HasCharsetDeclaration: boolean; Importance: string; Description: string; Link: string } {
     const charsetAudit = data?.lighthouseResult?.audits?.['charset'];
 
     // Check if the Charset Declaration Test audit data is available
@@ -41,6 +41,7 @@ export function performCharsetDeclarationTest(data: any): { Charset: string; Has
     // Extract charset declaration information
     const charset = charsetAudit.score || '';
     const hasCharsetDeclaration = charset !== '';
+    !hasCharsetDeclaration ? appendToFailed('Charset Declaration') : appendToSuccess('Charset Declaration');
 
     const importance = hasCharsetDeclaration ? 'High' : 'Low';
     const description = hasCharsetDeclaration ? `The charset declaration is set.` : 'No charset declaration found.';

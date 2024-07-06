@@ -21,7 +21,7 @@ interface PSIData {
 }
 
 // Function to perform Favicon Test using PSI data
-export function performFaviconTest(data: PSIData): { HasFavicon: boolean; Importance: string; Description: string; Link: string } {
+export function performFaviconTest(data: PSIData,appendToSuccess:any,appendToFailed:any): { HasFavicon: boolean; Importance: string; Description: string; Link: string } {
     const networkRequestsAudit = data?.lighthouseResult?.audits?.['network-requests'];
 
     // Check if the Network Requests audit data is available
@@ -42,6 +42,8 @@ export function performFaviconTest(data: PSIData): { HasFavicon: boolean; Import
     const hasFavicon = networkRequestURLs.some(url => url.toLowerCase().includes('favicon.ico'));
 
     const importance = hasFavicon ? 'High' : 'Low';
+    !hasFavicon ? appendToFailed('Favicon') : appendToSuccess('Favicon');
+
     const description = hasFavicon ? 'This website has a favicon properly configured.' : 'This website does not have a favicon properly configured.';
     const link = 'https://www.favicon-generator.org/';
 

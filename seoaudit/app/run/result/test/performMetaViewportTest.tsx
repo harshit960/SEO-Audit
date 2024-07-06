@@ -17,7 +17,7 @@ interface PSIData {
 }
 
 // Function to perform Meta Viewport Test using PSI data
-export function performMetaViewportTest(data: PSIData): { HasMetaViewport: boolean; Importance: string; Description: string } {
+export function performMetaViewportTest(data: PSIData,appendToSuccess:any,appendToFailed:any): { HasMetaViewport: boolean; Importance: string; Description: string } {
     const viewportAudit = data?.lighthouseResult?.audits?.['viewport'];
 
     // Check if the viewport audit data is available
@@ -32,6 +32,7 @@ export function performMetaViewportTest(data: PSIData): { HasMetaViewport: boole
 
     // Check the score of the viewport audit to determine if the viewport meta tag is present
     const hasMetaViewport = viewportAudit.score !== null && viewportAudit.score === 1;
+    !hasMetaViewport ? appendToFailed('Meta Viewport Test') : appendToSuccess('Meta Viewport Test');
 
     // Determine the importance and description based on the presence of the viewport meta tag
     const importance = hasMetaViewport ? 'High' : 'Medium';

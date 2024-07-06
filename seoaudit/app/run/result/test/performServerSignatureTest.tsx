@@ -21,7 +21,7 @@ interface PSIData {
 }
 
 // Function to perform Server Signature Test using PSI data
-export function performServerSignatureTest(data: any): { IsServerSignaturePresent: boolean; Importance: string; Description: string } {
+export function performServerSignatureTest(data: any,appendToSuccess:any,appendToFailed:any): { IsServerSignaturePresent: boolean; Importance: string; Description: string } {
     const networkRequestsAudit = data?.lighthouseResult?.audits?.['network-requests'];
 
     // Check if the Network Requests audit data is available
@@ -45,6 +45,7 @@ export function performServerSignatureTest(data: any): { IsServerSignaturePresen
 
     // Determine if the Server Signature is present
     const isServerSignaturePresent = !!serverHeader;
+    !isServerSignaturePresent ? appendToFailed('Server Signature Test') : appendToSuccess('Server Signature Test');
 
     // Determine the importance and description based on the presence of Server Signature
     const importance = isServerSignaturePresent ? 'Medium' : 'Low';

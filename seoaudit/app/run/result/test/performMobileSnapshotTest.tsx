@@ -19,7 +19,7 @@ interface PSIData {
 }
 
 // Function to perform Mobile Snapshot Test using PSI data
-export function performMobileSnapshotTest(data: any): { IsMobileSnapshotValid: boolean; Importance: string; Description: string } {
+export function performMobileSnapshotTest(data: any,appendToSuccess:any,appendToFailed:any): { IsMobileSnapshotValid: boolean; Importance: string; Description: string } {
     const mobileSnapshotAudit = data?.lighthouseResult?.audits?.['final-screenshot'];
 
     // Check if the mobile snapshot audit data is available
@@ -34,6 +34,7 @@ export function performMobileSnapshotTest(data: any): { IsMobileSnapshotValid: b
 
     // Check if the mobile snapshot is valid
     const isMobileSnapshotValid = mobileSnapshotAudit.details.type === 'screenshot' && mobileSnapshotAudit.details.screenshot !== '';
+    !isMobileSnapshotValid ? appendToFailed('Mobile Snapshot Valid Test') : appendToSuccess('Mobile Snapshot Valid Test');
 
     // Determine the importance and description based on the validity of the mobile snapshot
     const importance = isMobileSnapshotValid ? 'High' : 'Medium';

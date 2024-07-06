@@ -23,7 +23,7 @@ interface PSIData {
 }
 
 // Function to perform Render Blocking Resources Test using PSI data
-export function performRenderBlockingResourcesTest(data: any): { HasRenderBlockingResources: boolean; Importance: string; Description: string; Link: string } {
+export function performRenderBlockingResourcesTest(data: any,appendToSuccess:any,appendToFailed:any): { HasRenderBlockingResources: boolean; Importance: string; Description: string; Link: string } {
     const networkRequestsAudit = data?.lighthouseResult?.audits?.['network-requests'];
 
     // Check if the Network Requests audit data is available
@@ -43,6 +43,7 @@ export function performRenderBlockingResourcesTest(data: any): { HasRenderBlocki
 
     // Check if there are any render-blocking resources
     const hasRenderBlockingResources = cssRequests.length > 0 || jsRequests.length > 0;
+    hasRenderBlockingResources ? appendToFailed('Render Blocking Resources Test') : appendToSuccess('Render Blocking Resources Test');
 
     // Determine the importance and description based on render-blocking resources
     const importance = hasRenderBlockingResources ? 'High' : 'Low';

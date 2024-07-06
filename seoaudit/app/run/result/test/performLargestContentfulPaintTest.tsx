@@ -17,7 +17,7 @@ interface PSIData {
 }
 
 // Function to perform Largest Contentful Paint Test using PSI data
-export function performLargestContentfulPaintTest(data: PSIData): { Lcp: number; Importance: string; Description: string } {
+export function performLargestContentfulPaintTest(data: PSIData,appendToSuccess:any,appendToFailed:any): { Lcp: number; Importance: string; Description: string } {
     const lcpAudit = data?.lighthouseResult?.audits?.['largest-contentful-paint'];
 
     // Check if the Largest Contentful Paint audit data is available
@@ -47,6 +47,7 @@ export function performLargestContentfulPaintTest(data: PSIData): { Lcp: number;
         importance = 'Low';
         description = 'The Largest Contentful Paint (LCP) occurred after 4 seconds, indicating slow page load speed. Consider optimizing content delivery.';
     }
+    importance == 'Low' ? appendToFailed('Large Contentful Paint Test') : appendToSuccess('Large Contentful Paint Test');
 
     // console.log({
     //     message: 'Largest Contentful Paint Test',

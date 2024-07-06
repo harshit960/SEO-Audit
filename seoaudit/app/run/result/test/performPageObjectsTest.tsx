@@ -23,7 +23,7 @@ interface PSIData {
 }
 
 // Function to perform Page Objects Test using PSI data
-export function performPageObjectsTest(data: any): { ResourceSummary: { ResourceType: string; Size: number; Count: number }[]; Importance: string; Description: string; Link: string } {
+export function performPageObjectsTest(data: any,appendToSuccess:any,appendToFailed:any): { ResourceSummary: { ResourceType: string; Size: number; Count: number }[]; Importance: string; Description: string; Link: string } {
     const resourceSummaryAudit = data?.lighthouseResult?.audits?.['resource-summary'];
 
     // Check if the Resource Summary audit data is available
@@ -78,6 +78,7 @@ export function performPageObjectsTest(data: any): { ResourceSummary: { Resource
     //     link,
     //     importance
     // });
+    importance == 'Low' ? appendToFailed('Image Object Test') : appendToSuccess('Image Object Test');
 
     return {
         ResourceSummary: resourceSummary,

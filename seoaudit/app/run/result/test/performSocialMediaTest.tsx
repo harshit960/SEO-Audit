@@ -2,7 +2,7 @@
 
 
 // Function to perform Social Media Test using PSI data
-export function performSocialMediaTest(data: any): { HasSocialMediaTags: boolean; Importance: string; Description: string; Link: string } {
+export function performSocialMediaTest(data: any,appendToSuccess:any,appendToFailed:any): { HasSocialMediaTags: boolean; Importance: string; Description: string; Link: string } {
     const metaDescriptionAudit = data?.lighthouseResult?.audits?.['meta-description'];
     // const twitterCardAudit = data?.lighthouseResult?.audits?.['has-twitter-card'];
     // const facebookCardAudit = data?.lighthouseResult?.audits?.['has-facebook-card'];
@@ -20,6 +20,7 @@ export function performSocialMediaTest(data: any): { HasSocialMediaTags: boolean
 
     // Check if social media meta tags are present
     const hasSocialMediaTags = metaDescriptionAudit.score === 1 ;
+    hasSocialMediaTags ? appendToFailed('Social Media Test') : appendToSuccess('Social Media Test');
 
     const importance = hasSocialMediaTags ? 'High' : 'Low';
     const description = hasSocialMediaTags ? 'The website has properly configured social media meta tags.' : 'The website does not have properly configured social media meta tags.';

@@ -17,7 +17,7 @@ interface PSIData {
 }
 
 // Function to perform Cumulative Layout Shift Test using PSI data
-export function performCumulativeLayoutShiftTest(data: PSIData): { Cls: number; Importance: string; Description: string } {
+export function performCumulativeLayoutShiftTest(data: PSIData,appendToSuccess:any,appendToFailed:any): { Cls: number; Importance: string; Description: string } {
     const clsAudit = data?.lighthouseResult?.audits?.['cumulative-layout-shift'];
 
     // Check if the Cumulative Layout Shift audit data is available
@@ -47,6 +47,7 @@ export function performCumulativeLayoutShiftTest(data: PSIData): { Cls: number; 
         importance = 'Low';
         description = 'The Cumulative Layout Shift (CLS) score is high, indicating poor visual stability. Consider optimizing layout rendering.';
     }
+    importance == 'Low' ? appendToFailed('Cumulative Layout Shift Test') : appendToSuccess('Cumulative Layout Shift Test');
 
     // console.log({
     //     message: 'Cumulative Layout Shift Test',

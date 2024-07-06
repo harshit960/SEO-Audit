@@ -6,7 +6,7 @@ interface HTMLData {
 }
 
 // Function to perform Structured Data Test
-export function performStructuredDataTest(data: any): { HasStructuredData: boolean; Importance: string; Description: string } {
+export function performStructuredDataTest(data: any,appendToSuccess:any,appendToFailed:any): { HasStructuredData: boolean; Importance: string; Description: string } {
     const htmlContent = data.htmlContent;
 
     // Regular expressions to match JSON-LD, RDFa, and Microdata
@@ -16,6 +16,7 @@ export function performStructuredDataTest(data: any): { HasStructuredData: boole
 
     // Check if structured data is present in the HTML content
     const hasStructuredData = jsonLdRegex.test(htmlContent) || rdfaRegex.test(htmlContent) || microdataRegex.test(htmlContent);
+    hasStructuredData ? appendToFailed('Structured Data Test') : appendToSuccess('Structured Data Test');
 
     // Determine the importance and description based on the presence of structured data
     const importance = hasStructuredData ? 'High' : 'Low';

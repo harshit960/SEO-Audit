@@ -17,7 +17,7 @@ interface PSIData {
 }
 
 // Function to perform First Contentful Paint Test using PSI data
-export function performFirstContentfulPaintTest(data: PSIData): { Fcp: number; Importance: string; Description: string } {
+export function performFirstContentfulPaintTest(data: PSIData,appendToSuccess:any,appendToFailed:any): { Fcp: number; Importance: string; Description: string } {
     const fcpAudit = data?.lighthouseResult?.audits?.['first-contentful-paint'];
 
     // Check if the First Contentful Paint audit data is available
@@ -47,6 +47,7 @@ export function performFirstContentfulPaintTest(data: PSIData): { Fcp: number; I
         importance = 'Low';
         description = 'The First Contentful Paint (FCP) occurred after three seconds, indicating slow page load speed. Consider optimizing content delivery.';
     }
+    importance == 'Low' ? appendToFailed('First Contentful Paint Test') : appendToSuccess('First Contentful Paint Test');
 
     // console.log({
     //     message: 'First Contentful Paint Test',

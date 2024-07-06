@@ -17,7 +17,7 @@ interface PSIData {
 }
 
 // Function to perform Flash Test using PSI data
-export function performFlashTest(data: PSIData): { HasFlashContent: boolean; Importance: string; Description: string; Link: string } {
+export function performFlashTest(data: PSIData,appendToSuccess:any,appendToFailed:any): { HasFlashContent: boolean; Importance: string; Description: string; Link: string } {
     const legacyJavascriptAudit = data?.lighthouseResult?.audits?.['legacy-javascript'];
 
     // Check if the Legacy JavaScript audit data is available
@@ -33,6 +33,7 @@ export function performFlashTest(data: PSIData): { HasFlashContent: boolean; Imp
 
     // Determine if there's Flash content based on the presence of legacy JavaScript
     const hasFlashContent = legacyJavascriptAudit.score !== 1;
+    hasFlashContent ? appendToFailed('Flash Test') : appendToSuccess('Flash Test');
 
     // Determine the importance and description based on the presence of Flash content
     const importance = hasFlashContent ? 'High' : 'Low';

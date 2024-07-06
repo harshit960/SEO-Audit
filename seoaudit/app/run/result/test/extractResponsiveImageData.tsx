@@ -21,7 +21,7 @@ interface PSIData {
 }
 
 // Function to extract Responsive Image Test data from PSI data
-export function extractResponsiveImageData(data: any): { Images: { url: string; isResponsive: boolean }[]; Importance: string; Description: string; Link: string } {
+export function extractResponsiveImageData(data: any,appendToSuccess:any,appendToFailed:any): { Images: { url: string; isResponsive: boolean }[]; Importance: string; Description: string; Link: string } {
     const responsiveImageAudit = data?.lighthouseResult?.audits?.['uses-responsive-images'];
 
     // Check if the Responsive Image Test audit data is available
@@ -40,6 +40,7 @@ export function extractResponsiveImageData(data: any): { Images: { url: string; 
 
     // Check if all images are responsive
     const allImagesAreResponsive = images.every((image: { isResponsive: any; }) => image.isResponsive);
+    allImagesAreResponsive ? appendToFailed('Responsive Image Test') : appendToSuccess('Responsive Image Test');
 
     const importance = allImagesAreResponsive ? 'High' : 'Low';
     const description = allImagesAreResponsive ? 'All images on this website are responsive.' : 'Some images on this website are not responsive.';

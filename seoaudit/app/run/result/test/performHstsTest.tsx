@@ -21,7 +21,7 @@ interface PSIData {
 }
 
 // Function to perform HSTS Test using PSI data
-export function performHstsTest(data: any): { IsHstsEnabled: boolean; MaxAge: number | null; Importance: string; Description: string } {
+export function performHstsTest(data: any,appendToSuccess:any,appendToFailed:any): { IsHstsEnabled: boolean; MaxAge: number | null; Importance: string; Description: string } {
     const networkRequestsAudit = data?.lighthouseResult?.audits?.['network-requests'];
 
     // Check if the Network Requests audit data is available
@@ -47,6 +47,7 @@ export function performHstsTest(data: any): { IsHstsEnabled: boolean; MaxAge: nu
     // Determine if HSTS is enabled and extract max-age value
     const isHstsEnabled = !!hstsHeader;
     const maxAge = isHstsEnabled ? extractMaxAge(hstsHeader) : null;
+    !isHstsEnabled ? appendToFailed('HSTS Test') : appendToSuccess('HSTS Test');
 
     // Determine the importance and description based on HSTS configuration
     const importance = isHstsEnabled ? 'High' : 'Medium';

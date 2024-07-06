@@ -22,7 +22,7 @@ interface PSIData {
 }
 
 // Function to perform Google Analytics Test using PSI data
-export function performGoogleAnalyticsTest(data: PSIData): { HasGoogleAnalytics: boolean; Importance: string; Description: string; Link: string } {
+export function performGoogleAnalyticsTest(data: PSIData,appendToSuccess:any,appendToFailed:any): { HasGoogleAnalytics: boolean; Importance: string; Description: string; Link: string } {
     const networkRequestsAudit = data?.lighthouseResult?.audits?.['network-requests'];
 
     // Check if the Network Requests audit data is available
@@ -43,6 +43,8 @@ export function performGoogleAnalyticsTest(data: PSIData): { HasGoogleAnalytics:
     const hasGoogleAnalytics = networkRequestURLs.some(url => url.includes('google-analytics.com'));
 
     const importance = hasGoogleAnalytics ? 'High' : 'Low';
+    !hasGoogleAnalytics ? appendToFailed('Google Analytics') : appendToSuccess('Google Analytics');
+
     const description = hasGoogleAnalytics ? 'This website has Google Analytics tracking code embedded.' : 'This website does not have Google Analytics tracking code embedded.';
     const link = 'https://analytics.google.com/';
 

@@ -22,7 +22,7 @@ interface PSIData {
 }
 
 // Function to perform CDN Usage Test using PSI data
-export function performCDNUsageTest(data: any): { HasCDNUsage: boolean; Importance: string; Description: string; Link: string } {
+export function performCDNUsageTest(data: any,appendToSuccess:any,appendToFailed:any): { HasCDNUsage: boolean; Importance: string; Description: string; Link: string } {
     const resourceSummaryAudit = data?.lighthouseResult?.audits?.['network-requests'];
 
     // Check if the Resource Summary audit data is available
@@ -41,6 +41,7 @@ export function performCDNUsageTest(data: any): { HasCDNUsage: boolean; Importan
 
     // Check if any resource URL belongs to a known CDN domain
     const hasCDNUsage = resourceUrls.some((url: string) => isCDNUrl(url));
+    !hasCDNUsage ? appendToFailed('CDN Usage Test') : appendToSuccess('CDN Usage Test');
 
     // Determine the importance and description based on CDN usage
     const importance = hasCDNUsage ? 'High' : 'Low';

@@ -21,7 +21,7 @@ interface PSIData {
 }
 
 // Function to extract Deprecated HTML Tags Test data from PSI data
-export function extractDeprecatedHtmlTagsData(data: any): { DeprecatedTags: { tagName: string; occurrences: number }[]; Importance: string; Description: string; Link: string } {
+export function extractDeprecatedHtmlTagsData(data: any,appendToSuccess:any,appendToFailed:any): { DeprecatedTags: { tagName: string; occurrences: number }[]; Importance: string; Description: string; Link: string } {
     const deprecatedHtmlTagsAudit = data?.lighthouseResult?.audits?.['deprecated-html-tags'];
 
     // Check if the Deprecated HTML Tags Test audit data is available
@@ -40,6 +40,8 @@ export function extractDeprecatedHtmlTagsData(data: any): { DeprecatedTags: { ta
 
     // Check if any deprecated HTML tags are present
     const importance = deprecatedTags.length > 0 ? 'Low' : 'High';
+    deprecatedTags.length > 0 ? appendToFailed('deprecatedHtmlTagsAudit') : appendToSuccess('deprecatedHtmlTagsAudit');
+
     const description = deprecatedTags.length > 0 ? 'This website uses deprecated HTML tags. Consider replacing them with modern equivalents for better compatibility and performance.' : 'This website does not use any deprecated HTML tags.';
     const link = 'https://www.w3.org/wiki/HTML/Elements';
 

@@ -20,7 +20,7 @@ interface PSIData {
 }
 
 // Function to perform Console Errors Test using PSI data
-export function performConsoleErrorsTest(data: PSIData): { HasConsoleErrors: boolean; ErrorMessages: string[]; Importance: string; Description: string; Link: string } {
+export function performConsoleErrorsTest(data: PSIData,appendToSuccess:any,appendToFailed:any): { HasConsoleErrors: boolean; ErrorMessages: string[]; Importance: string; Description: string; Link: string } {
     const consoleErrorAudit = data?.lighthouseResult?.audits?.['errors-in-console'];
 
     // Check if the Console Errors Test audit data is available
@@ -40,6 +40,7 @@ export function performConsoleErrorsTest(data: PSIData): { HasConsoleErrors: boo
 
     // Check if there are any console errors
     const hasConsoleErrors = errorMessages.length > 0;
+    hasConsoleErrors ? appendToFailed('Console Errors') : appendToSuccess('Console Errors');
 
     const importance = hasConsoleErrors ? 'High' : 'Low';
     const description = hasConsoleErrors ? `Console errors were found: ${errorMessages.join(', ')}` : 'No console errors were found.';

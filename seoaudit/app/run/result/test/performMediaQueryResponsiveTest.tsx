@@ -21,7 +21,7 @@ interface PSIData {
 }
 
 // Function to perform Media Query Responsive Test using PSI data
-export function performMediaQueryResponsiveTest(data: any): { HasMediaQueries: boolean; Importance: string; Description: string } {
+export function performMediaQueryResponsiveTest(data: any,appendToSuccess:any,appendToFailed:any): { HasMediaQueries: boolean; Importance: string; Description: string } {
     const networkRequestsAudit = data?.lighthouseResult?.audits?.['network-requests'];
 
     // Check if the network requests audit data is available
@@ -39,6 +39,7 @@ export function performMediaQueryResponsiveTest(data: any): { HasMediaQueries: b
 
     // Check if any CSS resources contain media queries
     const hasMediaQueries = cssResources.some((resource: { url: string | string[]; }) => resource.url.includes('@media'));
+    !hasMediaQueries ? appendToFailed('Media Queries Test') : appendToSuccess('Media Queries Test');
 
     // Determine the importance and description based on the presence of media queries
     const importance = hasMediaQueries ? 'High' : 'Medium';

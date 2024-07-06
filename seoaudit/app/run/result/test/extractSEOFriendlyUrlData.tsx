@@ -21,7 +21,7 @@ interface PSIData {
 }
 
 // Function to extract SEO-friendly URL data from PSI data
-export function extractSEOFriendlyUrlData(data: any): { URLs: { url: string; isSEOFriendly: boolean }[]; Importance: string; Description: string; Link: string } {
+export function extractSEOFriendlyUrlData(data: any,appendToSuccess:any,appendToFailed:any): { URLs: { url: string; isSEOFriendly: boolean }[]; Importance: string; Description: string; Link: string } {
     const seoFriendlyUrlAudit = data?.lighthouseResult?.audits?.['seo-friendly-url'];
 
     // Check if the SEO-friendly URL audit data is available
@@ -37,6 +37,7 @@ export function extractSEOFriendlyUrlData(data: any): { URLs: { url: string; isS
 
     // Extract URL information
     const URLs = seoFriendlyUrlAudit.details.items;
+    URLs.some((url: { isSEOFriendly: any; }) => !url.isSEOFriendly) ? appendToFailed('SEO Friendly URL') : appendToSuccess('SEO Friendly URL');
 
     const importance = URLs.some((url: { isSEOFriendly: any; }) => !url.isSEOFriendly) ? 'Low' : 'High';
     const description = importance === 'High' ? 'All URLs on this website are SEO-friendly.' : 'Some URLs on this website are not SEO-friendly.';
