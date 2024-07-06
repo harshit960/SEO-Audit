@@ -7974,16 +7974,112 @@ async function YourComponent() {
 
     const [BrokenLink, setBrokenLink] = useState<any>({});
     const [MetaTitle, setMetaTitle] = useState<any>({});
+    const [MetaDesc, setMetaDesc] = useState<any>({});
+    const [SocialMedia, setSocialMedia] = useState<any>({});
+    const [MostCommonKeyword, setMostCommonKeyword] = useState<any>({});
+    const [HeadingTagData, setHeadingTagData] = useState<any>({});
+    const [SEOFriendlyUrl, setSEOFriendlyUrl] = useState<any>({});
+    const [ImageAltData, setImageAltData] = useState<any>({});
+    const [ResponsiveImgData, setResponsiveImgData] = useState<any>({});
+    const [ImageAspectRatioData, setImageAspectRatioData] = useState<any>({});
+    const [InlineCssData, setInlineCssData] = useState<any>({});
+    const [DeprecatedHtmlTagsData, setDeprecatedHtmlTagsData] = useState<any>({});
+    const [GoogleAnalyticsData, setGoogleAnalyticsData] = useState<any>({});
+    const [FaviconData, setFaviconData] = useState<any>({});
+    const [BacklinksData, setBacklinksData] = useState<any>({});
+    const [JSErrorData, setJSErrorData] = useState<any>({});
+    const [ConsoleErrorsData, setConsoleErrorsData] = useState<any>({});
+    const [CharsetDeclarationData, setCharsetDeclarationData] = useState<any>({});
+    const [HTMLPageSizeData, setHTMLPageSizeData] = useState<any>({});
+    const [DOMSizeData, setDOMSizeData] = useState<any>({});
+    const [HTMLCompressionData, setHTMLCompressionData] = useState<any>({});
+    const [SiteLoadingSpeedData, setSiteLoadingSpeedData] = useState<any>({});
+    const [JSExecutionTimeData, setJSExecutionTimeData] = useState<any>({});
+    const [PageObjectsData, setPageObjectsData] = useState<any>({});
+    const [PageCacheData, setPageCacheData] = useState<any>({});
+    const [FlashData, setFlashData] = useState<any>({});
+    const [CDNUsageData, setCDNUsageData] = useState<any>({});
+    const [RenderBlockingResourcesData, setRenderBlockingResourcesData] = useState<any>({});
+    const [NestedTableTest, setNestedTableTest] = useState<any>({});
+    const [FramesetTest, setFramesetTest] = useState<any>({});
+    const [DoctypeTest, setDoctypeTest] = useState<any>({});
+    const [UrlRedirectsTest, setUrlRedirectsTest] = useState<any>({});
+    const [FirstContentfulPaintTest, setFirstContentfulPaintTest] = useState<any>({});
+    const [LargestContentfulPaintTest, setLargestContentfulPaintTest] = useState<any>({});
+    const [CumulativeLayoutShiftTest, setCumulativeLayoutShiftTest] = useState<any>({});
+    const [URLCaninicalization, setURLCaninicalization] = useState<any>({});
+    const [SslCheckerTest, setSslCheckerTest] = useState<any>({});
+    const [MixedContentTest, setMixedContentTest] = useState<any>({});
+    const [Http2Test, setHttp2Test] = useState<any>({});
+    const [HstsTest, setHstsTest] = useState<any>({});
+    const [ServerSignatureTest, setServerSignatureTest] = useState<any>({});
+    const [PlaintextEmailsTest, setPlaintextEmailsTest] = useState<any>({});
+    const [UnsafeCrossOriginLinksTest, setUnsafeCrossOriginLinksTest] = useState<any>({});
+    const [MetaViewport, setMetaViewport] = useState<any>({});
+    const [MediaQuery, setMediaQuery] = useState<any>({});
+    const [MobileSnapshot, setMobileSnapshot] = useState<any>({});
+    const [StructuredData, setStructuredData] = useState<any>({});
+    const [NoindexTag, setNoindexTag] = useState<any>({});
+    const [NoFollowTag, setNoFollowTag] = useState<any>({});
+    const [MetaRefreshData, setMetaRefreshData] = useState<any>({});
 
 
     useEffect(() => {
         setBrokenLink(extractBrokenLinksData(psiData, appendToFailed, appendToSuccess));
+        setSocialMedia(performSocialMediaTest(psiData))
+        setSEOFriendlyUrl(extractSEOFriendlyUrlData(psiData))
+        setImageAltData(extractImageAltTestData(psiData))
+        setResponsiveImgData(extractResponsiveImageData(psiData))
+        setImageAspectRatioData(extractImageAspectRatioData(psiData))
+        setInlineCssData(extractInlineCssData(psiData))
+        setDeprecatedHtmlTagsData(extractDeprecatedHtmlTagsData(psiData))
+        setGoogleAnalyticsData(performGoogleAnalyticsTest(psiData))
+        setFaviconData(performFaviconTest(psiData))
+        setBacklinksData(performBacklinksTest(psiData))
+        setJSErrorData(performJSErrorTest(psiData))
+        setConsoleErrorsData(performConsoleErrorsTest(psiData))
+        setCharsetDeclarationData(performCharsetDeclarationTest(psiData))
+        setHTMLPageSizeData(performHTMLPageSizeTest(psiData))
+        setDOMSizeData(performDOMSizeTest(psiData))
+        setHTMLCompressionData(performHTMLCompressionTest(psiData))
+        setSiteLoadingSpeedData(performSiteLoadingSpeedTest(psiData))
+        setJSExecutionTimeData(performJSExecutionTimeTest(psiData))
+        setPageObjectsData(performPageObjectsTest(psiData))
+        setPageCacheData(performPageCacheTest(psiData))
+        setFlashData(performFlashTest(psiData))
+        setCDNUsageData(performCDNUsageTest(psiData))
+        setRenderBlockingResourcesData(performRenderBlockingResourcesTest(psiData))
+        setUrlRedirectsTest(performUrlRedirectsTest(psiData))
+        setFirstContentfulPaintTest(performFirstContentfulPaintTest(psiData))
+        setLargestContentfulPaintTest(performLargestContentfulPaintTest(psiData))
+        setCumulativeLayoutShiftTest(performCumulativeLayoutShiftTest(psiData))
+        setHttp2Test(performHttp2Test(psiData))
+        setHstsTest(performHstsTest(psiData))
+        setServerSignatureTest(performServerSignatureTest(psiData))
+        setMetaViewport(performMetaViewportTest(psiData))
+        setMediaQuery(performMediaQueryResponsiveTest(psiData))
+        setMobileSnapshot(performMobileSnapshotTest(psiData))
+        setStructuredData(performStructuredDataTest(psiData))
+        setNoindexTag(performNoindexTagTest(psiData))
     }, [psiData]);
     useEffect(() => {
         setMetaTitle(extractMetaTitle(scrapeData, appendToFailed, appendToSuccess))
+        setMetaDesc(extractMetaDescription(scrapeData))
+        setMostCommonKeyword(extractMostCommonKeywords(scrapeData))
+        setHeadingTagData(extractHeadingTagsData(scrapeData?.htmlText))
+        setNestedTableTest(performNestedTablesTest(scrapeData?.htmlText))
+        setFramesetTest(performFramesetTest(scrapeData?.htmlText))
+        setDoctypeTest(performDoctypeTest(scrapeData?.htmlText))
+        setURLCaninicalization(performUrlCanonicalizationTest(scrapeData?.htmlText))
+        setSslCheckerTest(performSslCheckerTest(scrapeData?.htmlText))
+        setMixedContentTest(performMixedContentTest(scrapeData?.htmlText))
+        setPlaintextEmailsTest(performPlaintextEmailsTest(scrapeData?.htmlText))
+        setUnsafeCrossOriginLinksTest(performUnsafeCrossOriginLinksTest(scrapeData?.htmlText))
+        setNoFollowTag(performNofollowTagTest(scrapeData?.htmlText))
+        setMetaRefreshData(performMetaRefreshTest(scrapeData?.htmlText))
     }, [scrapeData]);
 
-    
+
     if (loading) {
         return (
             <div className="flex h-screen w-screen items-center justify-center fixed bg-white">
@@ -8350,13 +8446,13 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractMetaDescription(scrapeData).Result == "Success" ?
+                                {MetaDesc.Result == "Success" ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
                                         </svg>
                                     </div>
-                                    : extractMetaDescription(scrapeData).Result == "Error" ? (
+                                    : MetaDesc.Result == "Error" ? (
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 m-2 text-red-400">
                                             <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
                                         </svg>
@@ -8364,12 +8460,12 @@ async function YourComponent() {
                             </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Meta Description Test</div>
                             <div className="flex flex-col overflow-auto">
-                                <div className="text-sm">{extractMetaDescription(scrapeData).Description}</div>
+                                <div className="text-sm">{MetaDesc.Description}</div>
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">Text: {extractMetaDescription(scrapeData).Text}</div>
-                                    <div className="text-sm">{extractMetaDescription(scrapeData).Length}</div>
-                                    <a href={extractMetaDescription(scrapeData).Link} className="text-sm">Learn More</a>
+                                    <div className="text-sm">Text: {MetaDesc.Text}</div>
+                                    <div className="text-sm">{MetaDesc.Length}</div>
+                                    <a href={MetaDesc.Link} className="text-sm">Learn More</a>
 
                                 </div>
                             </div>
@@ -8377,13 +8473,13 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractMetaDescription(scrapeData).Result == "Success" ?
+                                {MetaDesc.Result == "Success" ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
                                         </svg>
                                     </div>
-                                    : extractMetaDescription(scrapeData).Result == "Error" ? (
+                                    : MetaDesc.Result == "Error" ? (
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 m-2 text-red-400">
                                             <path fillRule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
                                         </svg>
@@ -8391,12 +8487,12 @@ async function YourComponent() {
                             </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Google Search Result Preview Test</div>
                             <div className="flex flex-col overflow-auto">
-                                {/* <div className="text-sm">{extractMetaDescription(scrapeData).Description}</div> */}
+                                {/* <div className="text-sm">{MetaDesc.Description}</div> */}
                                 <div className="bg-white border-4 border-slate-200 text-slate-700 p-3 my-3">
                                     <div className="text-sm  font-base text-blue-500  text-[#008744] truncate">{psiData ? psiData?.id : <></>}</div>
 
                                     <div className="text-base text-[#0057e7] truncate font-medium	">{MetaTitle.Text}</div>
-                                    <div className="text-sm line-clamp-2">{extractMetaDescription(scrapeData).Text}</div>
+                                    <div className="text-sm line-clamp-2">{MetaDesc.Text}</div>
                                     {/* <a href={extractMetaDescription(scrapeData).Link} className="text-sm">Learn More</a> */}
 
                                 </div>
@@ -8405,7 +8501,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performSocialMediaTest(psiData).HasSocialMediaTags ?
+                                {SocialMedia.HasSocialMediaTags ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8421,16 +8517,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">{performSocialMediaTest(psiData).Description}</div>
-                                    {/* <div className="text-sm">{performSocialMediaTest(psiData).HasSocialMediaTags}</div> */}
-                                    <a className="text-sm" href={performSocialMediaTest(psiData).Link}>Learn More</a>
+                                    <div className="text-sm">{SocialMedia.Description}</div>
+                                    {/* <div className="text-sm">{SocialMedia.HasSocialMediaTags}</div> */}
+                                    <a className="text-sm" href={SocialMedia.Link}>Learn More</a>
                                 </div>
                             </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performSocialMediaTest(psiData).HasSocialMediaTags ?
+                                {SocialMedia.HasSocialMediaTags ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8444,11 +8540,11 @@ async function YourComponent() {
                             </div>
                             <div className="text-sm  font-semibold min-w-80 whitespace-nowrap truncate">Most Common keyword Test</div>
                             <div className="flex flex-col">
-                                <div className="text-sm"> {extractMostCommonKeywords(scrapeData).Description}</div>
+                                <div className="text-sm"> {MostCommonKeyword.Description}</div>
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">{extractMostCommonKeywords(scrapeData).Keywords}</div>
-                                    <a className="text-sm" href={extractMostCommonKeywords(scrapeData).Link}>Learn More</a>
+                                    <div className="text-sm">{MostCommonKeyword.Keywords}</div>
+                                    <a className="text-sm" href={MostCommonKeyword.Link}>Learn More</a>
 
                                 </div>
                             </div>
@@ -8456,7 +8552,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractHeadingTagsData(scrapeData?.htmlText).HasH1Tags ?
+                                {HeadingTagData.HasH1Tags ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8474,8 +8570,8 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">{extractHeadingTagsData(scrapeData?.htmlText).Description}</div>
-                                    <a className="text-sm" href={extractHeadingTagsData(scrapeData?.htmlText).Link}>Learn More</a>
+                                    <div className="text-sm">{HeadingTagData.Description}</div>
+                                    <a className="text-sm" href={HeadingTagData.Link}>Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -8589,7 +8685,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractSEOFriendlyUrlData(psiData).URLs.length == 0 ?
+                                {SEOFriendlyUrl.URLs.length == 0 ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8607,9 +8703,9 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    <div className="text-sm">{extractImageAltTestData(psiData).Images}</div>
-                                    {/* <div className="text-sm">{extractImageAltTestData(psiData).Images}</div> */}
-                                    <a className="text-sm" href={extractImageAltTestData(psiData).Link}>Learn More</a>
+                                    <div className="text-sm">{ImageAltData.Images}</div>
+                                    {/* <div className="text-sm">{ImageAltData.Images}</div> */}
+                                    <a className="text-sm" href={ImageAltData.Link}>Learn More</a>
 
                                 </div>
                             </div>
@@ -8617,7 +8713,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractResponsiveImageData(psiData).Images.length == 0 ?
+                                {ResponsiveImgData.Images.length == 0 ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8635,16 +8731,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {extractResponsiveImageData(psiData).Link}</div> */}
-                                    <div className="text-sm">{extractResponsiveImageData(psiData).Description}</div>
-                                    <a className="text-sm" href={extractResponsiveImageData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {ResponsiveImgData.Link}</div> */}
+                                    <div className="text-sm">{ResponsiveImgData.Description}</div>
+                                    <a className="text-sm" href={ResponsiveImgData.Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractImageAspectRatioData(psiData).Images.length == 0 ?
+                                {ImageAspectRatioData.Images.length == 0 ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8662,16 +8758,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {extractImageAspectRatioData(psiData).Link}</div> */}
-                                    <div className="text-sm">{extractImageAspectRatioData(psiData).Description}</div>
-                                    <a className="text-sm" href={extractImageAspectRatioData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {ImageAspectRatioData.Link}</div> */}
+                                    <div className="text-sm">{ImageAspectRatioData.Description}</div>
+                                    <a className="text-sm" href={ImageAspectRatioData.Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractInlineCssData(psiData).Importance == "High" ?
+                                {InlineCssData.Importance == "High" ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8689,16 +8785,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {extractInlineCssData(psiData).Link}</div> */}
-                                    <div className="text-sm">{extractInlineCssData(psiData).Description}</div>
-                                    <a className="text-sm" href={extractInlineCssData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {InlineCssData.Link}</div> */}
+                                    <div className="text-sm">{InlineCssData.Description}</div>
+                                    <a className="text-sm" href={InlineCssData.Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {extractDeprecatedHtmlTagsData(psiData).DeprecatedTags.length == 0 ?
+                                {DeprecatedHtmlTagsData.DeprecatedTags.length == 0 ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8716,16 +8812,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {extractDeprecatedHtmlTagsData(psiData).Link}</div> */}
-                                    <div className="text-sm">{extractDeprecatedHtmlTagsData(psiData).Description}</div>
-                                    <a className="text-sm" href={extractDeprecatedHtmlTagsData(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {DeprecatedHtmlTagsData.Link}</div> */}
+                                    <div className="text-sm">{DeprecatedHtmlTagsData.Description}</div>
+                                    <a className="text-sm" href={DeprecatedHtmlTagsData.Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performGoogleAnalyticsTest(psiData).HasGoogleAnalytics ?
+                                {GoogleAnalyticsData.HasGoogleAnalytics ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8743,16 +8839,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performGoogleAnalyticsTest(psiData).Link}</div> */}
-                                    <div className="text-sm">{performGoogleAnalyticsTest(psiData).Description}</div>
-                                    <a className="text-sm" href={performGoogleAnalyticsTest(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {GoogleAnalyticsData.Link}</div> */}
+                                    <div className="text-sm">{GoogleAnalyticsData.Description}</div>
+                                    <a className="text-sm" href={GoogleAnalyticsData.Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performFaviconTest(psiData).HasFavicon ?
+                                {FaviconData.HasFavicon ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8770,16 +8866,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performFaviconTest(psiData).Link}</div> */}
-                                    <div className="text-sm">{performFaviconTest(psiData).Description}</div>
-                                    <a className="text-sm" href={performFaviconTest(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {FaviconData.Link}</div> */}
+                                    <div className="text-sm">{FaviconData.Description}</div>
+                                    <a className="text-sm" href={FaviconData.Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performBacklinksTest(psiData).TotalBacklinks ?
+                                {BacklinksData.TotalBacklinks ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8797,16 +8893,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performBacklinksTest(psiData).Link}</div> */}
-                                    <div className="text-sm">{performBacklinksTest(psiData).Description}</div>
-                                    <a className="text-sm" href={performBacklinksTest(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {BacklinksData.Link}</div> */}
+                                    <div className="text-sm">{BacklinksData.Description}</div>
+                                    <a className="text-sm" href={BacklinksData.Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {!performJSErrorTest(psiData).HasJSErrors ?
+                                {!JSErrorData.HasJSErrors ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8824,16 +8920,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performJSErrorTest(psiData).Link}</div> */}
-                                    <div className="text-sm">{performJSErrorTest(psiData).Description}</div>
-                                    <a className="text-sm" href={performJSErrorTest(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {JSErrorData.Link}</div> */}
+                                    <div className="text-sm">{JSErrorData.Description}</div>
+                                    <a className="text-sm" href={JSErrorData.Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {!performConsoleErrorsTest(psiData).HasConsoleErrors ?
+                                {!ConsoleErrorsData.HasConsoleErrors ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8851,16 +8947,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performConsoleErrorsTest(psiData).Link}</div> */}
-                                    <div className="text-sm">{performConsoleErrorsTest(psiData).Description}</div>
-                                    <a className="text-sm" href={performConsoleErrorsTest(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {ConsoleErrorsData.Link}</div> */}
+                                    <div className="text-sm">{ConsoleErrorsData.Description}</div>
+                                    <a className="text-sm" href={ConsoleErrorsData.Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performCharsetDeclarationTest(psiData).HasCharsetDeclaration ?
+                                {CharsetDeclarationData.HasCharsetDeclaration ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8878,9 +8974,9 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performCharsetDeclarationTest(psiData).Link}</div> */}
-                                    <div className="text-sm">{performCharsetDeclarationTest(psiData).Description}</div>
-                                    <a className="text-sm" href={performCharsetDeclarationTest(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {CharsetDeclarationData.Link}</div> */}
+                                    <div className="text-sm">{CharsetDeclarationData.Description}</div>
+                                    <a className="text-sm" href={CharsetDeclarationData.Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
@@ -8893,7 +8989,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performHTMLPageSizeTest(psiData).HTMLPageSizeBytes ?
+                                {HTMLPageSizeData.HTMLPageSizeBytes ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8911,16 +9007,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performHTMLPageSizeTest(psiData).Link}</div> */}
-                                    <div className="text-sm">{performHTMLPageSizeTest(psiData).Description}</div>
-                                    <a className="text-sm" href={performHTMLPageSizeTest(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {HTMLPageSizeData.Link}</div> */}
+                                    <div className="text-sm">{HTMLPageSizeData.Description}</div>
+                                    <a className="text-sm" href={HTMLPageSizeData.Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performDOMSizeTest(psiData).DOMSize ?
+                                {DOMSizeData.DOMSize ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8938,16 +9034,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performDOMSizeTest(psiData).Link}</div> */}
-                                    <div className="text-sm">{performDOMSizeTest(psiData).Description}</div>
-                                    <a className="text-sm" href={performDOMSizeTest(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {DOMSizeData.Link}</div> */}
+                                    <div className="text-sm">{DOMSizeData.Description}</div>
+                                    <a className="text-sm" href={DOMSizeData.Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performHTMLCompressionTest(psiData).IsCompressed ?
+                                {HTMLCompressionData.IsCompressed ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8965,16 +9061,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performHTMLCompressionTest(psiData).Link}</div> */}
-                                    <div className="text-sm">{performHTMLCompressionTest(psiData).Description}</div>
-                                    <a className="text-sm" href={performHTMLCompressionTest(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {HTMLCompressionData.Link}</div> */}
+                                    <div className="text-sm">{HTMLCompressionData.Description}</div>
+                                    <a className="text-sm" href={HTMLCompressionData.Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performSiteLoadingSpeedTest(psiData).FirstContentfulPaint ?
+                                {SiteLoadingSpeedData.FirstContentfulPaint ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -8992,16 +9088,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performSiteLoadingSpeedTest(psiData).Link}</div> */}
-                                    <div className="text-sm">{performSiteLoadingSpeedTest(psiData).Description}</div>
-                                    <a className="text-sm" href={performSiteLoadingSpeedTest(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {SiteLoadingSpeedData.Link}</div> */}
+                                    <div className="text-sm">{SiteLoadingSpeedData.Description}</div>
+                                    <a className="text-sm" href={SiteLoadingSpeedData.Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performJSExecutionTimeTest(psiData).ScriptBootUpTime ?
+                                {JSExecutionTimeData.ScriptBootUpTime ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9019,16 +9115,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performJSExecutionTimeTest(psiData).Link}</div> */}
-                                    <div className="text-sm">{performJSExecutionTimeTest(psiData).Description}</div>
-                                    <a className="text-sm" href={performJSExecutionTimeTest(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {JSExecutionTimeData.Link}</div> */}
+                                    <div className="text-sm">{JSExecutionTimeData.Description}</div>
+                                    <a className="text-sm" href={JSExecutionTimeData.Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performPageObjectsTest(psiData).ResourceSummary ?
+                                {PageObjectsData.ResourceSummary ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9046,16 +9142,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performPageObjectsTest(psiData).Link}</div> */}
-                                    <div className="text-sm">{performPageObjectsTest(psiData).Description}</div>
-                                    <a className="text-sm" href={performPageObjectsTest(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {PageObjectsData.Link}</div> */}
+                                    <div className="text-sm">{PageObjectsData.Description}</div>
+                                    <a className="text-sm" href={PageObjectsData.Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performPageCacheTest(psiData).CacheLifetimeMs ?
+                                {PageCacheData.CacheLifetimeMs ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9073,16 +9169,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performPageCacheTest(psiData).Link}</div> */}
-                                    <div className="text-sm">{performPageCacheTest(psiData).Description}</div>
-                                    <a className="text-sm" href={performPageCacheTest(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {PageCacheData.Link}</div> */}
+                                    <div className="text-sm">{PageCacheData.Description}</div>
+                                    <a className="text-sm" href={PageCacheData.Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {!performFlashTest(psiData).HasFlashContent ?
+                                {!FlashData.HasFlashContent ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9100,16 +9196,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performFlashTest(psiData).Link}</div> */}
-                                    <div className="text-sm">{performFlashTest(psiData).Description}</div>
-                                    <a className="text-sm" href={performFlashTest(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {FlashData.Link}</div> */}
+                                    <div className="text-sm">{FlashData.Description}</div>
+                                    <a className="text-sm" href={FlashData.Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performCDNUsageTest(psiData).HasCDNUsage ?
+                                {CDNUsageData.HasCDNUsage ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9127,9 +9223,9 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performCDNUsageTest(psiData).Link}</div> */}
-                                    <div className="text-sm">{performCDNUsageTest(psiData).Description}</div>
-                                    <a className="text-sm" href={performCDNUsageTest(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {CDNUsageData.Link}</div> */}
+                                    <div className="text-sm">{CDNUsageData.Description}</div>
+                                    <a className="text-sm" href={CDNUsageData.Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
@@ -9240,7 +9336,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {!performRenderBlockingResourcesTest(psiData).HasRenderBlockingResources ?
+                                {!RenderBlockingResourcesData.HasRenderBlockingResources ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9258,16 +9354,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performRenderBlockingResourcesTest(psiData).Link}</div> */}
-                                    <div className="text-sm">{performRenderBlockingResourcesTest(psiData).Description}</div>
-                                    <a className="text-sm" href={performRenderBlockingResourcesTest(psiData).Link}>Learn More</a>
+                                    {/* <div className="text-sm">Text: {RenderBlockingResourcesData.Link}</div> */}
+                                    <div className="text-sm">{RenderBlockingResourcesData.Description}</div>
+                                    <a className="text-sm" href={RenderBlockingResourcesData.Link}>Learn More</a>
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performNestedTablesTest(scrapeData?.htmlText).HasNestedTables ?
+                                {NestedTableTest.HasNestedTables ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9285,16 +9381,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performNestedTablesTest(scrapeData?.htmlText).HasNestedTables}</div> */}
-                                    <div className="text-sm">{performNestedTablesTest(scrapeData?.htmlText).Description}</div>
-                                    {/* <a className="text-sm" href={performNestedTablesTest(scrapeData?.htmlText).Link}>Learn More</a> */}
+                                    {/* <div className="text-sm">Text: {NestedTableTest.HasNestedTables}</div> */}
+                                    <div className="text-sm">{NestedTableTest.Description}</div>
+                                    {/* <a className="text-sm" href={NestedTableTest.Link}>Learn More</a> */}
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performFramesetTest(scrapeData?.htmlText).HasFrameset ?
+                                {FramesetTest.HasFrameset ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9312,8 +9408,8 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performFramesetTest(scrapeData?.htmlText).HasFrameset}</div> */}
-                                    <div className="text-sm">{performFramesetTest(scrapeData?.htmlText).Description}</div>
+                                    {/* <div className="text-sm">Text: {FramesetTest.HasFrameset}</div> */}
+                                    <div className="text-sm">{FramesetTest.Description}</div>
                                     {/* <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
@@ -9322,7 +9418,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performDoctypeTest(scrapeData?.htmlText).HasCorrectDoctype ?
+                                {DoctypeTest.HasCorrectDoctype ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9340,8 +9436,8 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performDoctypeTest(scrapeData?.htmlText).HasCorrectDoctype}</div> */}
-                                    <div className="text-sm">{performDoctypeTest(scrapeData?.htmlText).Description}</div>
+                                    {/* <div className="text-sm">Text: {DoctypeTest.HasCorrectDoctype}</div> */}
+                                    <div className="text-sm">{DoctypeTest.Description}</div>
                                     {/* <a className="text-sm" href={performDoctypeTest(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
@@ -9349,7 +9445,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performUrlRedirectsTest(psiData).HasRedirects ?
+                                {UrlRedirectsTest.HasRedirects ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9367,16 +9463,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performUrlRedirectsTest(psiData).HasRedirects}</div> */}
-                                    <div className="text-sm">{performUrlRedirectsTest(psiData).Description}</div>
-                                    {/* <a className="text-sm" href={performUrlRedirectsTest(psiData).Link}>Learn More</a> */}
+                                    {/* <div className="text-sm">Text: {UrlRedirectsTest.HasRedirects}</div> */}
+                                    <div className="text-sm">{UrlRedirectsTest.Description}</div>
+                                    {/* <a className="text-sm" href={UrlRedirectsTest.Link}>Learn More</a> */}
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performFirstContentfulPaintTest(psiData).Fcp != -1 ?
+                                {FirstContentfulPaintTest.Fcp != -1 ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9394,8 +9490,8 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performFirstContentfulPaintTest(psiData).Fcp}</div> */}
-                                    <div className="text-sm">{performFirstContentfulPaintTest(psiData).Description}</div>
+                                    {/* <div className="text-sm">Text: {FirstContentfulPaintTest.Fcp}</div> */}
+                                    <div className="text-sm">{FirstContentfulPaintTest.Description}</div>
                                     {/* <a className="text-sm" href={performFirstContentfulPaintTest(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
@@ -9403,7 +9499,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performLargestContentfulPaintTest(psiData).Lcp != -1 ?
+                                {LargestContentfulPaintTest.Lcp != -1 ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9421,8 +9517,8 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performLargestContentfulPaintTest(psiData).Lcp}</div> */}
-                                    <div className="text-sm">{performLargestContentfulPaintTest(psiData).Description}</div>
+                                    {/* <div className="text-sm">Text: {LargestContentfulPaintTest.Lcp}</div> */}
+                                    <div className="text-sm">{LargestContentfulPaintTest.Description}</div>
                                     {/* <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
@@ -9430,7 +9526,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performCumulativeLayoutShiftTest(psiData).Cls != -1 ?
+                                {CumulativeLayoutShiftTest.Cls != -1 ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9448,9 +9544,9 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performCumulativeLayoutShiftTest(psiData).Cls}</div> */}
-                                    <div className="text-sm">{performCumulativeLayoutShiftTest(psiData).Description}</div>
-                                    {/* <a className="text-sm" href={performCumulativeLayoutShiftTest(psiData).Link}>Learn More</a> */}
+                                    {/* <div className="text-sm">Text: {CumulativeLayoutShiftTest.Cls}</div> */}
+                                    <div className="text-sm">{CumulativeLayoutShiftTest.Description}</div>
+                                    {/* <a className="text-sm" href={CumulativeLayoutShiftTest.Link}>Learn More</a> */}
 
                                 </div>                            </div>
                         </div>
@@ -9491,7 +9587,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performUrlCanonicalizationTest(scrapeData?.htmlText).IsCanonicalized ?
+                                {URLCaninicalization.IsCanonicalized ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9509,8 +9605,8 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performUrlCanonicalizationTest(scrapeData?.htmlText).IsCanonicalized}</div> */}
-                                    <div className="text-sm">{performUrlCanonicalizationTest(scrapeData?.htmlText).Description}</div>
+                                    {/* <div className="text-sm">Text: {URLCaninicalization.IsCanonicalized}</div> */}
+                                    <div className="text-sm">{URLCaninicalization.Description}</div>
                                     {/* <a className="text-sm" href={performUrlCanonicalizationTest(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
@@ -9518,7 +9614,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performSslCheckerTest(scrapeData?.htmlText).IsSecure ?
+                                {SslCheckerTest.IsSecure ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9536,8 +9632,8 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performSslCheckerTest(scrapeData?.htmlText).IsSecure}</div> */}
-                                    <div className="text-sm">{performSslCheckerTest(scrapeData?.htmlText).Description}</div>
+                                    {/* <div className="text-sm">Text: {SslCheckerTest.IsSecure}</div> */}
+                                    <div className="text-sm">{SslCheckerTest.Description}</div>
                                     {/* <a className="text-sm" href={performSslCheckerTest(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
@@ -9545,7 +9641,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performMixedContentTest(scrapeData?.htmlText).HasMixedContent ?
+                                {MixedContentTest.HasMixedContent ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9563,8 +9659,8 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performMixedContentTest(scrapeData?.htmlText).HasMixedContent}</div> */}
-                                    <div className="text-sm">{performMixedContentTest(scrapeData?.htmlText).Description}</div>
+                                    {/* <div className="text-sm">Text: {MixedContentTest.HasMixedContent}</div> */}
+                                    <div className="text-sm">{MixedContentTest.Description}</div>
                                     {/* <a className="text-sm" href={performMixedContentTest(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
@@ -9572,7 +9668,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performHttp2Test(psiData).IsHttp2 ?
+                                {Http2Test.IsHttp2 ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9590,16 +9686,16 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performHttp2Test(psiData).IsHttp2}</div> */}
-                                    <div className="text-sm">{performHttp2Test(psiData).Description}</div>
-                                    {/* <a className="text-sm" href={performHttp2Test(psiData).Link}>Learn More</a> */}
+                                    {/* <div className="text-sm">Text: {Http2Test.IsHttp2}</div> */}
+                                    <div className="text-sm">{Http2Test.Description}</div>
+                                    {/* <a className="text-sm" href={Http2Test.Link}>Learn More</a> */}
 
                                 </div>                            </div>
                         </div>
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performHstsTest(psiData).IsHstsEnabled ?
+                                {HstsTest.IsHstsEnabled ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9617,9 +9713,9 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performHstsTest(psiData).IsHstsEnabled}</div> */}
-                                    <div className="text-sm">{performHstsTest(psiData).Description}</div>
-                                    {/* <a className="text-sm" href={performHstsTest(psiData).Link}>Learn More</a> */}
+                                    {/* <div className="text-sm">Text: {HstsTest.IsHstsEnabled}</div> */}
+                                    <div className="text-sm">{HstsTest.Description}</div>
+                                    {/* <a className="text-sm" href={HstsTest.Link}>Learn More</a> */}
 
                                 </div>                            </div>
                         </div>
@@ -9636,7 +9732,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performServerSignatureTest(psiData).IsServerSignaturePresent ?
+                                {ServerSignatureTest.IsServerSignaturePresent ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9654,8 +9750,8 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performServerSignatureTest(psiData).IsServerSignaturePresent}</div> */}
-                                    <div className="text-sm">{performServerSignatureTest(psiData).Description}</div>
+                                    {/* <div className="text-sm">Text: {ServerSignatureTest.IsServerSignaturePresent}</div> */}
+                                    <div className="text-sm">{ServerSignatureTest.Description}</div>
                                     {/* <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a> */}
 
                                 </div>                         </div>
@@ -9673,7 +9769,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performPlaintextEmailsTest(scrapeData?.htmlText).HasPlaintextEmails ?
+                                {PlaintextEmailsTest.HasPlaintextEmails ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9691,8 +9787,8 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performPlaintextEmailsTest(scrapeData?.htmlText).HasPlaintextEmails}</div> */}
-                                    <div className="text-sm">{performPlaintextEmailsTest(scrapeData?.htmlText).Description}</div>
+                                    {/* <div className="text-sm">Text: {PlaintextEmailsTest.HasPlaintextEmails}</div> */}
+                                    <div className="text-sm">{PlaintextEmailsTest.Description}</div>
                                     {/* <a className="text-sm" href={performPlaintextEmailsTest(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
@@ -9701,7 +9797,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performUnsafeCrossOriginLinksTest(scrapeData?.htmlText).HasUnsafeCrossOriginLinks ?
+                                {UnsafeCrossOriginLinksTest.HasUnsafeCrossOriginLinks ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9719,8 +9815,8 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performUnsafeCrossOriginLinksTest(scrapeData?.htmlText).HasUnsafeCrossOriginLinks}</div> */}
-                                    <div className="text-sm">{performUnsafeCrossOriginLinksTest(scrapeData?.htmlText).Description}</div>
+                                    {/* <div className="text-sm">Text: {UnsafeCrossOriginLinksTest.HasUnsafeCrossOriginLinks}</div> */}
+                                    <div className="text-sm">{UnsafeCrossOriginLinksTest.Description}</div>
                                     {/* <a className="text-sm" href={performUnsafeCrossOriginLinksTest(psiData).Link}>Learn More</a> */}
 
                                 </div>                           </div>
@@ -9733,7 +9829,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performMetaViewportTest(psiData).HasMetaViewport ?
+                                {MetaViewport.HasMetaViewport ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9751,8 +9847,8 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performMetaViewportTest(psiData).HasMetaViewport}</div> */}
-                                    <div className="text-sm">{performMetaViewportTest(psiData).Description}</div>
+                                    {/* <div className="text-sm">Text: {MetaViewport.HasMetaViewport}</div> */}
+                                    <div className="text-sm">{MetaViewport.Description}</div>
                                     {/* <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
@@ -9760,7 +9856,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performMediaQueryResponsiveTest(psiData).HasMediaQueries ?
+                                {MediaQuery.HasMediaQueries ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9778,8 +9874,8 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performMediaQueryResponsiveTest(psiData).HasMediaQueries}</div> */}
-                                    <div className="text-sm">{performMediaQueryResponsiveTest(psiData).Description}</div>
+                                    {/* <div className="text-sm">Text: {MediaQuery.HasMediaQueries}</div> */}
+                                    <div className="text-sm">{MediaQuery.Description}</div>
                                     {/* <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
@@ -9787,7 +9883,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performMobileSnapshotTest(psiData).IsMobileSnapshotValid ?
+                                {MobileSnapshot.IsMobileSnapshotValid ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9805,9 +9901,9 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performMobileSnapshotTest(psiData).IsMobileSnapshotValid}</div> */}
-                                    <div className="text-sm">{performMobileSnapshotTest(psiData).Description}</div>
-                                    {/* <a className="text-sm" href={performMobileSnapshotTest(psiData).Link}>Learn More</a> */}
+                                    {/* <div className="text-sm">Text: {MobileSnapshot.IsMobileSnapshotValid}</div> */}
+                                    <div className="text-sm">{MobileSnapshot.Description}</div>
+                                    {/* <a className="text-sm" href={MobileSnapshot.Link}>Learn More</a> */}
 
                                 </div>                            </div>
                         </div>
@@ -9819,7 +9915,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performStructuredDataTest(psiData).HasStructuredData ?
+                                {StructuredData.HasStructuredData ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9837,8 +9933,8 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performStructuredDataTest(psiData).HasStructuredData}</div> */}
-                                    <div className="text-sm">{performStructuredDataTest(psiData).Description}</div>
+                                    {/* <div className="text-sm">Text: {StructuredData.HasStructuredData}</div> */}
+                                    <div className="text-sm">{StructuredData.Description}</div>
                                     {/* <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
@@ -9846,7 +9942,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {await (await performCustom404ErrorPageTest(psiData.lighthouseResult.finalUrl)).HasCustom404ErrorPage ?
+                                { (await performCustom404ErrorPageTest(psiData.lighthouseResult.finalUrl)).HasCustom404ErrorPage ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9873,7 +9969,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performNoindexTagTest(psiData).HasNoindexTag ?
+                                {NoindexTag.HasNoindexTag ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9891,8 +9987,8 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performNoindexTagTest(psiData).HasNoindexTag}</div> */}
-                                    <div className="text-sm">{performNoindexTagTest(psiData).Description}</div>
+                                    {/* <div className="text-sm">Text: {NoindexTag.HasNoindexTag}</div> */}
+                                    <div className="text-sm">{NoindexTag.Description}</div>
                                     {/* <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
@@ -9900,7 +9996,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performNofollowTagTest(scrapeData?.htmlText).HasNofollowTag ?
+                                {NoFollowTag.HasNofollowTag ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9918,8 +10014,8 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performNofollowTagTest(scrapeData?.htmlText).HasNofollowTag}</div> */}
-                                    <div className="text-sm">{performNofollowTagTest(scrapeData?.htmlText).Description}</div>
+                                    {/* <div className="text-sm">Text: {NoFollowTag.HasNofollowTag}</div> */}
+                                    <div className="text-sm">{NoFollowTag.Description}</div>
                                     {/* <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
@@ -9954,7 +10050,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {performMetaRefreshTest(scrapeData?.htmlText).HasMetaRefreshTag ?
+                                {MetaRefreshData.HasMetaRefreshTag ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -9972,8 +10068,8 @@ async function YourComponent() {
                             <div className="flex flex-col">
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
-                                    {/* <div className="text-sm">Text: {performMetaRefreshTest(scrapeData?.htmlText).HasMetaRefreshTag}</div> */}
-                                    <div className="text-sm">{performMetaRefreshTest(scrapeData?.htmlText).Description}</div>
+                                    {/* <div className="text-sm">Text: {MetaRefreshData.HasMetaRefreshTag}</div> */}
+                                    <div className="text-sm">{MetaRefreshData.Description}</div>
                                     {/* <a className="text-sm" href={extractBrokenLinksData(psiData).Link}>Learn More</a> */}
 
                                 </div>                            </div>
