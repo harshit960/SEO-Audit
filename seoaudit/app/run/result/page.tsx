@@ -129,7 +129,7 @@ async function YourComponent() {
 
     const fetchData = async (url: any) => {
         try {
-            console.log(process.env.API_HOST);
+            console.log(process.env.NEXT_PUBLIC_API_HOST);
             
             const [psiRes, scrapeRes] = await Promise.all([
                 fetch(`${process.env.NEXT_PUBLIC_API_HOST}/psi?url=${encodeURIComponent(url)}`),

@@ -25,7 +25,7 @@ app.get('/psi', async (req, res) => {
         res.json(response.data);
     } catch (error) {
         console.error(error);
-        res.status(500).json({ error: 'An error occurred while fetching the PageSpeed Insights data' });
+        res.status(500).json({ error: 'An error occurred while fetching the PageSpeed Insights data',errors:error });
     }
 });
 // Puppeteer Endpoint
