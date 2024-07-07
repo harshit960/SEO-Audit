@@ -121,7 +121,6 @@ async function YourComponent() {
         seturl(url)
         fetchData(url);
     }, []);
-// dk
 
 
     const [psiData, setPsiData] = useState({ id: "", lighthouseResult: { audits: {}, finalUrl: "", requestedUrl: "", categories: { performance: { score: 0 }, accessibility: { score: 0 }, "best-practices": { score: 0 } }, categoryGroups: {}, environment: {}, fetchTime: "", finalScreenshot: "", i18n: {}, runWarnings: [], timing: {}, userAgent: "" } });
@@ -130,6 +129,8 @@ async function YourComponent() {
 
     const fetchData = async (url: any) => {
         try {
+            console.log(process.env.API_HOST);
+            
             const [psiRes, scrapeRes] = await Promise.all([
                 fetch(`${process.env.API_HOST}/psi?url=${encodeURIComponent(url)}`),
                 fetch(`${process.env.API_HOST}/scrape?url=${encodeURIComponent(url)}`)
