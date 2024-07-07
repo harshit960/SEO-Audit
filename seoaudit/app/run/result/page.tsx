@@ -131,8 +131,8 @@ async function YourComponent() {
     const fetchData = async (url: any) => {
         try {
             const [psiRes, scrapeRes] = await Promise.all([
-                fetch(`http://localhost:10000/psi?url=${encodeURIComponent(url)}`),
-                fetch(`http://localhost:10000/scrape?url=${encodeURIComponent(url)}`)
+                fetch(`${process.env.API_HOST}/psi?url=${encodeURIComponent(url)}`),
+                fetch(`${process.env.API_HOST}/scrape?url=${encodeURIComponent(url)}`)
             ]);
 
             const [psiData, scrapeData] = await Promise.all([
