@@ -17,7 +17,7 @@ interface PSIData {
 }
 
 // Function to perform Meta Viewport Test using PSI data
-export function performMetaViewportTest(data: PSIData,appendToSuccess:any,appendToFailed:any): { HasMetaViewport: boolean; Importance: string; Description: string } {
+export function performMetaViewportTest(data: any,appendToSuccess:any,appendToFailed:any): { HasMetaViewport: boolean; Importance: string; Description: string } {
     const viewportAudit = data?.lighthouseResult?.audits?.['viewport'];
 
     // Check if the viewport audit data is available

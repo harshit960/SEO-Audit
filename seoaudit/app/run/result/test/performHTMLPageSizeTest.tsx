@@ -20,7 +20,7 @@ interface PSIData {
 }
 
 // Function to perform HTML Page Size Test using PSI data
-export function performHTMLPageSizeTest(data: PSIData,appendToSuccess:any,appendToFailed:any): { HTMLPageSizeBytes: number; Importance: string; Description: string; Link: string } {
+export function performHTMLPageSizeTest(data: any,appendToSuccess:any,appendToFailed:any): { HTMLPageSizeBytes: number; Importance: string; Description: string; Link: string } {
     const totalByteWeightAudit = data?.lighthouseResult?.audits?.['total-byte-weight'];
 
     // Check if the Total Byte Weight audit data is available

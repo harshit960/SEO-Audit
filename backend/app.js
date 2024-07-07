@@ -21,7 +21,7 @@ app.get('/psi', async (req, res) => {
     try {
         const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(url)}&key=${API_KEY}&category=ACCESSIBILITY&category=BEST_PRACTICES&category=PERFORMANCE&category=SEO&category=PWA`;
         const response = await axios.get(apiUrl);
-        console.log("ghj");
+        console.log("PSI Data Received");
         res.json(response.data);
     } catch (error) {
         console.error(error);
@@ -31,7 +31,7 @@ app.get('/psi', async (req, res) => {
 // Puppeteer Endpoint
 app.get('/scrape', async (req, res) => {
     const { url } = req.query;
-    console.log("scrape");
+    console.log("Sucessfuly Scraped the page");
     if (!url) {
         return res.status(400).json({ error: 'URL parameter is required' });
     }

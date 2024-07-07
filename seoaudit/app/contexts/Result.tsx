@@ -18,12 +18,15 @@ export const OBProvider = ({ children }: { children: ReactNode }) => {
     const [Failed, setFailed] = useState<any[]>([]);
     const [Success, setSuccess] = useState<any[]>([]);
 
-    const appendToFailed = (item: any) => {
-        setFailed(prevFailed => [...prevFailed, item]);
+    const appendToFailed = (itemF: any) => {
+        setFailed(prevFailed => [...prevFailed, itemF]);
+        
     };
 
-    const appendToSuccess = (item: any) => {
-        setSuccess(prevSuccess => [...prevSuccess, item]);
+    const appendToSuccess = (itemS: any) => {
+        setSuccess(prevSuccess => [...prevSuccess, itemS]);
+        
+        
     };
     return (
         <ResultContext.Provider value={{ Failed, appendToFailed,appendToSuccess,Success }}>

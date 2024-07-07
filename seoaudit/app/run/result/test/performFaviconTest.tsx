@@ -21,7 +21,7 @@ interface PSIData {
 }
 
 // Function to perform Favicon Test using PSI data
-export function performFaviconTest(data: PSIData,appendToSuccess:any,appendToFailed:any): { HasFavicon: boolean; Importance: string; Description: string; Link: string } {
+export function performFaviconTest(data: any,appendToSuccess:any,appendToFailed:any): { HasFavicon: boolean; Importance: string; Description: string; Link: string } {
     const networkRequestsAudit = data?.lighthouseResult?.audits?.['network-requests'];
 
     // Check if the Network Requests audit data is available
@@ -36,10 +36,10 @@ export function performFaviconTest(data: PSIData,appendToSuccess:any,appendToFai
     }
 
     // Extract network request URLs
-    const networkRequestURLs = networkRequestsAudit.details.items.map(item => item.url);
+    const networkRequestURLs = networkRequestsAudit.details.items.map((item: { url: any; }) => item.url);
 
     // Check if a favicon is present in the network requests
-    const hasFavicon = networkRequestURLs.some(url => url.toLowerCase().includes('favicon.ico'));
+    const hasFavicon = networkRequestURLs.some((url: string) => url.toLowerCase().includes('favicon.ico'));
 
     const importance = hasFavicon ? 'High' : 'Low';
     !hasFavicon ? appendToFailed('Favicon') : appendToSuccess('Favicon');

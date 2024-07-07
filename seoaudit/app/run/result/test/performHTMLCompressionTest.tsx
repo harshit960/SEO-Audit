@@ -20,7 +20,7 @@ interface PSIData {
 }
 
 // Function to perform HTML Compression/GZIP Test using PSI data
-export function performHTMLCompressionTest(data: PSIData,appendToSuccess:any,appendToFailed:any): { IsCompressed: boolean; CompressionSavings: number; Importance: string; Description: string; Link: string } {
+export function performHTMLCompressionTest(data: any,appendToSuccess:any,appendToFailed:any): { IsCompressed: boolean; CompressionSavings: number; Importance: string; Description: string; Link: string } {
     const usesTextCompressionAudit = data?.lighthouseResult?.audits?.['uses-text-compression'];
 
     // Check if the Uses Text Compression audit data is available

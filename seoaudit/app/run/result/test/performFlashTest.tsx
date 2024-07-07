@@ -17,7 +17,7 @@ interface PSIData {
 }
 
 // Function to perform Flash Test using PSI data
-export function performFlashTest(data: PSIData,appendToSuccess:any,appendToFailed:any): { HasFlashContent: boolean; Importance: string; Description: string; Link: string } {
+export function performFlashTest(data: any,appendToSuccess:any,appendToFailed:any): { HasFlashContent: boolean; Importance: string; Description: string; Link: string } {
     const legacyJavascriptAudit = data?.lighthouseResult?.audits?.['legacy-javascript'];
 
     // Check if the Legacy JavaScript audit data is available

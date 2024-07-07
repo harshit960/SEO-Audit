@@ -17,7 +17,7 @@ interface PSIData {
 }
 
 // Function to perform Largest Contentful Paint Test using PSI data
-export function performLargestContentfulPaintTest(data: PSIData,appendToSuccess:any,appendToFailed:any): { Lcp: number; Importance: string; Description: string } {
+export function performLargestContentfulPaintTest(data: any,appendToSuccess:any,appendToFailed:any): { Lcp: number; Importance: string; Description: string } {
     const lcpAudit = data?.lighthouseResult?.audits?.['largest-contentful-paint'];
 
     // Check if the Largest Contentful Paint audit data is available

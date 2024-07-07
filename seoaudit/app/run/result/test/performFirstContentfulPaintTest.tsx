@@ -17,7 +17,7 @@ interface PSIData {
 }
 
 // Function to perform First Contentful Paint Test using PSI data
-export function performFirstContentfulPaintTest(data: PSIData,appendToSuccess:any,appendToFailed:any): { Fcp: number; Importance: string; Description: string } {
+export function performFirstContentfulPaintTest(data: any,appendToSuccess:any,appendToFailed:any): { Fcp: number; Importance: string; Description: string } {
     const fcpAudit = data?.lighthouseResult?.audits?.['first-contentful-paint'];
 
     // Check if the First Contentful Paint audit data is available

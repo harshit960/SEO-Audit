@@ -23,7 +23,7 @@ interface PSIData {
 }
 
 // Function to perform Site Loading Speed Test using PSI data
-export function performSiteLoadingSpeedTest(data: PSIData,appendToSuccess:any,appendToFailed:any): { TimeToInteractive: number; FirstContentfulPaint: number; Importance: string; Description: string; Link: string } {
+export function performSiteLoadingSpeedTest(data: any,appendToSuccess:any,appendToFailed:any): { TimeToInteractive: number; FirstContentfulPaint: number; Importance: string; Description: string; Link: string } {
     const firstContentfulPaintAudit = data?.lighthouseResult?.audits?.['first-contentful-paint'];
     const interactiveAudit = data?.lighthouseResult?.audits?.['interactive'];
 

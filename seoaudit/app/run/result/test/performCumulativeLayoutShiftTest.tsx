@@ -17,7 +17,7 @@ interface PSIData {
 }
 
 // Function to perform Cumulative Layout Shift Test using PSI data
-export function performCumulativeLayoutShiftTest(data: PSIData,appendToSuccess:any,appendToFailed:any): { Cls: number; Importance: string; Description: string } {
+export function performCumulativeLayoutShiftTest(data: any,appendToSuccess:any,appendToFailed:any): { Cls: number; Importance: string; Description: string } {
     const clsAudit = data?.lighthouseResult?.audits?.['cumulative-layout-shift'];
 
     // Check if the Cumulative Layout Shift audit data is available

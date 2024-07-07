@@ -20,7 +20,7 @@ interface PSIData {
 }
 
 // Function to perform JavaScript Error Test using PSI data
-export function performJSErrorTest(data: PSIData,appendToSuccess:any,appendToFailed:any): { HasJSErrors: boolean; ErrorMessages: string[]; Importance: string; Description: string; Link: string } {
+export function performJSErrorTest(data: any,appendToSuccess:any,appendToFailed:any): { HasJSErrors: boolean; ErrorMessages: string[]; Importance: string; Description: string; Link: string } {
     const jsErrorAudit = data?.lighthouseResult?.audits?.['errors-in-console'];
 
     // Check if the JavaScript Error Test audit data is available
@@ -36,7 +36,7 @@ export function performJSErrorTest(data: PSIData,appendToSuccess:any,appendToFai
     }
 
     // Extract JavaScript error messages
-    const errorMessages = jsErrorAudit.details.items.map(item => item.message);
+    const errorMessages = jsErrorAudit.details.items.map((item: { message: any; }) => item.message);
 
     // Check if there are any JavaScript errors
     const hasJSErrors = errorMessages.length > 0;

@@ -21,8 +21,8 @@ interface PSIData {
     };
 }
 
-// Function to perform Google Analytics Test using PSI data
-export function performGoogleAnalyticsTest(data: PSIData,appendToSuccess:any,appendToFailed:any): { HasGoogleAnalytics: boolean; Importance: string; Description: string; Link: string } {
+// Function to perform Google Analytics Test using PSI dataappendToFailed
+export function performGoogleAnalyticsTest(data: any,appendToSuccess:any,appendToFailed:any): { HasGoogleAnalytics: boolean; Importance: string; Description: string; Link: string } {
     const networkRequestsAudit = data?.lighthouseResult?.audits?.['network-requests'];
 
     // Check if the Network Requests audit data is available
@@ -37,13 +37,16 @@ export function performGoogleAnalyticsTest(data: PSIData,appendToSuccess:any,app
     }
 
     // Extract network request URLs
-    const networkRequestURLs = networkRequestsAudit.details.items.map(item => item.url);
+    const networkRequestURLs = networkRequestsAudit.details.items.map((item: { url: any; }) => item.url);
 
     // Check if Google Analytics tracking code is present in the network requests
-    const hasGoogleAnalytics = networkRequestURLs.some(url => url.includes('google-analytics.com'));
+    const hasGoogleAnalytics = networkRequestURLs.some((url: string | string[]) => url.includes('google-analytics.com'));
 
     const importance = hasGoogleAnalytics ? 'High' : 'Low';
-    !hasGoogleAnalytics ? appendToFailed('Google Analytics') : appendToSuccess('Google Analytics');
+    console.log(hasGoogleAnalytics);
+    hasGoogleAnalytics ? appendToSuccess('Google Analytics hhjsma') : appendToFailed('Google Analytics hwyyy');
+
+    // (!hasGoogleAnalytics) ? appendToFailed('Google Analytics') : appendToSuccess('Google Analytics');
 
     const description = hasGoogleAnalytics ? 'This website has Google Analytics tracking code embedded.' : 'This website does not have Google Analytics tracking code embedded.';
     const link = 'https://analytics.google.com/';
