@@ -132,8 +132,8 @@ async function YourComponent() {
             console.log(process.env.API_HOST);
             
             const [psiRes, scrapeRes] = await Promise.all([
-                fetch(`${process.env.API_HOST}/psi?url=${encodeURIComponent(url)}`),
-                fetch(`${process.env.API_HOST}/scrape?url=${encodeURIComponent(url)}`)
+                fetch(`${process.env.NEXT_PUBLIC_API_HOST}/psi?url=${encodeURIComponent(url)}`),
+                fetch(`${process.env.NEXT_PUBLIC_API_HOST}/scrape?url=${encodeURIComponent(url)}`)
             ]);
 
             const [psiData, scrapeData] = await Promise.all([
@@ -237,7 +237,8 @@ async function YourComponent() {
     const [MetaRefreshData, setMetaRefreshData] = useState<any>({});
 
 
-    useEffect(() => {
+    useEffect(() => {     
+        if (!loading) return;
         setBrokenLink(extractBrokenLinksData(psiData, appendToSuccess, appendToFailed,));
         setSocialMedia(performSocialMediaTest(psiData, appendToSuccess, appendToFailed))
         setSEOFriendlyUrl(extractSEOFriendlyUrlData(psiData, appendToSuccess, appendToFailed))
