@@ -8064,19 +8064,19 @@ async function YourComponent() {
     }, [psiData]);
     useEffect(() => {
         setMetaTitle(extractMetaTitle(scrapeData, appendToFailed, appendToSuccess))
-        setMetaDesc(extractMetaDescription(scrapeData))
-        setMostCommonKeyword(extractMostCommonKeywords(scrapeData))
-        setHeadingTagData(extractHeadingTagsData(scrapeData?.htmlText))
-        setNestedTableTest(performNestedTablesTest(scrapeData?.htmlText))
-        setFramesetTest(performFramesetTest(scrapeData?.htmlText))
-        setDoctypeTest(performDoctypeTest(scrapeData?.htmlText))
-        setURLCaninicalization(performUrlCanonicalizationTest(scrapeData?.htmlText))
-        setSslCheckerTest(performSslCheckerTest(scrapeData?.htmlText))
-        setMixedContentTest(performMixedContentTest(scrapeData?.htmlText))
-        setPlaintextEmailsTest(performPlaintextEmailsTest(scrapeData?.htmlText))
-        setUnsafeCrossOriginLinksTest(performUnsafeCrossOriginLinksTest(scrapeData?.htmlText))
-        setNoFollowTag(performNofollowTagTest(scrapeData?.htmlText))
-        setMetaRefreshData(performMetaRefreshTest(scrapeData?.htmlText))
+        setMetaDesc(extractMetaDescription(scrapeData,appendToFailed,appendToSuccess))
+        setMostCommonKeyword(extractMostCommonKeywords(scrapeData,appendToFailed,appendToSuccess))
+        setHeadingTagData(extractHeadingTagsData(scrapeData?.htmlText,appendToFailed,appendToSuccess))
+        setNestedTableTest(performNestedTablesTest(scrapeData?.htmlText,appendToFailed,appendToSuccess))
+        setFramesetTest(performFramesetTest(scrapeData?.htmlText,appendToFailed,appendToSuccess))
+        setDoctypeTest(performDoctypeTest(scrapeData?.htmlText,appendToFailed,appendToSuccess))
+        setURLCaninicalization(performUrlCanonicalizationTest(scrapeData?.htmlText,appendToFailed,appendToSuccess))
+        setSslCheckerTest(performSslCheckerTest(scrapeData?.htmlText,appendToFailed,appendToSuccess))
+        setMixedContentTest(performMixedContentTest(scrapeData?.htmlText,appendToFailed,appendToSuccess))
+        setPlaintextEmailsTest(performPlaintextEmailsTest(scrapeData?.htmlText,appendToFailed,appendToSuccess))
+        setUnsafeCrossOriginLinksTest(performUnsafeCrossOriginLinksTest(scrapeData?.htmlText,appendToFailed,appendToSuccess))
+        setNoFollowTag(performNofollowTagTest(scrapeData?.htmlText,appendToFailed,appendToSuccess))
+        setMetaRefreshData(performMetaRefreshTest(scrapeData?.htmlText,appendToFailed,appendToSuccess))
     }, [scrapeData]);
 
 

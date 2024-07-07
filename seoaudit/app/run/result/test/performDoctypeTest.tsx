@@ -6,11 +6,12 @@ interface HTMLData {
 }
 
 // Function to perform Doctype Test using HTML data
-export function performDoctypeTest(data: any): { HasCorrectDoctype: boolean; Importance: string; Description: string } {
+export function performDoctypeTest(data: any, appendToFailed:any, appendToSuccess:any): { HasCorrectDoctype: boolean; Importance: string; Description: string } {
     const htmlContent = data;
 
     // Check if the HTML content contains the correct DOCTYPE declaration
     const hasCorrectDoctype = htmlContent.includes('<!DOCTYPE html>');
+    !hasCorrectDoctype ? appendToFailed('Doctype Test') : appendToSuccess('Doctype Test');
 
     // Determine the importance and description based on the correctness of the DOCTYPE declaration
     const importance = hasCorrectDoctype ? 'High' : 'Medium';

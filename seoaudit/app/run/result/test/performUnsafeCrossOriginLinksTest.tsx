@@ -1,7 +1,7 @@
 // unsafeCrossOriginLinksTest.ts
 
 // Function to perform Unsafe Cross-Origin Links Test
-export function performUnsafeCrossOriginLinksTest(htmlContent: string): { HasUnsafeCrossOriginLinks: boolean; Importance: string; Description: string } {
+export function performUnsafeCrossOriginLinksTest(htmlContent: string, appendToFailed:any, appendToSuccess:any): { HasUnsafeCrossOriginLinks: boolean; Importance: string; Description: string } {
     // Regular expression to match links using the 'http://' protocol
     const httpLinksRegex = /<a\s+(?:[^>]*?\s+)?href=["']http:\/\/[^"']*["']/gi;
 
@@ -10,6 +10,7 @@ export function performUnsafeCrossOriginLinksTest(htmlContent: string): { HasUns
 
     // Determine if unsafe cross-origin links were found
     const hasUnsafeCrossOriginLinks = httpLinksMatches !== null && httpLinksMatches.length > 0;
+    !hasUnsafeCrossOriginLinks ? appendToSuccess('Unsafe Cross-Origin Links Test') : appendToFailed('Unsafe Cross-Origin Links Test');
 
     // Determine the importance and description based on the presence of unsafe cross-origin links
     const importance = hasUnsafeCrossOriginLinks ? 'Medium' : 'Low';

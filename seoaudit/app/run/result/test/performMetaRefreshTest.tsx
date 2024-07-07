@@ -6,7 +6,7 @@ interface HTMLData {
 }
 
 // Function to perform Meta Refresh Test
-export function performMetaRefreshTest(data: any): { HasMetaRefreshTag: boolean; Importance: string; Description: string; RedirectURL: string | null } {
+export function performMetaRefreshTest(data: any, appendToFailed:any, appendToSuccess:any): { HasMetaRefreshTag: boolean; Importance: string; Description: string; RedirectURL: string | null } {
     const htmlContent = data.htmlContent;
 
     // Regular expression to match meta refresh tag
@@ -20,6 +20,7 @@ export function performMetaRefreshTest(data: any): { HasMetaRefreshTag: boolean;
 
     // Extract the redirect URL from the match
     const redirectURL = match ? match[1] : null;
+    !hasMetaRefreshTag ? appendToFailed('Meta Refresh Test') : appendToSuccess('Meta Refresh Test');
 
     // Determine the importance and description based on the presence of meta refresh tag
     const importance = hasMetaRefreshTag ? 'Medium' : 'Low';

@@ -6,7 +6,7 @@ interface HTMLData {
 }
 
 // Function to perform Nested Tables Test using HTML data
-export function performNestedTablesTest(data: any): { HasNestedTables: boolean; Importance: string; Description: string } {
+export function performNestedTablesTest(data: any, appendToFailed:any, appendToSuccess:any): { HasNestedTables: boolean; Importance: string; Description: string } {
     const htmlContent = data;
 
     // Check if the HTML content contains nested tables
@@ -14,6 +14,8 @@ export function performNestedTablesTest(data: any): { HasNestedTables: boolean; 
 
     // Determine the importance and description based on nested tables
     const importance = hasNestedTables ? 'Medium' : 'Low';
+    !hasNestedTables ? appendToFailed('Nested Tables Test') : appendToSuccess('Nested Tables Test');
+
     const description = hasNestedTables ? 'The webpage contains nested tables, which can lead to accessibility and performance issues.' : 'No nested tables detected on the webpage.';
 
     // console.log({

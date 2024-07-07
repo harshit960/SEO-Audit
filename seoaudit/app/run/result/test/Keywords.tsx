@@ -20,9 +20,10 @@ function extractKeywords(htmlText: string): string[] {
 }
 
 // Function to extract the most common keywords from HTML text data
-export function extractMostCommonKeywords(data: any): { Keywords: string[]; Importance: string; Description: string; Link: string } {
+export function extractMostCommonKeywords(data: any, appendToFailed:any, appendToSuccess:any): { Keywords: string[]; Importance: string; Description: string; Link: string } {
     const htmlText = data?.htmlText ?? '';
     const extractedKeywords = extractKeywords(htmlText);
+    !extractedKeywords ? appendToFailed('Most Common Keywords') : appendToSuccess('Most Common Keywords');
     
     const importance = 'Low';
     const description = 'Keywords found on your site according to the Text Rank algorithm.';
