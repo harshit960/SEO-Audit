@@ -1,5 +1,7 @@
 export function processPSIData(psidata: any): any {
-    const listtt = psidata.lighthouseResult.audits['network-requests'].details.items;
+  try {
+    
+    const listtt = psidata.lighthouseResult.audits['network-requests']?.details.items;
     
     const processedList = listtt.map((item: { url: any; statusCode: any; protocol: any; transferSize: number; resourceSize: number; priority: any; }) => ({
       url: item.url,
@@ -14,5 +16,9 @@ export function processPSIData(psidata: any): any {
     processedList.sort((a: { resourceSizeKB: string; }, b: { resourceSizeKB: string; }) => parseFloat(b.resourceSizeKB) - parseFloat(a.resourceSizeKB));
     
     return processedList;
+    
+  } catch (error) {
+    return [];
+  }
   }
   

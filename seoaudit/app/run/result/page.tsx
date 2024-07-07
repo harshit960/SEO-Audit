@@ -124,8 +124,8 @@ async function YourComponent() {
 
 
 
-    const [psiData, setPsiData] = useState({id:"", lighthouseResult: { audits: {}, finalUrl: "", requestedUrl: "", categories: {performance:{score:0},accessibility:{score:0},"best-practices":{score:0}}, categoryGroups: {}, environment: {}, fetchTime: "", finalScreenshot: "", i18n: {}, runWarnings: [], timing: {}, userAgent: "" }});
-    const [scrapeData, setScrapeData] = useState<scrapeData | undefined>({ title: '', htmlText: '', keywords: '', subKeywords: '', metaDescription: '', languageCode: '', countryCode: '' });
+    const [psiData, setPsiData] = useState({ id: "", lighthouseResult: { audits: {}, finalUrl: "", requestedUrl: "", categories: { performance: { score: 0 }, accessibility: { score: 0 }, "best-practices": { score: 0 } }, categoryGroups: {}, environment: {}, fetchTime: "", finalScreenshot: "", i18n: {}, runWarnings: [], timing: {}, userAgent: "" } });
+    const [scrapeData, setScrapeData] = useState<scrapeData | undefined>();
     const [outdata1, setoutdata1] = useState<Outdata | null>(null);;
 
     const fetchData = async (url: any) => {
@@ -153,6 +153,7 @@ async function YourComponent() {
 
     useEffect(() => {
         if (!scrapeData) return;
+        console.log("fuckk");
 
         const fetchData = async () => {
 
@@ -274,6 +275,7 @@ async function YourComponent() {
         setNoindexTag(performNoindexTagTest(psiData, appendToSuccess, appendToFailed))
     }, [psiData]);
     useEffect(() => {
+        if (!scrapeData) return;
         setMetaTitle(extractMetaTitle(scrapeData, appendToFailed, appendToSuccess))
         setMetaDesc(extractMetaDescription(scrapeData, appendToFailed, appendToSuccess))
         setMostCommonKeyword(extractMostCommonKeywords(scrapeData, appendToFailed, appendToSuccess))

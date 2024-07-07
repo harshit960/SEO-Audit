@@ -31,7 +31,7 @@ app.get('/psi', async (req, res) => {
 // Puppeteer Endpoint
 app.get('/scrape', async (req, res) => {
     const { url } = req.query;
-    console.log("Sucessfuly Scraped the page");
+    console.log("Scraping");
     if (!url) {
         return res.status(400).json({ error: 'URL parameter is required' });
     }
@@ -62,7 +62,7 @@ app.get('/scrape', async (req, res) => {
         });
 
         await browser.close();
-        console.log("2hh");
+        console.log("Scrapped successfully");
         res.json(data);
     } catch (error) {
         console.error(error);
