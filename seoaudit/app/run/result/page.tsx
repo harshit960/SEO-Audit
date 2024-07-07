@@ -121,7 +121,7 @@ async function YourComponent() {
         seturl(url)
         fetchData(url);
     }, []);
-
+// dk
 
 
     const [psiData, setPsiData] = useState({ id: "", lighthouseResult: { audits: {}, finalUrl: "", requestedUrl: "", categories: { performance: { score: 0 }, accessibility: { score: 0 }, "best-practices": { score: 0 } }, categoryGroups: {}, environment: {}, fetchTime: "", finalScreenshot: "", i18n: {}, runWarnings: [], timing: {}, userAgent: "" } });
