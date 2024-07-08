@@ -153,8 +153,10 @@ async function YourComponent() {
 
 
     useEffect(() => {
+
+        console.log("fuckk",scrapeData);
         if (!scrapeData) return;
-        console.log("fuckk");
+        console.log("fuckk2",scrapeData);
 
         const fetchData = async () => {
 
@@ -163,9 +165,9 @@ async function YourComponent() {
                 htmlText: scrapeData?.htmlText,
                 keyword: scrapeData?.title,
                 subKeywords: scrapeData?.subKeywords,
-                metaDescription: scrapeData?.metaDescription,
-                languageCode: scrapeData?.languageCode,
-                countryCode: scrapeData?.countryCode
+                metaDescription: scrapeData?.metaDescription ? scrapeData?.metaDescription: "",
+                languageCode: scrapeData?.languageCode ? scrapeData?.languageCode : "",
+                countryCode: scrapeData?.countryCode ? scrapeData?.countryCode : ""
             };
 
 
@@ -183,7 +185,6 @@ async function YourComponent() {
 
     }, [scrapeData]);
     const { Failed, appendToFailed, appendToSuccess, Success } = useResultContext();
-    console.log(Failed, Success);
 
     const [BrokenLink, setBrokenLink] = useState<any>({});
     const [MetaTitle, setMetaTitle] = useState<any>({});
@@ -515,7 +516,7 @@ async function YourComponent() {
                             </div>
                             <div className="grow flex mt-10">
                                 <div className=" flex flex-col justify-center mr-2 bg-white  rounded-lg grow items-center">
-                                    <div className="radial-progress bg-yellow-100 text-yellow-400" style={{ "--value": psiData?.lighthouseResult.categories.performance.score * 100 } as React.CSSProperties} role="progressbar">{psiData?.lighthouseResult.categories.performance.score * 100}</div>
+                                    <div className="radial-progress bg-yellow-100 text-yellow-400" style={{ "--value": psiData?.lighthouseResult.categories.performance.score * 100 } as React.CSSProperties} role="progressbar">{Math.floor(psiData?.lighthouseResult.categories.performance.score * 100)}</div>
                                     <div className="text-base mt-2 font-semibold ">Performaance</div>
 
                                 </div>

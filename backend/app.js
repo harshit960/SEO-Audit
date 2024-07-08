@@ -37,18 +37,21 @@ app.get('/scrape', async (req, res) => {
     }
 
     try {
-        const browser = await puppeteer.launch();
+        const browser = await puppeteer.launch({
+            headless: true,
+            args: ['--no-sandbox']
+         });
         const page = await browser.newPage();
         await page.goto(url);
 
         const data = await page.evaluate(() => {
             const title = document.querySelector('title')?.innerText;
-            const htmlText = document.documentElement.innerHTML;
             const keywordsMeta = document.querySelector('meta[name="keywords"]');
             const keywords = keywordsMeta ? keywordsMeta.getAttribute('content') : null;
             const metaDescription = document.querySelector('meta[name="description"]')?.getAttribute('content');
             const languageCode = document.documentElement.lang;
             const countryCode = document.querySelector('meta[name="geo.country"]')?.getAttribute('content');
+            const htmlText = document.documentElement.innerHTML;
 
             return {
                 title,
@@ -75,6 +78,6 @@ app.get('/scrape', async (req, res) => {
 
 
 
-app.listen(port, () => {
+app.listen(process.env.PORT||3000, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
