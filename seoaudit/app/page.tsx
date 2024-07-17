@@ -188,11 +188,11 @@ function Home() {
             <br />
             Reporting Tool
           </div>
-          <Animations src="https://lottie.host/9be912a0-8874-4453-9149-881b6eb675ad/mEIIPGP58H.json" className="absolute bottom-16 -right-20 w-1/2  -z-10 overflow-hidden" />
+          <Animations src="https://lottie.host/9be912a0-8874-4453-9149-881b6eb675ad/mEIIPGP58H.json" className="absolute bottom-16 right-0 w-1/2  -z-10 overflow-hidden" />
 
           <Animations
             src="https://lottie.host/9a449fcb-8434-4985-ae02-866607de0cd4/H3276bRGu1.json"
-            className='absolute top-40 left-36 w-1/4  -z-10'
+            className='absolute top-40 left-36 w-1/4  -z-10 overflow-hidden'
           />
         </div>
         <div className="my-2 mt-5 text-black text-base lg:text-xl">
@@ -488,8 +488,8 @@ function Home() {
     <div className="flex flex-col items-center justify-center mt-32  ">
       <div className="text-4xl font-bold ">Our Latest Blogs</div>
       <div className="flex mt-10 mx-5 flex-wrap">
-        <div className="flex flex-col m-5 w-80 h-80 rounded shadow-2xl shadow-[#c9d2fc]">
-          <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-40 bg-cover ' />
+        <div className="flex flex-col m-5 w-80 h-96 rounded shadow-2xl shadow-[#c9d2fc]">
+          <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-60 bg-cover ' />
           <div className="text-xl m-2 line-clamp-2	">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores labore mollitia illum animi voluptas aliquam minima iure? Aut, dolore iste consectetur tempore harum molestiae, in, nesciunt deleniti facilis voluptas quisquam.</div>
           <div className="border-b mt-2">
 
@@ -500,8 +500,8 @@ function Home() {
             <div className="text-sm">Author</div>
           </div>
         </div>
-        <div className="flex flex-col m-5 w-80 h-80 rounded shadow-2xl shadow-[#c9d2fc]">
-          <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-40 bg-cover ' />
+        <div className="flex flex-col m-5 w-80 h-96 rounded shadow-2xl shadow-[#c9d2fc]">
+          <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-60 bg-cover ' />
           <div className="text-xl m-2 line-clamp-2	">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores labore mollitia illum animi voluptas aliquam minima iure? Aut, dolore iste consectetur tempore harum molestiae, in, nesciunt deleniti facilis voluptas quisquam.</div>
           <div className="border-b mt-2">
 
@@ -512,11 +512,10 @@ function Home() {
             <div className="text-sm">Author</div>
           </div>
         </div>
-        <div className="flex flex-col m-5 w-80 h-80 rounded shadow-2xl shadow-[#c9d2fc]">
-          <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-40 bg-cover ' />
+        <div className="flex flex-col m-5 w-80 h-96 rounded shadow-2xl shadow-[#c9d2fc]">
+          <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-60 bg-cover ' />
           <div className="text-xl m-2 line-clamp-2	">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores labore mollitia illum animi voluptas aliquam minima iure? Aut, dolore iste consectetur tempore harum molestiae, in, nesciunt deleniti facilis voluptas quisquam.</div>
           <div className="border-b mt-2">
-
           </div>
 
           <div className="flex justify-between p-2">
