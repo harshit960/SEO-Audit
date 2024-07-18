@@ -29,7 +29,7 @@ async function Pricing() {
                         <div className="flex flex-col">
                             <div className="text-xl my-2">Free</div>
                             <div className="flex items-baseline my-2">
-                                <div className="text-5xl font-bold">{pricing.Basic}</div>
+                                <div className="text-5xl font-bold">{pricing?.Basic}</div>
                                 <div className="text-base">/ month</div>
                             </div>
                             <div className="text-base my-2">Best for Small Teams or Individuals.</div>
@@ -47,7 +47,7 @@ async function Pricing() {
                         <div className="flex flex-col">
                             <div className="text-xl my-2">Professional</div>
                             <div className="flex items-baseline my-2">
-                                <div className="text-5xl font-bold">{pricing.Professional}</div>
+                                <div className="text-5xl font-bold">{pricing?.Professional}</div>
                                 <div className="text-base">/ month</div>
                             </div>
                             <div className="text-base my-2">Best for Small Teams or Individuals.</div>
@@ -65,7 +65,7 @@ async function Pricing() {
                         <div className="flex flex-col">
                             <div className="text-xl my-2">Enterprise</div>
                             <div className="flex items-baseline my-2">
-                                <div className="text-5xl font-bold">{pricing.Enterprise}</div>
+                                <div className="text-5xl font-bold">{pricing?.Enterprise}</div>
                                 <div className="text-base">/ month</div>
                             </div>
                             <div className="text-base my-2">Best for Small Teams or Individuals.</div>

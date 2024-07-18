@@ -22,9 +22,9 @@ async function Reviews() {
             <div className="flex flex-wrap lg:flex-nowrap justify-center">
               <div className="flex flex-col items-center justify-center">
 
-                <img src={reviews[0].imgUrl} className="rounded-full w-36"></img>
-                <div className="text-base font-semibold mt-3 whitespace-nowrap">{reviews[0].userName}</div>
-                <div className="text-base whitespace-nowrap">{reviews[0].userRole}</div>
+                <img src={reviews && reviews[0].imgUrl} className="rounded-full w-36"></img>
+                <div className="text-base font-semibold mt-3 whitespace-nowrap">{reviews && reviews[0].userName}</div>
+                <div className="text-base whitespace-nowrap">{reviews && reviews[0].userRole}</div>
               </div>
               <div className="flex flex-col py-2 lg:pl-10 text-center lg:text-left">
                 <div>
@@ -43,7 +43,7 @@ async function Reviews() {
                   </div>
                 </div>
                 <div className="text-base">
-                  {reviews[0].message}
+                  {reviews && reviews[0].message}
                 </div>
               </div>
             </div>
@@ -52,9 +52,9 @@ async function Reviews() {
             <div className="flex flex-wrap lg:flex-nowrap justify-center">
               <div className="flex flex-col items-center justify-center">
 
-                <img src={reviews[1].imgUrl} className="rounded-full w-36"></img>
-                <div className="text-base font-semibold mt-3 whitespace-nowrap">{reviews[1].userName}</div>
-                <div className="text-base whitespace-nowrap">{reviews[1].userRole}</div>
+                <img src={reviews && reviews[1].imgUrl} className="rounded-full w-36"></img>
+                <div className="text-base font-semibold mt-3 whitespace-nowrap">{reviews && reviews[1].userName}</div>
+                <div className="text-base whitespace-nowrap">{reviews && reviews[1].userRole}</div>
               </div>
               <div className="flex flex-col p-2 lg:pl-10 text-center lg:text-left">
               <div className="rating rating-md mb-4 rating-half">
@@ -71,7 +71,7 @@ async function Reviews() {
                     <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-2 bg-orange-400" />
                   </div>
                 <div className="text-base">
-                  {reviews[1].message}
+                  {reviews && reviews[1].message}
                 </div>
               </div>
             </div>
