@@ -2,15 +2,21 @@ import React from 'react'
 
 async function Pricing() {
     async function getPricing() {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/pricing`)
-        if (!res.ok) {
-          // This will activate the closest `error.js` Error Boundary
-          throw new Error('Failed to fetch data')
+        try {
+
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/pricing`)
+            if (!res.ok) {
+                // This will activate the closest `error.js` Error Boundary
+                throw new Error('Failed to fetch data')
+            }
+
+            return res.json()
+        } catch (error) {
+            console.log(error);
+
         }
-       
-        return res.json()
-      }
-    const pricing = await getPricing()    
+    }
+    const pricing = await getPricing()
     return (
         <>
             <div className=" flex flex-col items-center justify-center mt-20 ">
