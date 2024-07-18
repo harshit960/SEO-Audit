@@ -28,13 +28,13 @@ interface Post {
     };
   };
 }
+export async function getImg(post:any) {
+  const asset = await client.getAsset(post.fields.img.sys.id);
+  return asset.fields.file?.url || '';
+}
 async function page() {
   const posts:any = await fetchPosts();
   // console.log(JSON.stringify(posts));
-  async function getImg(post:any) {
-    const asset = await client.getAsset(post.fields.img.sys.id);
-    return asset.fields.file?.url || '';
-  }
   return (
     <>
       <Nav />
@@ -147,12 +147,12 @@ async function page() {
                       <div className="text-sm">3 min read</div>
                       
                     </div>
-                    <div className="text-2xl font-semibold line-clamp-2	mt-2">{JSON.stringify(post.fields.title)}</div>
+                    <div className="text-2xl font-semibold line-clamp-2	mt-2">{post.fields.title}</div>
                     <div className="text-sm mt-2 line-clamp-3">
                      {post.fields.body && post.fields.body.content.map((content: { content: any[]; }, index: React.Key | null | undefined) => (
                         <div key={index}>
                           {content.content.map((element: { value: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; }, elementIndex: React.Key | null | undefined) => (
-                            <p key={elementIndex}>{JSON.stringify(element.value)}</p>
+                            <p key={elementIndex}>{(element.value)}</p>
                           ))}
                         </div>
                       ))}
@@ -197,7 +197,7 @@ async function page() {
             <div className="w-full flex-col flex p-4 h-60 mt-20 bg-[#009379] justify-evenly">
               <div className="text-lg text-white font-semibold">Lorem ipsum dolor sit ametcing elit. Ipsam itaque perspiciatpit sed?</div>
               <div className="text-xs text-white font-light">Lorem ipsum dolor, sittatem iusto doloremque, in accusamus. !</div>
-              <div className="bg-white w-28 text-center rounded-md text-[#009379] font-medium p-1 text-sm">Get Started</div>
+              <Link href="run" className="bg-white w-28 text-center rounded-md text-[#009379] font-medium p-1 text-sm">Get Started</Link>
             </div>
           </div>
         </div>
@@ -206,4 +206,5 @@ async function page() {
 }
 
 
-      export default page
+      export default page; 
+    

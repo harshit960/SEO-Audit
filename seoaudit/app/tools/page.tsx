@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react'
+import Nav from '../Nav';
 
 function page() {
     const test = [
@@ -521,7 +522,7 @@ function page() {
 
     return (
         <>
-
+            <Nav />
             <div className='h-80 mt-40 w-full flex items-center justify-center flex-col'>
                 <div className="text-5xl font-bold ">
                     Some of our SEO Tools

@@ -20,6 +20,9 @@ import SearchBar from './components/SearchBar';
 // import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 // import { calsans } from "@/fonts/calsans";
 import YouTubeIframe from './YTiframe';
+import Blog from './sections/Blog';
+import Pricing from './sections/Pricing';
+import Reviews from './sections/Reviews';
 
 
 function Home() {
@@ -201,7 +204,7 @@ function Home() {
         <div className="flex items-center lg:justify-center flex-wrap mt-5 w-full drop-shadow-lg	">
 
           <SearchBar />
-          
+
         </div>
 
       </div>
@@ -294,9 +297,9 @@ function Home() {
         </div>
 
       </div>
-      <div className="bg-[#2D2D2D] w-32 rounded p-3 hover:bg-[#009379] hover:shadow-2xl hover:shadow-[#c9d2fc] duration-200 text-white text-center font-semibold mt-8 px-8">
+      <Link href="tools" className="bg-[#2D2D2D] w-32 rounded p-3 hover:bg-[#009379] hover:shadow-2xl hover:shadow-[#c9d2fc] duration-200 text-white text-center font-semibold mt-8 px-8">
         View All
-      </div>
+      </Link>
     </div>
     <div className="">
 
@@ -385,149 +388,9 @@ function Home() {
         </div>
       </div>
     </div>
-    <div className=" flex flex-col items-center justify-center mt-20 ">
-      <div className="text-4xl font-bold text-center">
-        Pick Your Perfect Plan
-      </div>
-      <div className="text-base mt-3 text-center">Find the perfect plan for your business with our flexible pricing options.</div>
-      <div className="flex mt-10 flex-wrap justify-center items-center">
-        <div className="m-5 w-80 p-10 bg-neutral-50 shadow-2xl shadow-[#c9d2fc] rounded-md text-[#2D2D2D]" >
-          <div className="flex flex-col">
-            <div className="text-xl my-2">Free</div>
-            <div className="flex items-baseline my-2">
-              <div className="text-5xl font-bold">$0</div>
-              <div className="text-base">/ month</div>
-            </div>
-            <div className="text-base my-2">Best for Small Teams or Individuals.</div>
-            <ul className='list-disc	mx-5 my-2 font-medium'>
-              <li>Write feature details here</li>
-              <li>Write feature details here</li>
-              <li>Write feature details here</li>
-            </ul>
-            <div className="mt-5 w-full rounded-2xl bg-[#E5F4F2] text-center hover:bg-[#009379] hover:text-white duration-200 p-3 text-[#009379] font-semibold">
-              Get Started
-            </div>
-          </div>
-        </div>
-        <div className="m-5 w-80 p-10 bg-neutral-50 shadow-2xl shadow-[#c9d2fc] rounded-md text-[#2D2D2D]" >
-          <div className="flex flex-col">
-            <div className="text-xl my-2">Professional</div>
-            <div className="flex items-baseline my-2">
-              <div className="text-5xl font-bold">$19</div>
-              <div className="text-base">/ month</div>
-            </div>
-            <div className="text-base my-2">Best for Small Teams or Individuals.</div>
-            <ul className='list-disc	mx-5 my-2 font-medium'>
-              <li>Write feature details here</li>
-              <li>Write feature details here</li>
-              <li>Write feature details here</li>
-            </ul>
-            <div className="mt-5 w-full rounded-2xl bg-[#E5F4F2] hover:bg-[#009379] hover:text-white duration-200  text-center p-3 text-[#009379] font-semibold">
-              Get Started
-            </div>
-          </div>
-        </div>
-        <div className="m-5 w-80 p-10 bg-[#009379] shadow-2xl shadow-[#c9d2fc] rounded-md text-[#fff]" >
-          <div className="flex flex-col">
-            <div className="text-xl my-2">Enterprise</div>
-            <div className="flex items-baseline my-2">
-              <div className="text-5xl font-bold">$49</div>
-              <div className="text-base">/ month</div>
-            </div>
-            <div className="text-base my-2">Best for Small Teams or Individuals.</div>
-            <ul className='list-disc	mx-5 my-2 font-medium'>
-              <li>Write feature details here</li>
-              <li>Write feature details here</li>
-              <li>Write feature details here</li>
-            </ul>
-            <div className="mt-5 w-full rounded-2xl bg-[#fff] hover:bg-[#E5F4F2] duration-200 text-center p-3 text-[#009379] font-semibold">
-              Get Started
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className="py-20 bg-[#F8D57E] flex flex-col items-center justify-center mt-20">
-      <div className="text-4xl text-center font-bold">Real Stories from Satisfied Customers</div>
-      <div className="text-base mt-2 text-center">See how our landing page ui kit is making an impact.</div>
-      <div className="flex mt-14 justify-center w-full flex-wrap">
-        <div className="w-[570px]  bg-white rounded p-10 m-5">
-          <div className="flex flex-wrap lg:flex-nowrap justify-center">
-            <div className="flex flex-col items-center justify-center">
-
-              <div className="rounded-full bg-slate-400 w-28 h-28"></div>
-              <div className="text-base font-semibold mt-3">David B.</div>
-              <div className="text-base">Developer</div>
-            </div>
-            <div className="flex flex-col p-2 lg:pl-10 text-center lg:text-left">
-              <div className="stars "> 8 88 88 88 </div>
-              <div className="text-base">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt fugit dolorum maxime ipsa esse! Aliquam porro reiciendis eum corporis animi, itaque"
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="w-[570px]  bg-white rounded p-10 m-5">
-          <div className="flex flex-wrap lg:flex-nowrap justify-center">
-            <div className="flex flex-col items-center justify-center">
-
-              <div className="rounded-full bg-slate-400 w-28 h-28"></div>
-              <div className="text-base font-semibold mt-3">David B.</div>
-              <div className="text-base">Developer</div>
-            </div>
-            <div className="flex flex-col p-2 lg:pl-10 text-center lg:text-left">
-              <div className="stars "> 8 88 88 88 </div>
-              <div className="text-base">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, odit? Repellat eos asperiores et amet tempore adipisci quam architecto in voluptatem,""
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className="flex flex-col items-center justify-center mt-32  ">
-      <div className="text-4xl font-bold ">Our Latest Blogs</div>
-      <div className="flex mt-10 mx-5 flex-wrap">
-        <div className="flex flex-col m-5 w-80 h-96 rounded shadow-2xl shadow-[#c9d2fc]">
-          <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-60 bg-cover ' />
-          <div className="text-xl m-2 line-clamp-2	">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores labore mollitia illum animi voluptas aliquam minima iure? Aut, dolore iste consectetur tempore harum molestiae, in, nesciunt deleniti facilis voluptas quisquam.</div>
-          <div className="border-b mt-2">
-
-          </div>
-
-          <div className="flex justify-between p-2">
-            <div className="text-sm">12/04/2024</div>
-            <div className="text-sm">Author</div>
-          </div>
-        </div>
-        <div className="flex flex-col m-5 w-80 h-96 rounded shadow-2xl shadow-[#c9d2fc]">
-          <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-60 bg-cover ' />
-          <div className="text-xl m-2 line-clamp-2	">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores labore mollitia illum animi voluptas aliquam minima iure? Aut, dolore iste consectetur tempore harum molestiae, in, nesciunt deleniti facilis voluptas quisquam.</div>
-          <div className="border-b mt-2">
-
-          </div>
-
-          <div className="flex justify-between p-2">
-            <div className="text-sm">12/04/2024</div>
-            <div className="text-sm">Author</div>
-          </div>
-        </div>
-        <div className="flex flex-col m-5 w-80 h-96 rounded shadow-2xl shadow-[#c9d2fc]">
-          <img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13" alt="" className='w-80 h-60 bg-cover ' />
-          <div className="text-xl m-2 line-clamp-2	">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores labore mollitia illum animi voluptas aliquam minima iure? Aut, dolore iste consectetur tempore harum molestiae, in, nesciunt deleniti facilis voluptas quisquam.</div>
-          <div className="border-b mt-2">
-          </div>
-
-          <div className="flex justify-between p-2">
-            <div className="text-sm">12/04/2024</div>
-            <div className="text-sm">Author</div>
-          </div>
-        </div>
-      </div>
-      <div className="bg-[#2D2D2D] rounded p-3 hover:bg-[#009379] duration-200 text-white font-semibold mt-8 px-8">
-        View All
-      </div>
-    </div>
+    <Pricing />
+    <Reviews />
+    <Blog />
     <div className="flex lg:p-20 p-5 mt-20">
       <div className="bg-[#E5F4F2] flex flex-col w-full lg:p-20 p-5 py-10 rounded-xl text-[#2D2D2D]">
         <div className="text-3xl font-semibold">

@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="text-sm opacity-60 my-1">
             Search Engine Optimization
           </div>
-          <div className="my-3 bg-[#4E4D4D] rounded p-2 text-white w-28 text-xs inline-flex items-center justify-center">GET STARTED</div>
+          <Link href="run" className="my-3 bg-[#4E4D4D] rounded p-2 text-white w-28 text-xs inline-flex items-center justify-center">GET STARTED</Link>
           <div className="flex mt-1 opacity-60">
 
             <img src="\Instagram Circle.png" alt="" className='w-7' />
