@@ -1,9 +1,12 @@
-const express = require('express');
-const axios = require('axios');
-const puppeteer = require('puppeteer');
+import express from 'express';
+import axios from 'axios';
+import puppeteer from 'puppeteer';
+import cors from 'cors'
+import { PrismaClient } from '@prisma/client'
+const prisma = new PrismaClient()
+
 const app = express();
 const port = 10000;
-const cors = require('cors')
 // Replace with your actual Google PSI API key
 const API_KEY = 'AIzaSyACLmKUkHHdaqeaIznrqBibQ2XQGw1HEks';
 
@@ -25,7 +28,7 @@ app.get('/psi', async (req, res) => {
         res.json(response.data);
     } catch (error) {
         console.error(error);
-        res.status(500).json({ error: 'An error occurred while fetching the PageSpeed Insights data',errors:error });
+        res.status(500).json({ error: 'An error occurred while fetching the PageSpeed Insights data', errors: error });
     }
 });
 // Puppeteer Endpoint
@@ -40,7 +43,7 @@ app.get('/scrape', async (req, res) => {
         const browser = await puppeteer.launch({
             headless: true,
             args: ['--no-sandbox']
-         });
+        });
         const page = await browser.newPage();
         await page.goto(url);
 
@@ -69,15 +72,88 @@ app.get('/scrape', async (req, res) => {
         res.json(data);
     } catch (error) {
         console.error(error);
-        res.status(500).json({ error: 'An error occurred while scraping the page',errors:error });
+        res.status(500).json({ error: 'An error occurred while scraping the page', errors: error });
     }
 });
 
+app.post('/createUser', async (req, res) => {
+    try {
+        const { name, email, password } = req.body;
+        const user = await prisma.user.create({
+            data: { name, email, password },
+        });
+        res.json(user);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
 
+});
+app.get('/pricing', async (req, res) => {
+    try {
+        const Basic = await prisma.PlanPricing.findFirst(
+            {
+                where: {
+                    name: 'Basic',
+                    country: 'India',
+                },
+            }
+        );
+        const Professional = await prisma.PlanPricing.findFirst(
+            {
+                where: {
+                    name: 'Professional',
+                    country: 'India',
+                },
+            }
+        );
+        const Enterprise = await prisma.PlanPricing.findFirst(
+            {
+                where: {
+                    name: 'Enterprise',
+                    country: 'India',
+                },
+            }
+        );
+        res.json({ Basic: Basic.price, Professional: Professional.price, Enterprise: Enterprise.price });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+app.post('/createPlan', async (req, res) => {
+    try {
+        const { name, price, currency, country } = req.body;
+        const plan = await prisma.PlanPricing.create({
+            data: { name, price, currency, country },
+        });
+        res.json(plan);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+app.post('/createReview', async (req, res) => {
 
-
-
-
-app.listen(process.env.PORT||10000, () => {
+    try {
+        const { userName, userRole, imgUrl, message, rating } = req.body;
+        const reviewData = await prisma.Rating.create({
+            data: { userName, userRole, imgUrl, message, rating },
+        });
+        res.json(reviewData);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+app.get('/getReviews', async (req, res) => {
+    try {
+        const reviews = await prisma.Rating.findMany(
+            {
+                take: 2
+            }
+        );
+        res.json(reviews);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+app.listen(process.env.PORT || 10000, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });

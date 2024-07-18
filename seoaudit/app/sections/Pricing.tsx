@@ -1,6 +1,16 @@
 import React from 'react'
 
-function Pricing() {
+async function Pricing() {
+    async function getPricing() {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/pricing`)
+        if (!res.ok) {
+          // This will activate the closest `error.js` Error Boundary
+          throw new Error('Failed to fetch data')
+        }
+       
+        return res.json()
+      }
+    const pricing = await getPricing()    
     return (
         <>
             <div className=" flex flex-col items-center justify-center mt-20 ">
@@ -13,7 +23,7 @@ function Pricing() {
                         <div className="flex flex-col">
                             <div className="text-xl my-2">Free</div>
                             <div className="flex items-baseline my-2">
-                                <div className="text-5xl font-bold">$0</div>
+                                <div className="text-5xl font-bold">{pricing.Basic}</div>
                                 <div className="text-base">/ month</div>
                             </div>
                             <div className="text-base my-2">Best for Small Teams or Individuals.</div>
@@ -31,7 +41,7 @@ function Pricing() {
                         <div className="flex flex-col">
                             <div className="text-xl my-2">Professional</div>
                             <div className="flex items-baseline my-2">
-                                <div className="text-5xl font-bold">$19</div>
+                                <div className="text-5xl font-bold">{pricing.Professional}</div>
                                 <div className="text-base">/ month</div>
                             </div>
                             <div className="text-base my-2">Best for Small Teams or Individuals.</div>
@@ -49,7 +59,7 @@ function Pricing() {
                         <div className="flex flex-col">
                             <div className="text-xl my-2">Enterprise</div>
                             <div className="flex items-baseline my-2">
-                                <div className="text-5xl font-bold">$49</div>
+                                <div className="text-5xl font-bold">{pricing.Enterprise}</div>
                                 <div className="text-base">/ month</div>
                             </div>
                             <div className="text-base my-2">Best for Small Teams or Individuals.</div>

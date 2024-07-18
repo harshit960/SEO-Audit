@@ -1,47 +1,86 @@
 import React from 'react'
 
-function Reviews() {
+async function Reviews() {
+  async function getReviews() {
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/getReviews`);
+      return response.json();
+    }
+    catch (error) {
+
+    }
+  }
+  const reviews = await getReviews();
+  console.log(reviews);
+
   return (
-<>
-<div className="py-20 bg-[#F8D57E] flex flex-col items-center justify-center mt-20">
-      <div className="text-4xl text-center font-bold">Real Stories from Satisfied Customers</div>
-      <div className="text-base mt-2 text-center">See how our landing page ui kit is making an impact.</div>
-      <div className="flex mt-14 justify-center w-full flex-wrap">
-        <div className="w-[570px]  bg-white rounded p-10 m-5">
-          <div className="flex flex-wrap lg:flex-nowrap justify-center">
-            <div className="flex flex-col items-center justify-center">
+    <>
+      <div className="py-20 bg-[#F8D57E] flex flex-col items-center justify-center mt-20">
+        <div className="text-4xl text-center font-bold">Real Stories from Satisfied Customers</div>
+        <div className="text-base mt-2 text-center">See how our landing page ui kit is making an impact.</div>
+        <div className="flex mt-14 justify-center w-full flex-wrap">
+          <div className="w-[570px]  bg-white rounded p-10 pt-6 m-5">
+            <div className="flex flex-wrap lg:flex-nowrap justify-center">
+              <div className="flex flex-col items-center justify-center">
 
-              <div className="rounded-full bg-slate-400 w-28 h-28"></div>
-              <div className="text-base font-semibold mt-3">David B.</div>
-              <div className="text-base">Developer</div>
-            </div>
-            <div className="flex flex-col p-2 lg:pl-10 text-center lg:text-left">
-              <div className="stars "> 8 88 88 88 </div>
-              <div className="text-base">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt fugit dolorum maxime ipsa esse! Aliquam porro reiciendis eum corporis animi, itaque"
+                <img src={reviews[0].imgUrl} className="rounded-full w-36"></img>
+                <div className="text-base font-semibold mt-3 whitespace-nowrap">{reviews[0].userName}</div>
+                <div className="text-base whitespace-nowrap">{reviews[0].userRole}</div>
+              </div>
+              <div className="flex flex-col py-2 lg:pl-10 text-center lg:text-left">
+                <div>
+                  <div className="rating rating-md mb-4 rating-half">
+                    {/* <input type="radio" name="rating-10" className="rating-hidden" /> */}
+                    <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-1 bg-orange-400" />
+                    <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-2 bg-orange-400" />
+                    <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-1 bg-orange-400"  />
+                    <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-2 bg-orange-400" />
+                    <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-1 bg-orange-400" />
+                    <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-2 bg-orange-400" />
+                    <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-1 bg-orange-400" />
+                    <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-2 bg-orange-400" />
+                    <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-1 bg-orange-400" defaultChecked />
+                    <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-2 bg-orange-400" />
+                  </div>
+                </div>
+                <div className="text-base">
+                  {reviews[0].message}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="w-[570px]  bg-white rounded p-10 m-5">
-          <div className="flex flex-wrap lg:flex-nowrap justify-center">
-            <div className="flex flex-col items-center justify-center">
+          <div className="w-[570px]  bg-white rounded p-10 pt-6 m-5">
+            <div className="flex flex-wrap lg:flex-nowrap justify-center">
+              <div className="flex flex-col items-center justify-center">
 
-              <div className="rounded-full bg-slate-400 w-28 h-28"></div>
-              <div className="text-base font-semibold mt-3">David B.</div>
-              <div className="text-base">Developer</div>
-            </div>
-            <div className="flex flex-col p-2 lg:pl-10 text-center lg:text-left">
-              <div className="stars "> 8 88 88 88 </div>
-              <div className="text-base">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, odit? Repellat eos asperiores et amet tempore adipisci quam architecto in voluptatem,""
+                <img src={reviews[1].imgUrl} className="rounded-full w-36"></img>
+                <div className="text-base font-semibold mt-3 whitespace-nowrap">{reviews[1].userName}</div>
+                <div className="text-base whitespace-nowrap">{reviews[1].userRole}</div>
+              </div>
+              <div className="flex flex-col p-2 lg:pl-10 text-center lg:text-left">
+              <div className="rating rating-md mb-4 rating-half">
+                    {/* <input type="radio" name="rating-10" className="rating-hidden" /> */}
+                    <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-1 bg-orange-400" />
+                    <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-2 bg-orange-400" />
+                    <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-1 bg-orange-400"  />
+                    <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-2 bg-orange-400" />
+                    <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-1 bg-orange-400" />
+                    <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-2 bg-orange-400" />
+                    <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-1 bg-orange-400" />
+                    <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-2 bg-orange-400" />
+                    <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-1 bg-orange-400" defaultChecked />
+                    <input type="radio" name="rating-10" className="mask mask-star-2 mask-half-2 bg-orange-400" />
+                  </div>
+                <div className="text-base">
+                  {reviews[1].message}
+                </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
-    </div>
-</>  )
+    </>)
 }
 
 export default Reviews
