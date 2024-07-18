@@ -3,7 +3,7 @@
 // Function to perform Ads.txt Validation Test
 export async function performAdsTxtValidationTest(domain: string): Promise<{ IsValidAdsTxt: boolean; Importance: string; Description: string }> {
     // Construct the URL of the ads.txt file
-    const adsTxtUrl = `${domain}ads.txt`;
+    const adsTxtUrl = `${domain}/ads.txt`;
 
     try {
         // Fetch the ads.txt file

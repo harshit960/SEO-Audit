@@ -242,12 +242,12 @@ async function YourComponent() {
         if (!loading) return;
         setBrokenLink(extractBrokenLinksData(psiData, appendToSuccess, appendToFailed,));
         setSocialMedia(performSocialMediaTest(psiData, appendToSuccess, appendToFailed))
-        setSEOFriendlyUrl(extractSEOFriendlyUrlData(psiData, appendToSuccess, appendToFailed))
+        // setSEOFriendlyUrl(extractSEOFriendlyUrlData(psiData, appendToSuccess, appendToFailed))
         setImageAltData(extractImageAltTestData(psiData, appendToSuccess, appendToFailed))
         setResponsiveImgData(extractResponsiveImageData(psiData, appendToSuccess, appendToFailed))
         setImageAspectRatioData(extractImageAspectRatioData(psiData, appendToSuccess, appendToFailed))
-        setInlineCssData(extractInlineCssData(psiData, appendToSuccess, appendToFailed))
-        setDeprecatedHtmlTagsData(extractDeprecatedHtmlTagsData(psiData, appendToSuccess, appendToFailed))
+        // setInlineCssData(extractInlineCssData(psiData, appendToSuccess, appendToFailed))
+        // setDeprecatedHtmlTagsData(extractDeprecatedHtmlTagsData(psiData, appendToSuccess, appendToFailed))
         setGoogleAnalyticsData(performGoogleAnalyticsTest(psiData, appendToSuccess, appendToFailed))
         setFaviconData(performFaviconTest(psiData, appendToSuccess, appendToFailed))
         setBacklinksData(performBacklinksTest(psiData, appendToSuccess, appendToFailed))
@@ -260,7 +260,7 @@ async function YourComponent() {
         setSiteLoadingSpeedData(performSiteLoadingSpeedTest(psiData, appendToSuccess, appendToFailed))
         setJSExecutionTimeData(performJSExecutionTimeTest(psiData, appendToSuccess, appendToFailed))
         setPageObjectsData(performPageObjectsTest(psiData, appendToSuccess, appendToFailed))
-        setPageCacheData(performPageCacheTest(psiData, appendToSuccess, appendToFailed))
+        // setPageCacheData(performPageCacheTest(psiData, appendToSuccess, appendToFailed))
         setFlashData(performFlashTest(psiData, appendToSuccess, appendToFailed))
         setCDNUsageData(performCDNUsageTest(psiData, appendToSuccess, appendToFailed))
         setRenderBlockingResourcesData(performRenderBlockingResourcesTest(psiData, appendToSuccess, appendToFailed))
@@ -580,7 +580,7 @@ async function YourComponent() {
                             <a role="tab" className="tab p-4" href="#Advanced SEO">Advanced SEO</a>
                         </div>
                     </div>
-                    <div className="w-4/5  my-10 mt-0  p-20 pt-0 rounded bg-white">
+                    <div className="w-4/5  my-10 mt-0  p-20 pt-0 rounded bg-white max-h-[100vh] overflow-y-auto overflow-x-hidden">
                         <div className="text-2xl my-10 font-semibold">Good Points</div>
                         {outdata1 ? outdata1.messages.goodPoints.map((item: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined, index: React.Key | null | undefined) => (
 
@@ -596,22 +596,22 @@ async function YourComponent() {
                         )) : <></>}
 
                     </div>
-                    <div className="w-4/5  my-10  p-20 pt-0 rounded bg-white" id="Minor Warnings">
+                    <div className="w-4/5  my-10  p-20 pt-0 rounded bg-white max-h-[100vh] overflow-y-auto overflow-x-auto" id="Minor Warnings" >
                         <div className="text-2xl my-10 font-semibold">Minor Warnings</div>
-                        {outdata1 ? outdata1.messages.minorWarnings.map((item: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined, index: React.Key | null | undefined) => (
+                        {outdata1 ? outdata1.messages.minorWarnings.map((item: string , index: React.Key | null | undefined) => (
 
-                            <div key={index} className=" flex mx-2 my-1 rounded items-center bg-slate-100 p-4 px-2">
+                            <div key={index} className=" flex mx-2 my-1 rounded items-center bg-slate-100 p-4 px-2 overflow-x-auto">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 m-2 text-yellow-300">
                                     <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
                                 </svg>
 
-                                <div className="text-sm  font-semibold  whitespace-nowrap truncate">{item}</div>
+                                <div className="text-sm  font-semibold  whitespace-nowrap max-w-full truncate">{item?.slice(0,100)}</div>
                                 {/* <div className="text-sm">Remark</div> */}
                             </div>
                         )) : <></>}
 
                     </div>
-                    <div className="w-4/5  my-10  p-20 pt-0 rounded bg-white" id="Warnings">
+                    <div className="w-4/5  my-10  p-20 pt-0 rounded bg-white max-h-[100vh] overflow-y-auto overflow-x-hidden" id="Warnings">
                         <div className="text-2xl my-10 font-semibold">Warnings</div>
                         {outdata1 ? outdata1.messages.warnings.map((item: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined, index: React.Key | null | undefined) => (
 
@@ -654,7 +654,7 @@ async function YourComponent() {
                                 <div className="bg-slate-200 border-l-4 border-slate-400 text-slate-700 p-4 my-2" role="alert">
 
                                     <div className="text-sm">Text: {MetaTitle.Text}</div>
-                                    <div className="text-sm">{MetaTitle.Length}</div>
+                                    <div className="text-sm">Length:{MetaTitle.Length}</div>
                                     <a href={MetaTitle.Link} className="text-sm">Learn More</a>
                                 </div>
                             </div>
@@ -843,7 +843,7 @@ async function YourComponent() {
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2 hidden">
                             <div className="mx-4">
 
                                 {SEOFriendlyUrl.URLs && SEOFriendlyUrl.URLs.length == 0 ?
@@ -898,7 +898,7 @@ async function YourComponent() {
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2 hidden">
                             <div className="mx-4">
 
                                 {SEOFriendlyUrl.URLs && SEOFriendlyUrl.URLs.length == 0 ?
@@ -980,7 +980,7 @@ async function YourComponent() {
 
                                 </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2 hidden">
                             <div className="mx-4">
 
                                 {InlineCssData.Importance == "High" ?
@@ -1007,7 +1007,7 @@ async function YourComponent() {
 
                                 </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2 hidden">
                             <div className="mx-4">
 
                                 {DeprecatedHtmlTagsData.DeprecatedTags && DeprecatedHtmlTagsData.DeprecatedTags.length == 0 ?
@@ -1364,7 +1364,7 @@ async function YourComponent() {
 
                                 </div>                            </div>
                         </div>
-                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
+                        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2 hidden">
                             <div className="mx-4">
 
                                 {PageCacheData.CacheLifetimeMs ?
@@ -1948,7 +1948,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {ServerSignatureTest.IsServerSignaturePresent ?
+                                {!ServerSignatureTest.IsServerSignaturePresent ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -1985,7 +1985,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {PlaintextEmailsTest.HasPlaintextEmails ?
+                                {!PlaintextEmailsTest.HasPlaintextEmails ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
@@ -2013,7 +2013,7 @@ async function YourComponent() {
                         <div className="bg-slate-100 flex mx-2 my-1 rounded items-center  p-4 px-2">
                             <div className="mx-4">
 
-                                {UnsafeCrossOriginLinksTest.HasUnsafeCrossOriginLinks ?
+                                {!UnsafeCrossOriginLinksTest.HasUnsafeCrossOriginLinks ?
                                     <div className="text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
                                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />

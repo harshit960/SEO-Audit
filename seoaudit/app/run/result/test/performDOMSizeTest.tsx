@@ -48,7 +48,7 @@ export function performDOMSizeTest(data: any,appendToSuccess:any,appendToFailed:
     }
     importance == 'Low' ? appendToFailed('html DOM Size Test') : appendToSuccess('html DOM Size Test');
 
-    const description = `The size of the DOM is ${DOMSize} elements.`;
+    const description = `The size of the DOM is ${JSON.stringify(DOMSize.value)} elements.`;
     const link = 'https://web.dev/dom-size/';
 
     // console.log({

@@ -45,7 +45,7 @@ export function performServerSignatureTest(data: any,appendToSuccess:any,appendT
 
     // Determine if the Server Signature is present
     const isServerSignaturePresent = !!serverHeader;
-    !isServerSignaturePresent ? appendToFailed('Server Signature Test') : appendToSuccess('Server Signature Test');
+    isServerSignaturePresent ? appendToFailed('Server Signature Test') : appendToSuccess('Server Signature Test');
 
     // Determine the importance and description based on the presence of Server Signature
     const importance = isServerSignaturePresent ? 'Medium' : 'Low';

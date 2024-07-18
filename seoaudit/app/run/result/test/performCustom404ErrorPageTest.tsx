@@ -5,7 +5,7 @@ export async function performCustom404ErrorPageTest(baseUrl: string): Promise<{ 
     // URL of a non-existing page to trigger a 404 error
     // console.log(baseUrl);
     
-    const nonExistingPageUrl = `${baseUrl}non-existing-page`;
+    const nonExistingPageUrl = `${baseUrl}/non-existing-page`;
 
     try {
         // Fetch the non-existing page
@@ -18,7 +18,7 @@ export async function performCustom404ErrorPageTest(baseUrl: string): Promise<{ 
             const responseBodyText = await response.text();
 
             // Check if the response body contains custom 404 error page content
-            const hasCustom404ErrorPage = responseBodyText.includes('This page could not be found');
+            const hasCustom404ErrorPage = responseBodyText.includes('404');
 
             // Determine the importance and description based on the presence of a custom 404 error page
             const importance = hasCustom404ErrorPage ? 'High' : 'Medium';

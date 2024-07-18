@@ -59,7 +59,7 @@ export function performPageObjectsTest(data: any,appendToSuccess:any,appendToFai
     let importance: string;
     let description: string;
 
-    if (totalImageCount === 0) {
+    if (totalImageCount === 0 || Number.isNaN(totalImageCount)) {
         importance = 'Low';
         description = 'No image resources found on the page.';
     } else if (totalImageSize < 1024 * 1024) { // Assuming threshold of 1 MB for total image size
