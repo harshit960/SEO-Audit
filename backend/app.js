@@ -3,6 +3,7 @@ import axios from 'axios';
 import puppeteer from 'puppeteer';
 import cors from 'cors'
 import { PrismaClient } from '@prisma/client'
+import nodemailer from 'nodemailer';
 const prisma = new PrismaClient()
 
 const app = express();
@@ -150,6 +151,28 @@ app.get('/getReviews', async (req, res) => {
             }
         );
         res.json(reviews);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+app.post('/contact', async (req, res) => {
+    try {
+        const { name, email, message } = req.body;
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'your-email@gmail.com',
+                pass: 'your-password'
+            }
+        });
+        const mailOptions = {
+            from: 'your-email@gmail.com',
+            to: 'recipient-email@example.com',
+            subject: 'New Contact Form Submission',
+            text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+        };
+        await transporter.sendMail(mailOptions);
+        res.json({ message: 'Contact form submitted successfully' });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
