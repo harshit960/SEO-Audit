@@ -154,16 +154,52 @@ function Home() {
   ];
   const faq = [
     {
-      que: "What is an SEO checker?",
-      desc: "The Seobility SEO checker is a tool that scans any web page for technical errors and SEO issues that can have a negative impact on search engine rankings. Use it to get a comprehensive list of errors found on your web page and find out where you still have to improve your website."
+      que: "What is an SEO audit? ",
+      desc: "An SEO audit is a comprehensive overview of your website's current search engine optimization (SEO) performance. It shows factors such as On-page, Off- Page and Technical SEO which you can optimize further to improve SEO score.",
     },
     {
-      que: "What is an SEO checker?",
-      desc: "The Seobility SEO checker is a tool that scans any web page for technical errors and SEO issues that can have a negative impact on search engine rankings. Use it to get a comprehensive list of errors found on your web page and find out where you still have to improve your website."
+      que: "Why do I need an SEO audit?",
+      desc: "An SEO audit helps you understand how well your website is optimized for search engines like Google. It highlights strengths and weaknesses, enabling you to make informed decisions to improve your website SEO score."
     },
     {
-      que: "What is an SEO checker?",
-      desc: "The Seobility SEO checker is a tool that scans any web page for technical errors and SEO issues that can have a negative impact on search engine rankings. Use it to get a comprehensive list of errors found on your web page and find out where you still have to improve your website."
+      que: "Is the SEO audit really free?",
+      desc: "Yes, our SEO audit is completely free of charge for now. You can enter your website URL, and within fw seconds, you'll receive a detailed report outlining key SEO metrics and actionable insights."
+    },
+    {
+      que: "What information will the SEO audit provide?",
+      desc: "Our audit report includes analysis of on-page SEO elements (like meta tags, headers, and content), technical SEO factors (such as site speed and mobile-friendliness), backlink analysis, and recommendations for improvement."
+    },
+    {
+      que: "How long does it take to receive the audit results?",
+      desc: "You'll typically receive the audit report instantly after entering your website URL. The process is quick and designed to give you immediate insights into your website's SEO health."
+    },
+    {
+      que: "How can I use the SEO audit results to improve my website?",
+      desc: "The audit report will provide specific recommendations tailored to your website's SEO needs. You can use these recommendations to prioritize and implement changes that will enhance your site's performance in search engine results."
+    },
+    {
+      que: "Is my website data secure?",
+      desc: "Yes, we take data security seriously. Your website URL and any information entered during the audit process are kept confidential and are not shared with third parties."
+    },
+    {
+      que: "Can I request a re-audit in the future?",
+      desc: "Yes, you can revisit our site and request a new SEO audit at any time. Regular audits can help track your progress and identify ongoing SEO opportunities."
+    },
+    {
+      que: "How do I check my SEO audit?",
+      desc: "To check your SEO audit, enter your website URL into our free SEO audit tool. It will analyze various aspects of your site's SEO performance and provide a detailed report with recommendations for improvement."
+    },
+    {
+      que: "What is a good SEO audit score?",
+      desc: "A good SEO audit score typically ranges from 80 to 100. This indicates that your website is well-optimized for search engines with few critical issues and room for minor improvements."
+    },
+    {
+      que: "How to calculate SEO score?",
+      desc: "SEO scores are calculated based on factors such as on-page SEO, technical SEO, content quality, and backlink profile. Automated tools analyze these factors and assign a score based on how well your website meets SEO best practices."
+    },
+    {
+      que: "How to do a free SEO audit of the website?",
+      desc: "You can perform a free SEO audit of your website by using online SEO audit tools. Simply enter your website URL into the tool, and it will generate a comprehensive report highlighting areas for improvement in on-page SEO, technical SEO, content, and more."
     },
   ]
   const words = [
@@ -211,7 +247,7 @@ function Home() {
       </div>
     </div>
     <div className="mb-10">
-      <div className="bg-gray-100 py-12 mb-15">
+      <div className="bg-gray-200 py-12 mb-15">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-gray-900 text-center">
             Trusted by Leading Brands
@@ -220,20 +256,20 @@ function Home() {
             <div className="flex justify-center w-full flex-wrap">
               {/* Replace the src attributes with the logos of your trusted brands */}
               <div className="flex justify-center">
-                <img className="h-8 m-2 lg:mx-10 my-3" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-4.svg" alt="Brand 1" />
+                <img className="h-14 m-2 lg:mx-10 my-3" src="https://wexert.com/wp-content/uploads/2019/02/wexert-logo-2.png" alt="Brand 1" />
               </div>
               <div className="flex justify-center">
-                <img className="h-8 m-2 lg:mx-10 my-3" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-1.svg" alt="Brand 2" />
+                <img className="h-20 m-2 lg:mx-10 my-3" src="https://digiron.in/wp-content/uploads/2024/06/YOUR-EXTENDED-MARKETING-TEAM.png" alt="Brand 2" />
               </div>
-              <div className="flex justify-center">
-                <img className="h-8 m-2 lg:mx-10 my-3" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-3.svg" alt="Brand 3" />
+              <div className="flex justify-center items-center">
+                <img className="h-10 m-2 lg:mx-10 my-3" src="https://morphinfotech.com/wp-content/uploads/2023/08/logo-horizontal-light.png" alt="Brand 3" />
               </div>
-              <div className="flex justify-center">
+              {/* <div className="flex justify-center">
                 <img className="h-8 m-2 lg:mx-10 my-3" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-2.svg" alt="Brand 4" />
               </div>
               <div className="flex justify-center">
                 <img className="h-8 m-2 lg:mx-10 my-3" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-5.svg" alt="Brand 5" />
-              </div>
+              </div> */}
               {/* Add more logos as needed */}
             </div>
           </div>
@@ -457,19 +493,24 @@ function Home() {
         <div className="text-2xl font-bold">
           Let’s get in touch!
         </div>
-        <div className="text-base mt-1">Got questions? Our team is here to help. Contact us for quick and friendly support.</div>
+        <div className="text-base mt-1">Thank you for visiting.  Whether you have a question about our SEO audit services or need assistance with optimizing your website, we're here to help. Please feel free to reach out to us using the contact information below:
+        </div>
         <div className="flex lg:mt-10 mt-5 justify-between items-stretch flex-wrap-reverse lg:flex-nowrap">
 
-          <div className="flex flex-col w-full items-stretch mt-5">
-            <div className="flex"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+          <div className="flex flex-col w-full items-stretch mt-0">
+            {/* <div className="flex"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
             </svg>
               +91 7894561587
-            </div>
+            </div> */}
             <div className="flex mt-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+              {/* <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /> */}
             </svg>
-              abcxyzemail@mail.com
+            bloggearpost@gmail.com
+            <br />
+            155, Panchkula, Haryana
+            <br />
+            Business Hours: 09:00 AM - 06:00 PM IST
             </div>
             <div className="text-xl font-semibold mt-11">Connect with us</div>
             <div className="flex mt-1 justify-between w-28">

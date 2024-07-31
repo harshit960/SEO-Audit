@@ -156,6 +156,7 @@ app.get('/getReviews', async (req, res) => {
     }
 });
 app.post('/contact', async (req, res) => {
+    console.log(req.body);
     try {
         const { name, email, message } = req.body;
         const transporter = nodemailer.createTransport({

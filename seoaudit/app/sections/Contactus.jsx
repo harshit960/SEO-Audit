@@ -16,6 +16,27 @@ function Contactus() {
 
     const handleSubmit = () => {
         // Handle form submission here
+        const formData = {
+            name: fullName,
+            email: email,
+            message: 'Submited form' // Add the message value here
+        };
+
+        fetch(`${process.env.NEXT_PUBLIC_API_HOST}/contact`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle the response data here
+            alert("Submitted successfully");
+        })
+        .catch(error => {
+            // Handle any errors here
+        });
     };
 
     return (
