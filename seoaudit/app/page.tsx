@@ -80,78 +80,7 @@ function Home() {
 
   ];
 
-  const dummyContent = [
-    {
-      title: "Blog 1",
-      description: (
-        <>
-          <p>
-            Dolor minim irure ut Lorem proident. Ipsum do pariatur est ad ad
-            veniam in commodo id reprehenderit adipisicing. Proident duis
-            exercitation ad quis ex cupidatat cupidatat occaecat adipisicing.
-          </p>
-
-        </>
-      ),
-      badge: "React",
-      image:
-        "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      title: "Blog 2",
-      description: (
-        <>
-          <p>
-            Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
-            deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
-            non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
-
-          </p>
-        </>
-      ),
-      badge: "Changelog",
-      image:
-        "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-  ];
-  const projects = [
-    {
-      title: "Stripe",
-      description:
-        "A technology company that builds economic infrastructure for the internet.",
-      link: "https://stripe.com",
-    },
-    {
-      title: "Netflix",
-      description:
-        "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-      link: "https://netflix.com",
-    },
-    {
-      title: "Google",
-      description:
-        "A multinational technology company that specializes in Internet-related services and products.",
-      link: "https://google.com",
-    },
-    {
-      title: "Meta",
-      description:
-        "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-      link: "https://meta.com",
-    },
-    {
-      title: "Amazon",
-      description:
-        "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-      link: "https://amazon.com",
-    },
-    {
-      title: "Microsoft",
-      description:
-        "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-      link: "https://microsoft.com",
-    },
-  ];
+  
   const faq = [
     {
       que: "What is an SEO audit? ",
