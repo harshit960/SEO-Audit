@@ -25,7 +25,7 @@ import Pricing from './sections/Pricing';
 import Reviews from './sections/Reviews';
 import Contactus from './sections/Contactus';
 
-
+// got domain and gaccount
 function Home() {
   const items = [{
     quote: "Meta Title ",
