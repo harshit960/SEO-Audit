@@ -1,10 +1,6 @@
 // "use client"
 import React from 'react'
-// import { InfiniteMovingCards } from './components/ui/infinite-moving-cards'
-// import { MovingBorder } from './components/ui/moving-border'
-// import { Button } from "./components/ui/moving-border";
-// import { BackgroundBeams } from "./components/ui/background-beams";
-// import { ContainerScroll } from './components/ui/container-scroll-animation';
+
 import Image from 'next/image';
 // import { Spotlight } from './components/Spotlight';
 // import { MaskContainer } from './components/ui/svg-mask-effect';
