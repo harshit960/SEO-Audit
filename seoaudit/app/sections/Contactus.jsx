@@ -56,6 +56,13 @@ function Contactus() {
                     value={email}
                     onChange={handleEmailChange}
                 />
+                <textarea
+                    type="text"
+                    className="w-full p-2 lg:m-2 px-4 my-2 border-2 rounded-xl"
+                    placeholder="Message"
+                    value={email}
+                    onChange={handleEmailChange}
+                />
                 <div
                     className="text-white my-2 lg:m-2 hover:bg-[#2D2D2D] duration-200 bg-[#009379] w-32 p-2 rounded-xl text-center font-semibold"
                     onClick={handleSubmit}

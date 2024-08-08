@@ -6,6 +6,7 @@ import Footer from "../../seoaudit/app/Footer";
 import { ReactNode } from 'react';
 import { HeroHighlight } from "./components/ui/hero-highlight";
 import { OBProvider } from "./contexts/Result";
+import { Analytics } from "@vercel/analytics/react"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: any) {
       <body className={inter.className}>
         {/* <OBProvider> */}
           {children}
+          <Analytics />
           <Footer />
         {/* </OBProvider> */}
 
