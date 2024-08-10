@@ -20,7 +20,7 @@ import Blog from './sections/Blog';
 import Pricing from './sections/Pricing';
 import Reviews from './sections/Reviews';
 import Contactus from './sections/Contactus';
-
+// 8 points remaining
 // got domain and gaccount
 function Home() {
   const items = [{
