@@ -386,7 +386,7 @@ function Home() {
         </div>
         <div className="lg:w-3/5 mt-5 w-4/5">
 
-          {faq.map((item) => (
+          {faq.slice(0,3).map((item) => (
             <>
               <div className="mt-14">
 

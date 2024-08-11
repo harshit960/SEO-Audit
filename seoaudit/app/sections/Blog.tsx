@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import { fetchPosts } from '../blogs/cfservices';
 import { getImg } from '../blogs/page';
-
+import dayjs from 'dayjs'
 async function Blog() {
 
     const posts: any = await fetchPosts();
@@ -28,7 +28,7 @@ async function Blog() {
                                 </div>
 
                                 <div className="flex justify-between p-2">
-                                    <div className="text-sm">{post.fields.date && new Date(post.fields.date.toString()).toLocaleDateString()}</div>
+                                    <div className="text-sm">{post.fields.date && dayjs(post.fields.date.toString()).format('D MMMM  YYYY')}</div>
                                     <div className="text-sm">Author</div>
                                 </div>
                             </div>

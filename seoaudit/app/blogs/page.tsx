@@ -3,7 +3,7 @@ import Nav from '../Nav'
 import client from '../cfclient';
 import { fetchPosts } from './cfservices';
 import Link from 'next/link';
-
+import dayjs from 'dayjs';
 
 interface ContentElement {
   value: string | number | bigint | boolean | React.ReactElement | Iterable<React.ReactNode> | React.ReactPortal | null | undefined;
@@ -143,7 +143,7 @@ async function page() {
                   <img className="w-96 bg-gray-400 h-60 " src={await getImg(post)}></img>
                   <div className="flex-col flex p-6 py-8">
                     <div className="flex mt-2 justify-between">
-                      <div className="text-sm">{post.fields.date && new Date(post.fields.date.toString()).toLocaleDateString()}</div>
+                      <div className="text-sm">{post.fields.date && dayjs(post.fields.date.toString()).format("D MMMM YYYY")}</div>
                       <div className="text-sm">3 min read</div>
                       
                     </div>
