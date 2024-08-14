@@ -8,7 +8,7 @@ function page() {
         </div>
         
         <div className="my-20 text-lg mb-20">
-        Last updated: January 24, 2019
+        Last updated: January 24, 2024
 
 Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using the https://seositecheckup.com website (the "Service") operated by SEO Site Checkup LLC ("us", "we", or "our").
 
