@@ -4,7 +4,7 @@ function page() {
   return (
     <div className='mx-40'>
         <div className="text-center text-5xl font-bold mt-52">
-        Terms of se      rvice
+        Terms of service
         </div>
         
         <div className="my-20 text-lg mb-20">
