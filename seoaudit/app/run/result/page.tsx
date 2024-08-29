@@ -295,32 +295,32 @@ async function YourComponent() {
         setMetaRefreshData(performMetaRefreshTest(scrapeData?.htmlText, appendToFailed, appendToSuccess))
     }, [scrapeData]);
 
-    if (loading) {
-        const [counter, setCounter] = React.useState(60);
+    // const [counter, setCounter] = React.useState(60);
 
-        useEffect(() => {
-            counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
+    // useEffect(() => {
+    //     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
 
-        }, [counter]);
-        return (
-            <>
-                <Suspense fallback={<div>
+    // }, [counter]);
+    // if (loading) {
+    //     return (
+    //         <>
+    //             <Suspense fallback={<div>
 
 
-                    <div className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white">
-                        <div className="text-5xl font-bold mb-4 animate-pulse">Loading... 75% {counter}</div>
-                        <div className="w-3/4 bg-gray-700 rounded-full h-4">
-                            <div className="bg-blue-500 h-4 rounded-full" style={{ width: "75%" }}></div>
-                        </div>
-                        <div className="mt-8 text-center text-lg italic">
-                            "Patience is the key to success."
-                        </div>
-                    </div>
-                </div>}>
-                </Suspense>
-            </>
-        )
-    }
+    //                 <div className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white">
+    //                     <div className="text-5xl font-bold mb-4 animate-pulse">Loading... 75%</div>
+    //                     <div className="w-3/4 bg-gray-700 rounded-full h-4">
+    //                         <div className="bg-blue-500 h-4 rounded-full" style={{ width: "75%" }}></div>
+    //                     </div>
+    //                     <div className="mt-8 text-center text-lg italic">
+    //                         "Patience is the key to success."
+    //                     </div>
+    //                 </div>
+    //             </div>}>
+    //             </Suspense>
+    //         </>
+    //     )
+    // }
     return (
         <>
             <Suspense fallback={<div></div>}>
