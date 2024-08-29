@@ -469,8 +469,16 @@ async function YourComponent() {
                             </button>
                         </div>
                         <div className="w-4/5 flex mt-4 flex-wrap justify-between">
+                            <div className=" flex flex-col rounded-lg bg-white  mr-4">
+                                <div className="text-xl font-bold">
+                                    Screenshot
+                                </div>
+                                <div className=" p-4  flex items-center justify-center">
+                                    <img src={getScreenshot(psiData)} alt="" srcSet="" />
+                                </div>
 
-                            <div className="grow mr-4 rounded-lg flex flex-col bg-white justify-around p-10  text-[#2D2D2D] flex ">
+                            </div>
+                            <div className="grow  rounded-lg flex flex-col bg-white justify-around p-10  text-[#2D2D2D] flex ">
                                 <div className="flex items-center justify-around ">
 
                                     <div className=" flex flex-col justify-center mr-2 bg-white  rounded-lg  items-center ">
@@ -518,12 +526,7 @@ async function YourComponent() {
                                 </div>
 
                             </div>
-                            <div className=" flex rounded-lg bg-white  ">
-                                <div className=" p-4  flex items-center justify-center">
-                                    <img src={getScreenshot(psiData)} alt="" srcSet="" />
-                                </div>
 
-                            </div>
                         </div>
 
                         <div className="flex w-4/5 justify-between mt-10 text-[#2D2D2D] overflow-x-hidden">
@@ -2329,10 +2332,10 @@ async function YourComponent() {
                     </div> */}
                     </div>
                 </div>
-         </Suspense >
-            </>
+            </Suspense >
+        </>
 
-        )
+    )
 }
 
 export default page
