@@ -18,11 +18,14 @@ export const metadata = {
 export default function RootLayout({ children }: any) {
   return (
     <html lang="en">
+      <head>
+        <meta name="robots" content="noindex, nofollow" />
+      </head>
       <body className={inter.className}>
         {/* <OBProvider> */}
-          {children}
-          <Analytics />
-          <Footer />
+        {children}
+        <Analytics />
+        <Footer />
         {/* </OBProvider> */}
 
 
