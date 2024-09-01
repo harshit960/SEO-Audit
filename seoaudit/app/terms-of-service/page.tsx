@@ -1,7 +1,10 @@
 import React from 'react'
+import Nav from '../Nav'
 
 function page() {
   return (
+    <>
+    <Nav/>
     <div className='mx-40'>
         <div className="text-center text-5xl font-bold mt-52">
         Terms of service
@@ -114,6 +117,7 @@ Contact Us
 If you have any questions about these Terms, please contact us at information@seositecheckup.com.
         </div>
     </div>
+    </>
   )
 }
 

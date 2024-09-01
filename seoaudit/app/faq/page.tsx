@@ -1,7 +1,10 @@
 import React from 'react'
+import Nav from '../Nav'
 
 function page() {
   return (
+    <>
+    <Nav />
     <div className='mx-40'>
         <div className="text-center text-5xl font-bold mt-52">
         Frequently Asked Questions
@@ -13,6 +16,7 @@ function page() {
         Just enter the URL you want analyzed, and our site will provide easy to understand recommendations so that your site will load faster, rank higher for your search terms, and get more visitors.
         </div>
     </div>
+    </>
   )
 }
 

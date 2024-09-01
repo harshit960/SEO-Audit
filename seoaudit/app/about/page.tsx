@@ -13,7 +13,6 @@ function page() {
           By leveraging our extensive industry knowledge, Auxdit simplifies complex auditing tasks, helping you identify and rectify issues that could impact your site’s search engine rankings. Our goal is to empower SEO professionals with the resources needed to optimize websites effectively and achieve better results in a competitive digital landscape.
 <br />
 <br />
-          About us page template should be like this - https://www.seoptimer.com/about/
 <br />
 <br />
           Team members data - Devendar, Manvik, Amit, Mahipal Singh
