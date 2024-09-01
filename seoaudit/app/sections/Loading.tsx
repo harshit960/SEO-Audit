@@ -2,12 +2,21 @@
 import React, { useEffect, useState } from "react";
 
 const quotes = [
-  "Patience is the key to success.",
-  "Good things come to those who wait.",
-  "Every moment is a fresh beginning.",
-  "The best way to predict the future is to create it.",
-  "Believe in the process.",
-  "Success is the sum of small efforts, repeated day in and day out."
+  "Good SEO is like a fine wine, it gets better with age.",
+  "Your website is your 24/7 salesperson; make sure it’s optimized to convert.",
+  "75% of users never scroll past the first page of search results.",
+  "Content is king, but context is queen.",
+  "A website without SEO is like a car without gas.",
+  "On average, it takes 3-4 months to see significant SEO improvements.",
+  "The top 5 search results get 75% of the clicks.",
+  "Website speed is a ranking factor; a slow website can cost you traffic and conversions.",
+  "Mobile-friendliness is critical: Over 50% of web traffic comes from mobile devices.",
+  "Organic search drives 53% of all website traffic.",
+  "SEO is not about getting traffic; it’s about getting the right kind of traffic.",
+  "Every second delay in page load time can reduce conversion rates by 7%.",
+  "93% of online experiences begin with a search engine.",
+  "Quality backlinks are still one of the top ranking factors in SEO.",
+  "Voice search is expected to be 50% of all searches by 2025."
 ];
 
 const Loading: React.FC = () => {

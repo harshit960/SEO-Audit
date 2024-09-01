@@ -304,7 +304,9 @@ async function YourComponent() {
     if (loading) {
         return (
             <>
-                <Suspense fallback={<div><Loading /></div>}>
+                <Suspense fallback={<div>
+                    {/* <Loading /> */}
+                    </div>}>
                     <Loading />
                 </Suspense>
             </>
@@ -312,7 +314,7 @@ async function YourComponent() {
     }
     return (
         <>
-            <Suspense fallback={<div></div>}>
+            <Suspense fallback={<div>tettttttt</div>}>
                 <Nav />
                 <div className="hidden fixed  flex-col top-0 left-0 min-w-80 bg-[#F8F9FF] h-full border-r">
                     <div className="flex items-center justify-center h-14 border-b p-10 font-semibold">
@@ -458,7 +460,7 @@ async function YourComponent() {
                             </button>
                         </div>
                         <div className="w-4/5 flex mt-4 flex-wrap justify-between">
-                            <div className=" flex flex-col rounded-lg bg-white  mr-4">
+                            <div className=" flex flex-col rounded-lg bg-white  mr-4 p-4">
                                 <div className="text-xl font-bold">
                                     Screenshot
                                 </div>
