@@ -72,7 +72,7 @@ import Nav from "@/app/Nav";
 import { getScreenshot } from "./test/getScreenshot";
 import { processPSIData } from "./netreq";
 import { useResultContext } from "@/app/contexts/Result";
-
+import Loading from "@/app/sections/Loading";
 
 function page() {
     return (
@@ -154,9 +154,9 @@ async function YourComponent() {
 
     useEffect(() => {
 
-        console.log("fuckk", scrapeData);
+        // console.log("fuckk", scrapeData);
         if (!scrapeData) return;
-        console.log("fuckk2", scrapeData);
+        // console.log("fuckk2", scrapeData);
 
         const fetchData = async () => {
 
@@ -301,26 +301,15 @@ async function YourComponent() {
     //     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
 
     // }, [counter]);
-    // if (loading) {
-    //     return (
-    //         <>
-    //             <Suspense fallback={<div>
-
-
-    //                 <div className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white">
-    //                     <div className="text-5xl font-bold mb-4 animate-pulse">Loading... 75%</div>
-    //                     <div className="w-3/4 bg-gray-700 rounded-full h-4">
-    //                         <div className="bg-blue-500 h-4 rounded-full" style={{ width: "75%" }}></div>
-    //                     </div>
-    //                     <div className="mt-8 text-center text-lg italic">
-    //                         "Patience is the key to success."
-    //                     </div>
-    //                 </div>
-    //             </div>}>
-    //             </Suspense>
-    //         </>
-    //     )
-    // }
+    if (loading) {
+        return (
+            <>
+                <Suspense fallback={<div><Loading /></div>}>
+                    <Loading />
+                </Suspense>
+            </>
+        )
+    }
     return (
         <>
             <Suspense fallback={<div></div>}>
