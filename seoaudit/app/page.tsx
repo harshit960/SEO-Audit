@@ -76,7 +76,7 @@ function Home() {
 
   ];
 
-  
+
   const faq = [
     {
       que: "What is an SEO audit? ",
@@ -149,9 +149,12 @@ function Home() {
 
         <div className="lg:text-6xl text-4xl flex items-center justify-center flex-col w-full">
           <div className="text-[#2D2D2D] font-black lg:text-center">
-            SEO Audit <span className='text-[#F8D57E]'> Checklist </span> and
-            <br />
-            Reporting Tool
+            <h1>
+
+              SEO Audit <span className='text-[#F8D57E]'> Checklist </span> and
+              <br />
+              Reporting Tool
+            </h1>
           </div>
           <Animations src="https://lottie.host/9be912a0-8874-4453-9149-881b6eb675ad/mEIIPGP58H.json" className="absolute bottom-16 right-0 w-1/2  -z-10 overflow-hidden" />
 
@@ -259,8 +262,8 @@ function Home() {
         </div>
 
       </div>
-      <Link href="tools" className="bg-[#2D2D2D] w-32 rounded p-3 hover:bg-[#009379] hover:shadow-2xl hover:shadow-[#c9d2fc] duration-200 text-white text-center font-semibold mt-8 px-8">
-        View All
+      <Link href="tools" className="bg-[#2D2D2D] whitespace-nowrap  rounded p-3 hover:bg-[#009379] hover:shadow-2xl hover:shadow-[#c9d2fc] duration-200 text-white text-center font-semibold mt-8 px-8">
+        Explore More Tools
       </Link>
     </div>
     <div className="">
@@ -386,7 +389,7 @@ function Home() {
         </div>
         <div className="lg:w-3/5 mt-5 w-4/5">
 
-          {faq.slice(0,3).map((item) => (
+          {faq.slice(0, 3).map((item) => (
             <>
               <div className="mt-14">
 
@@ -431,11 +434,11 @@ function Home() {
             <div className="flex mt-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
               {/* <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /> */}
             </svg>
-            bloggearpost@gmail.com
-            <br />
-            155, Panchkula, Haryana
-            <br />
-            Business Hours: 09:00 AM - 06:00 PM IST
+              bloggearpost@gmail.com
+              <br />
+              155, Panchkula, Haryana
+              <br />
+              Business Hours: 09:00 AM - 06:00 PM IST
             </div>
             <div className="text-xl font-semibold mt-11">Connect with us</div>
             <div className="flex mt-1 justify-between w-28">

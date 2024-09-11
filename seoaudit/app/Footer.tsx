@@ -39,9 +39,8 @@ export default function Footer() {
       </div>
       <div className="border-b w-full border-[#4E4D4D]">
       </div>
-      <div className="flex flex-wrap justify-between px-5 py-2 lg:px-20 font-semibold opacity-40">
-        <div className="text-sm whitespace-nowrap">Privacy Policy</div>
-        <div className="text-sm whitespace-nowrap">© Copyright All rights reserved</div>
+      <div className="flex flex-wrap justify-center px-5 py-2 lg:px-20 font-semibold opacity-40">
+        <div className="text-sm whitespace-nowrap">©Copyright 2024</div>
       </div>
     </div>
   )
