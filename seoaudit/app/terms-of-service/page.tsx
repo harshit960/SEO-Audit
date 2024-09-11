@@ -9,7 +9,7 @@ function page() {
         <div className="text-center text-5xl font-bold mt-52">
         Terms of service
         </div>
-        
+    
         <div className="my-20 text-lg mb-20">
         Last updated: January 24, 2024
 

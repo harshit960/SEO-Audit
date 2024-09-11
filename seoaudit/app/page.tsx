@@ -350,7 +350,7 @@ function Home() {
         </div>
       </div>
     </div>
-    <Pricing />
+    {/* <Pricing /> */}
     <Reviews />
     <Blog />
     <div className="flex lg:p-20 p-5 mt-20">
