@@ -9,7 +9,7 @@ export default function Footer() {
 
         <div className="flex flex-col lg:basis-1/2">
 
-          <div className="flex   my-2 font-black text-3xl">
+          <div className="flex my-2 font-black text-3xl">
             LOGO
           </div>
           <div className="text-sm opacity-60 my-1">
