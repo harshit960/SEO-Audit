@@ -523,29 +523,31 @@ function page() {
     return (
         <>
             <Nav />
+            <div className="flex items-center justify-center flex-col">
+
+            
             <div className='h-80 mt-40 w-full flex items-center justify-center flex-col'>
                 <div className="text-5xl font-bold ">
-                    Some of our SEO Tools
+                    Explore Our SEO Tools
                 </div>
                 <div className="text-lg font-medium mt-4">
-                    Want all the tools in one place?
-                    Start your Free Trial
+                    Looking for all the essential tools in one place? Start your free trial today!
                 </div>
             </div>
-            <div className="flex flex-wrap my-20 items-center justify-center">
+            <div className="flex flex-col w-4/5 my-20 items-center justify-center">
                 {test.map((item) => (
                     <Link href={`tools/test/?test=${item.title}`}>
 
-                        <div className="h-52 w-80 m-4 rounded flex flex-col items-center justify-center bg-slate-100 p-2 ">
+                        <div className="h-52 w-full m-4 p-8 rounded flex flex-col items-center justify-center bg-slate-100 ">
                             <div className="icon"></div>
-                            <div className="text-lg font-semibold">{item.title}</div>
-                            <div className="font-light line-clamp-4 text-center	">{item.desc}</div>
+                            <div className="text-lg font-semibold self-start">{item.title}</div>
+                            <div className="font-light line-clamp-4	">{item.desc}</div>
                         </div>
                     </Link>
                 ))}
 
             </div>
-
+            </div>
         </>
     )
 }
