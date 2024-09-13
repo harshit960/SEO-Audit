@@ -206,7 +206,7 @@ function Home() {
     </div>
     <div className="w-full mt-20 lg:mt-0 flex flex-col justify-center items-center ">
       <div className="lg:text-3xl text-3xl text-black font-black text-center">
-        Tools Available
+      Free SEO Audit Tools
       </div>
       <div className="flex justify-center mt-20  flex-wrap  ">
         <div className="w-80 h-96 rounded-2xl m-5 border border-[#c9d2fc] shadow-2xl hover:shadow-xl hover:shadow-[#c9d2fc] duration-150 shadow-[#c9d2fc] flex flex-col items-center justify-center bg-neutral-50">
