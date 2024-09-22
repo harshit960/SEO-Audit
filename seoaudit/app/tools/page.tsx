@@ -2,6 +2,10 @@ import Link from 'next/link';
 import React from 'react'
 import Nav from '../Nav';
 
+const slugify = (text: string) => {
+    return text.toLowerCase().replace(/\s+/g, '-');
+  };
+  
 function page() {
     const test = [
 
@@ -536,7 +540,7 @@ function page() {
             </div>
             <div className="flex flex-col w-4/5 my-20 items-center justify-center">
                 {test.map((item) => (
-                    <Link href={`tools/test/?test=${item.title}`}>
+                    <Link href={`/tools/${item.index}/${slugify(item.title)}`}>
 
                         <div className="h-52 w-full m-4 p-8 rounded flex flex-col items-center justify-center bg-slate-100 ">
                             <div className="icon"></div>
@@ -545,7 +549,6 @@ function page() {
                         </div>
                     </Link>
                 ))}
-{/* IDK */}
             </div>
             </div>
         </>

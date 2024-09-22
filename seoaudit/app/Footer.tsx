@@ -9,8 +9,10 @@ export default function Footer() {
 
         <div className="flex flex-col lg:basis-1/2">
 
-          <div className="flex my-2 font-black text-3xl">
-            LOGO
+          <div className="flex my-2 font-black text-3xl w-40">
+            <Link href="/">
+              <img src="/SEOlogoBW.png" alt="" srcSet="" />
+            </Link>
           </div>
           <div className="text-sm opacity-60 my-1">
             Search Engine Optimization
