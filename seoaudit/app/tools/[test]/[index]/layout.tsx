@@ -13,7 +13,7 @@ export default function RootLayout({ children }: any) {
     return (
         <>
             <Nav />
-            <div className="mt-20">
+            <div className="">
 
                 {children}
             </div>
