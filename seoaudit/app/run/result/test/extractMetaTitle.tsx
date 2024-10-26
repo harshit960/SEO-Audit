@@ -1,4 +1,4 @@
-export function extractMetaTitle(data: any, appendToFailed:any, appendToSuccess:any): { Text: string; Length: number; Result: string; Importance: string ;Description: string,Link :string } {
+export function extractMetaTitle(data: any, appendToFailed: any, appendToSuccess: any): { Text: string; Length: number; Result: string; Importance: string; Description: string, Link: string } {
 
     const titleAudit = data?.title ?? { title: 'No title found' };
     // console.log(titleAudit);
@@ -19,6 +19,6 @@ export function extractMetaTitle(data: any, appendToFailed:any, appendToSuccess:
         Result: resultType,
         Importance: importance,
         Description: description,
-        Link:link
+        Link: link
     };
 }
