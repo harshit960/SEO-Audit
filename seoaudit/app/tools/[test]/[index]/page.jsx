@@ -110,7 +110,7 @@ export default function TestPage({ params }) {
       // Fetch the test result data
       // const data = extractMetaTitle(scrapeData, appendToSuccess, appendToFailed);
       // alert(test);
-      const data = getData(scrapeData, parseInt(test));
+      const data = getData(scrapeData, parseInt(test), url);
       setTestResult(data);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -199,7 +199,7 @@ const appendToFailed = (message) => {
   console.log(`Failed: ${message}`);
   // Additional failure handling logic (e.g., storing in an array)
 };
-const getData = (data, index) => {
+const getData = (data, index, url) => {
   switch (index) {
     case 1:
       return extractMetaTitle(data, appendToSuccess, appendToFailed);
@@ -316,7 +316,7 @@ const getData = (data, index) => {
     case 57:
       return performServerSignatureTest(data, appendToSuccess, appendToFailed);
     case 58:
-      return performDirectoryBrowsingTest(data, appendToSuccess, appendToFailed);
+      return performDirectoryBrowsingTest(url);
     case 59:
       return performPlaintextEmailsTest(data, appendToSuccess, appendToFailed);
     case 60:
