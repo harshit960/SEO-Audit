@@ -157,7 +157,7 @@ async function YourComponent() {
         // console.log("fuckk", scrapeData);
         if (!scrapeData) return;
         // console.log("fuckk2", scrapeData);
-
+        
         const fetchData = async () => {
 
             const contentJson = {
