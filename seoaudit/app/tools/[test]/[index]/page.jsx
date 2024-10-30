@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { tests } from '../../page';
+import { jsonData as tests } from '../../../data/data';
 
 
 // test imports
