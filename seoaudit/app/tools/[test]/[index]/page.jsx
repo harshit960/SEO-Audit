@@ -71,6 +71,7 @@ import { performTtfbTest } from '@/app/run/result/test/performTtfbTest';
 import { performUnsafeCrossOriginLinksTest } from '@/app/run/result/test/performUnsafeCrossOriginLinksTest';
 import { performUrlCanonicalizationTest } from '@/app/run/result/test/performUrlCanonicalizationTest';
 import { performUrlRedirectsTest } from '@/app/run/result/test/performUrlRedirectsTest';
+import Loading from '@/app/sections/Loading';
 // ..............................................
 
 export default function TestPage({ params }) {
@@ -86,6 +87,7 @@ export default function TestPage({ params }) {
 
   const fetchData = async (url) => {
     try {
+      setLoading(true);
       console.log(process.env.NEXT_PUBLIC_API_HOST);
 
       const [psiRes, scrapeRes] = await Promise.all([
@@ -95,8 +97,9 @@ export default function TestPage({ params }) {
 
       const [psiData, scrapeData] = await Promise.all([
         psiRes.json(),
-        scrapeRes.json()
+        scrapeRes.json(),
       ]);
+      setLoading(false);
 
       console.log(psiData);
       console.log(scrapeData);
@@ -125,7 +128,12 @@ export default function TestPage({ params }) {
   // });
 
   if (loading) {
-    return <div>Loading...{test}</div>;
+    return <>
+    <div className="z-50 fixed w-full h-screen top-0 left-0">
+
+    <Loading />
+    </div>
+    </>;
   }
 
   // if (!testData) {
