@@ -115,7 +115,7 @@ function Home() {
           />
         </div>
         <div className="my-2 mt-5 text-black text-base lg:text-xl">
-          Get a Website Audit and Report Boost your SEO Score and Driver more Organic Traffic to your Website.
+        Get a comprehensive website audit to boost your SEO score and drive more organic traffic.
         </div>
         <div className="flex items-center lg:justify-center flex-wrap mt-5 w-full drop-shadow-lg	">
 
@@ -164,52 +164,51 @@ function Home() {
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
             <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
           </svg>
-          <div className="text-2xl p-5 text-[#2D2D2D] font-semibold">SEO Friendly
+          <div className="text-2xl p-5 text-[#2D2D2D] font-semibold">Meta Title
           </div>
           <div className="text-base text-center px-10">
-            No need to worry about screen size. Anima's Landing Page UI Kit adapts to any screen size, from desktop to mobile.
+          A meta title test helps evaluate the effectiveness of your page titles in improving SEO and click-through rates on search engines.
           </div>
-          <div className="text-[#009379] flex font-semibold p-4 items-center justify-center">
-            Learn More
+          <Link href="/tools/1/meta-title-test" className="text-[#009379] flex font-semibold p-4 items-center justify-center">
+            Try Now
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mx-1">
               <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
             </svg>
 
-          </div>
+          </Link>
         </div>
         <div className="w-80 border m-5 border-[#c9d2fc] bg-neutral-50 h-96 rounded-2xl shadow-2xl hover:shadow-xl hover:shadow-[#c9d2fc] duration-150 shadow-[#c9d2fc] flex flex-col items-center justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
             <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
           </svg>
-          <div className="text-2xl p-5 text-[#2D2D2D] font-semibold">SEO Friendly
+          <div className="text-2xl p-5 text-[#2D2D2D] font-semibold">Meta Description
           </div>
           <div className="text-base text-center px-10">
-            No need to worry about screen size. Anima's Landing Page UI Kit adapts to any screen size, from desktop to mobile.
-          </div>
-          <div className="text-[#009379] flex font-semibold p-4 items-center justify-center">
-            Learn More
+          A meta description is a short summary of a page content, designed to attract users in search results and boost click-through rates.          </div>
+          <Link href="/tools/2/meta-description-test" className="text-[#009379] flex font-semibold p-4 items-center justify-center">
+            Try Now
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mx-1">
               <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
             </svg>
 
-          </div>
+          </Link>
         </div>
         <div className="w-80 border m-5 border-[#c9d2fc] bg-neutral-50 h-96 rounded-2xl shadow-2xl hover:shadow-xl hover:shadow-[#c9d2fc] duration-150 shadow-[#c9d2fc] flex flex-col items-center justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
             <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
           </svg>
-          <div className="text-2xl p-5 text-[#2D2D2D] font-semibold">SEO Friendly
+          <div className="text-2xl p-5 text-[#2D2D2D] font-semibold">Headings
           </div>
           <div className="text-base text-center px-10">
-            No need to worry about screen size. Anima's Landing Page UI Kit adapts to any screen size, from desktop to mobile.
+          Heading tags are HTML elements used to structure content on a webpage. They help organize text, improve SEO, and enhance readability.
           </div>
-          <div className="text-[#009379] flex font-semibold p-4 items-center justify-center">
-            Learn More
+          <Link href="/tools/10/heading-tags-test" className="text-[#009379] flex font-semibold p-4 items-center justify-center">
+            Try Now
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mx-1">
               <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
             </svg>
 
-          </div>
+          </Link>
         </div>
 
       </div>
@@ -220,40 +219,36 @@ function Home() {
     <div className="">
 
       <div className="w-full mt-40">
-        <div className="text-3xl text-center font-black p-5">Our Metrics Tell the Story</div>
+        <div className="text-3xl text-center font-black p-5">Our Impact in Numbers: Proven SEO Success</div>
         <div className="text-base text-center m-4">Our metrics component gives you the inside scoop on your success and helps you stay on top of your game in style.</div>
       </div>
       <div className="flex justify-center flex-wrap mt-10">
         <div className="w-60 h-28 m-5 border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
-          <div className="text-3xl font-bold">10k+</div>
-          <div className="text-base">Website Analysed</div>
+          <div className="text-3xl font-bold">500+</div>
+          <div className="text-base">Websites Analyzed          </div>
         </div>
         <div className="w-60 h-28 m-5 border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
-          <div className="text-3xl font-bold">10k+</div>
-          <div className="text-base">Website Analysed</div>
+          <div className="text-3xl font-bold">15+</div>
+          <div className="text-base">Industries Served</div>
         </div>
         <div className="w-60 h-28 m-5  border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
-          <div className="text-3xl font-bold">10k+</div>
-          <div className="text-base">Website Analysed</div>
+          <div className="text-3xl font-bold">85%</div>
+          <div className="text-base">Client Retention Rate</div>
         </div>
         <div className="w-60 h-28 m-5 border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
-          <div className="text-3xl font-bold">10k+</div>
-          <div className="text-base">Website Analysed</div>
+          <div className="text-3xl font-bold">75%</div>
+          <div className="text-base">Average Improvement in SEO Scores
+          </div>
         </div>
       </div>
 
     </div>
     <div className="w-full flex bg-gray-100 mt-32 lg:p-20 p-5 py-12 flex-wrap">
       <div className="flex flex-col lg:w-1/2 ">
-        <div className="text-4xl font-bold">Embeddable Audit Tool</div>
+        <div className="text-4xl font-bold">Video Guide: SEO Audit Tool</div>
         <div className="font-light text-xl leading-10 mt-10 pr-10">
-          Generate more leads straight from your website with your own Embedded SEO Audit Tool. Simply embed a simple Audit Form that matches your website’s styling and colors.
+        Discover how you can use SEOvew effectively by exploring our detailed video tutorial. Learn which metrics you can track, analyze and implement actionable insights to improve your website speed and overall performance. From identifying SEO issues to improving overall organic traffic, this video will help us to understand how efficiently you can optimize your website using our tool.
 
-          Present customers a beautiful branded audit that inspires action.
-
-          Get notified of new leads and their details straight to your mailbox.
-
-          Send your leads and their reports straight to any other CRM, Mail Tool like MailChimp, Active Campaign and Salesforce.
         </div>
       </div>
       <div className="grow mt-10 lg:mt-0">
@@ -265,16 +260,16 @@ function Home() {
     <div className="flex w-full lg:h-[80vh] flex-wrap justify-center   mt-10 items-center">
       <div className="lg:w-1/3 p-10 lg:p-5">
         <div className="lg:text-5xl text-3xl font-bold leading-20	">
-          Comprehensive Website Audit
+        360 SEO Audit Tool
+
         </div>
         <div className="text-xl py-6 leading-10 font-light		">
-          Search Engines rely on many factors to rank a website. SEOptimer is a Website SEO Checker which reviews these and more to help identify problems that could be holding your site back from it’s potential.
+        Introducing SEOvew 360 SEO Audit Tool, designed to provide a comprehensive analysis of your website's performance. SEOvew SEO tool evaluates key aspects such as technical SEO, on-page optimization, keyword effectiveness, and site speed, giving you a complete view of your online presence. With detailed reports and actionable insights, you can identify critical issues and opportunities for improvement.
 
-          Additionally we provide a clear, actionable, prioritised list of recommendations to help improve.
         </div>
-        <div className="text-white hover:bg-[#2D2D2D] duration-200 bg-[#009379] w-32 p-2 rounded text-center font-semibold">
-          Learn More
-        </div>
+        <Link href="/tools" className="text-white whitespace-nowrap hover:bg-[#2D2D2D] duration-200 bg-[#009379] w-32 p-2 rounded text-center font-semibold">
+        Explore More Tools
+                </Link>
       </div>
       <div className="lg:w-1/3">
         <Animations
@@ -292,16 +287,15 @@ function Home() {
       </div>
       <div className="lg:w-1/3 lg:mx-10  p-10 lg:p-5">
         <div className="lg:text-5xl text-3xl font-bold  leading-20	">
-          Comprehensive Website Audit
+        Download Your Report
         </div>
         <div className="text-xl py-6  leading-10 font-light		">
-          Search Engines rely on many factors to rank a website. SEOptimer is a Website SEO Checker which reviews these and more to help identify problems that could be holding your site back from it’s potential.
+        Get your comprehensive SEO audit report instantly! Simply click the download button to receive your website SEO Audit report, which includes a detailed analysis of your website’s performance. This report highlights key findings, actionable recommendations, and important metrics to help you enhance your SEO strategy. 
 
-          Additionally we provide a clear, actionable, prioritised list of recommendations to help improve.
         </div>
-        <div className="text-white hover:bg-[#2D2D2D] duration-200 bg-[#009379] w-32 p-2 rounded text-center font-semibold">
+        <Link href="run" className="text-white hover:bg-[#2D2D2D] duration-200 bg-[#009379] w-32 p-2 rounded text-center font-semibold">
           Learn More
-        </div>
+        </Link>
       </div>
     </div>
     {/* <Pricing /> */}
