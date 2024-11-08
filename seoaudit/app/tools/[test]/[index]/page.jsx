@@ -111,6 +111,7 @@ export default function TestPage({ params }) {
       // const data = extractMetaTitle(scrapeData, appendToSuccess, appendToFailed);
       // alert(test);
       const data = getData(scrapeData, parseInt(test), url);
+      console.log(url);
       setTestResult(data);
     } catch (error) {
       console.error('Error fetching data:', error);
