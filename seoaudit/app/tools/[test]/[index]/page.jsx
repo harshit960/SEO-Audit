@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import { jsonData as tests } from '../../../data/data';
-
-
 // test imports
 import { extractBrokenLinksData } from '@/app/run/result/test/extractBrokenLinksData';
 import { extractDeprecatedHtmlTagsData } from '@/app/run/result/test/extractDeprecatedHtmlTagsData';
@@ -73,6 +71,7 @@ import { performTtfbTest } from '@/app/run/result/test/performTtfbTest';
 import { performUnsafeCrossOriginLinksTest } from '@/app/run/result/test/performUnsafeCrossOriginLinksTest';
 import { performUrlCanonicalizationTest } from '@/app/run/result/test/performUrlCanonicalizationTest';
 import { performUrlRedirectsTest } from '@/app/run/result/test/performUrlRedirectsTest';
+import Loading from '@/app/sections/Loading';
 // ..............................................
 
 export default function TestPage({ params }) {
@@ -83,23 +82,24 @@ export default function TestPage({ params }) {
   const [loading, setLoading] = useState(false);
   const [url, seturl] = useState('');
   const [MetaDesc, setMetaDesc] = useState({});
-  // alert(test);
   const [testTitle, setTestTitle] = useState(index);
   const [testResult, setTestResult] = useState({});
 
-    const fetchData = async (url) => {
-        try {
-            console.log(process.env.NEXT_PUBLIC_API_HOST);
+  const fetchData = async (url) => {
+    try {
+      setLoading(true);
+      console.log(process.env.NEXT_PUBLIC_API_HOST);
 
-            const [psiRes, scrapeRes] = await Promise.all([
-                fetch(`${process.env.NEXT_PUBLIC_API_HOST}/psi?url=${encodeURIComponent(url)}`),
-                fetch(`${process.env.NEXT_PUBLIC_API_HOST}/scrape?url=${encodeURIComponent(url)}`)
-            ]);
+      const [psiRes, scrapeRes] = await Promise.all([
+        fetch(`${process.env.NEXT_PUBLIC_API_HOST}/psi?url=${encodeURIComponent(url)}`),
+        fetch(`${process.env.NEXT_PUBLIC_API_HOST}/scrape?url=${encodeURIComponent(url)}`)
+      ]);
 
       const [psiData, scrapeData] = await Promise.all([
         psiRes.json(),
-        scrapeRes.json()
+        scrapeRes.json(),
       ]);
+      setLoading(false);
 
       console.log(psiData);
       console.log(scrapeData);
@@ -120,41 +120,46 @@ export default function TestPage({ params }) {
 
 
   // Fetch data on the client side
-  useEffect(() => {
-    fetchData(test);
-  }, [test]);
+  // useEffect(() => {
+  //   fetchData(test);
+  // }, [test]);
 
   // useEffect(()=>{
   //   alert(extractMetaTitle(test));
   // });
 
   if (loading) {
-    return <div>Loading...{test}</div>;
+    return <>
+    <div className="z-50 fixed w-full h-screen top-0 left-0">
+
+    <Loading />
+    </div>
+    </>;
   }
 
-    // if (!testData) {
-    //   return <div>Test not found</div>;
-    // }
+  // if (!testData) {
+  //   return <div>Test not found</div>;
+  // }
 
-    return (
-        <div className='flex flex-col w-full items-center min-h-screen justify-center p-20 space-y-10'>
-            <div className="text-3xl font-bold">
+  return (
+    <div className='flex flex-col w-full items-center min-h-screen justify-center p-20 space-y-10'>
+      <div className="text-3xl font-bold">
 
-                {tests[test - 1].title}
-            </div>
-            <div className="text-md text-center w-1/2">
-                {tests[test - 1].desc}
+        {tests[test - 1].title}
+      </div>
+      <div className="text-md text-center w-1/2">
+        {tests[test - 1].desc}
 
-            </div>
+      </div>
 
-            <div className="flex">
+      <div className="flex">
 
-                <input type="text" onChange={(e) => seturl(e.target.value)} value={url} className='border w-96 p-4' placeholder='Url' />
-                <button onClick={() => fetchData(url)} className='bg-[#009379] text-white p-4'>Run Test</button>
-            </ div>
-            <div className="flex h-40 w-full">
-                <div className="bg-slate-100 flex mx-2 my-1 rounded items-center w-full  p-4 px-2">
-                    <div className="mx-4">
+        <input type="text" onChange={(e) => seturl(e.target.value)} value={url} className='border w-96 p-4' placeholder='Url' />
+        <button onClick={() => fetchData(url)} className='bg-[#009379] text-white p-4'>Run Test</button>
+      </ div>
+      <div className="flex h-40 w-full">
+        <div className="bg-slate-100 flex mx-2 my-1 rounded items-center w-full  p-4 px-2">
+          <div className="mx-4">
 
             {MetaDesc.Result == "Success" ?
               <div className="text-sm">
@@ -184,12 +189,12 @@ export default function TestPage({ params }) {
               <div className="text-sm">{MetaDesc.Length}</div>
               <a href={MetaDesc.Link} className="text-sm">Learn More</a>
 
-                        </div>
-                    </div>
-                </div>
             </div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 const appendToSuccess = (message) => {
   console.log(`Success: ${message}`);
