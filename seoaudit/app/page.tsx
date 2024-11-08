@@ -21,6 +21,7 @@ import Blog from './sections/Blog';
 import Pricing from './sections/Pricing';
 import Reviews from './sections/Reviews';
 import Contactus from './sections/Contactus';
+import digiron from '../public/digiron.png';
 // 8 points remaining
 // got domain and gaccount
 function Home() {
@@ -115,7 +116,7 @@ function Home() {
           />
         </div>
         <div className="my-2 mt-5 text-black text-base lg:text-xl">
-        Get a comprehensive website audit to boost your SEO score and drive more organic traffic.
+          Get a comprehensive website audit to boost your SEO score and drive more organic traffic.
         </div>
         <div className="flex items-center lg:justify-center flex-wrap mt-5 w-full drop-shadow-lg	">
 
@@ -138,10 +139,10 @@ function Home() {
                 <img className="h-14 m-2 lg:mx-10 my-3" src="https://wexert.com/wp-content/uploads/2019/02/wexert-logo-2.png" alt="Brand 1" />
               </div>
               <div className="flex justify-center">
-                <img className="h-20 m-2 lg:mx-10 my-3" src="https://digiron.in/wp-content/uploads/2024/06/YOUR-EXTENDED-MARKETING-TEAM.png" alt="Brand 2" />
+              <img className="h-20 m-2 lg:mx-10 my-3" src={`/digiron.png`} alt="Brand 2" />
               </div>
               <div className="flex justify-center items-center">
-                <img className="h-10 m-2 lg:mx-10 my-3" src="https://morphinfotech.com/wp-content/uploads/2023/08/logo-horizontal-light.png" alt="Brand 3" />
+                <img className="h-10 m-2 lg:mx-10 my-3" src="https://morphinfotech.com/wp-content/uploads/2024/09/logo-horizontal-dark.png" alt="Brand 3" />
               </div>
               {/* <div className="flex justify-center">
                 <img className="h-8 m-2 lg:mx-10 my-3" src="https://sitechecker.pro/wp-content/themes/sitechecker/out/img_design/rate-logo-2.svg" alt="Brand 4" />
@@ -157,7 +158,7 @@ function Home() {
     </div>
     <div className="w-full mt-20 lg:mt-0 flex flex-col justify-center items-center ">
       <div className="lg:text-3xl text-3xl text-black font-black text-center">
-      Free SEO Audit Tools
+        Free SEO Audit Tools
       </div>
       <div className="flex justify-center mt-20  flex-wrap  ">
         <div className="w-80 h-96 rounded-2xl m-5 border border-[#c9d2fc] shadow-2xl hover:shadow-xl hover:shadow-[#c9d2fc] duration-150 shadow-[#c9d2fc] flex flex-col items-center justify-center bg-neutral-50">
@@ -167,7 +168,7 @@ function Home() {
           <div className="text-2xl p-5 text-[#2D2D2D] font-semibold">Meta Title
           </div>
           <div className="text-base text-center px-10">
-          A meta title test helps evaluate the effectiveness of your page titles in improving SEO and click-through rates on search engines.
+            A meta title test helps evaluate the effectiveness of your page titles in improving SEO and click-through rates on search engines.
           </div>
           <Link href="/tools/1/meta-title-test" className="text-[#009379] flex font-semibold p-4 items-center justify-center">
             Try Now
@@ -184,7 +185,7 @@ function Home() {
           <div className="text-2xl p-5 text-[#2D2D2D] font-semibold">Meta Description
           </div>
           <div className="text-base text-center px-10">
-          A meta description is a short summary of a page content, designed to attract users in search results and boost click-through rates.          </div>
+            A meta description is a short summary of a page content, designed to attract users in search results and boost click-through rates.          </div>
           <Link href="/tools/2/meta-description-test" className="text-[#009379] flex font-semibold p-4 items-center justify-center">
             Try Now
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mx-1">
@@ -200,7 +201,7 @@ function Home() {
           <div className="text-2xl p-5 text-[#2D2D2D] font-semibold">Headings
           </div>
           <div className="text-base text-center px-10">
-          Heading tags are HTML elements used to structure content on a webpage. They help organize text, improve SEO, and enhance readability.
+            Heading tags are HTML elements used to structure content on a webpage. They help organize text, improve SEO, and enhance readability.
           </div>
           <Link href="/tools/10/heading-tags-test" className="text-[#009379] flex font-semibold p-4 items-center justify-center">
             Try Now
@@ -247,7 +248,7 @@ function Home() {
       <div className="flex flex-col lg:w-1/2 ">
         <div className="text-4xl font-bold">Video Guide: SEO Audit Tool</div>
         <div className="font-light text-xl leading-10 mt-10 pr-10">
-        Discover how you can use SEOvew effectively by exploring our detailed video tutorial. Learn which metrics you can track, analyze and implement actionable insights to improve your website speed and overall performance. From identifying SEO issues to improving overall organic traffic, this video will help us to understand how efficiently you can optimize your website using our tool.
+          Discover how you can use SEOvew effectively by exploring our detailed video tutorial. Learn which metrics you can track, analyze and implement actionable insights to improve your website speed and overall performance. From identifying SEO issues to improving overall organic traffic, this video will help us to understand how efficiently you can optimize your website using our tool.
 
         </div>
       </div>
@@ -260,16 +261,16 @@ function Home() {
     <div className="flex w-full lg:h-[80vh] flex-wrap justify-center   mt-10 items-center">
       <div className="lg:w-1/3 p-10 lg:p-5">
         <div className="lg:text-5xl text-3xl font-bold leading-20	">
-        360 SEO Audit Tool
+          360 SEO Audit Tool
 
         </div>
         <div className="text-xl py-6 leading-10 font-light		">
-        Introducing SEOvew 360 SEO Audit Tool, designed to provide a comprehensive analysis of your website's performance. SEOvew SEO tool evaluates key aspects such as technical SEO, on-page optimization, keyword effectiveness, and site speed, giving you a complete view of your online presence. With detailed reports and actionable insights, you can identify critical issues and opportunities for improvement.
+          Introducing SEOvew 360 SEO Audit Tool, designed to provide a comprehensive analysis of your website's performance. SEOvew SEO tool evaluates key aspects such as technical SEO, on-page optimization, keyword effectiveness, and site speed, giving you a complete view of your online presence. With detailed reports and actionable insights, you can identify critical issues and opportunities for improvement.
 
         </div>
         <Link href="/tools" className="text-white whitespace-nowrap hover:bg-[#2D2D2D] duration-200 bg-[#009379] w-32 p-2 rounded text-center font-semibold">
-        Explore More Tools
-                </Link>
+          Explore More Tools
+        </Link>
       </div>
       <div className="lg:w-1/3">
         <Animations
@@ -287,10 +288,10 @@ function Home() {
       </div>
       <div className="lg:w-1/3 lg:mx-10  p-10 lg:p-5">
         <div className="lg:text-5xl text-3xl font-bold  leading-20	">
-        Download Your Report
+          Download Your Report
         </div>
         <div className="text-xl py-6  leading-10 font-light		">
-        Get your comprehensive SEO audit report instantly! Simply click the download button to receive your website SEO Audit report, which includes a detailed analysis of your website’s performance. This report highlights key findings, actionable recommendations, and important metrics to help you enhance your SEO strategy. 
+          Get your comprehensive SEO audit report instantly! Simply click the download button to receive your website SEO Audit report, which includes a detailed analysis of your website’s performance. This report highlights key findings, actionable recommendations, and important metrics to help you enhance your SEO strategy.
 
         </div>
         <Link href="run" className="text-white hover:bg-[#2D2D2D] duration-200 bg-[#009379] w-32 p-2 rounded text-center font-semibold">
@@ -334,7 +335,7 @@ function Home() {
         </div>
         <div className="lg:w-3/5 mt-5 w-4/5">
 
-          <Faq/>
+          <Faq />
         </div>
       </div>
     </div>
