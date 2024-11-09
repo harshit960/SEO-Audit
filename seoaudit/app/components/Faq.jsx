@@ -65,35 +65,31 @@ function Faq() {
     ]
     return (
         <>
-            {faq.slice(0, 3).map((item) => (
-                <>
-                    <div className="mt-14">
+            {faq.slice(0, 3).map((item, index) => (
+                <div className="mt-14" key={index}>
 
-                        <div className="text-lg font-semibold">{item.que}</div>
-                        <div className="mt-2 text-slate-500">{item.desc}</div>
-                    </div>
-                </>
+                    <div className="text-lg font-semibold">{item.que}</div>
+                    <div className="mt-2 text-slate-500">{item.desc}</div>
+                </div>
+
             ))}
             <div className={state}>
 
-                {faq.slice(3, 11).map((item) => (
-                    <>
-                        <div className="mt-14">
-
-                            <div className="text-lg font-semibold">{item.que}</div>
-                            <div className="mt-2 text-slate-500">{item.desc}</div>
-                        </div>
-                    </>
+                {faq.slice(3, 11).map((item, index) => (
+                    <div className="mt-14" key={index}>
+                        <div className="text-lg font-semibold">{item.que}</div>
+                        <div className="mt-2 text-slate-500">{item.desc}</div>
+                    </div>
                 ))}
             </div>
             <div className="flex items-center justify-center w-full mt-10">
 
-            <button onClick={handleClick}>
-                <div className=" p-2 rounded bg-[#009379] px-4 text-white">
+                <button onClick={handleClick}>
+                    <div className=" p-2 rounded bg-[#009379] px-4 text-white">
 
-                Expand
-                </div>
-            </button>
+                        Expand
+                    </div>
+                </button>
             </div>
 
         </>)
