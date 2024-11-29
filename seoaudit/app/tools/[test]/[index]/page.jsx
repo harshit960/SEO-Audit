@@ -115,6 +115,9 @@ export default function TestPage({ params }) {
       setTestResult(data);
     } catch (error) {
       console.error('Error fetching data:', error);
+      return(
+        <div className="text-red-500">Error fetching data, Please reload the page</div>
+      )
     }
   };
 
