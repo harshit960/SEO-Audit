@@ -6,7 +6,11 @@ export async function performCustom404ErrorPageTest(baseUrl: string): Promise<{ 
     // console.log(baseUrl);
     
     const nonExistingPageUrl = `${baseUrl}/non-existing-page`;
-
+    return {
+        HasCustom404ErrorPage: false,
+        Importance: 'Low',
+        Description: 'The server does not respond with a 404 status code for the non-existing page, so the custom 404 error page test cannot be performed.'
+    };
     try {
         // Fetch the non-existing page
         const response = await fetch(nonExistingPageUrl);
@@ -53,7 +57,7 @@ export async function performCustom404ErrorPageTest(baseUrl: string): Promise<{ 
         }
     } catch (error) {
         // Handle errors
-        // console.error('Error occurred during Custom 404 Error Page Test:', error);
+        console.error('Error occurred during Custom 404 Error Page Test:', error);
         return {
             HasCustom404ErrorPage: false,
             Importance: 'Low',

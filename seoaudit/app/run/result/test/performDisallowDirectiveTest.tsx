@@ -4,7 +4,11 @@
 export async function performDisallowDirectiveTest(baseUrl: string): Promise<{ HasDisallowDirective: boolean; Importance: string; Description: string }> {
     // URL of the robots.txt file
     const robotsTxtUrl = `${baseUrl}/robots.txt`;
-
+    return {
+        HasDisallowDirective: false,
+        Importance: 'Low',
+        Description: 'An error occurred while performing the Disallow Directive Test.'
+    };
     try {
         // Fetch the robots.txt file
         const response = await fetch(robotsTxtUrl);

@@ -136,11 +136,7 @@ export default function TestPage({ params }) {
     </div>
     </>;
   }
-
-  // if (!testData) {
-  //   return <div>Test not found</div>;
-  // }
-
+  else
   return (
     <div className='flex flex-col w-full items-center min-h-screen justify-center p-20 space-y-10'>
       <div className="text-3xl font-bold">

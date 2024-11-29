@@ -4,7 +4,11 @@
 export async function performAdsTxtValidationTest(domain: string): Promise<{ IsValidAdsTxt: boolean; Importance: string; Description: string }> {
     // Construct the URL of the ads.txt file
     const adsTxtUrl = `${domain}/ads.txt`;
-
+    return {
+        IsValidAdsTxt: false,
+        Importance: 'Low',
+        Description: 'An error occurred while performing the Ads.txt Validation Test.'
+    }
     try {
         // Fetch the ads.txt file
         const response = await fetch(adsTxtUrl);
