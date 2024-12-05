@@ -19,7 +19,7 @@ export default function RootLayout({ children }: any) {
   return (
     <html lang="en">
       <head>
-        <meta name="robots" content="noindex, nofollow" />
+        {/* <meta name="robots" content="noindex, nofollow" /> */}
       </head>
       <body className={inter.className}>
         {/* <OBProvider> */}
