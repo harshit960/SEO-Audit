@@ -139,7 +139,7 @@ function Home() {
                 <img className="h-14 m-2 lg:mx-10 my-3" src="https://wexert.com/wp-content/uploads/2019/02/wexert-logo-2.png" alt="Brand 1" />
               </div>
               <div className="flex justify-center">
-              <img className="h-20 m-2 lg:mx-10 my-3" src={`/digiron.png`} alt="Brand 2" />
+                <img className="h-20 m-2 lg:mx-10 my-3" src={`/digiron.png`} alt="Brand 2" />
               </div>
               <div className="flex justify-center items-center">
                 <img className="h-10 m-2 lg:mx-10 my-3" src="https://morphinfotech.com/wp-content/uploads/2024/09/logo-horizontal-dark.png" alt="Brand 3" />
@@ -158,13 +158,14 @@ function Home() {
     </div>
     <div className="w-full mt-20 lg:mt-0 flex flex-col justify-center items-center ">
       <div className="lg:text-3xl text-3xl text-black font-black text-center">
-        Free SEO Audit Tools
+        All in One SEO Tool
       </div>
       <div className="flex justify-center mt-20  flex-wrap  ">
         <div className="w-80 h-96 rounded-2xl m-5 border border-[#c9d2fc] shadow-2xl hover:shadow-xl hover:shadow-[#c9d2fc] duration-150 shadow-[#c9d2fc] flex flex-col items-center justify-center bg-neutral-50">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
-            <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605" />
           </svg>
+
           <div className="text-2xl p-5 text-[#2D2D2D] font-semibold">Meta Title
           </div>
           <div className="text-base text-center px-10">
@@ -179,9 +180,10 @@ function Home() {
           </Link>
         </div>
         <div className="w-80 border m-5 border-[#c9d2fc] bg-neutral-50 h-96 rounded-2xl shadow-2xl hover:shadow-xl hover:shadow-[#c9d2fc] duration-150 shadow-[#c9d2fc] flex flex-col items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
-            <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M17.995 3.744v7.5a6 6 0 1 1-12 0v-7.5m-2.25 16.502h16.5" />
           </svg>
+
           <div className="text-2xl p-5 text-[#2D2D2D] font-semibold">Meta Description
           </div>
           <div className="text-base text-center px-10">
@@ -195,9 +197,10 @@ function Home() {
           </Link>
         </div>
         <div className="w-80 border m-5 border-[#c9d2fc] bg-neutral-50 h-96 rounded-2xl shadow-2xl hover:shadow-xl hover:shadow-[#c9d2fc] duration-150 shadow-[#c9d2fc] flex flex-col items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
-            <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0-3-3m3 3 3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
           </svg>
+
           <div className="text-2xl p-5 text-[#2D2D2D] font-semibold">Headings
           </div>
           <div className="text-base text-center px-10">
@@ -238,7 +241,7 @@ function Home() {
         </div>
         <div className="w-60 h-28 m-5 border-b-4 shadow-2xl shadow-[#b7bac7a8] border-[#F2BFAF] bg-neutral-50 flex items-center justify-center flex-col">
           <div className="text-3xl font-bold">75%</div>
-          <div className="text-base">Average Improvement in SEO Scores
+          <div className="text-base text-center">Average Improvement in SEO Scores
           </div>
         </div>
       </div>
@@ -247,7 +250,7 @@ function Home() {
     <div className="w-full flex bg-gray-100 mt-32 lg:p-20 p-5 py-12 flex-wrap">
       <div className="flex flex-col lg:w-1/2 ">
         <div className="text-4xl font-bold">Video Guide: SEO Audit Tool</div>
-        <div className="font-light text-xl leading-10 mt-10 pr-10">
+        <div className="font-light text-xl text-justify leading-10 mt-10 pr-10">
           Discover how you can use SEOvew effectively by exploring our detailed video tutorial. Learn which metrics you can track, analyze and implement actionable insights to improve your website speed and overall performance. From identifying SEO issues to improving overall organic traffic, this video will help us to understand how efficiently you can optimize your website using our tool.
 
         </div>
@@ -264,7 +267,7 @@ function Home() {
           360 SEO Audit Tool
 
         </div>
-        <div className="text-xl py-6 leading-10 font-light		">
+        <div className="text-xl py-6 leading-10 font-light	text-justify	">
           Introducing SEOvew 360 SEO Audit Tool, designed to provide a comprehensive analysis of your website's performance. SEOvew SEO tool evaluates key aspects such as technical SEO, on-page optimization, keyword effectiveness, and site speed, giving you a complete view of your online presence. With detailed reports and actionable insights, you can identify critical issues and opportunities for improvement.
 
         </div>
@@ -305,7 +308,7 @@ function Home() {
     <div className="flex lg:p-20 p-5 mt-20">
       <div className="bg-[#E5F4F2] flex flex-col w-full lg:p-20 p-5 py-10 rounded-xl text-[#2D2D2D]">
         <div className="text-3xl font-semibold">
-          Why SEO Audit?
+          Why SEOvew?
         </div>
         <div className="text-xl font-light leading-relaxed mt-8">
           Getting your website to rank in Google is harder and more competitive than ever. There are many factors such as on page content, performance, social factors and backlink profile that search engines like Google use to determine which sites should rank highest.
