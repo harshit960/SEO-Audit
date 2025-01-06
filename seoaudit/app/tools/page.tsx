@@ -28,7 +28,7 @@ function Page() {
                             <div className="h-52 w-full m-4 p-8 rounded flex flex-col items-center justify-center bg-slate-100">
                                 <div className="icon"></div>
                                 <div className="text-lg font-semibold self-start">{item.title}</div>
-                                <div className="font-light line-clamp-4">{item.desc}</div>
+                                <div className="font-light line-clamp-4 text-justify">{item.desc}</div>
                             </div>
                         </Link>
                     ))}

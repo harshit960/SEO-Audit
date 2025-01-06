@@ -119,7 +119,7 @@ async function page() {
 
 
       </div >
-      <div className="h-[80vh] hidden bg-white flex justify-evenly items-center">
+      <div className="h-[80vh] hidden bg-white  justify-evenly items-center">
         <div className="flex-col w-96 ">
           <div className="text-4xl font-semibold">Blogs</div>
           <div className="text-sm my-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, sequi vero hic modi qui quo culpa quibusdam saepe a nulla eum dolores alias voluptatum natus. Libero dolores blanditiis enim incidunt!</div>

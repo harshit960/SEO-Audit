@@ -21,13 +21,13 @@ export const jsonData: Test[] = [
         "title": "Meta Description Test",
         "desc": "Your webpage's meta description is an HTML tag that is intended to provide a short and accurate summary of your page. Search engines use meta descriptions to help identify the a page's topic - they may also use meta descriptions by displaying them directly in search engine results. Accurate and inviting meta descriptions can help boost both your search engine rankings and a user's likelihood of clicking through to your page."
     },
-    {
-        "index": 3,
-        "icon": "",
-        "link": "",
-        "title": "Google Search Results Preview Test",
-        "desc": "Check how your page might appear in Google search results. Google search results typically uses your webpage title, url and meta-description in order to display relevant summarized information about your site. If these elements are too long, Google will truncate their content. Webpage title up to 70 characters in length, and webpage descriptions up to 160 characters in length are recommended in order to optimize readability."
-    },
+    // {
+    //     "index": 3,
+    //     "icon": "",
+    //     "link": "",
+    //     "title": "Google Search Results Preview Test",
+    //     "desc": "Check how your page might appear in Google search results. Google search results typically uses your webpage title, url and meta-description in order to display relevant summarized information about your site. If these elements are too long, Google will truncate their content. Webpage title up to 70 characters in length, and webpage descriptions up to 160 characters in length are recommended in order to optimize readability."
+    // },
     {
         "index": 4,
         "icon": "",
@@ -35,13 +35,13 @@ export const jsonData: Test[] = [
         "title": "Social Media Meta Tags Test",
         "desc": "This test will check if the analyzed webpage is using social media meta tags. While this type of meta tags don't affect what people see when they visit the webpage, they exist to provide information about it to search engines and social media platforms. Also, when a link is shared, both Facebook and Twitter will scrape the associated webpage and read its meta tags to display the appropriate information. Thus, social media meta tags will help to amplify your webpage's content."
     },
-    {
-        "index": 5,
-        "icon": "",
-        "link": "",
-        "title": "Most Common Keywords Test",
-        "desc": "Check the most common keywords in your page and their usage (number of times used). This can help give a quick overview of the keywords and topics that crawlers may associate with your web page."
-    },
+    // {
+    //     "index": 5,
+    //     "icon": "",
+    //     "link": "",
+    //     "title": "Most Common Keywords Test",
+    //     "desc": "Check the most common keywords in your page and their usage (number of times used). This can help give a quick overview of the keywords and topics that crawlers may associate with your web page."
+    // },
     {
         "index": 6,
         "icon": "",
@@ -63,13 +63,13 @@ export const jsonData: Test[] = [
         "title": "Related Keywords Test",
         "desc": "Related keywords will show search terms for which this URL shows up in the top 20 organic results."
     },
-    {
-        "index": 9,
-        "icon": "",
-        "link": "",
-        "title": "Competitor Domains Test",
-        "desc": "This test will show up to 5 competitors that could rank in the same organic search results as the target domain. Competitor domains are sorted by Domain Authority Score, which is measuring the importance of the domain based on the volume and quality of links that are pointing to it. The score is on a scale from 0 to 100, with 100 meaning the domain is highly important and its links communicate a strong amount of popularity."
-    },
+    // {
+    //     "index": 9,
+    //     "icon": "",
+    //     "link": "",
+    //     "title": "Competitor Domains Test",
+    //     "desc": "This test will show up to 5 competitors that could rank in the same organic search results as the target domain. Competitor domains are sorted by Domain Authority Score, which is measuring the importance of the domain based on the volume and quality of links that are pointing to it. The score is on a scale from 0 to 100, with 100 meaning the domain is highly important and its links communicate a strong amount of popularity."
+    // },
     {
         "index": 10,
         "icon": "",
@@ -77,20 +77,20 @@ export const jsonData: Test[] = [
         "title": "Heading Tags Test",
         "desc": "Check if your webpage is using any H1 and H2 HTML header tags. Header tags are not visible to users, but help clarify and support the overall theme or purpose of your page to search engines. The H1 tag represents the most important heading, e.g., the title of the page or blog post. The H2 tag represents the second most important headings on the webpages, e.g., the subheadings."
     },
-    {
-        "index": 11,
-        "icon": "",
-        "link": "",
-        "title": "Robots.txt Test",
-        "desc": "Check if your website is using a robots.txt file. When search engine robots crawl a website, they typically first access a site's robots.txt file. Robots.txt tells Googlebot and other crawlers what is and is not allowed to be crawled on your site."
-    },
-    {
-        "index": 12,
-        "icon": "",
-        "link": "",
-        "title": "Sitemap Test",
-        "desc": "Check if the website has a sitemap. A sitemap is important as it lists all the web pages of the site and let search engine crawlers to crawl the website more intelligently. A sitemap also provides valuable metadata for each webpage."
-    },
+    // {
+    //     "index": 11,
+    //     "icon": "",
+    //     "link": "",
+    //     "title": "Robots.txt Test",
+    //     "desc": "Check if your website is using a robots.txt file. When search engine robots crawl a website, they typically first access a site's robots.txt file. Robots.txt tells Googlebot and other crawlers what is and is not allowed to be crawled on your site."
+    // },
+    // {
+    //     "index": 12,
+    //     "icon": "",
+    //     "link": "",
+    //     "title": "Sitemap Test",
+    //     "desc": "Check if the website has a sitemap. A sitemap is important as it lists all the web pages of the site and let search engine crawlers to crawl the website more intelligently. A sitemap also provides valuable metadata for each webpage."
+    // },
     {
         "index": 13,
         "icon": "",
@@ -357,55 +357,55 @@ export const jsonData: Test[] = [
         "title": "Cumulative Layout Shift Test",
         "desc": "This test will check the Cumulative Layout Shift (CLS) score of the analyzed webpage. CLS is a Core Web Vitals metric calculated by summing all layout shifts that aren't caused by user interaction. Basically, whenever a page loads, certain page elements unexpectedly shift, affecting the way users interact with the webpage. A website with a low CLS has a stable page display, which does not shift elements around and ensures a steady, predictable loading of all website content. To provide a good user experience, Google recommends that sites should strive to have a CLS score of 0.1 or less."
     },
-    {
-        "index": 51,
-        "icon": "",
-        "link": "",
-        "title": "URL Canonicalization Test",
-        "desc": "Test your site for potential URL canonicalization issues. Canonicalization describes how a site can use slightly different URLs for the same page (e.g., if http://www.example.com and http://example.com displays the same page but do not resolve to the same URL). If this happens, search engines may be unsure about which URL is the correct one to index. Learn more about canonicalization issues."
-    },
-    {
-        "index": 52,
-        "icon": "",
-        "link": "",
-        "title": "SSL Checker and HTTPS Test",
-        "desc": "Check if your website is using HTTPS, a secure protocol for sending/receiving data over the Internet. Using HTTPS indicates that an additional encryption/authentication layer was added between client and server. HTTPS should be used by any site that collects sensitive customer data such as credit card information. Even for sites that do not collect such data, switching to https helps users by improving privacy and overall security. Google is increasingly using https as a positive ranking factor."
-    },
-    {
-        "index": 53,
-        "icon": "",
-        "link": "",
-        "title": "Mixed Content Test (HTTP over HTTPS)",
-        "desc": "This will check if all resources are loaded over a secure HTTPS connection. Mixed content occurs when initial HTML is loaded over a secure HTTPS connection, but other resources (such as images, videos, stylesheets, scripts) are loaded over an insecure HTTP connection. This is called mixed content because both HTTP and HTTPS content are being loaded to display the same page, and the initial request was secure over HTTPS. Browsers may block mixed content, so fixing this issue helps ensure your content loads as intended."
-    },
-    {
-        "index": 54,
-        "icon": "",
-        "link": "",
-        "title": "HTTP2 Test",
-        "desc": "Checks if the webpage and all resources are served over HTTP/2. As the first major HTTP protocol update since 1997, HTTP/2 offers several key improvements such as increased speed and security."
-    },
-    {
-        "index": 55,
-        "icon": "",
-        "link": "",
-        "title": "HSTS Test",
-        "desc": "This test will check if your webpage is using the Strict-Transport-Security header."
-    },
-    {
-        "index": 56,
-        "icon": "",
-        "link": "",
-        "title": "Safe Browsing Test",
-        "desc": "Check if your website is identified as having malware or exhibiting phishing activity by Google's safe browsing API. Any site containing malware or suspicious for phising activity is seen as a threat to the online community and is often penalized by search engines. This test checks your website for such threats."
-    },
-    {
-        "index": 57,
-        "icon": "",
-        "link": "",
-        "title": "Server Signature Test",
-        "desc": "Check if your server's signature is ON. A server signature is the public identity of your web server and contains sensitive information that could be used to exploit any known vulnerability. Turning your server signature OFF is considered a good security practice to avoid disclosure of what software versions you are running."
-    },
+    // {
+    //     "index": 51,
+    //     "icon": "",
+    //     "link": "",
+    //     "title": "URL Canonicalization Test",
+    //     "desc": "Test your site for potential URL canonicalization issues. Canonicalization describes how a site can use slightly different URLs for the same page (e.g., if http://www.example.com and http://example.com displays the same page but do not resolve to the same URL). If this happens, search engines may be unsure about which URL is the correct one to index. Learn more about canonicalization issues."
+    // },
+    // {
+    //     "index": 52,
+    //     "icon": "",
+    //     "link": "",
+    //     "title": "SSL Checker and HTTPS Test",
+    //     "desc": "Check if your website is using HTTPS, a secure protocol for sending/receiving data over the Internet. Using HTTPS indicates that an additional encryption/authentication layer was added between client and server. HTTPS should be used by any site that collects sensitive customer data such as credit card information. Even for sites that do not collect such data, switching to https helps users by improving privacy and overall security. Google is increasingly using https as a positive ranking factor."
+    // },
+    // {
+    //     "index": 53,
+    //     "icon": "",
+    //     "link": "",
+    //     "title": "Mixed Content Test (HTTP over HTTPS)",
+    //     "desc": "This will check if all resources are loaded over a secure HTTPS connection. Mixed content occurs when initial HTML is loaded over a secure HTTPS connection, but other resources (such as images, videos, stylesheets, scripts) are loaded over an insecure HTTP connection. This is called mixed content because both HTTP and HTTPS content are being loaded to display the same page, and the initial request was secure over HTTPS. Browsers may block mixed content, so fixing this issue helps ensure your content loads as intended."
+    // },
+    // {
+    //     "index": 54,
+    //     "icon": "",
+    //     "link": "",
+    //     "title": "HTTP2 Test",
+    //     "desc": "Checks if the webpage and all resources are served over HTTP/2. As the first major HTTP protocol update since 1997, HTTP/2 offers several key improvements such as increased speed and security."
+    // },
+    // {
+    //     "index": 55,
+    //     "icon": "",
+    //     "link": "",
+    //     "title": "HSTS Test",
+    //     "desc": "This test will check if your webpage is using the Strict-Transport-Security header."
+    // },
+    // {
+    //     "index": 56,
+    //     "icon": "",
+    //     "link": "",
+    //     "title": "Safe Browsing Test",
+    //     "desc": "Check if your website is identified as having malware or exhibiting phishing activity by Google's safe browsing API. Any site containing malware or suspicious for phising activity is seen as a threat to the online community and is often penalized by search engines. This test checks your website for such threats."
+    // },
+    // {
+    //     "index": 57,
+    //     "icon": "",
+    //     "link": "",
+    //     "title": "Server Signature Test",
+    //     "desc": "Check if your server's signature is ON. A server signature is the public identity of your web server and contains sensitive information that could be used to exploit any known vulnerability. Turning your server signature OFF is considered a good security practice to avoid disclosure of what software versions you are running."
+    // },
     {
         "index": 58,
         "icon": "",
@@ -441,13 +441,13 @@ export const jsonData: Test[] = [
         "title": "Media Query Responsive Test",
         "desc": "Check if your page implements responsive design functionalities using the media query technique. The '@media' rule allows different style rules for screen sizes. Media query techniques allow different presentation and content to be served depending on the output device, helping ensure that your website renders optimally on all devices and platforms."
     },
-    {
-        "index": 63,
-        "icon": "",
-        "link": "",
-        "title": "Mobile Snapshot Test",
-        "desc": "Check how your website renders on a mobile device."
-    },
+    // {
+    //     "index": 63,
+    //     "icon": "",
+    //     "link": "",
+    //     "title": "Mobile Snapshot Test",
+    //     "desc": "Check how your website renders on a mobile device."
+    // },
     {
         "index": 64,
         "icon": "",
@@ -455,13 +455,13 @@ export const jsonData: Test[] = [
         "title": "Structured Data Test",
         "desc": "Check if your webpage is using structured data markup. Search engines use structured data to better understand the content of your webpage and to create rich snippets in search results (which helps increase click-through rate to your site)."
     },
-    {
-        "index": 65,
-        "icon": "",
-        "link": "",
-        "title": "Custom 404 Error Page Test",
-        "desc": "This SEO test will check if your website is using a custom 404 error page. By creating a custom 404 error page, you can improve your website's user experience by letting users know that only a specific page is missing/broken (and not your entire site), providing them helpful links, the opportunity to report bugs, and potentially track the source of broken links in your site."
-    },
+    // {
+    //     "index": 65,
+    //     "icon": "",
+    //     "link": "",
+    //     "title": "Custom 404 Error Page Test",
+    //     "desc": "This SEO test will check if your website is using a custom 404 error page. By creating a custom 404 error page, you can improve your website's user experience by letting users know that only a specific page is missing/broken (and not your entire site), providing them helpful links, the opportunity to report bugs, and potentially track the source of broken links in your site."
+    // },
     {
         "index": 66,
         "icon": "",
@@ -497,13 +497,13 @@ export const jsonData: Test[] = [
         "title": "Meta Refresh Test",
         "desc": "This test will check if your webpage is using a refresh meta tag. This tag causes a web page to refresh automatically after a specified amount of time. Users generally don't expect automatic refreshes, so they can be disorienting. Refreshing also moves focus to the top of the page, which may frustrate or confuse users, particularly those who rely on screen readers or other assistive technologies."
     },
-    {
-        "index": 71,
-        "icon": "",
-        "link": "",
-        "title": "SPF Records Test",
-        "desc": "Check if your DNS records contains an SPF record. SPF (Sender Policy Framework) records allow email systems to verify if a given mail server has been authorized to send mail on behalf of your domain. Creating an SPF record increases email delivery rates by reducing the likelihood of your email being marked as spam."
-    },
+    // {
+    //     "index": 71,
+    //     "icon": "",
+    //     "link": "",
+    //     "title": "SPF Records Test",
+    //     "desc": "Check if your DNS records contains an SPF record. SPF (Sender Policy Framework) records allow email systems to verify if a given mail server has been authorized to send mail on behalf of your domain. Creating an SPF record increases email delivery rates by reducing the likelihood of your email being marked as spam."
+    // },
     {
         "index": 72,
         "icon": "",
