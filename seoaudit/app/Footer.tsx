@@ -37,17 +37,19 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div className="flex flex-col space-y-2 font-semibold lg:basis-1/4 mt-10 lg:mt-0">
+          <Link href="/tools" className="hover:text-white transition-colors">Tools</Link>
           <Link href="/faq" className="hover:text-white transition-colors">FAQ</Link>
-          <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
+          {/* <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link> */}
           <Link href="/disclaimer" className="hover:text-white transition-colors">Disclaimer</Link>
-          <Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link>
+          <Link href="/contact-us" className="hover:text-white transition-colors">Contact Us</Link>
         </div>
 
         {/* Company Links */}
         <div className="flex flex-col space-y-2 font-semibold lg:basis-1/4 mt-10 lg:mt-0">
+          <Link href="/blogs" className="hover:text-white transition-colors">Blogs</Link>
           <Link href="/terms-of-service" className="hover:text-white transition-colors">Terms and Conditions</Link>
-          <Link href="/about" className="hover:text-white transition-colors">About Us</Link>
-          <Link href="/refund-policy" className="hover:text-white transition-colors">Refund Policy</Link>
+          <Link href="/about-us" className="hover:text-white transition-colors">About Us</Link>
+          {/* <Link href="/refund-policy" className="hover:text-white transition-colors">Refund Policy</Link> */}
         </div>
       </div>
 

@@ -13,7 +13,7 @@ function page() {
             <div className="text-lg mt-20">
                 We will be happy to assist you in any way we can.
                 <br />
-                Team members data - Devendar, Manvik, Amit, Mahipal Singh
+                {/* Team members data - Devendar, Manvik, Amit, Mahipal Singh */}
 
 
             </div>

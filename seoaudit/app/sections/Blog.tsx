@@ -29,7 +29,7 @@ async function Blog() {
 
                                 <div className="flex justify-between p-2">
                                     <div className="text-sm">{post.fields.date && dayjs(post.fields.date.toString()).format('D MMMM  YYYY')}</div>
-                                    <div className="text-sm">Author</div>
+                                    {/* <div className="text-sm">Author</div> */}
                                 </div>
                             </div>
                         </Link>

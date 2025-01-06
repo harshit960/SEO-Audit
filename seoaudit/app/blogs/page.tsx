@@ -119,7 +119,7 @@ async function page() {
 
 
       </div >
-      <div className="h-[80vh] bg-white flex justify-evenly items-center">
+      <div className="h-[80vh] hidden bg-white flex justify-evenly items-center">
         <div className="flex-col w-96 ">
           <div className="text-4xl font-semibold">Blogs</div>
           <div className="text-sm my-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, sequi vero hic modi qui quo culpa quibusdam saepe a nulla eum dolores alias voluptatum natus. Libero dolores blanditiis enim incidunt!</div>
@@ -130,8 +130,8 @@ async function page() {
         </div>
         <div className="img w-96 h-96 bg-slate-500"></div>
       </div>
+      <div className="flex p-10 bg-slate-100 py-40">
 
-      <div className="flex p-40 bg-slate-100 py-20">
         <div className="flex-col">
           <div className="text-3xl font-bold">Recent Blogs</div>
           <div className="flex-wrap flex mt-10 w-full justify-evenly">

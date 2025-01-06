@@ -261,7 +261,7 @@ function Home() {
 
       </div>
     </div>
-    <div className="flex w-full lg:h-[80vh] flex-wrap justify-center   mt-10 items-center">
+    <div className="flex w-full lg:h-[] flex-wrap justify-center   mt-10 items-center">
       <div className="lg:w-1/3 p-10 lg:p-5">
         <div className="lg:text-5xl text-3xl font-bold leading-20	">
           360 SEO Audit Tool
@@ -282,14 +282,14 @@ function Home() {
         />
       </div>
     </div>
-    <div className="flex w-full lg:h-[80vh] justify-center mt-10 flex-wrap lg:flex-nowrap items-center">
+    <div className="flex w-full lg:h-[] justify-center mt-10 flex-wrap lg:flex-nowrap items-center">
       <div className="lg:w-1/3">
         <Animations
           src="https://lottie.host/759cd847-27af-459a-aeb7-b8f79bd454f4/iHzXLGv0Jv.json"
           className="scale-[1] w-[450px] h-[450px]"
         />
       </div>
-      <div className="lg:w-1/3 lg:mx-10  p-10 lg:p-5">
+      <div className="lg:w-1/3 lg:mx-10  p-10 pt-40 lg:p-5">
         <div className="lg:text-5xl text-3xl font-bold  leading-20	">
           Download Your Report
         </div>
@@ -372,9 +372,10 @@ function Home() {
             </svg>
               +91 7894561587
             </div> */}
-            <div className="flex mt-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+            <div className="flex mt-3">
+              {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6"> */}
               {/* <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /> */}
-            </svg>
+            {/* </svg> */}
               bloggearpost@gmail.com
               <br />
               155, Panchkula, Haryana
@@ -384,15 +385,28 @@ function Home() {
             <div className="text-xl font-semibold mt-11">Connect with us</div>
             <div className="flex mt-1 justify-between w-28">
 
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+              {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+              </svg> */}
+              <Link href="https://www.youtube.com/channel/UCmafeX3_9idkzsTS5SrRFpA" aria-label="YouTube">
+              <svg
+                className="h-8 w-8 hover:text-red-600 transition-colors"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 461.001 461.001"
+                xmlSpace="preserve"
+              >
+                <path
+                  className="fill-current"
+                  d="M365.257,67.393H95.744C42.866,67.393,0,110.259,0,163.137v134.728c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137C461.001,110.259,418.135,67.393,365.257,67.393z M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z"
+                />
+              </svg>
+            </Link>
+              {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
               </svg>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-              </svg>
+              </svg> */}
 
 
             </div>
