@@ -9,7 +9,7 @@ const prisma = new PrismaClient()
 const app = express();
 const port = 10000;
 // Replace with your actual Google PSI API key
-const API_KEY = 'AIzaSyACLmKUkHHdaqeaIznrqBibQ2XQGw1HEks';
+const API_KEY = '';
 
 // Middleware to parse JSON bodies
 app.use(express.json());
@@ -163,7 +163,7 @@ app.post('/contact', async (req, res) => {
             service: 'gmail',
             auth: {
                 user: 'seovew@gmail.com',
-                pass: 'svlcamndafcwuplk'
+                pass: ''
             }
         });
         const mailOptions = {
